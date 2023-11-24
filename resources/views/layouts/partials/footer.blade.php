@@ -9,7 +9,7 @@
                                     <h5>Our Mission</h5>
                                     <div class="f-mission-box">
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Ipsum for isimply dummy text of the printi typesetting industry.</p>
-                                        <a href="about-us.html" class="btn-more">READ MORE <i class="fa fa-angle-double-right"></i></a>
+                                        <a href="{{asset('assets/about-us.html')}}" class="btn-more">READ MORE <i class="fa fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                                         <li><a href="#"><i class="fa fa-skype"></i></a></li>
                                         <li><a href="#"><i class="fa fa-apple"></i></a></li>
                                     </ul>
-                                    <span class="copyright">&copy; 2015 <a href="#">Fekra Corporation</a></span>
+                                    <span class="copyright">&copy; 2023 <a href="#">Ttech IT Solutions</a></span>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
 	<!-- include JavaScript Plugins -->
 	<script type="text/javascript" src="{{asset('assets/js/plugins.js')}}"></script>
 	<!-- include Google Maps API -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="{{asset('assets/https://maps.googleapis.com/maps/api/js')}}"></script>
     </body>
 
 </html>

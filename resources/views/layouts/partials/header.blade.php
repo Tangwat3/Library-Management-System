@@ -8,15 +8,15 @@
 	<!-- set the title of your site -->
 	<title>Fekra</title>
 	<!-- ========= Favicon Icons ========= -->
-	<link rel="shortcut icon" href="images/favicon/favicon.ico">
+	<link rel="shortcut icon" href="{{asset('assets/images/favicon/favicon.ico')}}">
 	<!-- Standard iPhone Touch Icon-->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets/images/favicon/apple-touch-icon-57x57.png')}}">
 	<!-- Retina iPhone Touch Icon-->
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/images/favicon/apple-touch-icon-114x114.png')}}">
 	<!-- Standard iPad Touch Icon-->
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/images/favicon/apple-touch-icon-72x72.png')}}">
 	<!-- Retina iPad Touch Icon-->
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{asset('assets/images/favicon/apple-touch-icon-144x144.png')}}">
 	<!-- include Google fonts  -->
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic%7CPlayfair+Display:400,400italic,700,700italic,900,900italic%7CRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900%7CRaleway:400,100,200,300,500,600,700,800,900%7CGreat+Vibes%7CPoppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 	<!-- include the site stylesheet of bootstrap  -->
