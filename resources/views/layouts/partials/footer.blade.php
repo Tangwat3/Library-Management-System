@@ -107,11 +107,11 @@
 		<div class="fa fa-chevron-up" id="gotoTop" style="display: none;"></div>
 	</div>
     <!-- include jQuery library -->
-	<script type="{{asset('assets/text/javascript" src="js/jquery.js')}}"></script>
+	<script type="text/javascript" src="{{asset('assets/js/jquery.js')}}"></script>
 	<!-- include custom JavaScript -->
-	<script type="{{asset('assets/text/javascript" src="js/jquery.main.js')}}"></script>
+	<script type="text/javascript" src="{{asset('assets/js/jquery.main.js')}}"></script>
 	<!-- include JavaScript Plugins -->
-	<script type="{{asset('assets/text/javascript" src="js/plugins.js')}}"></script>
+	<script type="text/javascript" src="{{asset('assets/js/plugins.js')}}"></script>
 	<!-- include Google Maps API -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     </body>
