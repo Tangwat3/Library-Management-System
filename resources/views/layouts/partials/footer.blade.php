@@ -8,7 +8,7 @@
                                 <div class="f-our-mission">
                                     <h5>Our Mission</h5>
                                     <div class="f-mission-box">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Ipsum for isimply dummy text of the printi typesetting industry.</p>
+                                        <p>To Produce Higher Quality NCE and Graduate Teachers of International Standard and to be a Centre of Excellence in Research in Education..</p>
                                         <a href="{{asset('assets/about-us.html')}}" class="btn-more">READ MORE <i class="fa fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
@@ -17,15 +17,15 @@
                                 <!-- f contact info2 -->
                                 <div class="f-contact-info2">
                                     <h5>Contact Information</h5>
-                                    <address><i class="fa fa-map-marker"></i> 1422 1st St. Santa Rosa,t CA 94559. USA</address>
+                                    <address><i class="fa fa-map-marker"></i> FCE Opp. Bwarak, Federal College, Pankshin-Barakin Ladi Rd, 933105, Duk, Plateau. NIGERIA</address>
                                     <div class="mail-box2">
-                                        <span class="mail-box"><i class="fa fa-envelope-o"></i> <a href="mailto:&#097;&#100;&#109;&#105;&#110;&#064;&#101;&#045;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" class="email"> &#097;&#100;&#109;&#105;&#110;&#064;&#101;&#045;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></span>
+                                        <span class="mail-box"><i class="fa fa-envelope-o"></i> <a href="mailto:info@fcepkn.edu.ng." class="email"> info@fcepkn.edu.ng.</a></span>
                                     </div>
                                     <div class="tel-holder">
-                                        <span class="tel-box"><i class="fa fa-phone"></i> <a href="tel:00201008431112" class="tel">002- 01008431112</a></span>
+                                        <span class="tel-box"><i class="fa fa-phone"></i> <a href="tel:+2348137359212" class="tel">+234- 8137359212</a></span>
                                     </div>
                                     <div class="mail-box2">
-                                        <span class="mail-box"><i class="fa fa-link"></i> <a href="mailto:&#119;&#119;&#119;&#046;&#121;&#111;&#117;&#114;&#095;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;" class="email">&#119;&#119;&#119;&#046;&#121;&#111;&#117;&#114;&#095;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;</a></span>
+                                        <span class="mail-box"><i class="fa fa-link"></i> <a href="mailto:info@fcepkn.edu.ng." class="email">info@fcepkn.edu.ng.</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -65,16 +65,12 @@
                                 <div class="f-popular-tags">
                                     <h5>Popular Tags</h5>
                                     <ul class="list-inline footer-tags">
-                                        <li><a href="#">Business</a></li>
-                                        <li><a href="#">Creative</a></li>
-                                        <li><a href="#">One Page</a></li>
-                                        <li><a href="#">Parallax</a></li>
-                                        <li><a href="#">Clean</a></li>
-                                        <li><a href="#">Customization</a></li>
-                                        <li><a href="#">Themeforest</a></li>
-                                        <li><a href="#">Visual</a></li>
-                                        <li><a href="#">Elegant</a></li>
-                                        <li><a href="#">Development </a></li>
+                                        <li><a href="#">Books</a></li>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Categories</a></li>
+                                        <li><a href="#">Register</a></li>
+                                        <li><a href="#">Login</a></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
