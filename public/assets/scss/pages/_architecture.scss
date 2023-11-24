@@ -1,0 +1,393 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+11-2. architecture gallery Styles / .architecture-gallery
+11-3. archi columns Styles / .archi-columns
+11-4. archi projects Styles / .archi-projects
+11-5. archi whyus Styles / .archi-whyus
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+11-2. architecture gallery Styles / .architecture-gallery
+-------------------------------------------------------------------*/
+.architecture-gallery{
+	color: $white;
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	font-style: italic;
+	@include breakpoint($screen-xs-max){
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.holder{
+		padding: 90px 0;
+		@include v-align(frame, middle);
+	}
+	.title{
+		display: block;
+		text-transform: uppercase;
+		font: 900 100px/120px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 70px;
+			line-height: 100px;
+		}
+	}
+	.subtitle{
+		display: block;
+		padding: 0 8px;
+		font-size: 16px;
+		line-height: 20px;
+		font-style: normal;
+		margin: -12px 0 34px;
+		letter-spacing: 4.5px;
+		text-transform: uppercase;
+		@include vertical-align(inline-block, top);
+		@include breakpoint($screen-xs-max){
+			font-size: 7px;
+		}
+	}
+	p{margin: 0 0 33px;}
+	.slick-arrow{
+		left: 0;
+		top: 50%;
+		border: 0;
+		width: 79px;
+		z-index:999;
+		height: 71px;
+		color:$white;
+		font-size: 32px;
+		background: none;
+		margin:-35px 0 0;
+		line-height: 32px;
+		position: absolute;
+		text-indent: -9999px;
+		padding: 15px 13px 0 0;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){display: none;}
+		&:hover{
+			text-decoration: none;
+			&:after{background: $white;}
+		}
+		&:after{
+			z-index: -1;
+			content: "";
+			left: -20px;
+			right: 13px;
+			@extend %postionreset;
+			transform: skewX(20deg);
+			-ms-transform: skewX(20deg);
+			-webkit-transform: skewX(20deg);
+			@include transition (all, 0.4s, ease);
+		}
+		&:before{
+			top: 19px;
+			left: -2px;
+			width: 53px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 32px;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			transform: skewX(14deg);
+			-ms-transform: skewX(14deg);
+			-webkit-transform: skewX(14deg);
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-next{
+		right: 0;
+		left: auto;
+		padding: 15px 0 0 13px;
+		&:after{
+			left: 13px;
+			right: -20px;
+			transform: skewX(-20deg);
+			-ms-transform: skewX(-20deg);
+			-webkit-transform: skewX(-20deg);
+		}
+		&:before{content:"\f105"; left: 19px;}
+	}
+	.btn-history:after{
+		transform: skewX(15deg);
+		-ms-transform: skewX(15deg);
+		-webkit-transform: skewX(15deg);
+	}
+}
+/*------------------------------------------------------------------
+11-3. archi columns Styles / .archi-columns
+-------------------------------------------------------------------*/
+.archi-columns{
+	z-index: 999;
+	color: $shark;
+	font-size: 14px;
+	margin: -56px 0 0;
+	line-height: 21px;
+	position: relative;
+	padding: 0 0 100px;
+	.dark &{color: $stack;}
+	.coll{
+		float: left;
+		width: 33.333%;
+		background: $desert-storm;
+		@include transition (all, 0.4s, ease);
+		.dark &{background: #191919;}
+		@include breakpoint($screen-xs-max){
+			float: none;
+			width: 100%;
+		}
+		&:hover{
+			color: $white;
+			margin: -20px 0 0;
+			@include breakpoint($screen-md-max){margin: -16px 0 0;}
+			@include breakpoint($screen-sm-max){margin: -15px 0 0;}
+			@include breakpoint($screen-xs-max){margin: 0;}
+			h2{
+				color: $white;
+				a{
+					color: $white;
+					&:hover{color: $lime;}
+				}
+				&:after{background: $white;}
+			}
+			img{
+				height: 230px;
+				max-height: 230px;
+				@include breakpoint($screen-md-max){
+					height: 185px;
+					max-height: 185px;
+				}
+				@include breakpoint($screen-sm-max){
+					height: 142px;
+					max-height: 142px;
+				}
+				@include breakpoint($screen-xs-max){
+					height: auto;
+					max-height: 9999px;
+				}
+			}
+		}
+	}
+	img{
+		width: 100%;
+		max-height: 210px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-md-max){max-height: 169px;}
+		@include breakpoint($screen-sm-max){max-height: 129px;}
+		@include breakpoint($screen-xs-max){max-height: 9999px;}
+	}
+	.block{
+		overflow: hidden;
+		position: relative;
+		padding: 11px 20px 43px 22px;
+	}
+	h2{
+		color: $black;
+		padding: 0 0 8px;
+		margin: 0 0 25px;
+		position: relative;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 600 18px/24px $font-family-sans-serif;
+		.dark &{color: $white;}
+		@include transition (all, 0.4s, ease);
+		a{
+			color: $black;
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $white;}
+			&:hover{text-decoration: none;}
+		}
+		&:after{
+			left: 0;
+			bottom: 0;
+			@extend %after;
+			@include size(36px, 4px);
+		}
+	}
+	.more{
+		right: 0;
+		bottom: 0;
+		color: $white;
+		width: 40px;
+		height: 42px;
+		font-size: 20px;
+		position: absolute;
+		padding: 8px 0 0 15px;
+		&:after{
+			left: 0;
+			z-index: -1;
+			content: "";
+			right: -20px;
+			background: $lime;
+			@extend %postionreset;
+			transform: skewX(-20deg);
+			-ms-transform: skewX(-20deg);
+			-webkit-transform: skewX(-20deg);
+			@include transition (all, 0.4s, ease);
+		}
+	}
+	&.decoration{
+		margin: 0;
+		position: static;
+		.container{
+			margin-top: -209px;
+			@include breakpoint($screen-md-max){margin-top: -167px;}
+			@include breakpoint($screen-sm-max){margin-top: -129px;}
+			@include breakpoint($screen-xs-max){margin-top: 0;}
+		}
+		.coll{
+			width: 100%;
+			background: $white;
+			.dark &{background: #191919;}
+		}
+		.block{padding: 16px 20px 20px;}
+	}
+}
+/*------------------------------------------------------------------
+11-4. archi projects Styles / .archi-projects
+-------------------------------------------------------------------*/
+.archi-projects{
+	@extend %boxreset;
+	line-height: 28px;
+	padding: 78px 0 100px;
+	font-family: $font-family-sans-serif;
+	@include element(after, 0, 0, 0, 0, rgba(255, 255, 255, 0.85));
+	&:after{
+		.dark &{background: rgba(42, 42, 42, 0.85);}
+	}
+	.stretch{z-index: -1;}
+	.heading-v2{h2{margin: 0 0 10px;}}
+	.img-box{
+		float: right;
+		max-width: 668px;
+		@include breakpoint($screen-md-max){max-width: 600px;}
+		@include breakpoint($screen-sm-max){
+			float: none;
+			max-width: 100%;
+		}
+		img{width: 100%;}
+	}
+	.text{
+		overflow: hidden;
+		background: rgba(255, 255, 255, 0.85);
+		padding: 32px 40px 54px 39px;
+		border: 1px solid $gainsboro;
+		@include breakpoint($screen-xs-max){
+			padding: 32px 20px 54px;
+		}
+		.dark &{
+			border-color: #494949;
+			background: rgba(42, 42, 42, 0.95);
+		}
+		p{margin: 0 0 32px;}
+	}
+	.btn-history{
+		color: $white;
+		background: $black;
+		padding: 11px 67px 11px 22px;
+	}
+	.title{
+		color: $black;
+		display: block;
+		font-size: 16px;
+		margin: 0 0 -7px;
+		font-weight: 300;
+		text-transform: uppercase;
+		.dark &{color: $white;}
+	}
+	.subtitle{
+		color: $lime;
+		display: block;
+		font-size: 13px;
+		margin: 0 0 21px;
+		text-transform: uppercase;
+		.dark &{color: $white;}
+	}
+	h3{
+		color: $black;
+		margin: 0 0 33px;
+		padding: 0 0 19px;
+		position: relative;
+		text-transform: uppercase;
+		font: 300 42px/40px $font-family-sans-serif;
+		.dark &{color: $white;}
+		.add{
+			display: block;
+			font-weight: 400;
+		}
+		&:after{
+			left: 0;
+			bottom: 0;
+			@extend %after;
+			@include size(36px, 4px);
+		}
+	}
+	.beans-slider .slick-dots{
+		bottom: 5px;
+		width: 473px;
+		text-align: right;
+		@include breakpoint($screen-sm-max){
+			width: 100%;
+			text-align: center;
+		}
+		li{
+			float: none;
+			padding:0 5px;
+			@include vertical-align(inline-block, top);
+			button{
+				border: 0;
+				margin: 0;
+				padding: 0;
+				display: block;
+				background: none;
+				overflow: hidden;
+				border-radius:50%;
+				text-indent: 9999px;
+				@include square(10px);
+				border:2px solid #c4c4c4;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+11-5. archi whyus Styles / .archi-whyus
+-------------------------------------------------------------------*/
+.archi-whyus{
+	color: #7d7d7d;
+	padding: 90px 0 113px;
+	font: 300 italic 15px/24px $font-family-sans-serif;
+	h2{
+		margin: 0 0 17px;
+		text-transform: uppercase;
+		font: 300 32px/40px $font-family-sans-serif;
+		.add{font-weight: 600;}
+	}
+	p{margin: 0 0 29px;}
+	.text-box{
+		width: 50%;
+		padding: 10px 0 0;
+		@include vertical-align(inline-block, middle);
+		@include breakpoint($screen-sm-max){
+			width: 100%;
+			display: block;
+		}
+	}
+	.img-box{
+		width: 48.5%;
+		margin: 0 0 0 1%;
+		@include vertical-align(inline-block, middle);
+		@include breakpoint($screen-sm-max){
+			width: 100%;
+			border-left: 0;
+			display: block;
+		}
+	}
+	.btn{
+		color: $white;
+		background: $black;
+		padding: 11px 66px 11px 19px;
+	}
+}

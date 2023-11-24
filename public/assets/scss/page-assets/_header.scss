@@ -1,0 +1,3678 @@
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1-2. icon list Styles / .icon-list
+1-3. header top Styles / .header-top
+1-4. header cent Styles / .header-cent
+1-5. head social Styles / .head-social
+1-6. language nav Styles / .language-nav
+1-7. top nav Styles / .top-nav
+1-8. head socialnetworks Styles / .head-socialnetworks
+1-9. cart box Styles / .cart-box
+1-10. lang drop Styles / .lang-drop
+1-11. cartopener main Styles / .cartopener-main
+1-12. header style2 Styles / .style2
+1-13. header style3 Styles / .style3
+1-14. header style4 Styles / .style4
+1-15. header style5 Styles / .style5
+1-16. header style6 Styles / .style6
+1-17. header style7 Styles / .style7
+1-18. header style8 Styles / .style8
+1-19. header style9 Styles / .style9
+1-20. header style10 Styles / .style10
+1-21. header style11 Styles / .style11
+1-22. header style12 Styles / .style12
+1-23. header style13 Styles / .style13
+1-24. header style14 Styles / .style14
+1-25. header style15 Styles / .style15
+1-26. header style16 Styles / .style16
+1-27. header style17 Styles / .style17
+1-28. header style18 Styles / .style18
+1-30. header style20 Styles / .style20
+1-31. header style21 Styles / .style21
+1-32. header style22 Styles / .style22
+1-33. header style23 Styles / .style23
+1-34. header style24 Styles / .style24
+1-35. header style25 Styles / .style25
+1-36. header style26 Styles / .style26
+1-37. header style27 Styles / .style27
+1-37-1. header style28 Styles / .style28
+1-37-2. header style29 Styles / .style29
+1-38. header fixed-position Styles / .fixed-position
+1-39. logo Styles / .logo
+1-40. logo v9 Styles / .logo-v9
+1-41. lancer logo Styles / .lancer-logo
+1-42. main navigation Styles / #nav
+1-43. search popup Styles / .search-popup
+1-44. menu nav Styles / .menu-nav
+1-45. side widget Styles / .side-widget
+1-46. sidemenu photo Styles / .sidemenu-photo
+1-47. nav7 Styles / #nav7
+-------------------------------------------------------------------*/
+a:focus{
+	outline: none;
+	text-decoration: none;
+}
+/*------------------------------------------------------------------
+1-1. header Styles / #header
+-------------------------------------------------------------------*/
+#header{
+	z-index: 9996;
+	padding: 46px 0 0;
+	@extend %postionreset;
+	bottom: auto !important;
+	@include transition (all, 0.4s, ease);
+	&:after{
+		opacity: 0;
+		z-index: -1;
+		@extend %after;
+		@extend %postionreset;
+		bottom: -20px !important;
+		@include transition (all, 0.4s, ease);
+		box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+	}
+	.holder{float: right;}
+	/*------------------------------------------------------------------
+	1-2. icon list Styles / .icon-list
+	-------------------------------------------------------------------*/
+	.icon-list{
+		margin: 0;
+		float: right;
+		position: relative;
+		@include breakpoint($screen-sm-max){
+			top: 0;
+			left: 50px;
+			float: none;
+			position: absolute;
+		}
+		> li{
+			float: right;
+			margin: 0 0 0 11px;
+			position: relative;
+			&:hover .lang-drop{display: block;}
+		}
+		&.social{
+			font-size: 15px;
+			a{
+				color: $lime;
+				.dark &{color: $white;}
+			}
+		}
+	}
+	.opener-icons{
+		float: right;
+		color: $white;
+		font-size: 17px;
+		padding: 5px 0 0;
+		text-align: center;
+		border-radius: 50%;
+		@include square(39px);
+		border: 2px solid $white;
+		@include transition (all, 0.4s, ease);
+		&.active,
+		&:hover{
+			text-decoration: none;
+			border-color: transparent;
+		}
+		.cart-num{
+			top: -11px;
+			right: -9px;
+			color: $stack;
+			display: none;
+			font-size: 14px;
+			font-weight: 700;
+			background: $white;
+			position: absolute;
+			border-radius: 50%;
+			@include square(24px);
+			border: 1px solid #333;
+		}
+	}
+	/*------------------------------------------------------------------
+	1-3. header top Styles / .header-top
+	-------------------------------------------------------------------*/
+	.header-top{
+		font-size: 12px;
+		line-height: 15px;
+		padding-top: 15px;
+		margin-bottom: 30px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		@include transition (all, 0.4s, ease);
+		@include element(after, auto, -9999px, 0, -9999px, $white);
+		&:after{
+			height: 1px;
+			opacity: 0.3;
+			display: block;
+		}
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-4. header cent Styles / .header-cent
+	-------------------------------------------------------------------*/
+	.header-cent{
+		padding-top: 18px;
+		padding-bottom: 20px;
+		@include transition (all, 0.4s, ease);
+		@include element(after, 0, -9999px, 0, -9999px, $white);
+		&:after{
+            display: block;
+            .dark &{background: #2a2a2a;}
+        }
+		.logo{margin: 0;}
+	}
+	/*------------------------------------------------------------------
+	1-5. head social Styles / .head-social
+	-------------------------------------------------------------------*/
+	.head-social{
+		float: right;
+		margin: 8px 0 0;
+		li{padding: 0 2px 0 0;}
+		a{
+			display: block;
+			font-size: 20px;
+			padding: 5px 0 0;
+			border-radius: 50%;
+			text-align: center;
+			@include square(42px);
+			border: 1px solid transparent;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-6. language nav Styles / .language-nav
+	-------------------------------------------------------------------*/
+	.language-nav{
+		float: left;
+		max-width: 300px;
+		margin: 0 0 0 8px;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			max-width: 100%;
+			text-align: center;
+		}
+		li{
+			padding: 0 8px 0 4px;
+			@include breakpoint($screen-xs-max){
+				padding: 0 8px;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-7. top nav Styles / .top-nav
+	-------------------------------------------------------------------*/
+	.top-nav{
+		float: right;
+		max-width: 600px;
+		margin: 0 -9px 0 0;
+		@include breakpoint($screen-xs-max){
+			margin: 0;
+			float: none;
+			max-width: 100%;
+			text-align: center;
+		}
+		li{
+			padding: 0 1px 0 20px;
+			@include breakpoint($screen-xs-max){
+				padding: 0 8px;
+			}
+		}
+		&.style2 li{
+			line-height: 1;
+			font-size: 18px;
+			padding: 0 0 0 11px;
+			margin: -3px 0 -2px;
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+				padding: 0 4px;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-8. head socialnetworks Styles / .head-socialnetworks
+	-------------------------------------------------------------------*/
+	.head-socialnetworks{
+		margin: 0;
+		float: right;
+		font-size: 15px;
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+		li{
+			padding: 0;
+			margin: 0 0 0 14px;
+		}
+	}
+	/*------------------------------------------------------------------
+	1-9. cart box Styles / .cart-box
+	-------------------------------------------------------------------*/
+	.cart-box{
+		float: right;
+		margin: 0 0 0 11px;
+		position: relative;
+		&:hover{
+			.cart-drop{display: block;}
+			.opener-icons{
+				color:  $white;
+				border-color: transparent;
+				.cart-num{display: block;}
+			}
+			.cartopener-main .cart-num{display: block;}
+		}
+		.main-title{
+			color: $stack;
+			display: block;
+			font-size: 13px;
+			margin: 0 0 14px;
+			line-height: 20px;
+            letter-spacing: 2px;
+			text-transform: uppercase;
+			padding: 18px 10px 11px 20px;
+			border-bottom: 1px solid #333;
+		}
+		.cart-drop {
+			top: 40px;
+			z-index: 100;
+			width: 257px;
+			right: -13px;
+			display: none;
+			padding: 13px 0 0;
+			position: absolute;
+			@include breakpoint($screen-sm-max){
+				left: -45px;
+				right: auto;
+			}
+			.cart-holder{
+				position: relative;
+				background: #2a2a2a;
+				border: 1px solid #3a3a3a;
+				&:after{
+					top: -2px;
+					left: -1px;
+					right: -1px;
+					height: 2px;
+					@extend %after;
+				}
+			}
+			a{
+				color: $white;
+                font-weight: 500;
+				&:hover{text-decoration: none;}
+			}
+			.title {
+				color: $stack;
+				display: block;
+				margin: 0 0 7px;
+				font-weight: normal;
+				font-family: $font-family-serif;
+				a{color: $stack;}
+			}
+			.btn-list {
+				text-align: center;
+				li {
+					width: 45%;
+					padding: 0;
+					margin: 0 1.1% 15px 1.4%;
+					@include vertical-align(inline-block, top);
+				}
+			}
+			.total-price-area {
+				font-size: 13px;
+				overflow: hidden;
+				margin: -3px 0 15px;
+				padding: 0 21px 12px;
+				border-bottom: 1px solid #333;
+				.title-text {
+					float: left;
+					width: 111px;
+					color: $stack;
+					font-weight: 700;
+				}
+				.price {
+					float: right;
+					overflow: hidden;
+					font-weight: 900;
+				}
+			}
+			.btn{
+				padding: 8px;
+				color: $white;
+				display: block;
+				border-width: 2px;
+				text-transform: uppercase;
+				@include transition (all, 0.4s, ease);
+				&:hover{
+					color: $stack;
+					border-color: $stack;
+					background: transparent;
+				}
+				&.add{
+					color: $stack;
+					border-color: $stack;
+					background: transparent;
+					&:hover{color: $white;}
+				}
+			}
+		}
+		.cart-list {
+			overflow: hidden;
+			font-family: $font-family-sans-serif;
+			> li {
+				overflow: hidden;
+				margin: 0 0 15px;
+				position: relative;
+				padding: 0 20px 19px 23px;
+				border-bottom: 1px solid #333;
+			}
+			.image {
+				float: left;
+				overflow: hidden;
+				margin: 0 19px 0 0;
+				border-radius: 50%;
+				a {
+					display: block;
+					outline: none;
+				}
+				img {
+					border-radius: 50%;
+					@extend %img-responsive;
+				}
+			}
+			.description {
+				overflow: hidden;
+				position: relative;
+				padding: 9px 0 0 2px;
+			}
+			.price-area {
+				right: 2px;
+				bottom: -2px;
+				color: $stack;
+				font-size: 12px;
+				position: absolute;
+			}
+			.product-name {
+				color: $stack;
+				display: block;
+				margin: 0 0 5px;
+				font-size: 13px;
+				font-weight: 700;
+				text-transform: uppercase;
+				a{@include transition (all, 0.4s, ease);}
+			}
+			.rating {
+				margin: 0;
+				font-size: 12px;
+				padding: 0 0 0 1px;
+				li {
+					padding: 0;
+					margin: 0 -2px 0 -2px;
+					a:hover{text-decoration: none;}
+				}
+			}
+			.fa-star-o{color: $stack;}
+			.quantity {
+				position: relative;
+				padding: 0 0 0 13px;
+				@include vertical-align(inline-block, middle);
+			}
+			.price {@include vertical-align(inline-block, middle);}
+			.delete {
+				top: 5px;
+				right: 22px;
+				color: #5d5d5d;
+				font-size: 14px;
+				line-height: 25px;
+				position: absolute;
+				@include transition (all, 0.4s, ease);
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-10. lang drop Styles / .lang-drop
+	-------------------------------------------------------------------*/
+	.lang-drop{
+		right: 0;
+		top: 100%;
+		width: 100px;
+		display: none;
+		font-size: 13px;
+		position: absolute;
+		text-transform: uppercase;
+		border-radius: 0 0 5px 5px;
+		border-bottom: 2px solid transparent;
+		ul{
+			margin: 38px 0 0;
+			overflow: hidden;
+			background: $white;
+			padding: 10px 15px 0;
+			.dark &{background: #2a2a2a;}
+			@include breakpoint($screen-sm-max){
+				margin: 8px 0 0;
+			}
+			li{margin: 0 0 10px;}
+			a{
+				color: $lime;
+				text-decoration: none;
+				@include transition (all, 0.4s, ease);
+				.dark &{color: $white;}
+			}
+		}
+	}
+	.leng-opener{
+		color: $lime;
+		text-transform: uppercase;
+		&:hover{text-decoration: none;}
+	}
+	/*------------------------------------------------------------------
+	1-11. cartopener main Styles / .cartopener-main
+	-------------------------------------------------------------------*/
+	.cartopener-main{
+		color: $lime;
+		font-size: 15px;
+		position: relative;
+		.cart-num{
+			top: -15px;
+			right: -13px;
+			color: $white;
+			display: none;
+			font-size: 14px;
+			padding: 2px 0 0;
+			font-weight: 700;
+			text-align: center;
+			position: absolute;
+			border-radius: 50%;
+			@include square(24px);
+		}
+		.dark &{color: $white;}
+	}
+	/*------------------------------------------------------------------
+	1-12. header style2 Styles / .style2
+	-------------------------------------------------------------------*/
+	&.style2{
+		padding: 0;
+		.logo{margin: -5px 0 0;}
+		.top-nav,
+		.language-nav{margin: 0;}
+		@include breakpoint($screen-xs-max){.header-top{margin-bottom: 15px;}}
+		#nav{
+			.nav-top{margin: 9px 10px 0 0;}
+			.mega-drop{
+				left: 15px;
+				right: 15px;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-13. header style3 Styles / .style3
+	-------------------------------------------------------------------*/
+	&.style3{
+		padding: 0;
+		.header-top{padding-top: 20px;}
+		.holder{width:100%;}
+		.logo{margin: 0;}
+		.icon-list{
+			margin: 7px 3px 19px 0;
+			@include breakpoint($screen-sm-max){
+				margin: 28px 0 19px -45px;
+			}
+		}
+		.opener-icons{
+			padding: 8px 0 0;
+			border-radius: 0;
+			border-width: 1px;
+			@include square(36px);
+			border-color: rgba(255, 255, 255, 0.4);
+			&:hover{color: $white;}
+		}
+		.cart-opener{
+			display: block;
+			position: relative;
+			text-transform: capitalize;
+			padding: 9px 55px 10px 21px;
+			background: rgba(255, 255, 255, 0.18);
+			.arrow{
+				top: 0;
+				right: 0;
+				bottom: 0;
+				position: absolute;
+				padding: 7px 6px 0 13px;
+				.fa{font-size: 17px;}
+			}
+			.fa{
+				font-size: 13px;
+				padding: 0 5px 0 0;
+				@include vertical-align(inline-block, middle);
+			}
+			.txt{
+				font-size: 13px;
+				@include vertical-align(inline-block, middle);
+			}
+			&:hover{color: $white;}
+		}
+		#nav{
+			float: left;
+			max-width: 75%;
+			@include breakpoint($screen-sm-max){float: none;}
+			.nav-opener{top: -6px;}
+			.nav-top{
+				margin: 0;
+				> li{
+					margin: 0 22px 0 0;
+					@include breakpoint($screen-md-max){margin: 0 18px 0 0;}
+					@include breakpoint($screen-sm-max){margin: 0 0 15px;}
+				}
+			}
+			.drop ul{
+				margin: 7px 0 0;
+				.drop ul{margin: 0;}
+			}
+			.mega-drop{
+				right: 15px;
+				@include breakpoint($screen-sm-max){top: 100%;}
+				.drop-holder{margin: 0;}
+			}
+		}
+		.cart-box .cart-drop{
+			top: 35px;
+			@include breakpoint($screen-xs-max){left: 0;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-14. header style4 Styles / .style4
+	-------------------------------------------------------------------*/
+	&.style4{
+		padding: 25px 0 0;
+		background: rgba(255, 255, 255, 0.95);
+		@include breakpoint($screen-sm-max){padding: 20px 0;}
+		.dark &{background: rgba(42, 42, 42, 0.95);}
+		.holder{padding: 8px 0 0;}
+        .logo{
+            .b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+            .w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+        }
+		.opener-icons{
+			border: 0;
+			padding: 0;
+			width: auto;
+			color: $lime;
+			height: auto;
+			font-size: 16px;
+			.dark &{color: $white;}
+			&:hover{background: transparent;}
+		}
+		.cartopener-main{
+			.dark &{color: $white;}
+		}
+		.leng-opener{
+			.dark &{color: $white;}
+		}
+		.icon-list{
+			@include breakpoint($screen-sm-max){top: 8px;}
+			> li{margin: 0 0 0 20px;}
+		}
+		.cart-box .cart-drop{
+			top: 19px;
+			padding: 39px 0 0;
+			@include breakpoint($screen-sm-max){padding: 9px 0 0;}
+			@include breakpoint($screen-xs-max){padding: 25px 0 0;}
+		}
+		#nav{
+			.nav-top{
+				margin: 0;
+				> li{
+					margin: 0 0 0 2px;
+					> a{
+						color: $lime;
+						display: block;
+						padding: 0 10px 34px;
+						border-bottom: 4px solid transparent;
+						.dark &{color: $white;}
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+					}
+				}
+			}
+			.drop ul{margin: 1px 0 0;}
+			.mega-drop{
+				top: 32px;
+				right: 15px;
+			}
+			.nav-opener{
+				color: $lime;
+				border-color: $lime;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-15. header style5 Styles / .style5
+	-------------------------------------------------------------------*/
+	&.style5{
+		z-index: 9999;
+		top: 0 !important;
+		padding: 20px 0 14px;
+		position: relative !important;
+		@include breakpoint($screen-xs-max){
+			position: absolute !important;
+			&:after{
+				background: $white;
+				.dark &{background: #2a2a2a;}
+			}
+		}
+		&:after{
+			opacity: 1;
+			bottom: 0 !important;
+		}
+		.logo{
+			margin: -3px 0 0;
+			.b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+			.w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+		}
+		.opener-icons{
+			color: $storm-dust;
+			border-color: $storm-dust;
+			.dark &{
+				color: $white;
+				border-color: $white;
+			}
+			&:hover{color: $white;}
+		}
+		#nav{
+			margin: 1px -4px 0 0;
+			.nav-top > li > a{
+				color: $storm-dust;
+				.dark &{color: $white;}
+			}
+			.drop ul{
+				margin: 31px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+				.drop ul{margin: 0;}
+			}
+			.mega-drop .drop-holder{
+				margin: 35px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+			}
+			.nav-opener{
+				top: 5px;
+				color: $storm-dust;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+		.cart-box .cart-drop{
+			top: 38px;
+			padding: 25px 0 0;
+		}
+		.icon-list{
+			@include breakpoint($screen-sm-max){
+				left: 50px;
+				top: 5px;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-16. header style6 Styles / .style6
+	-------------------------------------------------------------------*/
+	&.style6{
+		top: auto;
+		bottom: 0;
+		background: $shark;
+		padding: 16px 0 14px;
+		@include breakpoint($screen-xs-max){
+			top: 0;
+			bottom: auto;
+		}
+		.logo{
+			margin: 0 0 0 8px;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				width: 196px;
+				display: block;
+				margin: 0 auto 8px;
+			}
+		}
+		.holder{margin: 5px 0 0;}
+		#nav{
+			.drop{
+				ul{margin: 29px 0 0;}
+				.drop ul{margin: 0;}
+			}
+			.mega-drop .drop-holder{margin: 44px 0 0;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-17. header style7 Styles / .style7
+	-------------------------------------------------------------------*/
+	&.style7{
+		z-index: 9999;
+		padding: 30px 0 0;
+		@include breakpoint($screen-xs-max){
+			padding: 0;
+			background: $white;
+			.dark &{background: #2a2a2a;}
+		}
+		&:after{bottom: 0 !important;}
+		.container .row{
+			margin: 0;
+			background: $white;
+			@include breakpoint($screen-sm-max){padding-bottom: 15px;}
+			.dark &{background: #2a2a2a;}
+		}
+		.opener-icons{
+			color: $lime;
+			.dark &{color: $white;}
+			&:hover{background: transparent;}
+		}
+		.logo{
+            margin: 20px 0 0 16px;
+            .b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+            .w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+        }
+		.holder{
+			padding: 31px 12px 0 0;
+			@include breakpoint($screen-sm-max){padding: 0;}
+		}
+		.opener-icons{
+			border: 0;
+			padding: 0;
+			width: auto;
+			height: auto;
+			font-size: 16px;
+		}
+		.icon-list{
+			@include breakpoint($screen-sm-max){top: 36px;}
+			@include breakpoint($screen-xs-max){display: none;}
+			> li{margin: 0 4px 0 16px;}
+		}
+		#nav{
+			.nav-top{
+				margin: 3px 0 0;
+				> li{
+					margin: 0 0 0 2px;
+					> a{
+						color: $shark;
+						display: block;
+						padding: 0 10px 29px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						.dark &{color: $white;}
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+					}
+				}
+			}
+			.drop ul{margin: 1px 0 0;}
+			.mega-drop{
+				left: 0;
+				right: 0;
+				top: 54px;
+			}
+			.nav-opener{top: 28px;}
+			.nav-opener{
+				color: $lime;
+				border-color: $lime;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-18. header style8 Styles / .style8
+	-------------------------------------------------------------------*/
+	&.style8{
+		padding: 0;
+		background: $white;
+		.dark &{background: $lime;}
+		&:after{bottom: 0 !important;}
+		.header-top{
+			margin-bottom: 25px;
+			@include breakpoint($screen-xs-max){
+				li{padding: 0 2px;}
+			}
+			&:after{
+				opacity: 1;
+				height: 100%;
+				background: $shark;
+			}
+			.fa{margin: 0 3px 0 0;}
+		}
+		.logo{
+			margin: -5px 0 0;
+			@include breakpoint($screen-sm-max){margin: -5px 0 15px;}
+			.w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+			.b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+		}
+		.top-nav,
+		.language-nav{margin: 0;}
+		#nav{
+			.nav-top{
+				margin: 9px 10px 0 0;
+				> li{
+					color: $shark;
+					margin: 0 0 0 2px;
+					.dark &{color: $white;}
+					> a{
+						color: $lime;
+						display: block;
+						padding: 0 10px 29px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+						.dark &{color: $white;}
+					}
+				}
+			}
+			.drop ul{margin: 0;}
+			.mega-drop{
+				top: 28px;
+				left: 15px;
+				right: 15px;
+				@include breakpoint($screen-sm-max){
+					.drop-holder{margin: 25px 0 0;}
+				}
+			}
+			.nav-opener{
+				color: $storm-dust;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+		.icon-list{
+			margin: 1px 4px 0 -10px;
+			@include breakpoint($screen-sm-max){margin: 1px 4px 0;}
+		}
+		.opener-icons{
+			border: 0;
+			color: $shark;
+			@include square(auto);
+			.dark &{color: $white;}
+			&:hover{background: transparent;}
+		}
+		.cart-box{
+			margin: 0;
+			@include breakpoint($screen-xs-max){float: none;}
+			.cart-drop{
+				top: 100%;
+				padding: 21px 0 0;
+				@include breakpoint($screen-sm-max){
+					left: auto;
+					right: 0;
+					text-align: left;
+				}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-19. header style9 Styles / .style9
+	-------------------------------------------------------------------*/
+	&.style9{
+		padding: 22px 0 16px;
+		position: relative;
+		&:after{
+			opacity: 1;
+			background: $shark;
+			visibility: visible;
+			bottom: 0 !important;
+		}
+		#nav {
+			.drop ul{
+				margin: 31px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+				ul{margin: 0;}
+			}
+			.mega-drop{top: 25px;}
+			.nav-top{margin-right: 0;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-20. header style10 Styles / .style10
+	-------------------------------------------------------------------*/
+	&.style10{
+		padding: 22px 0 0;
+		position: relative;
+		@include breakpoint($screen-sm-max){
+			padding: 22px 0 15px;
+		}
+		&:after{
+			opacity: 1;
+			background: $shark;
+			visibility: visible;
+			bottom: 0 !important;
+		}
+		#nav{
+			.drop ul{margin: 0;}
+			.nav-top{
+				margin: 9px 7px 0 0;
+				> li{
+					margin: 0;
+					> a{
+						display: block;
+						padding: 0 11px 24px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+					}
+				}
+			}
+		}
+		.mega-drop{top: 23px;}
+		.cart-box .cart-drop{padding: 19px 0 0;}
+	}
+	/*------------------------------------------------------------------
+	1-21. header style11 Styles / .style11
+	-------------------------------------------------------------------*/
+	&.style11{
+		padding: 27px 0 0;
+		&:after{
+			opacity: 1;
+			background: $white;
+			visibility: visible;
+			bottom: 0 !important;
+			.dark &{background: $lime;}
+		}
+		.logo{
+			float: none;
+			width: 261px;
+			height: auto;
+			display: block;
+			margin: 0 auto 27px;
+			@include breakpoint($screen-sm-max){
+				width: 180px;
+				float: right;
+				margin: 0 auto 20px;
+			}
+			.w-logo{.dark &{display: none;}}
+			.b-logo{.dark &{display: block;}}
+		}
+		#nav{
+			float: none;
+			text-align: center;
+			position: relative;
+			border-top: 1px solid #e9e9e9;
+			.dark &{border-color: #494949;}
+			@include breakpoint($screen-sm-max){border: 0;}
+			.drop ul{
+				margin: 0;
+				text-align: left;
+			}
+			.nav-top{
+				margin: 11px 0 0 11px;
+				> li{
+					margin: 0;
+					> a{
+						color: $shark;
+						display: block;
+						padding: 0 11px 11px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						.dark &{color: $white;}
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+					}
+				}
+			}
+			.mega-drop{
+				top: 100%;
+				text-align: left;
+				.drop-holder{margin: 0;}
+			}
+			.nav-opener{
+				margin: -9px 0 0;
+				color: $storm-dust;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-22. header style12 Styles / .style12
+	-------------------------------------------------------------------*/
+	&.style12{
+		padding: 0;
+		@include breakpoint($screen-sm-max){
+			.head-social{display: none;}
+		}
+        .logo{
+            .w-logo{
+                display: none;
+                .dark &{display: block;}
+            }
+            .b-logo{
+                display: block;
+                .dark &{display: none;}
+            }
+        }
+		.info-list{
+			margin: 0;
+			float: left;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 17px;
+			text-transform: uppercase;
+			@include breakpoint($screen-xs-max){float: none;}
+			li{
+				padding: 0 24px 0 0;
+				@include breakpoint($screen-xs-max){
+					display: block;
+					padding: 0 0 10px;
+					text-align: center;
+				}
+			}
+			a{
+				color: $lime;
+				@include transition (all, 0.4s, ease);
+                .dark &{color: $white;}
+				&:hover{
+					.fa{
+                        color: $lime;
+                        .dark &{color: $white;}
+                    }
+					text-decoration: none;
+				}
+			}
+			.fa{padding: 0 2px 0 0;}
+		}
+		.language-nav{
+			float: right;
+			margin: 0;
+			font-weight: 700;
+			@include breakpoint($screen-xs-max){float: none;}
+			ul{margin: 0;}
+			li{padding: 0 2px 0 10px;}
+			a{
+				color: $lime;
+				@include transition (all, 0.4s, ease);
+                .dark &{color: $white;}
+				&:hover{
+					.fa{
+                        color: $lime;
+                        .dark &{color: $white;}
+                    }
+					text-decoration: none;
+				}
+			}
+		}
+		.header-top{
+			margin: 0;
+			padding-bottom: 19px;
+			@include breakpoint($screen-xs-max){
+				display: none;
+			}
+			&:after{
+				top: 0;
+				opacity: 1;
+				height: auto;
+				background: $wild-sand;
+                .dark &{background: #191919;}
+			}
+		}
+		#nav{
+			margin: 0;
+			float: left;
+			width: 100%;
+			@include element(after, 0, -9999px, 0, -9999px, transparent);
+			.nav-holder{
+				float: left;
+				width: 100%;
+				@include breakpoint($screen-sm-max){
+					float: none;
+					width: 240px;
+				}
+			}
+			.logo{
+				display: none;
+				margin: 10px 55px 0 0;
+				@include breakpoint($screen-sm-max){
+					margin: 10px 15px 0 0;
+				}
+			}
+			.nav-top{
+				float: left;
+				margin: 18px 0 0 -9px;
+				@include breakpoint($screen-sm-max){
+					margin: 0;
+					float: none;
+				}
+				> li{
+					margin: 0 22px 0 0;
+					@include breakpoint($screen-sm-max){margin: 0;}
+					> a{
+						display: block;
+						padding: 0 8px 15px;
+						border-bottom: 6px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){border-bottom: 0;}
+						&:hover{
+							color: $lime;
+							border-bottom-color: $lime;
+						}
+					}
+					&:hover,
+					&.hover,
+					&.active{
+						> a{
+							color: $lime;
+							border-bottom-color: $lime;
+						}
+					}
+				}
+			}
+			.drop ul{margin: 0;}
+			.mega-drop{
+				right: 0;
+				top: 100%;
+				left: -9px;
+				.drop-holder{margin: 1px 0 0;}
+			}
+			.nav-opener{
+				color: $storm-dust;
+				margin: -60px 0 0 -15px;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+			.quote-btn{
+				float: right;
+				color: $white;
+				overflow: hidden;
+				background: $lime;
+				text-transform: uppercase;
+				padding: 20px 31px 21px 33px;
+				@include transition (all, 0.4s, ease);
+				font: 600 14px/18px $font-family-sans-serif;
+				@include breakpoint($screen-sm-max){
+					float: none;
+					display: none;
+				}
+				&:hover{background: $white;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-23. header style13 Styles / .style13
+	-------------------------------------------------------------------*/
+	&.style13{
+		padding: 23px 0 0;
+		.icon-list{
+			margin: 0 0 0 40px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				top: 0;
+				left: 15px;
+				position: absolute;
+			}
+			&:after{
+				width: 1px;
+				top: -50px;
+				left: -22px;
+				bottom: -23px;
+				@extend %after;
+				background: rgba(255, 255, 255, 0.5);
+				.dark &{background: rgba(42, 42, 42, 0.5);}
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+		}
+		.cart-box .cart-drop{padding: 25px 0 0;}
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			bottom: -20px;
+			@extend %after;
+			background: rgba(255, 255, 255, 0.5);
+			.dark &{background: rgba(42, 42, 42, 0.5);}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-24. header style14 Styles / .style14
+	-------------------------------------------------------------------*/
+	&.style14{
+		padding: 23px 0 0;
+		.logo{
+			position: relative;
+			&:after{
+				width: 1px;
+				top: -50px;
+				right: -25px;
+				bottom: -20px;
+				@extend %after;
+				background: rgba(255, 255, 255, 0.5);
+				.dark &{background: rgba(42, 42, 42, 0.5);}
+				@include breakpoint($screen-md-max){bottom: -18px;}
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+		}
+		.icon-list{
+			margin: -29px 0 0 40px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				top: 0;
+				margin: 0;
+				left: 55px;
+				position: absolute;
+			}
+			&:after{
+				width: 1px;
+				top: -50px;
+				left: -22px;
+				bottom: -23px;
+				@extend %after;
+				background: rgba(255, 255, 255, 0.5);
+				.dark &{background: rgba(42, 42, 42, 0.5);}
+				@include breakpoint($screen-md-max){bottom: -18px;}
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+		}
+		.cart-box .cart-drop{padding: 25px 0 0;}
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			bottom: -20px;
+			@extend %after;
+			background: rgba(255, 255, 255, 0.5);
+			.dark &{background: rgba(42, 42, 42, 0.5);}
+		}
+		#nav{
+			width: 70%;
+			float: none;
+			margin: 0 auto;
+			text-align: center;
+			@include breakpoint($screen-sm-max){
+				float: left;
+				width: 100%;
+			}
+			.nav-top > li{text-align: left;}
+			.drop ul{
+				margin: 35px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+				ul{margin: 0;}
+			}
+			.mega-drop{
+				left: 0;
+				right: 0;
+			}
+			.nav-opener{@include breakpoint($screen-sm-max){margin: 0;}}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-25. header style15 Styles / .style15
+	-------------------------------------------------------------------*/
+	&.style15{
+		padding: 5px 0 0;
+		@include breakpoint($screen-xs-max){
+			padding: 5px 0 10px;
+			.logo{
+				.b-logo{display: none;}
+				.w-logo{display: block;}
+			}
+		}
+		.info-list{
+			float: right;
+			font-size: 13px;
+			margin: 0 -4px 0 0;
+			text-transform: lowercase;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				margin: 0 0 10px;
+				text-align: center;
+			}
+			.fa{margin: 0 3px 0 00;}
+		}
+		.header-top{
+			margin: 0 0 30px;
+			@include breakpoint($screen-xs-max){
+				margin: 0 0 10px;
+			}
+			&:after{display: none;}
+		}
+		.head-socialnetworks{
+			float: left;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				text-align: center;
+			}
+			li{margin: 0 15px 0 -1px;}
+		}
+		&:after{
+			top: 53px;
+			opacity: 0.2;
+			background: $white;
+			bottom: -16px !important;
+			@include breakpoint($screen-xs-max){
+				top: 0;
+				opacity: 0;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-26. header style16 Styles / .style16
+	-------------------------------------------------------------------*/
+	&.style16{
+		padding: 0;
+		background: $white;
+        .dark &{background: #2a2a2a;}
+		&:after{bottom: 0 !important;}
+		.header-top{
+			margin-bottom: 25px;
+			@include breakpoint($screen-xs-max){
+				li{padding: 0 2px;}
+			}
+			&:after{
+				opacity: 1;
+				height: 100%;
+				background: $shark;
+                .dark &{background: #191919;}
+			}
+			.fa{margin: 0 3px 0 0;}
+		}
+        .logo{
+            margin: -5px 0 0;
+            @include breakpoint($screen-sm-max){margin: -5px 0 15px;}
+            .w-logo{
+                display: none;
+                .dark &{display: block;}
+            }
+            .b-logo{
+                display: block;
+                .dark &{display: none;}
+            }
+        }
+		.top-nav{
+			margin: 0;
+			float: left;
+			@include breakpoint($screen-xs-max){float: none;}
+			li{padding: 0 18px 0 4px;}
+		}
+		.language-nav{
+			margin: 0;
+			float: right;
+			@include breakpoint($screen-xs-max){float: none;}
+			li{padding: 0 6px 0 6px;}
+		}
+		#nav{
+			.nav-top{
+				margin: 9px 10px 0 0;
+				> li{
+					margin: 0 0 0 2px;
+					> a{
+						color: $shark;
+						display: block;
+						padding: 0 10px 29px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+                        .dark &{color: $white;}
+					}
+				}
+			}
+			.drop ul{margin: 0;}
+			.mega-drop{
+				top: 28px;
+				left: 15px;
+				right: 15px;
+			}
+			.nav-opener{
+				color: $storm-dust;
+				border-color: $storm-dust;
+                .dark &{
+                    color: $white;
+                    border-color: $white;
+                }
+				&:hover{color: $white;}
+			}
+		}
+        .opener-icons{
+			border: 0;
+            color: $shark;
+			@include square(auto);
+            .dark &{color: $white;}
+            &:hover{background: transparent;}
+        }
+		.icon-list{
+			margin: 1px 4px 0 -10px;
+			@include breakpoint($screen-sm-max){
+				margin: 1px 4px 0;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-27. header style17 Styles / .style17
+	-------------------------------------------------------------------*/
+	&.style17{
+		padding: 22px 0 0;
+		@include breakpoint($screen-sm-max){padding: 22px 0;}
+		&:after{
+			opacity: 1;
+			background: $shark;
+			visibility: visible;
+			bottom: 0 !important;
+		}
+		#nav{
+			.drop ul{margin: 0;}
+			.nav-top{
+				margin: 9px 7px 0 0;
+				> li{
+					margin: 0;
+					> a{
+						display: block;
+						padding: 0 11px 24px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+					}
+				}
+			}
+		}
+		.mega-drop{top: 22px;}
+	}
+	/*------------------------------------------------------------------
+	1-28. header style18 Styles / .style18
+	-------------------------------------------------------------------*/
+	&.style18{
+		padding: 0;
+		background: $white;
+		@include breakpoint($screen-xs-max){padding: 10px 0;}
+        .dark &{background: $shark;}
+		.header-top{
+			margin: 0 0 17px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			background: $wild-sand;
+			@include breakpoint($screen-xs-max){display: none;}
+            .dark &{background: #191919;}
+		}
+		.info-list{
+			float: left;
+			font-weight: 700;
+			margin: 0 0 0 -6px;
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+				float: none;
+				text-align: center;
+			}
+			.fa{
+				margin: -1px 3px 0 0;
+				@include transition (all, 0.4s, ease);
+				@include breakpoint($screen-xs-max){margin: 0 0 15px;}
+			}
+			li{padding-right: 9px;}
+			a{
+				color: $lime;
+                .dark &{color: $white;}
+				&:hover .fa{
+                    color: $lime;
+                    .dark &{color: $white;}
+                }
+			}
+		}
+		.head-socialnetworks{
+			float: right;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				text-align: center;
+			}
+			li{margin: 2px 7px 0 22px;}
+			a{
+				color: $gainsboro;
+				@include transition (all, 0.4s, ease);
+                .dark &{color: $white;}
+			}
+		}
+		#nav{
+			.nav-holder{@extend %clearfix;}
+			.quote-btn{
+				float: right;
+				color: $white;
+				min-width: 186px;
+				padding: 14px 10px;
+				text-align: center;
+				margin: 4px 3px 0 0;
+				text-transform: uppercase;
+				font: 500 14px/20px $font-family-sans-serif;
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+			.drop ul{margin: 0;}
+			.nav-top{
+				float: left;
+				margin: 15px 7px 0 0;
+				@include breakpoint($screen-sm-max){
+					margin: 0;
+					float: none;
+				}
+				> li{
+					margin: 0 17px 0 0;
+					@include breakpoint($screen-md-max){margin: 0 12px 0 0;}
+					&:hover,
+					&.hover,
+					&.active >a{
+                        color: $lime;
+                        .dark &{color: $white;}
+                    }
+					> a{
+						color: $lime;
+						display: block;
+                        font-weight: 600;
+						padding: 0 7px 30px;
+						letter-spacing: 1px;
+                        font-family: $font-family-sans-serif;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+                        .dark &{color: $white;}
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+						&:hover{
+                            color: $lime;
+                            .dark &{color: $white;}
+                        }
+					}
+				}
+			}
+			.nav-opener{
+				margin: 11px 0 0;
+				color: $storm-dust;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+		.mega-drop{
+			top: 25px;
+			.drop-holder{
+				margin: 45px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+			}
+		}
+		.logo{
+            margin: 0;
+            @include breakpoint($screen-sm-max){margin: 0 0 15px;}
+            @include breakpoint($screen-xs-max){margin: 0;}
+            .w-logo{
+                display: none;
+                .dark &{display: block;}
+            }
+            .b-logo{
+                display: block;
+                .dark &{display: none;}
+            }
+        }
+	}
+	/*------------------------------------------------------------------
+	1-30. header style20 Styles / .style20
+	-------------------------------------------------------------------*/
+	&.style20{
+		padding: 25px 0 0;
+		background: $white;
+		.dark &{background: $shark;}
+		&:after{bottom: 0 !important;}
+		.logo{
+			margin: -5px 0 0;
+			@include breakpoint($screen-sm-max){margin: -5px 0 15px;}
+		}
+		#nav{
+			.nav-top{
+				margin: 9px 10px 0 0;
+				> li{
+					margin: 0 0 0 2px;
+					> a{
+						color: $shark;
+						display: block;
+						padding: 0 10px 29px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+						.dark &{color: $white;}
+					}
+				}
+			}
+			.nav-opener{
+				color: $storm-dust;
+				border-color: $storm-dust;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{
+					color: $white;
+				}
+			}
+			.drop ul{margin: 0;}
+			.mega-drop{
+				top: 28px;
+				left: 15px;
+				right: 15px;
+			}
+		}
+		.icon-list{
+			margin: 1px 4px 0 -10px;
+			@include breakpoint($screen-sm-max){margin: 1px 4px 0 0;}
+		}
+		.opener-icons{
+			border: 0;
+			color: $shark;
+			@include square(auto);
+			.dark &{color: $white;}
+			&:hover{background: transparent;}
+		}
+		.logo{
+			.b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+			.w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-31. header style21 Styles / .style21
+	-------------------------------------------------------------------*/
+	&.style21{
+		padding: 0;
+		background: $white;
+        .dark &{ background: $lime;}
+		&:after{bottom: 0 !important;}
+		.header-top{
+			margin-bottom: 25px;
+			@include breakpoint($screen-xs-max){
+				li{padding: 0 2px 2px;}
+			}
+			&:after{
+				opacity: 1;
+				height: 100%;
+                .dark &{background: #191919;}
+            }
+			.fa{margin: 2px 3px 0 0;}
+			a:hover{
+				color: $white;
+				.dark &{color: $white;}
+			}
+		}
+		.logo{
+			margin: -5px 0 0;
+            @include breakpoint($screen-sm-max){margin: -5px 0 15px;}
+			.b-logo{
+                display: block;
+                .dark &{display: none;}
+            }
+			.w-logo{
+                display: none;
+                .dark &{display: block;}
+            }
+		}
+		.info-list{
+			margin: 0;
+			float: left;
+			color: $white;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				text-align: center;
+			}
+		}
+		.top-nav{
+			margin: 0;
+			li{vertical-align: top;}
+			.fa{vertical-align: top;}
+		}
+		#nav{
+			.nav-top{
+				margin: 9px 10px 0 0;
+				> li{
+					margin: 0 0 0 2px;
+					> a{
+						color: $shark;
+						display: block;
+						font-weight: 500;
+						padding: 0 10px 29px;
+						border-bottom: 4px solid transparent;
+						@include transition (all, 0.4s, ease);
+						font-family: $font-family-sans-serif;
+						@include breakpoint($screen-sm-max){
+							border-bottom: 0;
+							padding: 0 10px 10px;
+						}
+                        .dark &{color: $white;}
+					}
+				}
+			}
+			.drop ul{margin: 0;}
+			.mega-drop{
+				top: 28px;
+				left: 15px;
+				right: 15px;
+			}
+		}
+		.icon-list{
+			margin: 1px 4px 0 -10px;
+			@include breakpoint($screen-sm-max){margin: 1px 4px 0 0;}
+			&.social{
+				margin: 9px 0 0;
+				li{
+					margin: 0 5px 0 14px;
+					@include breakpoint($screen-md-max){margin: 0 4px;}
+				}
+			}
+		}
+		#nav .nav-opener{
+			color: $storm-dust;
+			border-color: $storm-dust;
+            .dark &{
+                color: $white;
+                border-color: $white;
+            }
+			&:hover{color: $white;}
+		}
+		.opener-icons{
+			border: 0;
+			color: $shark;
+			@include square(auto);
+            .dark &{ color: $white;}
+			&:hover{background: transparent;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-32. header style22 Styles / .style22
+	-------------------------------------------------------------------*/
+	&.style22{
+		padding: 0;
+		.logo{
+			margin: -5px 0 0;
+			@include breakpoint($screen-xs-max){margin: -2px -10px 0 0;}
+		}
+		.top-nav,
+		.language-nav{margin: 0;}
+		#nav{
+			.nav-top{margin: 9px 10px 0 0;}
+			.mega-drop{
+				left: 15px;
+				right: 15px;
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-33. header style23 Styles / .style23
+	-------------------------------------------------------------------*/
+	&.style23{
+		padding: 23px 0 0;
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			bottom: -20px;
+			@extend %after;
+			background: rgba(255, 255, 255, 0.1);
+		}
+		#nav{
+			float: right;
+			@include breakpoint($screen-sm-max){float: none;}
+			.nav-top > li{text-align: left;}
+			.nav-opener{@include breakpoint($screen-sm-max){top: 5px;}}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-34. header style24 Styles / .style24
+	-------------------------------------------------------------------*/
+	&.style24{
+		padding: 23px 0 0;
+		.icon-list{
+			margin: -29px 0 0 40px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				top: 0;
+				margin: 0;
+				left: 60px;
+				position: absolute;
+			}
+		}
+		.logo{
+			.b-logo{display: none;}
+			.w-logo{display: block;}
+		}
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			opacity: 0.5;
+			bottom: -20px;
+			@extend %after;
+			background: $white;
+		}
+		#nav{
+			width: 70%;
+			float: none;
+			margin: 0 auto;
+			text-align: center;
+			@include breakpoint($screen-sm-max){width: 100%;}
+			.nav-top > li{text-align: left;}
+			.nav-top > li a{font-weight: 500;}
+			.drop ul{
+				margin: 35px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+				ul{margin: 0;}
+			}
+			.mega-drop{
+				left: 0;
+				right: 0;
+				@include breakpoint($screen-sm-max){
+					.drop-holder{margin: 0;}
+				}
+			}
+		}
+		.btn-more{background: none;}
+	}
+	/*------------------------------------------------------------------
+	1-35. header style25 Styles / .style25
+	-------------------------------------------------------------------*/
+	&.style25{
+		padding: 23px 0 0;
+		.logo{
+			position: relative;
+			&:after{
+				width: 1px;
+				top: -50px;
+				right: -25px;
+				opacity: 0.5;
+				bottom: -18px;
+				@extend %after;
+				background: $white;
+				.dark &{background: #494949;}
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+		}
+		.icon-list{
+			margin: -29px 0 0 40px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				top: 0;
+				margin: 0;
+				left: 50px;
+				position: absolute;
+			}
+			&:after{
+				width: 1px;
+				top: -50px;
+				left: -22px;
+				opacity: 0.5;
+				bottom: -23px;
+				@extend %after;
+				background: $white;
+				.dark &{background: #494949;}
+				@include breakpoint($screen-md-max){bottom: -16px;}
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+		}
+		.cart-box .cart-drop{padding: 25px 0 0;}
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			bottom: -20px;
+			@extend %after;
+			background: rgba(255, 255,255, 0.5);
+			.dark &{background: #494949;}
+		}
+		#nav{
+			width: 70%;
+			float: none;
+			margin: 0 auto;
+			text-align: center;
+			@include breakpoint($screen-sm-max){width: 100%;}
+			.nav-top > li{text-align: left;}
+			.drop ul{
+				margin: 35px 0 0;
+				@include breakpoint($screen-xs-max){margin: 0;}
+				ul{margin: 0;}
+			}
+			.mega-drop{
+				left: 0;
+				right: 0;
+				@include breakpoint($screen-sm-max){
+					.drop-holder{margin: 0;}
+				}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-37. header style27 Styles / .style27
+	-------------------------------------------------------------------*/
+	&.style27{
+		padding: 23px 0 0;
+		.icon-list{
+			margin: -29px 0 0 40px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				top: 0;
+				margin: 0;
+				left: 50px;
+				position: absolute;
+			}
+			@include breakpoint($screen-xs-max){display: none;}
+		}
+		.logo{
+			.b-logo{
+                display: block;
+                .dark &{display: none;}
+            }
+			.w-logo{
+                display: none;
+                .dark &{display: block;}
+            }
+		}
+		&:before{
+			left: 0;
+			right: 0;
+			height: 1px;
+			opacity: 0.5;
+			bottom: -20px;
+			@extend %after;
+			background: $white;
+            .dark &{background: #494949;}
+		}
+		#nav{
+			width: 70%;
+			float: none;
+			margin: 0 auto;
+			text-align: center;
+			@include breakpoint($screen-sm-max){width: 100%;}
+			.nav-top > li{text-align: left;}
+			.nav-top > li >a{
+				color: $shark;
+				font-weight: 500;
+                .dark &{color: $white;}
+			}
+			.drop ul{
+				margin: 35px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+				ul{margin: 0;}
+			}
+			.mega-drop{
+				left: 0;
+				right: 0;
+				@include breakpoint($screen-sm-max){
+					.drop-holder{margin: 0;}
+				}
+			}
+		}
+		#nav .nav-opener{
+			color: $storm-dust;
+			border-color: $storm-dust;
+            .dark &{
+                color: $white;
+                border-color: $white;
+            }
+			&:hover{color: $white;}
+		}
+		.opener-icons{
+			color: $shark;
+			border-color: $shark;
+            .dark &{
+                color: $white;
+                border-color: $white;
+            }
+			&:hover{color: $white;}
+		}
+	}
+	&.dec-header{
+		padding: 31px 0 0;
+		.icon-list{
+			margin: 7px 3px 0 0;
+			@include breakpoint($screen-xs-max){margin: 10px 0 0 -90px; span{display: none;}}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-37-1. header style28 Styles / .style28
+	-------------------------------------------------------------------*/
+	&.style28{
+		.holder{padding: 30px 0 0;}
+		.social-list{
+			margin: 0; 
+			float: right;
+			font-size: 14px;
+			a{color: $white;}
+			li{margin:0 0 0 5px;}
+		}
+		#nav .mega-drop{top: 40px;}
+		.logo{@include transition (all, 0.4s, ease);}
+		#nav .nav-top{margin-top: 0;}
+		@include breakpoint($screen-sm-max){
+			.holder{float: left; padding: 4px 0 0 40px;}
+			.logo{max-width: 130px; margin: -26px 0 0;}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-37-2. header style29 Styles / .style29
+	-------------------------------------------------------------------*/
+	&.style29{
+		padding: 39px 0 0;
+		@include breakpoint($screen-sm-max){padding: 20px 0;}
+		.holder{padding: 14px 0 0;}
+        .logo{
+        	@include breakpoint($screen-sm-max){max-width: 170px; margin: 0;}
+            .b-logo{
+				display: block;
+				.dark &{display: none;}
+			}
+            .w-logo{
+				display: none;
+				.dark &{display: block;}
+			}
+        }
+		.opener-icons{
+			border: 0;
+			padding: 0;
+			width: auto;
+			color: $lime;
+			height: auto;
+			font-size: 16px;
+			.dark &{color: $white;}
+			&:hover{background: transparent;}
+		}
+		.cartopener-main{
+			.dark &{color: $white;}
+		}
+		.icon-list{
+			@include breakpoint($screen-sm-max){top: 8px;}
+			> li{
+				margin: 0 0 0 25px;
+				@include breakpoint($screen-sm-max){margin: 0 0 0 15px;}
+			}
+		}
+		.cart-box .cart-drop{
+			top: 19px;
+			padding: 39px 0 0;
+			@include breakpoint($screen-sm-max){padding: 9px 0 0;}
+			@include breakpoint($screen-xs-max){padding: 25px 0 0;}
+		}
+		#nav{
+			.nav-top{
+				margin: 0;
+				> li > a{color: $lime;}
+			}
+			.drop ul{
+				margin: 23px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+			}
+			.mega-drop{
+				top: 22px;
+				right: 15px;
+			}
+			.nav-opener{
+				color: $lime;
+				border-color: $lime;
+				.dark &{
+					color: $white;
+					border-color: $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+	}
+	/*------------------------------------------------------------------
+	1-38. header fixed-position Styles / .fixed-position
+	-------------------------------------------------------------------*/
+	&.fixed-position{
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 26px 0 0;
+		position: fixed;
+		@include breakpoint($screen-xs-max){
+			padding: 46px 0 0;
+			position: absolute !important;
+		}
+		&:after{
+			opacity: 1;
+			background: $white;
+			.dark &{
+				background: #2a2a2a;
+				border-bottom: 1px solid #494949;
+			}
+		}
+		.logo{
+			.b-logo{
+				display: block;
+				.dark &{display: none;}
+				@include breakpoint($screen-xs-max){display: none;}
+			}
+			.w-logo{
+				display: none;
+				.dark &{display: block;}
+				@include breakpoint($screen-xs-max){display: block;}
+			}
+		}
+		.burger-menu{color: $storm-dust;}
+		#nav{
+			.drop ul{
+				margin: 35px 0 0;
+				@include breakpoint($screen-md-max){margin: 33px 0 0;}
+				@include breakpoint($screen-sm-max){margin: 0;}
+				.drop ul{margin: 0;}
+			}
+			.mega-drop .drop-holder{
+				margin: 38px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+			}
+			.nav-top > li > a{
+				color: $storm-dust;
+				.dark &{color: $white;}
+			}
+		}
+		.header-top{
+			margin-top: -79px;
+			margin-bottom: 22px;
+			@include breakpoint($screen-xs-max){
+				margin-top: 0;
+				margin-bottom: 42px;
+			}
+		}
+		.cart-box .cart-drop{
+			padding: 25px 0 0;
+			@include breakpoint($screen-xs-max){padding: 13px 0 0;}
+		}
+		.nav-opener,
+		.opener-icons{
+			color: $storm-dust;
+			border-color: $storm-dust;
+			.dark &{
+				color: $white;
+				border-color: $white;
+			}
+			@include breakpoint($screen-xs-max){
+				color: $white;
+				border-color: $white;
+			}
+			&:hover{
+				color: $white;
+				@include breakpoint($screen-xs-max){
+					color: $storm-dust;
+					border-color: $storm-dust;
+				}
+			}
+		}
+		&.style2{
+			@include breakpoint($screen-xs-max){
+				padding: 0;
+				background: transparent;
+				.header-top{margin-bottom: 15px;}
+			}
+		}
+		&.style3{
+			@include breakpoint($screen-sm-max){padding: 26px 0;}
+			.header-top{
+				margin-top: -108px;
+				@include breakpoint($screen-xs-max){
+					margin-top: 0;
+					margin-bottom: 12px;
+				}
+			}
+			.logo{
+				top: 90px;
+				left: 15px;
+				position: absolute;
+				@include breakpoint($screen-md-max){top: 90px;}
+				@include breakpoint($screen-sm-max){
+					top: 95px;
+					left: auto;
+					right: 15px;
+				}
+			}
+			.icon-list{
+				top: 91px;
+				right: 15px;
+				position: absolute;
+				@include breakpoint($screen-md-max){top: 90px;}
+				@include breakpoint($screen-sm-max){display: none;}
+				@include breakpoint($screen-xs-max){
+					margin: 6px 3px 19px 0;
+					position: static;
+					display: block;
+				}
+			}
+			.cart-opener{
+				background: rgba(0, 0, 0, 0.5);
+				@include breakpoint($screen-xs-max){
+					background: rgba(255, 255, 255, 0.5);
+				}
+			}
+			.cart-box .cart-drop{top: 25px;}
+			.head-socialnetworks{
+				display: none;
+				@include breakpoint($screen-xs-max){display: block;}
+			}
+			#nav{
+				padding-left: 120px;
+				@include breakpoint($screen-sm-max){padding-left: 0;}
+				.drop ul{margin: 21px 0 0;}
+				.mega-drop .drop-holder{margin: 15px 0 0;}
+				.nav-top > li{
+					@include breakpoint($screen-md-max){margin: 0 13px 0 0;}
+					@include breakpoint($screen-sm-max){margin: 0;}
+				}
+			}
+		}
+		&.style4{
+			padding: 25px 0 0;
+			@include breakpoint($screen-sm-max){padding: 20px 0;}
+			&:after{opacity: 0;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop .drop-holder{margin: 35px 0 0;}
+			}
+			.cart-box .cart-drop{margin: 15px 0 0;}
+			.opener-icons{
+				color: $lime;
+				.dark &{color: $white;}
+			}
+		}
+		&.style5{
+			padding: 20px 0 14px;
+			#nav{
+				.drop ul{
+					margin: 31px 0 0;
+					@include breakpoint($screen-sm-max){margin: 0;}
+					.drop ul{margin: 0;}
+				}
+				.mega-drop .drop-holder{
+					margin: 35px 0 0;
+					@include breakpoint($screen-sm-max){margin: 0;}
+				}
+			}
+		}
+		&.style7{
+			padding: 0;
+			@include breakpoint($screen-xs-max){padding: 0 0 20px;}
+			&:after{opacity: 1;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{
+					left: 30px;
+					right: 30px;
+					.drop-holder{margin: 35px 0 0;}
+				}
+			}
+		}
+		&.style8{
+			@include breakpoint($screen-xs-max){padding: 0;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{top: 25px;}
+			}
+		}
+		&.style9{
+			padding: 22px 0 16px;
+			&:after{background: $shark;}
+			#nav .drop ul{
+				margin: 30px 0 0;
+				@include breakpoint($screen-sm-max){margin: 0;}
+			}
+			#nav .mega-drop{top: 22px;}
+			#nav .nav-top > li > a{
+				color: $white;
+				@include breakpoint($screen-sm-max){color: $lime;}
+			}
+			.nav-opener{
+				color: $white;
+				border-color: $white;
+				&:hover{border:0;}
+			}
+		}
+		&.style10{
+			@include breakpoint($screen-sm-max){padding: 22px 0 15px;}
+			&:after{background: $shark;}
+			#nav .drop ul{margin: 0;}
+			#nav .mega-drop{top: 18px;}
+			#nav .nav-top > li> a{
+				color: $white;
+				@include breakpoint($screen-sm-max){color: $lime;}
+			}
+			.cart-box .cart-drop{padding: 19px 0 0;}
+			.opener-icons{
+				color: $white;
+				border-color: $white;
+			}
+			.nav-opener{
+				color: $white;
+				border-color: $white;
+				&:hover{border: 0;}
+			}
+		}
+		&.style11{
+			padding: 19px 0 0;
+			&:after{
+				background: $white;
+				.dark &{background: $shark;}
+			}
+			.logo{
+				float: left;
+				max-width: 170px;
+				margin: -3px 0 0;
+				@include transition (all, 0.2s, ease);
+				@include breakpoint($screen-md-max){max-width: 140px;}
+				@include breakpoint($screen-sm-max){
+					float: right;
+					max-width: 100%;
+					margin: 2px 0 16px;
+				}
+				.w-logo{
+					display: block;
+					.dark &{display: none;}
+				}
+				.b-logo{
+					display: none;
+					.dark &{display: block;}
+				}
+			}
+			#nav{
+				border: 0;
+				width: 85%;
+				float: right;
+				position: static;
+				text-align: right;
+				margin: -15px 0 0;
+				@include transition (all, 0.4s, ease);
+				@include breakpoint($screen-sm-max){
+					margin: 0;
+					width: 100%;
+					float: none;
+					text-align: left;
+					position: relative;
+					.nav-opener{text-align: center;}
+				}
+				.drop ul{margin: 0;}
+				.mega-drop{top: -6px;}
+				#nav .nav-top > li> a{
+					color: $white;
+					@include breakpoint($screen-sm-max){color: $lime;}
+				}
+			}
+			.icon-list > li .opener-icons{
+				color: $white;
+				border-color: $white;
+			}
+		}
+		&.style12{
+			padding: 0;
+            .logo{
+                .b-logo{
+                	display: none;
+                	@include breakpoint($screen-sm-max){display: block;}
+                }
+                .w-logo{
+                	display: block;
+                	@include breakpoint($screen-sm-max){display: none;}
+                }
+            }
+			&:after{display: none;}
+			.header-cent{
+				max-height: 0;
+				padding-top: 0;
+				margin-top: -2px;
+				padding-bottom: 0;
+				@include breakpoint($screen-sm-max){
+					padding-bottom: 20px;
+					max-height: 9999px;
+					padding-top: 18px;
+				}
+			}
+			.header-top{
+				@include breakpoint($screen-xs-max){margin-bottom: 0;}
+			}
+			#nav{
+				.nav-top{
+					float: right;
+					@include breakpoint($screen-sm-max){float: none;}
+					>li{
+						@include breakpoint($screen-sm-max){margin: 0;}
+						&:hover,
+						&.hover,
+						&.active{> a{color: $lime;}}
+						> a{
+							color: $white;
+							@include breakpoint($screen-sm-max){color: $lime;}
+							&:hover{color: $lime;}
+						}
+					}
+				}
+				.quote-btn{display: none;}
+				.logo{
+					top: -5px;
+					display: block;
+					position: relative;
+					@include breakpoint($screen-sm-max){display: none;}
+				}
+				.drop ul{margin: 0;}
+				.mega-drop{
+					left: 0;
+					.drop-holder{margin: 1px 0 0;}
+				}
+			}
+		}
+		&.style13{
+			padding: 23px 0 0;
+			&:after{
+				background: $body-bg;
+				.dark &{background: #2a2a2a;}
+			}
+		}
+		&.style14{
+			padding: 23px 0 0;
+			.logo:after,
+			.icon-list:after{
+				background: $body-bg;
+				.dark &{background: rgba(42, 42, 42, 0.5);}
+			}
+		}
+		&.style15{
+			@include breakpoint($screen-xs-max){
+				background: none;
+				padding: 5px 0 0;
+				position: static !important;
+				.header-top{margin: 0 0 10px;}
+				.logo{
+					.b-logo{display: none;}
+					.w-logo{display: block;}
+				}
+				&:after{background: none;}
+			}
+			&:after{top: 0;}
+		}
+		&.style16{
+			@include breakpoint($screen-xs-max){padding: 0;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{top: 25px;}
+			}
+		}
+		&.style17{
+			padding: 20px 0 0;
+			@include breakpoint($screen-sm-max){padding: 20px 0;}
+			&:after{background: $shark;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{top: 20px;}
+				.nav-top > li > a{
+					color: $white;
+					@include breakpoint($screen-sm-max){color: $lime;}
+				}
+			}
+			.opener-icons{
+				color: $white;
+				border-color: $white;
+			}
+			.nav-opener{
+				color: $white;
+				border-color: $white;
+				&:hover{border:0;}
+			}
+		}
+		&.style18{
+			padding: 20px 0 0;
+			@include breakpoint($screen-xs-max){padding: 10px 0;}
+			&:after{bottom: 0 !important;}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{
+					top: 25px;
+					.drop-holder{margin: 45px 0 0;}
+				}
+			}
+		}
+		&.style19 #nav .nav-top > li > a{
+			color: $lime;
+			.dark &{color: $white;}
+		}
+		&.style20{
+			padding: 20px 0 0;
+			@include breakpoint($screen-xs-max){
+				padding: 5px 0 0;
+				.header-top{margin: 0 0 30px;}
+				.logo{
+					.b-logo{display: block;}
+					.w-logo{display: none;}
+				}
+			}
+			&:after{top: 0;}
+			#nav .drop ul{margin: 0;}
+			#nav .mega-drop{
+				top: 25px;
+				.drop-holder{margin: 38px 0 0;}
+			}
+		}
+		&.style21{
+			@include breakpoint($screen-xs-max){
+				padding: 0;
+				.logo .w-logo{display: none;}
+				.logo .b-logo{display: block;}
+			}
+			#nav{
+				.drop ul{margin: 0;}
+				.mega-drop{top: 26px;}
+			}
+		}
+		&.style22{
+			@include breakpoint($screen-xs-max){
+				padding: 0;
+				&:after{background: transparent;}
+			}
+		}
+		&.style27,
+		&.style23,
+		&.style24{padding: 23px 0 0;}
+		&.style25{
+			padding: 23px 0 0;
+			.logo:after,
+			.icon-list:after{
+				background: $body-bg;
+				.dark &{background: #494949;}
+			}
+		}
+		&.style28{
+			.logo{max-width: 130px;}
+			.social-list a{color: $storm-dust;}
+			#nav .mega-drop{top: 45px;}
+		}
+		&.style29{
+			padding: 25px 0;
+			background: #fff;
+			.dark &{background: $lime;}
+			@include breakpoint($screen-sm-max){padding: 20px 0;}
+			&:after{opacity: 0;}
+			#nav{
+				.mega-drop{top:40px;}
+				.drop ul{
+					margin: 43px 0 0;
+					@include breakpoint($screen-sm-max){margin: 0;}
+				}
+			}
+			.cart-box .cart-drop{margin: 15px 0 0;}
+			.opener-icons{
+				color: $lime;
+				.dark &{color: $white;}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-39. logo Styles / .logo
+-------------------------------------------------------------------*/
+.logo{
+	float: left;
+	img{width: 100%;}
+	margin: -6px 0 0;
+	@include breakpoint($screen-sm-max){
+		float: right;
+		margin: -6px 0 0;
+	}
+	a{display: block;}
+	.b-logo{display: none;}
+	&.port-logo{
+		margin: 0;
+		top: 30px;
+		left: 100px;
+		z-index: 9999;
+		position: fixed;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){
+			left: 20px;
+			position: absolute;
+		}
+        .b-logo{
+            .dark &{display: block;}
+        }
+        .w-logo{
+            .dark &{display: none;}
+        }
+	}
+}
+/*------------------------------------------------------------------
+1-40. logo v9 Styles / .logo-v9
+-------------------------------------------------------------------*/
+.logo-v9{
+	top: 50%;
+	left: -49px;
+	z-index: 999;
+	opacity: 1;
+	position: fixed;
+	@include rotate (90deg);
+	@include transition (all, 0.4s, ease);
+	@include breakpoint($screen-xs-max){
+		display: none;
+	}
+	.b-logo{.dark &{display: none;}}
+    .w-logo{
+		display: none;
+		.dark &{display: block;}
+	}
+}
+/*------------------------------------------------------------------
+1-41. lancer logo Styles / .lancer-logo
+-------------------------------------------------------------------*/
+.lancer-logo{
+	display: block;
+	margin: 0 auto 50px;
+	@include square(120px);
+}
+/*------------------------------------------------------------------
+1-42. main navigation Styles / #nav
+-------------------------------------------------------------------*/
+#nav{
+	float: right;
+	font-size: 13px;
+	line-height: 20px;
+	text-transform: uppercase;
+	@include breakpoint($screen-sm-max){
+		float: none;
+		position: static;
+		text-align: center;
+	}
+	a{
+		color: $white;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){
+			color: $lime;
+			vertical-align: top;
+			display: inline-block;
+			.dark &{color: $white;}
+		}
+		&:hover{text-decoration: none;}
+	}
+	li{
+		position: relative;
+		@include breakpoint($screen-sm-max){text-align: left;}
+		> a{
+			font-weight: 600;
+			letter-spacing: 2px;
+		}
+		&.has-mega-drop{position: static;}
+		&.hover,
+		&:hover{
+			> .drop{
+				opacity: 1;
+				visibility: visible;
+				@include breakpoint($screen-sm-max){max-height: 9999px;}
+			}
+			.mega-drop{
+				opacity: 1;
+				visibility: visible;
+				@include breakpoint($screen-sm-max){max-height: 9999px;}
+			}
+		}
+	}
+	.drop{
+		left: 0;
+		top: 100%;
+		opacity: 0;
+		width: 200px;
+		font-size: 12px;
+		visibility: hidden;
+		position: absolute;
+        font-family: $font-family-sans-serif;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){
+			border: 0;
+			width: 100%;
+			max-height: 0;
+			display: block;
+			overflow: hidden;
+			position: static;
+		}
+		li:hover .drop{display: block;}
+		ul{
+			margin: 25px 0 0;
+			position: relative;
+			background: #2a2a2a;
+			border: 1px solid #3a3a3a;
+			&:after{
+				top: -2px;
+				left: -1px;
+				right: -1px;
+				height: 2px;
+				@extend %after;
+			}
+			@include breakpoint($screen-sm-max){
+				margin: 0;
+				border: 0;
+				background: transparent;
+				&:after{display: none;}
+			}
+			a{
+				color: $stack;
+				display: block;
+				padding: 9px 17px;
+				letter-spacing: 0;
+				position: relative;
+				@include transition (all, 0.4s, ease);
+				&:hover{
+					color: #c9c9c9;
+					background: #333;
+					text-decoration: none;
+					&:after{
+						right: 9px;
+						@include breakpoint($screen-sm-max){
+							right: 15px;
+							@include rotate (-90deg);
+						}
+					}
+				}
+				&:after{
+					top: 8px;
+					right: 15px;
+					display: none;
+					content: "\f105";
+					position: absolute;
+					font-family: 'FontAwesome';
+					@include transition (all, 0.4s, ease);
+					@include breakpoint($screen-sm-max){@include rotate (90deg);}
+				}
+			}
+			li{
+				&:hover{
+					> a{
+						color: #c9c9c9;
+						background: #333;
+						padding: 9px 15px 9px 20px;
+						@include breakpoint($screen-sm-max){
+							padding: 9px 17px;
+							background: transparent;
+						}
+						&:after{
+							right: 9px;
+							@include breakpoint($screen-sm-max){right: 15px;}
+						}
+					}
+					> .drop{
+						display: block;
+						@include breakpoint($screen-sm-max){max-height: 9999px;}
+					}
+				}
+				&.has-drop > a:after{display: block;}
+				&.active >a{
+					color: #c9c9c9;
+					background: #333;
+					padding: 9px 5px 9px 20px;
+					@include breakpoint($screen-sm-max){
+						padding: 9px 17px;
+						background: transparent;
+					}
+					&:after{
+						right: 9px;
+						@include breakpoint($screen-sm-max){
+							right: 15px;
+							@include rotate (-90deg);
+						}
+					}
+				}
+			}
+		}
+		.drop{
+			top: -1px;
+			left: 198px;
+			display: none;
+			@include breakpoint($screen-sm-max){max-height: 0;}
+			> ul{
+				margin: 1px 0 0;
+				> li:hover{
+					@include breakpoint($screen-sm-max){max-height: 9999px;}
+				}
+			}
+			.drop{
+				top: -1px;
+				left: 199px;
+				display: none;
+				@include breakpoint($screen-sm-max){max-height: 0;}
+				ul{
+					margin: 1px 0 0;
+					@include breakpoint($screen-sm-max){margin: 0 !important;}
+				}
+			}
+		}
+	}
+	.mega-drop{
+		top: 26px;
+		left: 15px;
+		opacity: 0;
+		right: 15px;
+		font-size: 12px;
+		font-weight: 400;
+		overflow: hidden;
+		visibility: hidden;
+		position: absolute;
+        font-family: $font-family-sans-serif;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-md-max){right: 15px;}
+		@include breakpoint($screen-sm-max){
+			border: 0;
+			width: 100%;
+			max-height: 0;
+			display: block;
+			overflow: hidden;
+			position: static;
+		}
+		.coll{
+			width: 25%;
+			float: left;
+			padding: 0 0 10px;
+			position: relative;
+			@include breakpoint($screen-sm-max){
+				width: 100%;
+				float: none;
+				&:after{display: none;}
+			}
+			&:after{
+				top: 0;
+				width: 1px;
+				left: -1px;
+				@extend %after;
+				bottom: -9999px;
+				background: #3a3a3a;
+			}
+		}
+		.drop-holder{
+			float: left;
+			width: 100%;
+			margin: 35px 0 0;
+			position: relative;
+			background: #2a2a2a;
+			border: 1px solid #3a3a3a;
+			@include breakpoint($screen-sm-max){
+				border: 0;
+				margin: 0 !important;
+				background: transparent;
+				&:after{display: none;}
+			}
+			&:after{
+				top: -2px;
+				left: -1px;
+				right: -1px;
+				height: 2px;
+				@extend %after;
+				@include breakpoint($screen-sm-max){display: none;}
+			}
+			a{
+				color: $stack;
+				display: block;
+				padding: 9px 31px;
+				letter-spacing: 0;
+				position: relative;
+				@include transition (all, 0.4s, ease);
+				@include breakpoint($screen-sm-max){padding: 9px 15px;}
+				&:hover{
+					color: #c9c9c9;
+					background: #333;
+					text-decoration: none;
+					padding: 9px 15px 9px 40px;
+					@include breakpoint($screen-sm-max){
+						padding: 9px 20px;
+						background: transparent;
+					}
+				}
+			}
+			li.active a{
+				color: #c9c9c9;
+				background: #333;
+				padding: 9px 15px 9px 40px;
+				@include breakpoint($screen-sm-max){
+					padding: 9px 20px;
+					background: transparent;
+				}
+			}
+		}
+		.title{
+			color: $white;
+			display: block;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 20px;
+			padding: 10px 30px;
+            letter-spacing: 2px;
+			font-family: $font-family-sans-serif;
+			@include breakpoint($screen-sm-max){display: none;}
+		}
+		.fa{margin: 0 5px 0 0;}
+	}
+	.nav-top{
+		margin: 9px 17px 0 0;
+		@include breakpoint($screen-sm-max){
+			margin: 0;
+			top: 60px;
+			position: relative;
+		}
+		> li{
+			padding: 0;
+			margin: 0 0 0 22px;
+			@include breakpoint($screen-md-max){margin: 4px 0 0 13px;}
+			@include breakpoint($screen-sm-max){
+				display: block;
+				position: relative;
+				margin: 0 !important;
+				border-bottom: 1px solid #2a2a2a;
+				&.has-mega-drop:before,
+				&.has-drop:before{
+					top: 5px;
+					right: 10px;
+					color: #2a2a2a;
+					line-height: 2;
+					font-size: 15px;
+					content:"\f107";
+					position: absolute;
+					font-family:'FontAwesome';
+					.dark &{color: $white;}
+				}
+				&:hover:before{@include rotate (180deg);}
+				> a{@include breakpoint($screen-sm-max){padding: 10px !important;}}
+			}
+		}
+	}
+	.nav-opener{
+		top: 0;
+		left: 15px;
+		color: $white;
+		z-index: 9999;
+		display: none;
+		padding: 5px 0 0;
+		position: absolute;
+		border-radius: 50%;
+		@include square(38px);
+		border: 2px solid $white;
+		@include breakpoint($screen-sm-max){display: block;}
+		.txt{display: none;}
+		.fa{
+			margin: 0 5px;
+			font-size: 18px;
+			@include vertical-align(inline-block, middle);
+		}
+		&:hover{color: $white;}
+	}
+	.nav-holder{
+		@include breakpoint($screen-sm-max){
+			top: 0;
+			bottom: 0;
+			left: -240px;
+			width: 240px;
+			height: 100vh;
+			z-index: 9999;
+			position: fixed;
+			overflow-y: auto;
+			overflow-x: hidden;
+			background: $white;
+			box-shadow: 0 0 7px 1px rgba(0,0,0,0.1);
+			@include transition (all, 0.4s, ease);
+			.dark &{background: #2a2a2a;}
+		}
+	}
+}
+@include breakpoint($screen-sm-max){
+	.mainnav-active #nav .nav-holder{left: 0;}
+	.mainnav-active .w1{margin: 0 -240px 0 240px;}
+}
+/*------------------------------------------------------------------
+1-43. search popup Styles / .search-popup
+-------------------------------------------------------------------*/
+.search-popup{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 9999;
+	position: fixed;
+	visibility: hidden;
+	background: rgba(0, 0, 0, 0.9);
+	@include v-align(holder,  middle);
+	@include transition (all, 0.4s, ease);
+	.holder{width: 100%;}
+	.close-btn{
+		right: 0;
+		width:61px;
+		top: -200px;
+		height:61px;
+		position:absolute;
+		@include hide-text;
+		background:#f6f5f4;
+		@include transition (all, 0.4s, ease);
+		&:hover{text-decoration: none;}
+		&:before,
+		&:after{
+			top:28px;
+			left:21px;
+			width:21px;
+			height:4px;
+			@extend %after;
+			background:$black;
+			@include rotate (45deg);
+		}
+		&:after{@include rotate (-45deg);}
+	}
+	.search-form{
+		position: relative;
+		.search{
+			border: 0;
+			margin: 0;
+			float: left;
+			width: 100%;
+			height: 40px;
+			color: $white;
+			font-size: 30px;
+			line-height: 40px;
+			padding: 0 60px 0 20px;
+			background: transparent;
+			text-transform: capitalize;
+		}
+	}
+	.submit{
+		right: 0;
+		border: 0;
+		top: -2px;
+		color: $white;
+		font-size: 30px;
+		position: absolute;
+		background: transparent;
+		@include transition (all, 0.4s, ease);
+	}
+}
+.search-active .search-popup{
+	opacity: 1;
+	visibility: visible;
+}
+/*------------------------------------------------------------------
+1-44. menu nav Styles / .menu-nav
+-------------------------------------------------------------------*/
+.menu-nav{
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 240px;
+	z-index: 9999;
+	font-size: 18px;
+	position: fixed;
+	line-height: 25px;
+	background: $cape-cod;
+	padding: 40px 20px 20px;
+	margin: 0 -241px 0 0 !important;
+	@include transition (all, 0.4s, ease);
+}
+.main-navopener2{
+	top: 17px;
+	left: 27px;
+	z-index: 999;
+	color: $white;
+	font-size: 34px;
+	position: fixed;
+	@include transition (margin, 0.4s, ease);
+	&:focus,
+	&:hover{
+		opacity: 0.8;
+		color: $white;
+		text-decoration: none;
+	}
+}
+.main-menu{
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	z-index: 9999;
+	font-size: 20px;
+	position: fixed;
+	font-weight: 500;
+	padding: 20px 0 0;
+	background: $white;
+	margin: 0 0 0 -301px;
+	@include transition (margin, 0.4s, ease);
+	#nav{
+		float: none;
+		a{
+			color: $shark;
+			display: block;
+			padding: 10px 20px;
+			border-bottom: 1px solid $shark;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				color: $white;
+				background: $shark;
+				text-decoration: none;
+				padding: 10px 10px 10px 25px;
+			}
+		}
+		li:hover .drop{max-height: 999px;}
+		.drop{
+			width: 100%;
+			max-height: 0;
+			display: block;
+			position: static;
+			overflow: hidden;
+			ul{
+				border: 0;
+				margin: 0;
+				border-radius: 0;
+				background: transparent;
+				a{
+					padding: 10px 10px 10px 30px;
+					&:hover{
+						color: $white;
+						padding: 10px 10px 10px 35px;
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-45. side widget Styles / .side-widget
+-------------------------------------------------------------------*/
+.side-widget{
+	color: #aaa;
+	font-size: 14px;
+	margin: 0 0 55px;
+	line-height: 20px;
+	h2{
+		color: $white;
+		margin: 0 0 24px;
+		padding: 0 0 15px;
+		position: relative;
+        letter-spacing: 2px;
+		font: 600 14px/18px $font-family-sans-serif;
+		&:after{
+			left: 0;
+			bottom: 0;
+			@extend %after;
+			@include size(39px, 2px);
+		}
+	}
+	a{color: #aaa;}
+	p{margin: 0 0 20px;}
+	.widget-nav{
+		font-size: 14px;
+		padding: 3px 0 0;
+		margin: 0 0 -2px;
+		line-height: 24px;
+		li{
+			position: relative;
+			padding: 0 0 0 17px;
+		}
+		a{
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+		.fa{
+			left: 0;
+			top: 6px;
+			position: absolute;
+		}
+	}
+	.btn{
+		color: $white;
+		font-size: 12px;
+		padding: 2px 14px;
+		text-transform: uppercase;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			background: transparent;
+			color: rgba(143, 143, 143, 0.6);
+			border-color: rgba(143, 143, 143, 0.6);
+		}
+	}
+	&.address-widget{
+		font-size: 14px;
+		line-height: 26px;
+		a{
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+		.fa{
+			margin: 0 6px 0 0;
+			@include vertical-align(inline-block, middle);
+		}
+		address{
+			display: block;
+			line-height: 26px;
+			margin: -3px 0 -1px;
+		}
+		.tel,
+		.web,
+		.email{
+			@include vertical-align(inline-block, top);
+		}
+	}
+	&.social-widget{
+		ul{
+			padding: 6px 0 0;
+			li{
+				margin: 0 2px 0 0;
+				@include vertical-align(inline-block, top);
+			}
+		}
+		a{
+			display: block;
+			font-size: 18px;
+			padding: 12px 0 0;
+			text-align: center;
+			border-radius: 50%;
+			@include square(44px);
+            background: rgba(255,255,255,0.1);
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+			.dark &{background: rgba(255,255,255,0.2);}
+		}
+	}
+}
+.mainnav-active{
+	.sidemenu-photo.v9,
+	.sidemenu-photo.v10,
+	.sidemenu-photo{margin: 0;}
+	.w7{
+		@include breakpoint($screen-sm-max){
+			margin:0 -260px 0 260px;
+		}
+	}
+	.w9{margin:0 -200px 0 200px;}
+	.logo-v9{
+		opacity: 0;
+		left: 213px;
+		visibility: hidden;
+	}
+	.sidemenu-photo.v9 #nav7 .nav-opener,
+	.sidemenu-photo.v10 #nav7 .nav-opener{
+		padding: 5px;
+		right: -53px;
+		color: $white;
+		border-radius: 3px;
+		background: rgba(0,0,0,0.2);
+		@include transition (all, 0.4s, ease);
+	}
+	.sidemenu-photo.v9 #nav7 .nav-opener{padding: 5px 15px;}
+}
+/*------------------------------------------------------------------
+1-46. sidemenu photo Styles / .sidemenu-photo
+-------------------------------------------------------------------*/
+.sidemenu-photo{
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 260px;
+	z-index: 9999;
+	position: fixed !important;
+	background: url(../images/pattren01.png);
+	@include breakpoint($screen-sm-max){
+		z-index: 9999;
+		margin: 0 0 0 -260px;
+		@include transition (margin, 0.4s, ease);
+	}
+	.sidemenu-holder{padding:100px 10px;}
+	.logo{
+		z-index:99;
+		float: none;
+		width: 198px;
+		display: block;
+		position:relative;
+		margin:0 auto 97px;
+        .b-logo{
+			display: block;
+			.dark &{display: none;}
+		}
+        .w-logo{
+			display: none;
+			.dark &{display: block;}
+		}
+	}
+	&.v9{
+		background: $white;
+		margin: 0 0 0 -260px;
+		@include transition (margin, 0.4s, ease);
+		.dark &{background: $lime;}
+		#nav7{
+			font-weight: 700;
+			ul a{color: $stack;}
+			.nav-opener{
+				padding: 0;
+				width: auto;
+				color: $lime;
+				right: -41px;
+				display: block;
+				font-size: 26px;
+				background: transparent;
+				.txt{
+					line-height: 16px;
+					font-weight: 500;
+					font-size: 14px;
+					display: block;
+				}
+			}
+		}
+		.logo{
+			width: 150px;
+			margin: 0 auto 40px;
+		}
+		.sidemenu-holder{padding: 50px 10px;}
+	}
+	&.v10{
+		background: $white;
+		margin: 0 0 0 -260px;
+		@include transition (margin, 0.4s, ease);
+		.dark &{background: $lime;}
+		#nav7{
+			font-weight: 700;
+			ul a{color: $stack;}
+			.nav-opener{
+				padding: 0;
+				width: auto;
+				color: $lime;
+				right: -50px;
+				display: block;
+				font-size: 26px;
+				background: transparent;
+				.dark &{color: $white;}
+				.txt{
+					line-height: 16px;
+					font-weight: 500;
+					font-size: 14px;
+					display: block;
+				}
+			}
+		}
+		#nav7{
+			.nav-opener{
+				color: $lime;
+				background: transparent;
+				@include breakpoint($screen-xs-max){
+					border-radius: 8px;
+					padding: 8px;
+					color: $white;
+					margin: 0 0 0 10px;
+					background: rgba(0, 0, 0, 0.4);
+				}
+			}
+		}
+		.logo{
+			width: 150px;
+			margin: 0 auto 40px;
+		}
+		.sidemenu-holder{padding: 50px 10px;}
+	}
+	&.v11{
+		background: $white;
+		.dark &{background: $lime;}
+		#nav7 .nav-opener{top: 4px;}
+		.logo img{
+			width: auto;
+			margin: 0 auto;
+		}
+		#nav7 ul a{
+			color: $shark;
+			.dark &{color: $stack;}
+		}
+		.sidemenu-holder{padding: 200px 10px 0;}
+	}
+	&.v12{
+		background: $white;
+		#nav7 ul{
+			text-align: left;
+			font: 500 12px/16px $font-family-base;
+			a{color: $stack;}
+			li{margin: 0 0 24px 34px;}
+		}
+		.logo{width: 142px; margin: 0 0 85px 35px;}
+	}
+}
+/*------------------------------------------------------------------
+1-47. nav7 Styles / #nav7
+-------------------------------------------------------------------*/
+#nav7{
+	margin: 0 0 200px;
+	@extend %clearfix;
+	.nav-holder{@extend %clearfix;}
+	@include breakpoint($screen-sm-max){
+		margin: 0;
+	}
+	ul{
+		margin:0;
+		text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font: 500 12px/ 16px $font-family-sans-serif;
+		li{
+			float: none;
+			display: block;
+			margin:0 0 24px;
+		}
+		a{
+			color:$white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.nav-opener{
+		top: 50px;
+		width: 100px;
+		padding: 5px;
+		color: $white;
+		right: -120px;
+		display: none;
+		font-size: 20px;
+		background: $lime;
+		text-align: center;
+		position: absolute;
+		@include breakpoint($screen-sm-max){display: block;}
+		&:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+}
+.portfolio-nav-opener{
+	top: 30px;
+	right: 100px;
+	z-index: 9999;
+	color: $white;
+	font-size: 34px;
+	position: fixed;
+	padding: 1px 11px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.2);
+	@include transition (all, 0.4s, ease);
+	@include breakpoint($screen-xs-max){
+		right: 30px;
+		position: absolute;
+	}
+	&:focus,
+	&:hover{
+		color: $white;
+		text-decoration: none;
+		background: rgba(0, 0, 0, 1);
+	}
+}
+.sidenav-port{
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	z-index: 9999;
+	position: fixed;
+	text-align: center;
+    letter-spacing: 2px;
+	padding: 80px 20px 20px;
+    text-transform: uppercase;
+	margin: 0 -301px 0 0 !important;
+	@include transition (all, 0.4s, ease);
+	background: url(../images/pattren01.png);
+    font: 500 12px/25px $font-family-sans-serif;
+	a{
+		color: $white;
+		@include transition (all, 0.4s, ease);
+		&:hover{text-decoration: none;}
+	}
+	ul{
+		margin: 0;
+		li{margin: 0 0 20px;}
+	}
+}
+.sidenav-active{
+	.menu-nav{margin: 0 !important;}
+	.w1{margin: 0 0 0 -240px;}
+	&.boxed-v .w1{margin: 0;}
+}
+.mainnav-active{
+	#nav .nav-holder{max-height: 9999px;}
+	.main-menu{margin: 0;}
+	.main-navopener2{margin: 0 0 0 301px;}
+}
+.nav-active{
+	.sidenav-port{margin: 0 !important;}
+	#header,
+	.w1{margin: 0 240px 0 -240px;}
+	.portfolio-nav-opener{right: 340px;}
+	.logo.port-logo{left: -400px;}
+	&.lancer{
+		.w1{margin: 0 -240px 0 240px;}
+		.portfolio-nav-opener{
+			right: auto;
+			left: 340px;
+		}
+		.sidenav-port{margin: 0 !important;}
+	}
+	&.boxed-v.lancer .w1{margin: 0;}
+}
+.lancer{
+	.portfolio-nav-opener{
+		right: auto;
+		left: 100px;
+		@include breakpoint($screen-xs-max){
+			left: 40px;
+		}
+	}
+	.sidenav-port{
+		left: 0;
+		right: auto;
+		margin: 0 0 0 -301px !important;
+	}
+}
+.clearfix-sm{
+	@include breakpoint($screen-sm-max){clear: left;}
+}
+.search-form-top{
+	float: right;
+	margin: 0 0 5px;
+	@include placeholder{color: $white;}
+	@include breakpoint($screen-sm-max){float: none; max-width: 210px; margin: 30px auto 10px;}
+	.fa{
+		border: 0;
+		margin: 0;
+		padding: 0;
+		float: right;
+		color: $white;
+		font-size: 17px;
+		background: none;
+	}
+	.text{
+		border: 0;
+		padding: 0;
+		float: left;
+		height: 20px;
+		width: 173px;
+		color: $white;
+		font-size: 12px;
+		background: none;
+		line-height: 20px;
+		margin: 0 10px 0 0;
+	}
+}
+.burger-menu{
+	color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font: 12px/1 $font-family-serif;
+}
+.burger-menu .fa{
+    font-size: 26px;
+    margin: 0 0 0 20px;
+    vertical-align: middle;
+}
+.burger-menu span{
+	display: inline-block;
+	vertical-align: middle;
+}

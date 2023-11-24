@@ -1,0 +1,633 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+4-2. welcom banner Styles / .welcom-banner
+4-3. about post Styles / .about-post
+4-4. nav tabs Styles / .nav-tabs
+4-5. create business Styles / .create-business
+4-6. partners nav Styles / .partners-nav
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+4-2. welcom banner Styles / .welcom-banner
+-------------------------------------------------------------------*/
+.welcom-banner{
+	z-index: 5;
+	overflow: hidden;
+	position:relative;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{
+		z-index:9;
+		pointer-events: none;
+		background: rgba($black, 0.40);
+	}
+	.vimeo{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		@include breakpoint($screen-xs-max){
+			left: -340px;
+			right: -340px;
+		}
+	}
+	.slick-dots{
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        @include transition (all, 0.4s, ease);
+		li{
+			margin: 0 6px 0 5px;
+			@include vertical-align(inline-block, top);
+			&.slick-active button{background: $white;}
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: none;
+			display: block;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(10px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				background: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	.slick-arrow{
+		right: 0;
+		top: 50%;
+		border: 0;
+		padding: 0;
+        opacity: 0;
+		z-index: 9;
+		width: 32px;
+		color: $white;
+		font-size: 60px;
+		background: none;
+		margin: -46px 0 0;
+		position: absolute;
+        visibility: visible;
+		text-indent: -9999px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){
+			margin: -20px 0 0;
+			right: 15px;
+		}
+		&:hover{opacity: 0.8;}
+		&:after{
+			top: 0;
+			left: 3px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-prev{
+		left: 0;
+		right: auto;
+		&:after{content:"\f104";}
+    }
+    &:hover{
+        .slick-next{
+            opacity: 1;
+            right: 29px;
+            visibility: visible;
+		    @include breakpoint($screen-xs-max){right: 15px;}
+        }
+        .slick-prev{
+            opacity: 1;
+            left: 29px;
+            right: auto;
+            visibility: visible;
+            @include breakpoint($screen-xs-max){
+                right: auto;
+                left: 15px;
+            }
+        }
+        .slick-dots{
+            opacity: 1;
+            bottom: 33px;
+            visibility: visible;
+        }
+    }
+    .beans-fadeslider {
+        @extend %postionreset;
+        .slideset{@extend %postionreset;}
+        .slick-track,
+        .slick-list{@extend %postionreset; z-index: -1;}
+    }
+	&.style4 .welcome-heading{
+		letter-spacing: 1px;
+		font: 400 14px/24px $font-family-base;
+	}
+}
+.banner-section{
+	z-index:999;
+	min-height:533px;
+	padding-top: 20px;
+	position:relative;
+	padding-bottom: 40px;
+	@include transition (all, 0.4s, ease);
+	@include v-align(welcome-heading, middle);
+}
+.welcome-heading{
+	margin:0;
+	width: 100%;
+	color:$white;
+	padding:160px 0 0;
+	text-align: center;
+	letter-spacing: 5px;
+	font:600 18px/22px $font-family-sans-serif;
+	@include breakpoint($screen-xs-max){br{display: none;}}
+	h1{
+		margin:0 0 27px;
+		overflow: hidden;
+		letter-spacing:6px;
+		padding:19px 25px 21px;
+		border: 5px solid $white;
+		text-transform: uppercase;
+		@include transition (all, 0.4s, ease);
+		@include vertical-align(inline-block, top);
+		font:700 60px/64px $font-family-sans-serif;
+		@include breakpoint($screen-sm-max){font-size: 50px;}
+		@include breakpoint($screen-xs-max){
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+	p{margin: 0 0 26px;}
+	.buttons-box{overflow: hidden;}
+	.btn{
+		margin:0 3px;
+		border-width:2px;
+	}
+	.main-text{
+		width: 509px;
+		color: $white;
+		display: block;
+		margin: 0 auto 25px;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		font: 600 48px/60px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+			font-size: 22px;
+			line-height: 30px;
+			br{display: none;}
+		}
+		.rotate-text{
+			display: block;
+			padding: 12px 0;
+			font-size: 60px;
+			font-weight: 700;
+			margin: 10px 0 0;
+			@include breakpoint($screen-xs-max){
+				font-size: 30px;
+				line-height: 50px;
+			}
+		}
+	}
+	&.style5{
+		h1{
+			border: 0;
+			padding: 0;
+			letter-spacing: 0;
+			text-transform: lowercase;
+			text-transform: capitalize;
+			font: 70px/100px $font-great-wibes;
+		}
+	}
+}
+/*------------------------------------------------------------------
+4-3. about post Styles / .about-post
+-------------------------------------------------------------------*/
+.about-post{
+	color:$stack;
+	font-size: 14px;
+	line-height:26px;
+	margin-bottom: 30px;
+	.img-box{
+		overflow: hidden;
+		margin: 0 0 26px;
+	}
+	h3{
+		color:$lime;
+		margin: 0 0 22px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 16px/21px $font-family-sans-serif;
+        .dark &{color: $white;}
+        a{
+            color:$lime;
+            @include transition (all, 0.4s, ease);
+            .dark &{color: $white;}
+            &:hover{text-decoration: none;}
+        }
+        *.large{font-size: 18px;}
+	}
+	p{margin: 0 0 23px;}
+	.btn{
+		color:$stack;
+		border-color: $gainsboro;
+		.dark &{
+			color: rgba(143, 143, 143, 0.6);
+			border-color: rgba(143, 143, 143, 0.6);
+		}
+		&:hover{
+			color: $white;
+			.dark &{
+				color: #8f8f8f;
+				background: transparent;
+				color: rgba(143, 143, 143, 1);
+				border-color: rgba(143, 143, 143, 1);
+			}
+		}
+	}
+}
+.features-col{
+	color:$lime;
+	margin-bottom: 30px;
+    .dark &{color: $white;}
+	h2{
+		margin: 0 0 39px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 21px/24px $font-family-sans-serif;
+	}
+	&.style2 h2{font-weight: 700;}
+	&.style3 .panel-title a{padding: 12px 10px 15px 29px;}
+	&.style4{
+		.panel-title{
+			a{
+				color: $white;
+				line-height: 2;
+				font-size: 14px;
+				overflow: hidden;
+				font-weight: 600;
+				text-transform: uppercase;
+				padding: 15px 37px 15px 42px;
+				font-family: $font-family-sans-serif;
+				&.collapsed{background: $lime;}
+			}
+		}
+		.list-events{
+			margin: -22px 0 0;
+			li{
+				margin: 0 0 0 17px;
+				padding: 37px 0 32px;
+				border-top: 1px solid #ededed;
+				&:first-child{border-top-color:transparent;}
+				@include breakpoint($screen-md-max){margin: 0;}
+			}
+			p{margin: 0;}
+			.title{
+				color: $lime;
+				display: block;
+				margin: 0 0 16px;
+				position: relative;
+				padding: 0 17px 0 22px;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				font: 600 14px/20px $font-family-sans-serif;
+				.dark &{color: $white;}
+			}
+			.fa{
+				top: 0;
+				left: 0;
+				font-size: 17px;
+				position: absolute;
+			}
+			time{
+				float: right;
+				position: relative;
+				padding: 0 0 0 28px;
+			}
+		}
+	}
+}
+.tabs-block{overflow: hidden;}
+/*------------------------------------------------------------------
+4-4. nav tabs Styles / .nav-tabs
+-------------------------------------------------------------------*/
+.nav-tabs{
+	font-size: 14px;
+	line-height:16px;
+	text-transform: capitalize;
+	border-bottom:0;
+	>li{
+		margin:0;
+		>a{
+			color:$lime;
+			margin:11px 0 0;
+			border-radius:1px;
+			background: $white;
+            letter-spacing: 1px;
+			padding:11px 29px 12px;
+			border:solid #ececec;
+			border-width:1px 1px 0 1px;
+			@include transition (all, 0.4s, ease);
+			@include element(before, 0, -1px, auto, -1px, transparent);
+			@include element2(after, 4px, auto, auto, 50%);
+            .dark &{
+                color: $white;
+                background: #191919;
+                border-color: #494949;
+            }
+			@include breakpoint($screen-sm-max){
+				padding:11px 15px 12px;
+			}
+			@include breakpoint($screen-xs-max){
+				padding:11px 12px 12px;
+			}
+			&:before{
+				top: -1px;
+				opacity: 0;
+				height: 5px;
+				visibility: hidden;
+				@include transition (all, 0.4s, ease);
+			}
+			&:after{
+				opacity: 0;
+				margin:0 0 0 -3px;
+				visibility: hidden;
+				@include transition (all, 0.4s, ease);
+				@include arrow(6px, 4px, 0, 4px, transparent, transparent, transparent, transparent);
+			}
+			&:hover{
+				margin:0;
+				background: $white;
+				padding:18px 29px 16px;
+                .dark &{background: #191919;}
+				@include breakpoint($screen-sm-max){
+					padding:18px 20px 16px;
+				}
+				@include breakpoint($screen-xs-max){
+					padding:18px 8px 16px;
+				}
+				&:after,
+				&:before{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		&.active > a,
+		&.active > a:hover,
+		&.active > a:focus{
+			margin:0;
+			border-radius:0;
+			background: $white;
+			border:solid #ececec;
+			border-width:1px 1px 0 1px;
+			padding:18px 29px 16px;
+			@include element(before, 0, -1px, auto, -1px, transparent);
+			@include element2(after, 4px, auto, auto, 50%);
+            .dark &{
+                border-color: #494949;
+                background: #191919;
+            }
+			@include breakpoint($screen-sm-max){
+				padding:18px 20px 16px;
+			}
+			@include breakpoint($screen-xs-max){
+				padding:18px 12px 16px;
+			}
+			&:before{
+				top: -1px;
+				opacity: 1;
+				height: 5px;
+				visibility: visible;
+			}
+			&:after{
+				opacity: 1;
+				margin:0 0 0 -3px;
+				visibility: visible;
+				@include arrow(6px, 4px, 0, 4px, transparent, transparent, transparent, transparent);
+			}
+		}
+	}
+}
+.tab-content{overflow: hidden;}
+.tab-pane{
+	color:$stack;
+	font-size: 14px;
+	overflow: hidden;
+	line-height:26px;
+	background: $white;
+	border:1px solid #ececec;
+	padding:24px 5% 22px 5.3%;
+    .dark &{
+        background: #191919;
+        border-color: #494949;
+    }
+	@include breakpoint($screen-md-max){
+		padding:20px 3%;
+	}
+	.alignleft{
+		float: left;
+		margin:7px 34px 0 0;
+		@include breakpoint($screen-md-max){
+			margin:7px 14px 0 0;
+		}
+		@include breakpoint($screen-sm-max){
+			float: none;
+			margin: 0 0 20px;
+			img{width: 100%;}
+		}
+	}
+	.text-box{
+		overflow: hidden;
+		p{margin: 0;}
+	}
+}
+.panel-group{
+	overflow: hidden;
+	.panel{
+		border-radius:0;
+		box-shadow:none;
+		margin-bottom: 9px;
+		background: $white;	
+		border-color:$light-gray2;
+        .dark &{
+            background: #191919;
+            border-color: #494949;
+        }
+	}
+}
+.panel-default > .panel-heading{border-radius:0;}
+.features-col .panel-default > .panel-heading{padding:0;}
+.panel-default > .panel-heading + .panel-collapse > .panel-body{border-color:$light-gray2;}
+.panel-default > .panel-heading{background: none;}
+.panel-title{
+	color:$white;
+	font:14px/18px $font-family-base;
+	text-transform: capitalize;
+	a{
+		color:$white;
+		display: block;
+		position:relative;
+        letter-spacing: 1px;
+		padding:12px 10px 15px 44px;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			color:$white;
+			text-decoration: none;
+		}
+		&.collapsed{
+			color:$shark;
+			background: $white;
+            .dark &{
+                color: $white;
+                background: #191919;
+            }
+            &:hover{color:$white;}
+		}
+	}
+	.fa{
+		top: 50%;
+		left: 20px;
+		margin:-7px 0 0;
+		font-size: 15px;
+		line-height:12px;
+		position: absolute;
+		@include transition (all, 0.4s, ease);
+	}
+}
+.panel-body{
+	color:$stack;
+	line-height:26px;
+	padding:23px 20px 24px 29px;
+	dl{
+		margin: 0;
+		letter-spacing: 2px;
+		dt {
+			float: left;
+			color: $lime;
+			width: 129px;
+			font-size: 14px;
+			font-weight: 600;
+			.dark &{color: $white;}
+		}
+		dd{
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+}
+/*------------------------------------------------------------------
+4-5. create business Styles / .create-business
+-------------------------------------------------------------------*/
+.business-block{
+	@extend %clearfix;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{
+		z-index:9;
+		background: rgba($white, 0.92);
+        .dark &{background: rgba($lime, 0.92);}
+	}
+	&.dark{
+		&:before{
+            background: rgba($white, 0.85);
+            .dark &{background: rgba($lime, 0.85);}
+        }
+	}
+}
+.create-business{
+	line-height:26px;
+	position:relative;
+	z-index:999;
+	h2{
+		color: $lime;
+		margin:0 0 23px;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 600 21px/24px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+	p{margin: 0;}
+	.busines-col{
+		padding-top: 30px;
+		@include breakpoint($screen-md-max){
+			padding-top: 0;
+		}
+	}
+	.img-box{
+		overflow: hidden;
+		margin: -30px 0 -43px;
+		@include breakpoint($screen-md-max){
+			margin: 40px 0 -43px;
+		}
+		@include breakpoint($screen-sm-max){
+			margin: 192px 0 -30px;
+		}
+		@include breakpoint($screen-xs-max){
+			margin: 0 0 -30px;
+		}
+	}
+	.buttons-box{
+		padding:24px 0;
+		overflow: hidden;
+	}
+	.btn{
+		margin: 0 8px 0 0;
+		border:2px solid transparent;
+		@include breakpoint($screen-xs-max){
+			margin: 0 8px 10px 0;
+		}
+	}
+	.btn-f-info{
+		color:$shark;
+		background: none;
+		border-color: $shark;
+		&:hover{color:$white;}
+        .dark &{
+            color: $white;
+            border-color: $white;
+        }
+	}
+	.btn-f-default:hover{
+		color:$shark;
+		border-color:$shark;
+		background: none;
+        .dark &{
+            color: $white;
+            border-color: $white;
+        }
+	}
+	.video-block{overflow: hidden;}
+}
+/*------------------------------------------------------------------
+4-6. partners nav Styles / .partners-nav
+-------------------------------------------------------------------*/
+.partners-block{overflow: hidden;}
+.partners-nav{
+	margin:0;
+	text-align: center;
+	overflow: hidden;
+	li{
+		margin:0 17px;
+		img{display: block;}
+    }
+    a{@include transition (all, 0.4s, ease);}
+    .frame{
+        height: 70px;
+        @include v-align(box, middle);
+        a:hover{opacity: 0.7;}
+        &.add{
+            a{opacity: 0.4;}
+            a:hover{opacity: 1;}
+        }
+    }
+    &.large li{margin: 0 60px;}
+    &.medium li{margin: 0 30px;}
+}

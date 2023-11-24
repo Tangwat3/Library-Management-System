@@ -1,0 +1,299 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+15-2. youga slider Styles / .youga-slider
+15-3. events mainbanner Styles / .events-mainbanner
+15-4. events icons Styles / .events-icons
+15-5. bakery textbox Styles / .bakery-textbox
+15-6. bakery dishs Styles / .bakery-dishs
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+15-2. youga slider Styles / .youga-slider
+-------------------------------------------------------------------*/
+.youga-slider{
+    color: $white;
+	font: 300 14px/24px $font-family-sans-serif;
+	.caption{
+		z-index: 55;
+		height: 787px;
+		position: relative;
+		padding: 120px 0 20px;
+        background:rgba(0, 0, 0, 0.5);
+		@include v-align(caption-holder, middle);
+		&.dark{background:rgba(0, 0, 0, 0.87);}
+	}
+	.caption-holder{width: 100%;}
+	h1{
+		top: -50px;
+		opacity: 0;
+		margin: 0 0 25px;
+		position: relative;
+		text-transform: uppercase;
+		transition: all 2.5s ease;
+		font: 700 40px/56px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+	.center{
+		max-width: 67%;
+		margin: 0 auto;
+		h1{
+			font-weight: 600;
+			text-transform: lowercase;
+			text-transform: capitalize;
+		}
+	}
+	.slick-dots{
+		bottom:10px;
+		text-align: center;
+		li{
+			@include vertical-align(inline-block, top);
+			margin:0 3px;
+			button{
+				margin: 0;
+				border: 0;
+				padding: 0;
+				display: block;
+				background: none;
+				border-radius:50%;
+				text-indent: -9999px;
+				@include square(10px);
+				border:2px solid $white;
+			}
+		}
+	}
+	.slick-arrow{
+		left: 0;
+		top: 50%;
+		border: 0;
+        opacity: 0;
+		z-index: 55;
+        color: $white;
+		font-size: 52px;
+		overflow: hidden;
+		margin: 38px 0 0;
+		line-height: 30px;
+		position: absolute;
+        visibility: hidden;
+		text-indent: -9999px;
+		@include square(58px);
+        background: rgba(0, 0, 0, 0.87);
+        @include transition (all, 0.4s, ease);
+		&:after{
+			top: 0;
+			left: 19px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-next{
+		right: 0;
+		left: auto;
+		&:after{content:"\f105";}
+	}
+	.slick-prev{background: none;}
+    &:hover{
+        .slick-arrow{
+            opacity: 1;
+            visibility: visible;
+        }
+        .slick-prev{left: 14px;}
+        .slick-next{right: 14px;}
+    }
+	.slick-active .caption h1 {
+		transition: all 1s ease 1s;
+		opacity: 1;
+		top: 0;
+	}
+	.caption p {
+		transition: all 2.5s ease;
+		position: relative;
+		margin: 0 0 34px;
+		left: -50px;
+		opacity: 0;
+	}
+	.slick-active .caption  p {
+		transition: all 1s ease 1s;
+		opacity: 1;
+		left: 0;
+	}
+	.caption .btn {
+		transition: all 2.5s ease;
+		margin: 0 10px 10px 0;
+		position: relative;
+		bottom: -50px;
+		opacity: 0;
+	}
+	.slick-active .caption .btn {
+		transition: all 1s ease 1s;
+		opacity: 1;
+		bottom: 0;
+	}
+}
+/*------------------------------------------------------------------
+15-3. events mainbanner Styles / .events-mainbanner
+-------------------------------------------------------------------*/
+.events-mainbanner{
+	color: $white;
+	@extend %boxreset;
+	padding: 286px 0 297px;
+	@include breakpoint($screen-xs-max){padding: 150px 0;}
+	.container{
+		z-index: 99;
+		position: relative;
+		text-align: center;
+	}
+	.heading{
+		margin: 0;
+		font-size: 52px;
+		font-weight: 700;
+		line-height: 1.4;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		font-family: $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){font-size: 30px;}
+	}
+	.subtitle{
+		padding: 0 10px;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.5;
+		vertical-align: top;
+		margin: 0 0 51px 4px;
+		display: inline-block;
+		letter-spacing: 4.8px;
+		text-transform: uppercase;
+		@include breakpoint($screen-xs-max){
+			font-size: 12px;
+			letter-spacing: 2px;
+		}
+	}
+	.wedding-nav{
+		color: $white;
+		margin: 0 0 50px;
+		text-transform: uppercase;
+		font: 16px/20px $font-family-base;
+		.countdown-section{
+			padding: 0;
+			width: 141px;
+			margin:0 7px;
+			height: 150px;
+			border-radius: 0;
+			background: transparent;
+			@include breakpoint($screen-xs-max){width: 100px;}
+			.countdown-amount{
+				font: 600 68px/70px $font-family-sans-serif;
+				padding: 0 0 42px;
+				@include element(before, auto, auto, 19px, 50%, rgba(255, 255, 255, 0.2));
+				&:before{
+					z-index: 1;
+					width: 50px;
+					height: 2px;
+					margin: 0 0 0 -24px;
+				}
+			}
+		}
+	}
+	.text{
+		display: block;
+		max-width: 754px;
+		margin: 0 auto 55px;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		font: 300 20px/28px $font-family-sans-serif;
+	}
+	.stretch{
+		text-align: center;
+		@include element(before, 0, -9999px, 0, -9999px, rgba(0, 0, 0, 0.8));
+		position: absolute;
+		&:before{
+			z-index: 9;
+			display: block;
+		}
+	}
+}
+/*------------------------------------------------------------------
+15-4. events icons Styles / .events-icons
+-------------------------------------------------------------------*/
+.events-icons{
+	color: $white;
+	line-height: 1;
+	font-size: 25px;
+	padding: 0 0 28px;
+	background: $lime;
+	text-align: center;
+	@include breakpoint($screen-xs-max){padding: 20px 0; margin: 0 0 30px;}
+	.dark &{background: #191919;}
+	.icon{
+		z-index: 99;
+		display: block;
+		font-size: 28px;
+		padding: 32px 0 0;
+		position: relative;
+		text-align: center;
+		border-radius: 50%;
+		@include square(98px);
+		margin: -52px auto 20px;
+		@include breakpoint($screen-xs-max){margin: 0 auto 20px;}
+	}
+	.text{display: block;}
+}
+.banner-bar{
+	color: $white;
+	padding: 53px 0 40px;
+	font: 300 18px/30px $font-family-sans-serif;
+	.btn{
+		float: right;
+		margin: 10px 0 0 50px;
+	}
+}
+/*------------------------------------------------------------------
+15-5. bakery textbox Styles / .bakery-textbox
+-------------------------------------------------------------------*/
+.bakery-textbox{
+	text-align: center;
+	letter-spacing: 1px;
+	font:300 14px/24px $font-family-sans-serif; 
+	@include breakpoint($screen-xs-max){img{margin: 0 auto 20px;}}
+	p{
+		margin: 0 0 54px;
+		@include breakpoint($screen-xs-max){margin: 0 0 40px;}
+	}
+	h2{
+		color: $lime;
+		margin: 0 0 34px;
+		font: 70px/80px $font-great-wibes;
+		@include breakpoint($screen-xs-max){
+			font-size: 45px;
+			line-height: 60px;
+		}
+		.add-color{display: block;}
+		.dark &{color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+15-6. bakery dishs Styles / .bakery-dishs
+-------------------------------------------------------------------*/
+.bakery-dishs{
+	text-align: center;
+	font:300 14px/24px $font-family-sans-serif;
+	p{margin: 0;}
+	h2{
+		color: $lime;
+		margin: 0 0 35px;
+		font: 24px/30px $font-playfair;
+		@include breakpoint($screen-xs-max){margin: 0 0 25px;}
+		.dark &{color: $white;}
+	}
+	img{
+		margin: 0 auto 40px;
+		@include breakpoint($screen-xs-max){margin: 0 auto 20px;}
+	}
+}

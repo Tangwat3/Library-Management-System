@@ -1,0 +1,437 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+5-2. personal banner Styles / .personal-banner
+5-3. personal about Styles / .personal-about
+5-4. p skill section Styles / .p-skill-section
+5-5. personal process Styles / .personal-process
+5-6. personal exper Styles / .personal-exper
+5-7. p skills Styles / .p-skills
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+5-2. personal banner Styles / .personal-banner
+-------------------------------------------------------------------*/
+.personal-banner{
+	@extend %boxreset;
+	.text-box{
+		z-index: 55;
+        color: $shark;
+		position: relative;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		@include v-align(box, middle);
+        font: 600 16px/24px $font-family-sans-serif;
+	}
+	.box{margin: 4px 0 0 -1px;}
+	h1{
+        color: $shark;
+		margin: 0 0 20px;
+		text-transform: initial;
+		font: 600 76px/80px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 55px;
+			line-height: 60px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+5-3. personal about Styles / .personal-about
+-------------------------------------------------------------------*/
+.personal-about{
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 32px;
+	text-align: center;
+	font-style: italic;
+	padding: 90px 0 99px;
+	.block{padding: 0 17px;}
+	p{margin: 0 0 52px;}
+	&.style2{font-family:$font-family-sans-serif; font-style: normal;}
+}
+/*------------------------------------------------------------------
+5-4. p skill section Styles / .p-skill-section
+-------------------------------------------------------------------*/
+.p-skill-section{
+	overflow: hidden;
+	.img-box{
+		width: 50%;
+		float: left;
+		height: 600px;
+		overflow: hidden;
+		position: relative;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			width: 100%;
+			height: 300px !important;
+		}
+	}
+	.block{
+        color: $stack;
+		font-size: 16px;
+		max-width: 550px;
+		overflow: hidden;
+		line-height: 27px;
+		padding: 69px 0 0 29px;
+		@include breakpoint($screen-xs-max){
+			max-width: 100%;
+			padding: 40px 15px 0;
+		}
+		p{margin: 0 0 18px;}
+	}
+	.chart-block{
+		overflow: hidden;
+		margin: 0 -45px 0 -33px;
+		@include breakpoint($screen-xs-max){ margin: 0;}
+	}
+	.box{
+		width: 197px;
+		margin: 0 0 44px;
+		font-weight: 400;
+		font-style: normal;
+		@include vertical-align(inline-block, top);
+		@include breakpoint($screen-md-max){
+			width: 176px;
+		}
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+			display: block;
+		}
+	}
+	.pie-chart {
+		line-height: 20px;
+		position: relative;
+		margin: 0 auto 9px;
+		text-align: center;
+		canvas {
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			display: block;
+			position: absolute;
+		}
+		.pie-chart-percent{
+			left: 0;
+			top: 50px;
+			width: 100%;
+			z-index: 10;
+            color: $shark;
+			display: block;
+			text-align: center;
+			position: absolute;
+			font: 700 15px/20px $font-family-sans-serif;
+            .dark & {color: $white;}
+		}
+		img {
+			max-width:100%;
+			vertical-align: middle;
+		}
+	}
+	.pie-description {
+        color: $shark;
+		display: block;
+		font-size: 12px;
+        font-weight: 600;
+		text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+        .dark & {color: $white;}
+	}
+	&.style2{
+		.img-box{
+			float: right;
+			height: 640px;
+			@include breakpoint($screen-xs-max){float: none; height: 300px !important;}
+		}
+		.page-heading{text-align: left;}
+		.form-block{
+			width: 50%;
+			float: right;
+			overflow: hidden;
+			position: relative;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				width: 100%;
+				height: auto !important;
+			}
+		}
+		.page-heading{margin: 0 0 20px;}
+		.block{
+			z-index: 99;
+			float: right;
+			width: 63.3%;
+			max-width: 100%;
+			position: relative;
+			padding: 87px 34px 40px 10px;
+			@include breakpoint($screen-md-max){
+				width: 100%;
+				padding: 87px 20px 40px;
+			}
+		}
+		.facts-section .box{
+			display: block;
+			width: 100%;
+			margin: 0;
+			.num{
+				font-size: 50px;
+				line-height: 70px;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+5-5. personal process Styles / .personal-process
+-------------------------------------------------------------------*/
+.personal-process{
+	overflow: hidden;
+	padding: 90px 0 20px;
+	@include breakpoint($screen-xs-max){padding: 50px 0 20px;}
+	.beans-slider{
+        color: $stack;
+		margin: 0 auto;
+		font-size: 18px;
+		max-width: 730px;
+		overflow: hidden;
+		line-height: 32px;
+		font-style: italic;
+		text-align: center;
+		.slick-dots{
+			position: static;
+			overflow: hidden;
+			padding: 12px 0 60px;
+			li{
+				margin: 0 4px;
+				vertical-align: top;
+				display: inline-block;
+			}
+			button{
+				margin: 0;
+				padding: 0;
+				display: block;
+				background: none;
+				overflow: hidden;
+				border-radius: 50%;
+				text-indent: -9999px;
+				@include square(12px);
+				border: 1px solid #dedede;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+		}
+	}
+	.icon{
+        color: $white;
+		display: block;
+		font-size: 39px;
+		padding: 39px 0 0;
+		text-align: center;
+		border-radius: 50%;
+		margin: 0 auto 33px;
+		@include square(120px);
+	}
+	.title{
+        color: $shark;
+		display: block;
+		font-size: 21px;
+		font-weight: 700;
+		margin: 0 0 23px;
+		line-height: 25px;
+		font-style: normal;
+		text-transform: uppercase;
+        .dark &{ color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+5-6. personal exper Styles / .personal-exper
+-------------------------------------------------------------------*/
+.personal-exper{
+    color: $stack;
+	padding: 91px 0 24px;
+	.p-holder{
+		font-size: 14px;
+		overflow: hidden;
+		padding: 0 0 74px;
+		line-height: 20px;
+		position: relative;
+		@include breakpoint($screen-xs-max){
+			padding: 0 0 40px;
+		}
+		&:after{
+			top: 0;
+			bottom: 0;
+			left:584px;
+			width: 2px;
+			@extend %after;
+            background: #ededed;
+			@include breakpoint($screen-md-max){
+				left: 470px;
+			}
+			@include breakpoint($screen-sm-max){
+				left: 359px;
+			}
+			@include breakpoint($screen-xs-max){
+				display: none;
+			}
+            .dark &{ background: #494949;}
+		}
+		&:last-child:after{bottom: 74px;}
+		.box{
+			float: left;
+			width: 532px;
+			padding: 23px 0 0;
+			text-align: right;
+			margin: 0 22px 0 0;
+			@include breakpoint($screen-md-max){
+				width: 416px;
+			}
+			@include breakpoint($screen-sm-max){
+				width: 306px;
+			}
+		}
+		.title{
+            color: $shark;
+			display: block;
+			font-size: 16px;
+			margin: 0 0 24px;
+			line-height: 20px;
+            .dark &{ color: $white;}
+			a{
+                color: $shark;
+				font-size: 12px;
+				text-transform: uppercase;
+                .dark &{ color: $white;}
+			}
+		}
+		time{
+			float: left;
+            color: $shark;
+			width: 200px;
+			font-size: 16px;
+			line-height: 20px;
+			padding: 22px 0 0 21px;
+            .dark &{ color: $white;}
+		}
+		.icon{
+            color: $white;
+			z-index: 5;
+			float: left;
+			font-size: 24px;
+			padding: 20px 0 0;
+			position: relative;
+			text-align: center;
+			border-radius: 50%;
+			margin: 0 auto 33px;
+			@include square(62px);
+		}
+		p{margin: 0;}
+		&:nth-child(even){
+			.box{
+				float: right;
+				text-align: left;
+				margin: 0 0 0 22px;
+			}
+			time{
+				float: right;
+				text-align: right;
+				padding: 22px 21px 0 0;
+			}
+			.icon{
+				float: right;
+			}
+		}
+	}
+	&.style3{
+		padding-top: 0;
+		.img-box{
+			overflow: hidden;
+			margin: 0 0 20px;
+			img{@extend %img-responsive;}
+		}
+		h2{
+            color: $shark;
+			display: block;
+			font-size: 16px;
+			margin: 0 0 10px;
+			line-height: 20px;
+			text-transform: uppercase;
+			.dark &{color: $white;}
+			a{
+                color: $shark;
+				@include transition (all, 0.4s, ease);
+				.dark &{color: $white;}
+				&:hover{text-decoration: none;}
+			}
+		}
+		.p-holder{padding: 0 0 34px;}
+		&.sidebar{
+			.p-holder{
+				&:after{
+					left: 434px;
+					@include breakpoint($screen-md-max){
+						left: 350px;
+					}
+					@include breakpoint($screen-sm-max){
+						display: none;
+					}
+				}
+				.box{
+					width: 382px;
+					@include breakpoint($screen-md-max){
+						width: 296px;
+					}
+					@include breakpoint($screen-sm-max){
+						width: 377px;
+					}
+					@include breakpoint($screen-xs-max){
+						width: 100%;
+					}
+				}
+				time{
+					@include breakpoint($screen-sm-max){
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+5-7. p skills Styles / .p-skills
+-------------------------------------------------------------------*/
+.p-skills{
+	padding: 91px 0 80px;
+	.heading-v5{margin: 0 0 2px;}
+	.title{
+		display: block;
+		margin: 0 0 19px;
+		font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 16px/20px $font-family-sans-serif;
+	}
+	.progress-right{
+		text-align: right;
+		.progress-holder{
+			.progress-bar-outer{
+                background: $shark;
+				left: auto;
+				right: 0;
+			}
+			.text{
+				left: auto;
+				right: 21px;
+			}
+			.counter{
+				left: 9px;
+				right: auto;
+			}
+		}
+	}
+	.progress-holder{
+		margin: 0;
+        .counter{color: $stack;}
+		.text{text-transform: uppercase;}
+	}
+}

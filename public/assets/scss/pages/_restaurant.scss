@@ -1,0 +1,573 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+10-2. resturant gallery Styles / .resturant-gallery
+10-3. about chef Styles / .about-chef
+10-4. chef quotes Styles / .chef-quotes
+10-5. menu block Styles / .menu-block
+10-6. our menu nav Styles / .our-menu-nav
+10-7. menu article Styles / .menu-article
+10-8. book block Styles / .book-block
+10-9. finest chef Styles / .finest-chef
+10-10. chef carousel Styles / .chef-carousel
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+10-2. resturant gallery Styles / .resturant-gallery
+-------------------------------------------------------------------*/
+.resturant-gallery{
+	overflow: hidden;
+	position: relative;
+	.beans-slide{overflow: hidden;}
+	.slick-arrow{
+		top: 50%;
+		margin: 0;
+		border: 0;
+		left: 20px;
+		padding: 0;
+		width: 21px;
+		z-index:999;
+        color:$white;
+		font-size: 60px;
+        background: none;
+		margin:-33px 0 0;
+		line-height:20px;
+		position:absolute;
+        text-indent: -9999px;
+		transition:all 0.25s ease;
+		&:hover{text-decoration: none;}
+		&:after{
+			top: 0;
+			left: 3px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 60px;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-next{
+		left: auto;
+		right: 20px;
+		&:after{content:"\f105";}
+	}
+	.video-area{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		.mejs-offscreen{display: none;}
+	}
+	&.video-bg{
+		@include breakpoint($screen-xs-max){
+			.chef-icon,
+			p{display: none;}
+			.win-height{height: auto !important;}
+			.resturant-heading h1{
+				font-size: 28px;
+				line-height: 30px;
+			}
+			.resturant-heading{padding: 30px 0 20px;}
+		}
+	}
+}
+.resturant-content{
+	max-height:1079px;
+	position:relative;
+	z-index:99;
+	@include v-align(resturant-heading, $valign: middle);
+}
+.resturant-heading{
+	width: 100%;
+	font-size: 18px;
+	line-height:28px;
+    color:$white;
+	text-align: center;
+	padding:30px 20px 20px;
+	@include element(before, -9999px, -9999px, -9999px, -9999px, rgba(0, 0, 0, 0.64));
+	@include breakpoint($screen-xs-max){
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.beans-fadeslider {
+		position: relative;
+		overflow: visible;
+		height: 80px;
+	}
+	h1{
+		margin:0 0 25px;
+		text-transform: uppercase;
+		font:700 74px/78px $font-playfair;
+		@include breakpoint($screen-xs-max){
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.top-text{
+			display: block;
+			font-size: 54px;
+			font-weight: normal;
+			text-transform: initial;
+			@include breakpoint($screen-xs-max){font-size: 20px;}
+		}
+	}
+	p{margin: 0 0 35px;}
+	.btn{border-width:2px;}
+}
+.chef-icon{
+	margin:0 auto 23px;
+	display: block;
+}
+.header{
+	overflow: hidden;
+	height: 80px;
+	@extend %backgroundreset;
+}
+/*------------------------------------------------------------------
+10-3. about chef Styles / .about-chef
+-------------------------------------------------------------------*/
+.about-chef{
+	.txt-box{
+		padding-top: 141px;
+		padding-bottom: 167px;
+		@include breakpoint($screen-md-max){
+			padding-top: 80px;
+			padding-bottom: 40px;
+		}
+	}
+	.img-box{position: relative;}
+	&.style2{
+		.img2{
+			margin:-49px 0 0 36px;
+			@include breakpoint($screen-sm-max){
+				margin: -19px 0 0 0;
+			}
+		}
+		.txt-box{
+			padding-top: 90px;
+			padding-bottom: 117px;
+			@include breakpoint($screen-md-max){
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+			@include breakpoint($screen-sm-max){
+				padding-top: 40px;
+				padding-bottom: 0;
+			}
+		}
+        .chef-quotes cite{
+			background: url(images/one-page/img03.png) no-repeat;
+			@include breakpoint($screen-sm-max){display: none;}
+		}
+	}
+	&.style3{
+		padding-top: 100px;
+		.img2{margin:-49px 0 0 36px;}
+		.txt-box{
+			padding-top: 90px;
+			padding-bottom: 117px;
+		}
+        .chef-quotes cite{background: url(images/icons/sign.png) no-repeat;}
+	}
+}
+/*------------------------------------------------------------------
+10-4. chef quotes Styles / .chef-quotes
+-------------------------------------------------------------------*/
+.chef-quotes{
+	margin:0;
+	border: 0;
+    color:$shark;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+	line-height:30px;
+	font-weight: 300;
+	font-style: italic;
+	padding:0;
+    .dark &{color: $white;}
+	q{
+		display: block;
+		margin:0 0 54px;
+		quotes:none;
+	}
+	cite{
+		@include size(231px, 88px);
+		margin:0 auto;
+		text-indent: -9999px;
+		display: block;
+        background:url(images/restaurant/signature.png) no-repeat;
+	}
+}
+/*------------------------------------------------------------------
+10-5. menu block Styles / .menu-block
+-------------------------------------------------------------------*/
+.menu-block{
+	position:relative;
+	overflow: hidden;
+	.nav-holder{margin-bottom: 60px;}
+}
+.menu-frame{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+/*------------------------------------------------------------------
+10-6. our menu nav Styles / .our-menu-nav
+-------------------------------------------------------------------*/
+.our-menu-nav{
+	margin:0;
+	text-align: center;
+	padding:23px 10px 0;
+	text-transform: capitalize;
+	font:700 18px/22px $font-playfair;
+	@include element2(before, 0, -9999px, 0, -9999px);
+	@include breakpoint($screen-xs-max){padding: 0;}
+	&:before{
+		border: solid $baltic-sea;
+		border-width:2px 0;
+	}
+	li{
+		float: none;
+		padding:0 18px;
+		@include vertical-align(inline-block, top);
+		@include breakpoint($screen-xs-max){
+			padding:0 1px;
+		}
+		a{
+            color:$white;
+			display: block;
+			padding:  0 0 26px;
+			@include transition (all, 0.4s, ease);
+			@include element(before, auto, 0, 0, 0, transparent);
+			&:before{
+				height: 2px;
+				opacity: 0;
+				visibility: hidden;
+				@include transition (all, 0.4s, ease);
+			}
+			&:hover{
+				text-decoration: none;
+				&:before{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		&.active a:before{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.menus-holder{
+	width: 105%;
+	margin:0 0 2px;
+	overflow: hidden;
+	@include breakpoint($screen-sm-max){
+		width: 100%;
+	}
+}
+.hold-backery{
+	padding: 25px;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat:  no-repeat;
+	font:300 14px/24px $font-family-sans-serif;
+	@include breakpoint($screen-xs-max){padding: 15px;}
+	.frm-backery{
+		overflow: hidden;
+		padding: 59px 35px 7px;
+		border: 11px solid rgba(255, 255, 255, 0.5);
+		@include breakpoint($screen-xs-max){
+			padding: 40px 20px 7px;
+			border-width: 5px;
+		}
+	}
+	.menu-article{
+		width: 48.6%;
+		color: $white;
+		margin: 0 2.8% 0 0;
+		@include breakpoint($screen-sm-max){
+			margin: 0;
+			width: 100%;
+		}
+		@include breakpoint($screen-xs-max){
+			margin:0 0 40px;
+		}
+		h2{font-size: 16px;}
+		.alignleft{
+			width: 28.2%;
+			margin: 0 4.4% 59px 0;
+			@include breakpoint($screen-xs-max){
+				width: 100%;
+				margin:0 0 20px;
+			}
+			img{border-radius: 20px;}
+		}
+		.txt-box{padding: 5px 0 0;}
+		.btn{
+			font-size: 14px;
+			border-width: 2px;
+			border-radius: 15px;
+			&:hover{color: $white !important;}
+		}
+		&:nth-child(2n){margin-right: 0;}
+	}
+}
+/*------------------------------------------------------------------
+10-7. menu article Styles / .menu-article
+-------------------------------------------------------------------*/
+.menu-article{
+	float: left;
+    color:$stack;
+	width: 46.4%;
+	margin:0 2.5% 0 0;
+	@include breakpoint($screen-sm-max){
+		margin: 0;
+		width: 100%;
+	}
+	@include breakpoint($screen-xs-max){
+		margin:0 0 40px;
+	}
+	.alignleft{
+		float: left;
+		width:29.8%;
+		position: relative;
+		margin:0 5.6% 59px 0;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			width: 100%;
+			margin:0 0 20px;
+		}
+		a:hover{
+			img{opacity:0.6;}
+			text-decoration: none;
+			.fa{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		img{
+			width: 100%;
+			@include transition (all, 0.4s, ease);
+		}
+		.fa{
+			top: 50%;
+			left: 50%;
+			opacity: 0;
+            color: $white;
+			font-size: 20px;
+			visibility: hidden;
+			position: absolute;
+			margin: -10px 0 0 -10px;
+			@include transition (all, 0.4s, ease);
+		}
+	}
+	.txt-box{overflow: hidden;}
+	.heading-box{
+		overflow: hidden;
+		margin:0 0 4px;
+	}
+	h2{
+		float: left;
+        color:$white;
+		margin:0 12px 0 0;
+		text-transform: capitalize;
+		font:700 18px/22px $font-playfair;
+		a{
+            color:$white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.price{
+		float: right;
+        color:$white;
+		font:24px/28px $font-playfair;
+		margin:-5px 0 0 0;
+		sub{
+			@include vertical-align(inline-block, middle);
+			margin:0;
+			bottom: -2px;
+			left: -3px;
+			font-size: 17px;
+		}
+	}
+	.rattings-nav{
+		margin: 0 0 9px;
+		font-size: 14px;
+		line-height:18px;
+	}
+	p{margin: 0 0 11px;}
+	.btn{
+		font-size: 9px;
+		line-height:13px;
+        text-transform: uppercase;
+	}
+}
+/*------------------------------------------------------------------
+10-8. book block Styles / .book-block
+-------------------------------------------------------------------*/
+.book-block{
+	position: relative;
+	overflow: hidden;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{
+        z-index:9;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+.book-section{
+    color:$white;
+	position:relative;
+	z-index:999;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-height:480px;
+	@include v-align2(book-heading, middle);
+}
+.book-heading{
+	font:300 italic 16px/28px $font-family-base;
+	text-align: center;
+	overflow: hidden;
+	padding: 67px 10% 0;
+	@include breakpoint($screen-xs-max){
+		padding: 20px 10px;
+	}
+	h2{
+		margin: 0 0 26px;
+		text-transform: uppercase;
+		font:700 42px/46px $font-playfair;
+	}
+	p{margin: 0 0 40px;}
+}
+/*------------------------------------------------------------------
+10-9. finest chef Styles / .finest-chef
+-------------------------------------------------------------------*/
+.finest-chef{
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+/*------------------------------------------------------------------
+10-10. chef carousel Styles / .chef-carousel
+-------------------------------------------------------------------*/
+.chef-carousel{
+	margin: 0 -20px 0 0;
+	@include breakpoint($screen-xs-max){
+		margin: 0 auto;
+		max-width: 280px;
+	}
+	.beans-slide{
+		float: left;
+        color:$stack;
+		position:relative;
+		text-align: center;
+		padding:0 10px 36px;
+		margin:0 0 20px 20px;
+		border:1px solid $gainsboro;
+        .dark &{
+            background: #191919;
+            border-color: #494949;
+        }
+		@include breakpoint($screen-xs-max){margin: 0 0 20px;}
+		&:hover .slide-over{opacity: 1;}
+	}
+	.img-box{
+		overflow: hidden;
+		margin:0 -10px 24px;
+		img{@extend %img-responsive2}
+	}
+	h3{
+        color:$shark;
+		margin:0 0 6px;
+		text-transform: capitalize;
+		font:700 24px/28px $font-playfair;
+        .dark &{color: $white;}
+	}
+	.title{
+		display: block;
+		margin: 0 0 25px;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+	.slick-dots{
+		position: static;
+		li{
+			padding:0 2px;
+			@include vertical-align(inline-block, top);
+            &.slick-active button{background: $shark;}
+			button{
+				margin: 0;
+				border: 0;
+				padding: 0;
+				display: block;
+				text-indent: -9999px;
+				border-radius:50%;
+                background: $white;
+				border:1px solid $shark;
+				@include square(12px);
+				@include transition (all, 0.4s, ease);
+                &:hover{
+                    background: $shark;
+                    text-decoration: none;
+                }
+			}
+		}
+	}
+}
+.slide-over{
+	@extend %postionreset;
+	text-align: center;
+	opacity: 0;
+    background: $baltic-sea;
+	transition:all 0.6s ease;
+}
+.slide-frame{
+	display: table;
+	@include square(100%);
+	padding:20px 10%;
+	.slide-box{
+        color:$white;
+		@include vertical-align(table-cell, middle);
+		font-size: 13px;
+		line-height:24px;
+		h3{
+			margin:0 0 4px;
+			text-transform: capitalize;
+			font:700 24px/28px $font-playfair;
+			a{
+                color:$white;
+				transition:all 0.25s ease;
+				&:hover{text-decoration: none;}
+			}
+		}
+		p{margin: 0 0 10px;}
+		.title{
+			display: block;
+			margin: 0 0 20px;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		.slide-socials{
+            margin: 0 0 50px;
+            a{color:$white;}
+        }
+	}
+}
+.slide-socials{
+	margin:0;
+	text-align: center;
+	li{
+		@include vertical-align(inline-block, top);
+		float: none;
+		padding: 0 11px;
+	}
+	a{
+        color:$fuscous-gray;
+		font-size: 14px;
+		line-height:12px;
+		@include transition (all, 0.4s, ease);
+		&:hover{text-decoration: none;}
+	}
+}

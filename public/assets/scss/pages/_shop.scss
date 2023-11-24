@@ -1,0 +1,1065 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+9-2. shop gallery Styles / .shop-gallery
+9-3. collection block Styles / .collection-block
+9-4. product section Styles / .product-section
+9-5. product nav Styles / .product-nav
+9-6. new product Styles / .new-product
+9-7. special block Styles / .special-block
+9-8. best seller Styles / .best-seller
+9-9. other services Styles / .other-services
+9-10. shop features Styles / .shop-features
+9-11. deal gallery Styles / .deal-gallery
+9-12. product article Styles / .product-article
+9-13. links nav Styles / .links-nav
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+9-2. shop gallery Styles / .shop-gallery
+-------------------------------------------------------------------*/
+.shop-gallery{
+	.shop-content{
+		min-height: 667px;
+		padding-top: 150px;
+		padding-bottom: 20px;
+		@include v-align(shop-heading, $valign: middle);
+		&.add{
+			text-align: right;
+			.shop-heading{
+                color: $white;
+				font-size: 14px;
+				text-align: left;
+				max-width: 580px;
+				line-height: 24px;
+				h1{
+                    color: $white;
+					font-size: 43px;
+					margin:0 0 20px -2px;
+				}
+				p{margin: 0 0 20px;}
+			}
+			.button-slider{
+                overflow: hidden;
+                .btn{
+                    color: $white;
+                    border-color: $white;
+                    &:hover{border-color:$shark;}
+                }
+            }
+		}
+		&.add2{
+			.shop-heading{
+                color: $white;
+				font-size: 14px;
+				max-width: 640px;
+				line-height: 24px;
+				h1{
+                    color: $white;
+					font-size: 43px;
+					margin:0 0 20px -2px;
+				}
+				p{margin: 0 0 20px;}
+			}
+			.button-slider{
+                overflow: hidden;
+                .btn{
+                    color: $white;
+                    border-color: $white;
+                    &:hover{border-color:$shark;}
+                }
+            }
+		}
+	}
+	.shop2-content{
+		height: 700px;
+		padding-top: 250px;
+		padding-bottom: 20px;
+		@include breakpoint($screen-xs-max){
+			height: 480px;
+			padding-top: 200px;
+			padding-bottom: 20px;
+		}
+	}
+	.shop-heading{
+		z-index:999;
+		max-width: 570px;
+		position:relative;
+		margin: 2px 0 0 2px;
+		h1{
+            color:$shark;
+            letter-spacing: 2px;
+			margin:0 0 33px -2px;
+			text-transform: uppercase;
+			font: 700 53px/56px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 35px;
+				line-height: 40px;
+			}
+			.txt{
+				display: block;
+				font-size: 60px;
+				font-weight: 100;
+				margin:0 0 4px -3px;
+				@include breakpoint($screen-xs-max){
+					font-size: 40px;
+				}
+			}
+		}
+	}
+	.button-slider{
+		overflow: hidden;
+		.btn{
+            color:$shark;
+			border-width:2px;
+			margin:0 8px 0 0;
+            border-color:$shark;
+			@include breakpoint($screen-xs-max){
+				width: 200px;
+				margin:0 0 15px;
+			}
+            &:hover{
+                border-color:$shark;
+                background: $shark;
+                color:$white;
+            }
+		}
+	}
+	.add-text{
+		display: block;
+		font-size: 60px;
+		font-weight: 600;
+	}
+	.slick-dots{
+        opacity: 0;
+		bottom:10px;
+        visibility: hidden;
+		text-align: center;
+		li{
+			margin: 0 3px 0 2px;
+			@include vertical-align(inline-block, top);
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			display: block;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(10px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				background: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	.slick-arrow{
+		left: 0;
+		top: 50%;
+		margin: 0;
+		border: 0;
+		padding: 0;
+        opacity: 0;
+		z-index: 55;
+        color: $white;
+		font-size: 52px;
+		overflow: hidden;
+		margin: -23px 0 0;
+		line-height: 30px;
+		position: absolute;
+        visibility: hidden;
+		text-indent: -9999px;
+		@include square(58px);
+        background: rgba(0, 0, 0, 0.85);
+        @include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){
+			top: auto;
+			margin: 0;
+			bottom: 40px;
+		}
+		&:after{
+			top: 0;
+			left: 15px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 60px;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-next{
+		right: 0;
+		left: auto;
+		&:after{content:"\f105";}
+	}
+    &:hover{
+    	.slick-dots,
+        .slick-arrow{
+            opacity: 1;
+            visibility: visible;
+        }
+        .slick-prev{left: 14px;}
+        .slick-next{right: 14px;}
+    }
+	&.fitness{
+		padding: 137px 0 0;
+		.shop-content{min-height: 603px;}
+		.shop-content.add .shop-heading{
+			max-width: 561px;
+			margin: 17px 0 0;
+			h1{
+				font-size: 48px;
+				line-height: 1;
+				font-weight: 400;
+				letter-spacing: 0;
+				margin: 0 0 28px -2px;
+			}
+		}
+		.shop-content.add2 .shop-heading h1{
+			font-size: 48px;
+			line-height: 1;
+			font-weight: 400;
+			letter-spacing: 0;
+			margin: 0 0 28px -2px;
+		}
+	}
+	&.finance{
+		padding: 137px 0 0;
+		.anim-top {
+			transition: all 2.5s ease 0.5s;
+			position: relative;
+			top: -50px;
+			opacity: 0;
+		}
+		.slick-active .anim-top {
+			transition: all 1s ease 0.5s;
+			opacity: 1;
+			top: 0;
+		}
+		.btn,
+		.anim-bottom {
+			transition: all 2.5s ease 0.75s;
+			position: relative;
+			bottom: -50px;
+			opacity: 0;
+		}
+		.slick-active .btn,
+		.slick-active .anim-bottom {
+			transition: all 1s ease 0.75s;
+			opacity: 1;
+			bottom: 0;
+		}
+		p {
+			transition: all 2.5s ease 1s;
+			position: relative;
+			left: -50px;
+			opacity: 0;
+		}
+		.slick-active p {
+			transition: all 1s ease 1s;
+			opacity: 1;
+			left: 0;
+		}
+		.shop-content{min-height: 603px;}
+		.shop-content.add2 .shop-heading{
+			p{color: $stack;}
+			h1{
+				color: $lime;
+				font-size: 48px;
+				line-height: 1;
+				font-weight: 400;
+				letter-spacing: 0;
+				margin: 0 0 28px -2px;
+			}
+		}
+	}
+	&.shop2{
+		@include breakpoint($screen-xs-max){
+			.btn{width: 147px;}
+		}
+		.shop-content{
+			padding-left: 115px;
+			@include breakpoint($screen-xs-max){
+				padding-left: 25px;
+				.btn{width: 147px;}
+			}
+		}
+		.shop-heading h1{
+			font-weight: 700;
+			font-size: 112px;
+			line-height: 100px;
+			letter-spacing: 31px;
+			@include breakpoint($screen-xs-max){
+				font-size: 40px;
+				line-height: 40px;
+				letter-spacing: 20px;
+			}
+			.txt{
+				font-size: 48px;
+				font-weight: 500;
+				line-height: 56px;
+				letter-spacing: 1px;
+				@include breakpoint($screen-xs-max){
+					font-size: 20px;
+					line-height: 30px;
+				}
+			}
+			.text2{
+				display: block;
+				font-size: 29px;
+				font-weight: 500;
+				line-height: 56px;
+				letter-spacing: 0.3px;
+				@include breakpoint($screen-xs-max){
+					font-size: 12px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+9-3. collection block Styles / .collection-block
+-------------------------------------------------------------------*/
+.collection-block{
+	padding-top: 104px;
+	padding-bottom: 50px;
+	@include breakpoint($screen-xs-max){
+		display: none;
+	}
+	&.style2 .collection-over .box h2 .txt{
+		font-size: 14px;
+		line-height: 14px;
+	}
+}
+.collection-col{
+	position:relative;
+	overflow: hidden;
+	&.women{
+		margin-bottom: 29px;
+		@include breakpoint($screen-md-max){margin-bottom: 21px;}
+		@include breakpoint($screen-sm-max){margin-bottom: 14px;}
+	}
+	img{@extend %img-responsive2;}
+}
+.collection-over{
+	z-index: 5;
+	@extend %postionreset;
+	padding:10px;
+    background: rgba(0, 0, 0, 0.2);
+	&:after {
+		z-index: -1;
+        background: rgba(0,0,0, 0.35);
+		transition: all 0.25s ease;
+		@include rotate (-90deg);
+		-ms-transform-origin: 0 100%;
+		-webkit-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+		position: absolute;
+		content: '';
+		bottom: 10px;
+		right: 10px;
+		left: 0;
+		top: 10px;
+	}
+	&:hover {
+		&:after {
+			@include rotate (0deg);
+			left: 10px;
+		}
+	}
+	.frame{
+		border:2px solid $white;
+		@include square(100%);
+		display: table;
+	}
+	.box{
+		@include vertical-align(table-cell, middle);
+		padding:10px 10px 10px 35px;
+		h2{
+            color:$white;
+			text-transform: uppercase;
+			font:700 34px/43px $font-family-base;
+			margin:-5px 0 10px;
+			@include breakpoint($screen-sm-max){
+				margin: 0 0 5px;
+				font-size: 25px;
+				line-height: 35px;
+			}
+			.txt{
+				display: block;
+				font-weight: 300;
+			}
+		}
+	}
+	&.add{
+		.box{
+			padding-bottom:28px;
+			vertical-align:bottom;
+			@include breakpoint($screen-sm-max){
+				padding-bottom: 8px;
+				padding-right: 20px;
+			}
+			h2{
+				font-size: 24px;
+				line-height:34px;
+				@include breakpoint($screen-sm-max){
+					font-size: 20px;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+	&.add2 .box{
+		padding-bottom:28px;
+		vertical-align:bottom;
+	}
+}
+/*------------------------------------------------------------------
+9-4. product section Styles / .product-section
+-------------------------------------------------------------------*/
+.product-section{
+	padding-top: 45px;
+	padding-bottom: 38px;
+	&.seller{
+		padding-top: 95px;
+		padding-bottom: 40px;
+	}
+}
+.product-nav-holder{margin-bottom: 60px;}
+/*------------------------------------------------------------------
+9-5. product nav Styles / .product-nav
+-------------------------------------------------------------------*/
+.product-nav{
+	border:1px solid $gainsboro;
+	margin:0;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing:-4px;
+	font-size: 0;
+	.dark &{border-color: #494949;}
+	li{
+		@include vertical-align(inline-block, top);
+		padding:0;
+		letter-spacing:0;
+		font-size: 14px;
+        &.active a{color:$white;}
+	}
+	a{
+        color:$lime;
+		display: block;
+		padding:13px 20px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $stack;}
+		&:hover{
+            color:$white;
+            text-decoration: none;
+        }
+	}
+}
+.products-holder{
+	overflow: hidden;
+	width: 105%;
+	@include breakpoint($screen-xs-max){
+		width: 100%;
+	}
+}
+/*------------------------------------------------------------------
+9-6. new product Styles / .new-product
+-------------------------------------------------------------------*/
+.new-product{
+	width: 22%;
+	float: left;
+	text-align: center;
+	margin: 0 3% 58px 0;
+	@include breakpoint($screen-sm-max){
+		margin:0 2.3% 30px 0;
+	}
+	@include breakpoint($screen-xs-max){
+		width: 50%;
+		margin:0 0 30px;
+	}
+	@include breakpoint(479px){
+		width: 100%;
+	}
+	.product-img{
+		position: relative;
+		overflow: hidden;
+		margin:0 0 15px;
+		img{@extend %img-responsive2;}
+	}
+	.title{
+        color:$stack;
+		display: block;
+		margin:0 0 2px;
+		font-size: 11px;
+		line-height:16px;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	h2{
+		margin:0 0 7px;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font:600 12px/20px $font-family-base;
+		a{
+            color:$shark;
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $stack;}
+			&:hover{text-decoration: none;}
+		}
+	}
+	.amount{
+		display: block;
+		margin:-2px 0 0;
+		font-size: 21px;
+		line-height:24px;
+		font-weight: 900;
+		sub{
+			font-size: 16px;
+			font-weight: 700;
+			@include vertical-align(inline-block, middle);
+			margin:-9px 0 0;
+		}
+	}
+	.btn-cart{
+		display: none;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height:16px;
+        color:$shark;
+		margin: 4px 0 2px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $stack;}
+		&:hover{text-decoration: none;}
+	}
+	&:hover{
+		.product-over{top: 0;}
+		.btn-cart{@include vertical-align(inline-block, top);}
+		.amount{display: none;}
+	}
+	&.active{
+		.product-over{top: 0;}
+		.btn-cart{@include vertical-align(inline-block, top);}
+		.amount{display: none;}
+	}
+}
+.product-over{
+	@extend %postionreset;
+	transition:all 0.6s ease;
+    background: rgba(0, 0, 0, 0.8);
+	top: 100%;
+	.frame{
+		@include square(100%);
+		display: table;
+	}
+	.box{
+		@include vertical-align(table-cell, middle);
+		padding:10px;
+	}
+}
+.rattings-nav{
+	overflow: hidden;
+	margin:0 0 15px;
+	font-size: 11px;
+	line-height:14px;
+	li{
+		padding:0;
+		@include vertical-align(inline-block, top);
+        &.add .fa{color:$light-gray3;}
+	}
+}
+/*------------------------------------------------------------------
+9-7. special block Styles / .special-block
+-------------------------------------------------------------------*/
+.special-block{
+	position:relative;
+	overflow: hidden;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{background: rgba(0, 0, 0, 0.2); z-index: 1;}
+	&.style2{
+		&:before{display: none;}
+	}
+	.beans-slider{
+		@include element2(before, 0, 0, 0, 0);
+		&:before{background: rgba(0, 0, 0, 0.4);}
+	}
+	.slick-arrow{
+		top: 50%;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		left: 14px;
+		z-index: 55;
+        color: $white;
+		font-size: 52px;
+		overflow: hidden;
+		margin: -23px 0 0;
+		line-height: 30px;
+		position: absolute;
+		text-indent: -9999px;
+		@include square(58px);
+        background: rgba(0, 0, 0, 0.85);
+		@include breakpoint($screen-sm-max){
+			display: none;
+		}
+		&:after{
+			top: 0;
+			left: 18px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-next{
+		left: auto;
+		right: 14px;
+		&:after{content:"\f105";}
+	}
+}
+.special-content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height:400px;
+	position:relative;
+	z-index:999;
+	@include v-align2(special-box, $valign: middle);
+}
+.special-box{
+    color:$white;
+	margin:-6px 0 0;
+	padding:0 38% 0 0;
+	line-height:24px;
+	@include breakpoint($screen-xs-max){
+		padding: 0;
+	}
+	h2{
+		margin:0 0 26px;
+		text-transform: uppercase;
+		font:600 32px/36px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){font-size: 20px; line-height: 1.4;}
+	}
+	p{margin: 0 0 36px;}
+}
+/*------------------------------------------------------------------
+9-8. best seller Styles / .best-seller
+-------------------------------------------------------------------*/
+.best-seller{
+	margin-bottom: 56px;
+	@include breakpoint($screen-sm-max){
+		margin-bottom: 30px;
+	}
+	.new-product{
+		float: none;
+		overflow: hidden;
+		margin:0;
+		width: 100%;
+		min-height:340px;
+		@include breakpoint($screen-md-max){
+			min-height: 280px;
+		}
+		@include breakpoint($screen-sm-max){
+			min-height: 240px;
+		}
+		@include breakpoint($screen-xs-max){
+			margin:0 0 40px;
+		}
+		h2{margin: 0 0 15px;}
+		.product-img{margin: 0 0 12px;}
+		.rattings-nav{
+			display: none;
+			padding:3px 0 0;
+		}
+		&:hover{
+			h2{display: none;}
+			.rattings-nav{
+				display: block;
+				width: 100%;
+			}
+		}
+		&.active{
+			h2{display: none;}
+			.rattings-nav{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+9-9. other services Styles / .other-services
+-------------------------------------------------------------------*/
+.other-services{
+	overflow: hidden;
+    background: $white;
+	border:1px solid $gainsboro;
+	padding:72px 15px 15px;
+	text-align: center;
+	line-height:24px;
+	@include transition (all, 0.4s, ease);
+	@include breakpoint($screen-xs-max){
+		margin: 0 0 20px;
+	}
+	.dark &{
+		background: #191919;
+		border-color: #494949;
+	}
+	.fa{
+        color:$shark;
+		position: absolute;
+		left: 50%;
+		top: -41px;
+		font-size: 32px;
+		line-height:20px;
+		margin:0 0 0 -16px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $white;}
+	}
+	.fa-money{margin:0 0 0 -18px;}
+	.fa-phone{margin:2px 0 0 -13px;}
+	h2{
+        color:$shark;
+		margin:0 0 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 12px/20px $font-family-sans-serif;
+		.dark &{color: $white;}
+		a{
+            color:$shark;
+			position: relative;
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $white;}
+			&:hover{
+				text-decoration: none;
+				opacity: 0.6;
+			}
+		}
+	}
+	p{margin: 0 0 10px;}
+	&:hover{
+		color:$white;
+		.fa{color:$white;}
+		h2 a{color:$white;}
+	}
+}
+/*------------------------------------------------------------------
+9-10. shop features Styles / .shop-features
+-------------------------------------------------------------------*/
+.shop-features{
+	h2{
+        color:$lime;
+		margin:0 0 61px;
+		padding:0 0 13px;
+		text-transform: uppercase;
+		font: 700 18px/21px $font-family-sans-serif;
+		@include element(before, auto, auto, 0, 0, transparent);
+		&:before{
+            @include size(40px, 3px);
+            @include transition (all, 0.4s, ease);
+        }
+		.dark &{color: $white;}
+	}
+	&.hot h2{max-width:200px;}
+    &:hover h2:before{width: 60px;}
+}
+/*------------------------------------------------------------------
+9-11. deal gallery Styles / .deal-gallery
+-------------------------------------------------------------------*/
+.deal-gallery{
+	overflow: visible;
+	.deal-img{
+		overflow: hidden;
+		position:relative;
+		border:1px solid $gainsboro;
+		margin:0 0 17px;
+		img{@extend %img-responsive2;}
+	}
+	.deal-box{overflow: hidden;}
+	.deal-row{
+		overflow: hidden;
+		margin:0 0 14px;
+	}
+	.name{
+		float: left;
+        color:$shark;
+		font-size: 16px;
+		line-height:18px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $white;}
+		&:hover{text-decoration: none;}
+	}
+	.rattings-nav{
+		float: right;
+		margin:3px 0 0;
+	}
+	.price{
+		float: right;
+		font-size: 18px;
+		line-height:20px;
+		font-weight: 700;
+		&.cancel{
+			float: left;
+            color:$shark;
+			text-decoration:line-through;
+			.dark &{color: $white;}
+		}
+	}
+	.btn-sale{
+		top: 9px;
+		left: 10px;
+        color:$white;
+		font-size: 12px;
+		line-height:14px;
+		padding:2px 10px;
+		position:absolute;
+		text-transform: uppercase;
+		@include transition (all, 0.4s, ease);
+		@include vertical-align(inline-block, top);
+		&:hover{
+            text-decoration: none;
+			background: $lime;
+			color:$white;
+		}
+	}
+	.deal-buttons{
+	}
+	.slick-arrow{
+		border: 0;
+		margin: 0;
+		padding: 0;
+		top: -95px;
+		right: 2px;
+		z-index:99;
+		font-size: 18px;
+		overflow: hidden;
+        color:$gainsboro;
+		line-height:20px;
+		margin:0 0 0 3px;
+		border-radius:50%;
+		position:absolute;
+        background: $white;
+		text-indent: 9999px;
+		@include square(28px);
+		border:1px solid $gainsboro;
+		@include transition (all, 0.4s, ease);
+		@include vertical-align(inline-block, top);
+		.dark &{
+			border-color: #494949;
+			background: #191919;
+			color: $white;
+		}
+		&:after{
+			top: 4px;
+			left: 9px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+		&:hover{text-decoration: none;}
+	}
+	.slick-next{
+		right: 35px;
+		&:after{content:"\f104";}
+	}
+}
+/*------------------------------------------------------------------
+9-12. product article Styles / .product-article
+-------------------------------------------------------------------*/
+.product-article{
+    color:$stack;
+	margin:0 0 21px;
+	font-size: 12px;
+	line-height:18px;
+	overflow: hidden;
+	.alignleft{
+		float: left;
+		width: 36.9%;
+		margin:0 10px 0 0;
+		border:1px solid $gainsboro;
+		.dark &{border-color: #494949;}
+		img{
+			width: 100%;
+			@extend %img-responsive;
+		}
+		a{display: block;}
+	}
+	.txt-box{overflow: hidden;}
+	h3{
+        color:$shark;
+		margin:0 0 3px;
+		text-transform: capitalize;
+		font:16px/20px $font-family-base;
+		.dark &{color: $stack;}
+		a{
+            color:$shark;
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $stack;}
+			&:hover{text-decoration: none;}
+		}
+	}
+	.rattings-nav{margin:0 0 18px;}
+	.price{
+        color:$shark;
+		display: block;
+		font-size: 18px;
+		line-height:20px;
+		font-weight: 700;
+		.dark &{color: $stack;}
+	}
+	p{margin: 0;}
+	time{
+		display: block;
+		margin:0 0 11px -2px;
+	}
+	&.blog{
+		margin:0 0 19px;
+		.alignleft{margin: 0 13px 0 0;}
+		h3{margin:-5px 0 2px -2px;}
+	}
+}
+.features-box{
+	@extend %clearfix;
+	&.links h3{
+        color:$shark;
+		margin:-5px 0 17px;
+		text-transform: uppercase;
+		font:700 16px/20px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+9-13. links nav Styles / .links-nav
+-------------------------------------------------------------------*/
+.links-nav{
+	font-size: 13px;
+	line-height:16px;
+	margin:0 0 22px;
+	padding:0 0 0 12px;
+	li{padding: 0 0 8px;}
+	a{
+        color:$stack;
+		position:relative;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			padding: 0 0 0 5px;
+			text-decoration: none;
+		}
+	}
+	.fa{
+		position: absolute;
+		left: -12px;
+		top: 1px;
+	}
+}
+
+.shop2-container{
+	overflow: hidden;
+	text-align: center;
+	font:300 16px/26px $font-family-sans-serif;
+	h2{
+		color: $white;
+		margin: 0 0 53px;
+		padding: 0 0 27px;
+		position: relative;
+		font:42px/50px $font-playfair;
+		&:after{
+			background: #515151;
+			margin: 0 0 0 -50px;
+			position: absolute;
+			width: 100px;
+			content: "";
+			height: 3px;
+			right: 50%;
+			bottom: 0;
+		}
+	}
+	p{margin: 0 0 50px;}
+	img{width: 100%;}
+	.shop-box{
+		margin: 0 0 30px;
+		position: relative;
+		.txt-box{
+			vertical-align: middle;
+			background: $white;
+			display: table;
+			height: 227px;
+			width: 100%;
+		}
+		h3{
+			margin: 0;
+			color: $lime;
+			display: table-cell;
+			vertical-align: middle;
+			text-transform: uppercase;
+			font:300 26px/33px $font-family-sans-serif;
+			span{font-weight: 600; display: block; font-size: 37px;}
+		}
+		&.arrow.top:after {
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: #fff;
+			border-width: 20px;
+			margin-left: -20px;
+		}
+		&.arrow.right:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-left-color: #fff;
+			border-width: 20px;
+			margin-top: -20px;
+		}
+		&.arrow.bottom:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-top-color: #fff;
+			border-width: 20px;
+			margin-left: -20px;
+		}
+		&.arrow.left:after {
+			right: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-right-color: #fff;
+			border-width: 20px;
+			margin-top: -20px;
+		}
+		a:hover{text-decoration: none;}
+	}
+}

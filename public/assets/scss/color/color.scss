@@ -1,0 +1,1117 @@
+$main-color:							#e74c3c;
+#header{
+	.opener-icons:hover{background: $main-color;}
+	.header-top a:hover{color: $main-color;}
+	.head-social a{
+		color: $main-color;
+		border-color: $main-color;
+		&:hover{background: $main-color;}
+	}
+	.head-socialnetworks a:hover{color: $main-color;}
+	.cart-box{
+		&:hover .opener-icons{background: $main-color;}
+		.cart-drop {
+			.cart-holder:after{background: $main-color;}
+			a:hover{color: $main-color;}
+			.total-price-area .price {color: $main-color;}
+			.btn{
+				background: $main-color;
+				border-color: $main-color;
+				&.add:hover{
+					background: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+		.cart-list {
+			.product-name a:hover{color: $main-color;}
+			.rating  li .fa-star{color: $main-color;}
+			.delete:hover{color: $main-color;}
+		}
+	}
+	.lang-drop{
+		border-bottom-color: $main-color;
+		a:hover{color: $main-color;}
+	}
+	.leng-opener:hover{color: $main-color;}
+	.cartopener-main .cart-num{background: $main-color;}
+	&.style3{
+		.opener-icons:hover{border-color: $main-color;}
+		.cart-opener .arrow{background: $main-color;}
+	}
+	&.style4{
+		.opener-icons:hover{color: $main-color;}
+		#nav{
+			.nav-top > li{
+				> a:hover{
+					color: $main-color;
+					border-color: $main-color;
+				}
+				&.hover,
+				&:hover,
+				&.active{
+					> a{
+						color: $main-color;
+						border-color: $main-color;
+					}
+				}
+			}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style5{
+		.opener-icons:hover{border-color: $main-color;}
+		#nav{
+			.nav-top > li{
+				&:hover >a,
+				&.hover >a,
+				&.active >a{color: $main-color;}
+				> a:hover{color: $main-color;}
+			}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style7{
+		.opener-icons:hover{color: $main-color;}
+		#nav{
+			.nav-top > li{
+				> a:hover{
+					color: $main-color;
+					border-color: $main-color;
+				}
+				&.hover,
+				&:hover,
+				&.active{
+					> a{
+						color: $main-color;
+						border-color: $main-color;
+					}
+				}
+			}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style8{
+		#nav .nav-top > li{
+			> a:hover{
+				color: $main-color;
+				border-color: $main-color;
+			}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{
+					color: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+		#nav .nav-opener:hover{border-color: $main-color;}
+		.opener-icons:hover{color: $main-color;}
+	}
+	&.style10{
+		#nav .nav-top > li{
+			> a:hover{
+				color: $main-color;
+				border-color: $main-color;
+			}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{
+					color: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+	}
+	&.style11{
+		#nav{
+			.nav-top > li{
+				> a:hover{
+					color: $main-color;
+					border-color: $main-color;
+				}
+				&.hover,
+				&:hover,
+				&.active{
+					> a{
+						color: $main-color;
+						border-color: $main-color;
+					}
+				}
+			}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style12{
+		.info-list{
+			a:hover{color: $main-color;}
+			.fa{color: $main-color;}
+		}
+		.language-nav a:hover{color: $main-color;}
+		#nav{
+			&:after{background: $main-color;}
+			.quote-btn:hover{color: $main-color;}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style16{
+		#nav .nav-top > li{
+			> a:hover{
+				color: $main-color;
+				border-color: $main-color;
+			}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{
+					color: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+		.opener-icons:hover{color: $main-color;}
+		#nav .nav-opener:hover{border-color: $main-color;}
+	}
+	&.style17{
+		#nav .nav-top > li{
+			> a:hover{border-color: $main-color;}
+			&:hover,
+			&.hover,
+			&.active{ > a{border-color: $main-color;}}
+		}
+	}
+	&.style18{
+		.info-list{
+			a:hover{color: $main-color;}
+			.fa{color: $main-color;}
+		}
+		.head-socialnetworks a:hover{color: $main-color;}
+		#nav{
+			.quote-btn{background: $main-color;}
+			.nav-top{
+				> li{
+					> a:hover{border-color: $main-color;}
+					&:hover,
+					&.hover,
+					&.active{
+						> a{border-color: $main-color;}
+					}
+				}
+			}
+			.nav-opener:hover{border-color: $main-color;}
+		}
+	}
+	&.style20{
+		#nav .nav-top > li{
+			> a:hover{
+				color: $main-color;
+				border-color: $main-color;
+			}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{
+					color: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+		#nav .nav-opener:hover{border-color: $main-color;}
+		.opener-icons:hover{color: $main-color;}
+	}
+	&.style21{
+		.header-top:after{background: $main-color;}
+		#nav .nav-top > li{
+			> a:hover{
+				color: $main-color;
+				border-color: $main-color;
+			}
+			&.hover,
+			&:hover,
+			&.active{
+				> a{
+					color: $main-color;
+					border-color: $main-color;
+				}
+			}
+		}
+		#nav .nav-opener:hover{border-color: $main-color;}
+		.opener-icons:hover{color: $main-color;}
+	}
+	&.style26{
+		#nav .nav-top > li{
+			> a:hover{border-color: $main-color;}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{border-color: $main-color;}
+			}
+		}
+	}
+	&.style27{
+		#nav .nav-top > li{
+			> a:hover{border-color: $main-color;}
+			&:hover,
+			&.hover,
+			&.active{
+				> a{border-color: $main-color;}
+			}
+		}
+		#nav .nav-opener:hover{border-color: $main-color;}
+		.opener-icons:hover{
+			background: $main-color;
+			border-color: $main-color;
+		}
+	}
+	&.fixed-position{
+		#nav .nav-top > li{
+			&:hover >a,
+			&.hover >a,
+			&.active >a{color: $main-color;}
+			> a:hover{color: $main-color;}
+		}
+		.opener-icons:hover{border-color: $main-color;}
+		&.style4 .opener-icons:hover{color: $main-color;}
+		&.style7 .opener-icons:hover{color: $main-color;}
+		&.style8 .opener-icons:hover{color: $main-color;}
+		&.style9{
+			#nav .nav-top > li{
+				> a:hover,
+				&:hover >a,
+				&.hover >a,
+				&.active >a{color: $main-color;}
+				> a:hover{color: $main-color;}
+			}
+		}
+		&.style10{
+			#nav .nav-top > li{
+				&:hover,
+				&.hover,
+				&.active{
+					> a{color: $main-color;}
+				}
+				> a:hover{color: $main-color;}
+			}
+			.icon-list > li{
+				.opener-icons:hover{border-color: $main-color;}
+				&:hover .opener-icons{border-color: $main-color;}
+			}
+		}
+		&.style16 .opener-icons:hover{color: $main-color;}
+		&.style17{
+			#nav{
+				.nav-top > li.active > a,
+				.nav-top > li:hover > a,
+				.nav-top > li.hover > a,
+				.nav-top > li > a:hover{color: $main-color;}
+			}
+			.opener-icons:hover{
+				background: $main-color;
+				border-color: $main-color;
+			}
+		}
+		&.style19 #nav{
+			.nav-top > li.active > a,
+			.nav-top > li:hover > a,
+			.nav-top > li.hover > a,
+			.nav-top > li > a:hover{color: $main-color;}
+		}
+		&.style20 .opener-icons:hover{color: $main-color;}
+		&.style21 .opener-icons:hover{color: $main-color;}
+	}
+}
+#nav{
+	a:hover{color: $main-color;}
+	li.hover,
+	li:hover,
+	li.active{> a{color: $main-color;}}
+	.drop ul:after{background: $main-color;}
+	.mega-drop .drop-holder:after{background: $main-color;}
+	.nav-opener:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.search-popup{
+	.close-btn:hover{background: $main-color;}
+	.submit:hover{color: $main-color;}
+}
+.side-widget{
+	h2:after{background: $main-color;}
+	a:hover{color: $main-color;}
+	.btn{
+		background: $main-color;
+		border-color:  $main-color;
+	}
+}
+.sidemenu-photo{
+	&.v9 #nav7 ul a:hover,
+	&.v11 #nav7 ul a:hover,
+	&.v12 #nav7 ul a:hover,
+	&.v11 #nav7 ul li.active a,
+	&.v12 #nav7 ul li.active a,
+	&.v9 #nav7 .nav-opener:hover,
+	&.v10 #nav7 .nav-opener:hover,
+	&.v10 #nav7 ul a:hover{color:$main-color;}
+}
+#footer{
+	&.style11 .btn-more:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	&.style13 .f-info-box .tel{color: $main-color;}
+	&.style15 .footer-bottom .footer-nav li a:hover{color: $main-color;}
+	&.style17 .footer-bottom .footer-nav li a:hover{color: $main-color;}
+	&.style19 .f-info-box .tel{color: $main-color;}
+	&.style23 .f-info-box .tel{color: $main-color;}
+	&.style25 .footer-social li a:hover{background: $main-color;}
+	&.style26 .f-info-box .num{color: $main-color;}
+	&.style27 .f-info-box .tel{color: $main-color;}
+	&.style30 .f-social-networks a:hover{color: $main-color;}
+}
+.mailing-form2 .btn-submit{
+	background: $main-color;
+	&:hover{color: $main-color;}
+}
+.bottom-box3 .footer-social a:hover{background: $main-color;}
+.f-our-mission .btn-more{
+	.fa{color:$main-color;}
+	&:hover{color: $main-color;}
+}
+.newsletter-form button:hover{color:$main-color;}
+.time-nav .close-txt{background: $main-color;}
+#lancer-footer{
+	.f-social a:hover{background: $main-color;}
+	.footer-bottom ul a:hover{color: $main-color;}
+}
+.wed-social .social a:hover{background: $main-color;}
+.socialize-holder .footer-social a:hover{background: $main-color;}
+.btn-f-default:hover{
+	background: $main-color;
+	border-color: $main-color;
+}
+.btn-f-info{
+	background: $main-color;
+	border-color: $main-color;
+}
+.btn-history{
+	&:before{background: $main-color;}
+	&:hover{
+		background: $main-color;
+		&:after{color: $main-color;}
+	}
+}
+.btn-more:hover{
+	background: $main-color;
+	border-color: $main-color;
+}
+.btn-resume{
+	background: $main-color;
+	border-color: $main-color;
+}
+.know-more{
+	background: $main-color;
+	border-color: $main-color;
+}
+.portfolio-view{
+    &:before,
+	&:after{color:$main-color;}
+	&:hover span{color:$main-color;}
+}
+.page-heading .heading3:before{border-color: $main-color transparent transparent;}
+.page-banner{ 
+    .heading:before{background: $main-color;}
+    .breadcrumbs{
+        li.active a{color: $main-color;}
+        a:hover{color: $main-color;}
+    }
+    &.grey .breadcrumbs a:hover{color: $main-color;}
+}
+.main-slider .slick-dots .slick-active button,
+.main-slider .slick-dots button:hover{
+	background: $main-color;
+	border-color: $main-color;
+}
+.f-iconbox{
+	.icon{
+		color: $main-color;
+		border-color: $main-color;
+	}
+	&:hover .icon{background: $main-color;}
+	&.light:hover .icon{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.team-block .over{background: $main-color;}
+.team-box{
+	.over{background: $main-color;}
+	.subtitle a{color: $main-color;}
+	.info-box .add-text a{color: $main-color;}
+	&:hover{.social-network{background: $main-color;}}
+	&.style3 .social-network{background: $main-color;}
+}
+.testimon-section{
+	.icon{background: $main-color;}
+	.slick-dots{
+		li.slick-active button{
+			background: $main-color;
+			border-color: $main-color;
+		}
+		button:hover{
+			background: $main-color;
+			border-color: $main-color;
+		}
+	}
+	&.alt-version blockquote .fa{color: $main-color;}
+}
+.isotop-controls{
+	li.active a{background: $main-color;}
+	a:hover{background: $main-color;}
+}
+.isotop-controls2{
+	a:hover{
+		background: none;
+		&:after{background: $main-color;}
+	}
+	li.active a:after{background: $main-color;}
+}
+.isotop-controls3{
+	a:hover:after{background: $main-color;}
+	li.active a:after{background: $main-color;}
+}
+.isotop-controls4{
+	a:hover:before{background: $main-color;}
+	li.active a:before{background: $main-color;}
+    .view-all:hover:before{background: $main-color;}
+}
+.portfolio-block{
+	.over .plus{color: $main-color;}
+	.title:after{background: $main-color;}
+	.search{background: $main-color;}
+	.link:hover{background: $main-color;}
+	.portfolio-btn:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.portfolio-text .btn:hover{
+    background: $main-color;
+    border-color: $main-color;
+}
+.work-slider .slick-arrow:hover{background: $main-color;}
+.price-section{
+	.box{
+		&:hover,
+		&.active{
+			.heading{background: $main-color;}
+			.btn{
+				background: $main-color;
+				border-color: $main-color;
+			}
+		}
+	}
+	.btn:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	&.style2 .box{
+		&.active,
+		&:hover{
+			.btn:hover{
+				background: $main-color;
+				border-color: $main-color;
+			}
+		}
+	}
+	&.style3 .box{
+		&.active,
+		&:hover{ .heading{background: $main-color;} }
+	}
+	&.style5 .box{
+		&.active,
+		&:hover{
+			border-color:$main-color;
+			.heading{background: $main-color;}
+			.btn-purchase{
+				background: $main-color;
+				border-color:$main-color;
+			}
+		}
+	}
+}
+.blog-section .beans-stepslider .slick-dots{
+	li.slick-active button{
+		border-color: $main-color;
+		&:after{background: $main-color;}
+	}
+	button{
+		&:hover{border-color: $main-color;}
+		&:after{background: $main-color;}
+	}
+}
+.blog-m-post{
+	h3 a:hover{color: $main-color;}
+	.meta a:hover{color: $main-color;}
+	.icon{background: $main-color;}
+	&.style2 .blog-txt{border-color: $main-color;}
+}
+.facts-section{
+	.fa{color: $main-color;}
+	.num:after{background: $main-color;}
+}
+.clients-section .beans-stepslider{
+	.slick-next:hover,
+	.slick-prev:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.wedo-section{
+	.coll:hover{
+		.icon{
+			background: $main-color;
+			border-color: $main-color;
+		}
+		.btn{
+			background: $main-color;
+			border-color: $main-color;
+		}
+	}
+	.icon:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.counter-container{
+	.fa{color: $main-color;}
+	.num:after{background: $main-color;}
+}
+.services-section h3 .fa{color: $main-color;}
+.video-section .play-icon{color: $main-color;}
+.process-section .icon .num{background: $main-color;}
+.progress-holder .progress-bar-outer{background: $main-color;}
+.features-section .fa{color: $main-color;}
+.core-section .list li:after{color: $main-color;}
+.twitter-section a{color: $main-color;}
+.appshowcase-banner .platform a:hover{color: $main-color;}
+.about-section{
+	.fa{color: $main-color;}
+	.know-more{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.counter-section .num:after{background: $main-color;}
+.team-lightbox .socialnetworks a:hover{color: $main-color;}
+.app-mainbanner{
+	h1 .add{color: $main-color;}
+	.btn{background: $main-color;}
+}
+.get-app .platform a:hover{color: $main-color;}
+.appsub-section .input-box #mc_embed_signup input.button{background: $main-color;}
+.architecture-gallery{
+	.subtitle{background: $main-color;}
+	.slick-arrow{
+		&:hover{color:$main-color;}
+		&:after{background: $main-color;}
+	}
+}
+.archi-columns{
+	.coll:hover{background: $main-color;}
+	h2:after{background: $main-color;}
+}
+.archi-projects{
+	.heading-v2:after{background: $main-color;}
+	h3:after{background: $main-color;}
+	.beans-slider .slick-dots li{
+		button:hover{
+			background: $main-color;
+			border-color: $main-color;
+		}
+		&.slick-active button{
+			border-color: $main-color;
+			background: $main-color;
+		}
+	}
+}
+.archi-whyus h2 .add{color: $main-color;}
+.blog-over{
+	h2 a:hover{color: $main-color;}
+	.author-info .txt a:hover{color: $main-color;}
+	.blog-nav li a:hover{color: $main-color;}
+}
+.blog-post-v1{
+	.more:hover{color: $main-color;}
+	h2 a:hover{color: $main-color;}
+	h3{
+		color: $main-color;
+		a{color: $main-color;}
+	}
+	.meta a:hover{color: $main-color;}
+	.icon{background: $main-color;}
+	.post-blockquote{border-color: $main-color;}
+}
+.blog-footer{
+	.btn-box .btn:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	.btn-load:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	.b-pagination{
+		li.active a{
+			background: $main-color;
+			border-color: $main-color;
+		}
+		a:hover{
+			background: $main-color;
+			border-color: $main-color;
+		}
+	}
+}
+.blog-post-v2{
+	h2 a:hover{color: $main-color;}
+	.meta a:hover{color: $main-color;}
+	.icon{background: $main-color;}
+}
+.widget{
+	.searchform button{background: $main-color;}
+	.tabset{
+		a:hover{background: $main-color;}
+		.active a{background: $main-color;}
+	}
+	&.cate-widget{
+		a{
+			
+			&:hover{color: $main-color;}
+			.fa{color: $main-color;}
+		}
+		ul li.active a{color: $main-color;}
+	}
+}
+.comment-box .box.img-box .reply:hover{color: $main-color;}
+.comment-form .btn{background: $main-color;}
+.blog-isotop-nav{
+	li.active a{background: $main-color;}
+	a:hover{background: $main-color;}
+}
+.welcome-heading .main-text .rotate-text{background: $main-color;}
+.about-post h3 a:hover{color: $main-color;}
+.about-post .btn:hover{
+	background: $main-color;
+	border-color:$main-color;
+}
+.nav-tabs{
+	>li{
+		>a{
+			&:before{background: $main-color;}
+			&:after{border-color: $main-color transparent transparent transparent;}
+		}
+		&.active > a,
+		&.active > a:hover,
+		&.active > a:focus{
+			&:before{background: $main-color;}
+			&:after{border-color: $main-color transparent transparent transparent;}
+		}
+	}
+}
+.panel-title a{
+	background: $main-color;
+	&:hover{background: $main-color;}
+    &.collapsed:hover{
+        .dark &{background: $main-color;}
+    }
+}
+.create-business{
+	h2 a{color:$main-color;}
+	.btn-f-info:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	.btn-f-default{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.construct-gallery{
+	.title{border-left-color: $main-color;}
+	.btn{
+		&:before{background: $main-color;}
+		&:hover{background: $main-color;}
+	}
+	.slick-dots li{
+		button:hover{
+			background: $main-color;
+			border-color: $main-color;
+		}
+		&.slick-active button{
+			background: $main-color;
+			border-color: $main-color;
+		}
+	}
+}
+.safety-section{
+	h2 .add{color: $main-color;}
+	.btn{
+		&:before{background: $main-color;}
+		&:hover{background: $main-color;}
+	}
+	.more:before{background: $main-color;}
+}
+.const-services{
+	.icon{color: $main-color;}
+	.slick-arrow:hover{background: $main-color;}
+	&.style2 .box{
+		.fa{color: $main-color;}
+		&:hover .over{background: rgba($main-color, 0.8);}
+	}
+}
+.onepage-banner .down-arrow:hover{color: $main-color;}
+.about-aricle .img-box{background: $main-color;}
+.tabset-onepage li{
+	a{
+		&:before{background: $main-color;}
+		&:hover .fa{color:$main-color;}
+	}
+	&.active a .fa{color:$main-color;}
+}
+.tab-content.onepage .btn{
+	background: $main-color;
+	border-color:$main-color;
+}
+.process-nav li{
+	.fa{color:$main-color;}
+	&:hover .process{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.recentblog-col{
+	h3 a:hover{color: $main-color;}
+	.meta-nav a:hover{color: $main-color;}
+	.date-holder a{background: $main-color;}
+}
+.install-demos .btn{
+	background: $main-color;
+	border-color:$main-color;
+}
+.contact-form .btn-submit{
+	background: $main-color;
+	border-color: $main-color;
+}
+.lancer-do{
+	.fa{color: $main-color;}
+	&.style2{
+		.fa{color: $main-color;}
+		.list-do a:hover{background: $main-color;}
+	}
+}
+.personal-process{
+	.beans-slider .slick-dots{
+		li.slick-active button{
+			border-color: $main-color;
+			background: $main-color;
+		}
+		button:hover{
+			border-color: $main-color;
+			background: $main-color;
+		}
+	}
+	.icon{background: $main-color;}
+}
+.personal-exper{
+	.p-holder .icon{background: $main-color;}
+	&.style3 h2 a:hover{color: $main-color;}
+}
+.p-skills .progress-holder .progress-bar-outer{background: $main-color;}
+.port-single ul a{color: $main-color;}
+.port-single .social-network a:hover{background: $main-color;}
+.portfolio-footer.style2 .btn{
+	background: $main-color;
+	border-color: $main-color;
+}
+.realestate-slider .slick-arrow:hover{color: $main-color;}
+.realestate-section{
+	.tabset li{
+		&.active a{
+			background: $main-color;
+			border-left-color: $main-color;
+		}
+		&:hover a{
+			background: $main-color;
+			border-left-color: $main-color;
+		}
+	}
+	.tab-content{background: $main-color;}
+}
+.realestate-services{
+	.img-box a:hover{
+		color: $main-color;
+		border-color: $main-color;
+	}
+	.star-list li.active a{color: $main-color;}
+	.price{color: $main-color;}
+	.slick-arrow:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.resturant-gallery .slick-arrow:hover{color: $main-color;}
+.menu-block .btn.view:hover{
+	background: $main-color;
+	border-color: $main-color;
+}
+.our-menu-nav li{
+	a{
+		&:before{background: $main-color;}
+		&:hover{color:$main-color;}
+	}
+	&.active a{color:$main-color;}
+}
+.slide-frame .slide-box{
+	h3 a:hover{color:$main-color;}
+	.slide-socials a:hover{color:$main-color;}
+}
+.slide-socials a:hover{color:$main-color;}
+.menu-article h2 a:hover{color:$main-color;}
+.rattings-nav li .fa{color:$main-color;}
+.shop-gallery .slick-dots li{
+	button:hover{
+		border-color:$main-color;
+		background: $main-color;
+	}
+	&.slick-active button{
+		border-color:$main-color;
+		background: $main-color;
+	}
+}
+.btn-shop:hover{color: $main-color;}
+.btn-shop.add{color: $main-color;}
+.product-nav{
+	li.active a{background: $main-color;}
+	a:hover{background: $main-color;}
+}
+.new-product{
+	h2 a:hover{color:$main-color;}
+	.btn-cart:hover{color:$main-color;}
+}
+.rattings-nav{
+	color:$main-color;
+	li .fa{color:$main-color;}
+}
+.special-block{
+	.slick-arrow:hover{color: $main-color;}
+	&.style2 .btn-slider:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+}
+.special-box .btn:hover{
+	background: $main-color;
+	border-color: $main-color;
+}
+.other-services:hover{
+	background: $main-color;
+	border-color:$main-color;
+}
+.shop-features h2:before{background: $main-color;}
+.deal-gallery{
+	.name:hover{color:$main-color;}
+	.price{color:$main-color;}
+	.btn-sale{background: $main-color;}
+	.slick-arrow:hover{
+		color:$main-color;
+		border-color:$main-color;
+	}
+}
+.product-article h3 a:hover{color:$main-color;}
+.links-nav{
+	a:hover{color:$main-color;}
+	.fa{color:$main-color;}
+}
+.social-block.style4 .social-container .footer-social a:hover{background: $main-color;}
+.shop-header p a{color: $main-color;}
+.shop-footer p a{color: $main-color;}
+.shop-next,
+.shop-prev{
+	&:hover{
+		background:$main-color;
+		border-color: $main-color;
+	}
+}
+.shop-pagination li{
+	a:hover{
+		background:$main-color;
+		border-color: $main-color;
+	}
+	&.active a{
+		background:$main-color;
+		border-color: $main-color;
+	}
+}
+.shop-widget ul li a{
+	&:before{border-color: transparent transparent transparent $main-color;}
+	&:hover{color: $main-color;}
+}
+.shop-product-info{
+	h2 a:hover{color:$main-color;}
+	.btn-cart:hover{color:$main-color;}
+}
+.description-header .review:hover{color: $main-color;}
+.cart-form .btn:hover{background: $main-color;}
+.btn-add{
+	.fa{color: $main-color;}
+	&:hover{color: $main-color;}
+}
+.descriptio-tabs{
+	.nav-tabs > li > a:hover{background:$main-color;}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus{background:$main-color;}
+}
+.related-shop .btn-prev:hover{
+	color: $main-color;
+	border-color: $main-color;
+}
+.reply-box:hover{color: $main-color;}
+.shop-table .btn-close:hover{color: $main-color;}
+.shop-apply .btn-slider:hover{background: $main-color;}
+.apply-form .btn-slider:hover{background: $main-color;}
+.shop-calculation.checkout .cart-table .col-2.add{color: $main-color;}
+.update-form .btn:hover{background: $main-color;}
+.rang-form .btn-form:hover{background:$main-color;}
+.travel-slider .slick-arrow:hover{color: $main-color;}
+.travel-section .btn-submit{background: $main-color;}
+.wedding-banner .slick-arrow:hover{color:$main-color;}
+.wedding-nav .countdown-section{background: $main-color;}
+.happy-couple{
+	h3 a:hover{color:$main-color;}
+	.title{color:$main-color;}
+	.social a:hover{color: $main-color;}
+}
+.love-story{
+	.row-holder time{background: $main-color;}
+	h3 a:hover{color: $main-color;}
+}
+.wedding-photos{
+	.view:hover{
+		background: $main-color;
+		border-color: $main-color;
+	}
+	.over a:hover{color:$main-color;}
+}
+.youga-slider .slick-dots li{
+	button:hover{
+		border-color:$main-color;
+		background: $main-color;
+	}
+	&.active button{
+		border-color:$main-color;
+		background: $main-color;
+	}
+}
+.login-form2{
+	a:hover{color: $main-color;}
+	.btn-info:hover{background: $main-color;}
+}
+.contact-address{
+	h3 .fa{color: $main-color;}
+	a:hover{color: $main-color;}
+}
+.faq-section{
+	.smoothanchor:hover,
+	.opener:hover{color: $main-color;}
+	&.style3 .divider-line2 .smoothanchor:hover{color: $main-color;;}
+}
+.parallax-section{
+	.next-section:hover{color: $main-color;}
+	.scroll{
+		background: $main-color;
+		&:hover{background: $main-color;}
+		&.add:hover{background: $main-color;}
+	}
+}
+.error-section {
+	h1 {color: $main-color;}
+	.text a {color: $main-color;}
+	.btn-down:hover{color: $main-color;}
+	&.style7 .wedding-nav  .countdown-period{background: $main-color;}
+}
+.btn-back{
+    color: $main-color;
+	border-color: $main-color;
+	&:hover{background: $main-color;}
+}
+#style-changer{
+	.list-style .btn2{
+		background: $main-color;
+		border-color: $main-color;
+		&.add:hover{
+			background: $main-color;
+			border-color:  $main-color;
+		}
+	}
+	.changer-opener{color: $main-color;}
+}
+#gotoTop:hover,
+.bg-theme-color,
+.page-heading .icon,
+.events-icons .icon,
+.footer-social a:hover,
+.error-form .btn:hover,
+.footer-form .btn-submit,
+.mailing-form .btn-submit,
+.events-mainbanner .subtitle,
+.page-heading .heading:after,
+.page-heading .heading2:after,
+.page-heading .heading8:after,
+.page-heading .heading9:after,
+.page-heading .heading3:after,
+.page-heading .heading5:after,
+.page-heading .heading5:before,
+.page-heading .heading2:before,
+.page-heading .heading8:before,
+.grey-contact-form .btn-submit,
+.features-col.style4 .panel-title a.collapsed:hover,
+.shop-gallery .slick-arrow:hover{background: $main-color;}
+.lost-block h2,
+#nav7 ul a:hover,
+.page-heading .dot,
+.burger-menu:hover,
+.burger-menu:focus,
+.sidenav-port a:hover,
+.shop-gallery .add-text,
+.footer-social2 a:hover,
+.contact-form2 .btn-f-info,
+.services-section h3 .icon,
+.bakery-textbox h2 .add-color,
+.page-heading .heading4:after,
+.page-heading .heading4:before,
+.main-slider .slick-arrow:hover,
+.testimonials blockquote:before,
+#footer.style31 .footer-cent h5,
+.hold-backery .menu-article .btn,
+#footer.style31 .footer-aside h5,
+.welcom-banner .slick-arrow:hover,
+.page-heading .heading11 .add-color,
+#header.style28 .social-list a:hover,
+.croporate-slider .slick-arrow:hover,
+.features-col.style4 .list-events .fa,
+#footer.style31 .footer-news-box time,
+#footer.style31 .footer-social a:hover,
+#footer.style31 .newsletter-form button,
+#footer.style15 .footer-cent h5 .add-color,
+#footer.style15 .f-contact-info2 address .fa,
+#footer.style15 .f-contact-info2 .tel-box .fa,
+#header.fixed-position.style28 .social-list a:hover,
+#footer.style15 .f-contact-info2 .mail-box .fa{color: $main-color;}
+.page-heading .heading7:after,
+.page-heading .heading10:after,
+.hold-backery .menu-article .btn,
+.page-heading .heading7:before{border-color: $main-color;}
+.main-color{color: $main-color !important;}

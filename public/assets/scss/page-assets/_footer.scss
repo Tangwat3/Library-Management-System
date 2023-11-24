@@ -1,0 +1,1969 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+2-1. footer Styles / #footer
+2-2. footer top Styles / .footer-top
+2-3. footer social Styles / .footer-social
+2-4. footer cent Styles / .footer-cent
+2-5. f get touch Styles / .f-get-touch
+2-6. insta box Styles / .insta-box
+2-7. footer news box Styles / .footer-news-box
+2-8. footer tags Styles / .footer-tags
+2-9. footer bottom Styles / .footer-bottom
+2-10. f info col Styles / .f-info-col
+2-11. footer form Styles / .footer-form
+2-12. mailing form Styles / .mailing-form
+2-13. mailing form2 Styles / .mailing-form2
+2-14. footer social2 Styles / .footer-social2
+2-15. f contact us Styles / .f-contact-us
+2-15. f about us Styles / .f-about-us
+2-16. f contact info Styles / .f-contact-info
+2-17. f contact info2 Styles / .f-contact-info2
+2-18. bottom box1 Styles / .bottom-box1
+2-19. bottom box2 Styles / .bottom-box2
+2-20. bottom box3 Styles / .bottom-box3
+2-21. bottom box4 Styles / .bottom-box4
+2-22. bottom box5 Styles / .bottom-box5
+2-23. f our mission Styles / .f-our-mission
+2-24. payment nav Styles / .payment-nav
+2-25. f aside holder Styles / .f-aside-holder
+2-26. footer aside Styles / .footer-aside
+2-27. newsletter form Styles / .newsletter-form
+2-28. time nav Styles / .time-nav
+2-29. lancer footer Styles / #lancer-footer
+2-30. wed logo Styles / .wed-logo
+2-31. wed social Styles / .wed-social
+2-32. socialize holder Styles / .socialize-holder
+2-33. f blog social Styles / .f-blog-social
+2-34. social block Styles / .social-block
+2-35. social container Styles / .social-container
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+2-1. footer Styles / #footer
+-------------------------------------------------------------------*/
+#footer{
+	@extend %boxreset;
+	a{
+		@include transition (all, 0.4s, ease);
+		&:hover{text-decoration: none;}
+	}
+	.logo{
+		float: none;
+		vertical-align: top;
+		display: inline-block;
+	}
+	@include breakpoint($screen-sm-max){
+		.column1{margin: 0 0 30px;}
+		.column2{margin: 0 0 30px;}
+		.column3{margin: 0 0 30px;}
+	}
+	&.style3{
+		.f-get-touch{
+			padding-top: 2px;
+			p{margin: 0 0 18px;}
+		}
+		.footer-top{
+			padding-top: 20px;
+			padding-bottom: 12px;
+			.holder{
+				max-width:inherit;
+				padding:0 2px 0 0;
+				@include breakpoint($screen-xs-max){overflow: visible;}
+			}
+			.logo{
+				margin: 0;
+				float: left;
+				@include breakpoint($screen-xs-max){
+					float: none;
+					display: block;
+					margin: 0 auto 15px;
+				}
+			}
+		}
+		.footer-social{
+			float: right;
+			margin: 2px 0 0;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				margin: 0 -15px;
+				text-align: center;
+			}
+			li{
+				padding:0 0 10px 6px;
+				@include breakpoint($screen-xs-max){padding:0 0 10px 2px;}
+				&.apple,
+				&.skype{@include vertical-align(inline-block, top);}
+			}
+			a{
+				font-size: 20px;
+				@include square(46px);
+			}
+			.fa-apple{
+				font-size: 21px;
+				margin:2px 0 0;
+			}
+			.fa-skype{
+				font-size: 20px;
+				margin:0 2px 0 0;
+			}
+			.fa-behance{margin:0 2px 0 0;}
+			.fa-facebook{
+				margin:3px 0 0;
+				font-size: 21px;
+			}
+		}
+		.footer-cent{padding-top: 53px;}
+		.footer-bottom{
+			padding-top: 27px;
+			.copyright{
+				@include breakpoint($screen-sm-max){
+					float: none;
+					display: block;
+					max-width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+	&.style4{
+		.f-get-touch p{margin: 0 0 18px;}
+		.footer-top{
+			padding-top: 25px;
+			padding-bottom: 26px;
+			.f-contact-us{display: block;}
+		}
+		.footer-social{
+			float: right;
+			margin: 2px 0 0;
+			li{
+				padding:0 0 10px 6px;
+				&.apple,
+				&.skype{@include vertical-align(inline-block, top);}
+			}
+			a{
+				@include square(46px);
+				font-size: 20px;
+			}
+			.fa-apple{
+				font-size: 21px;
+				margin:2px 0 0;
+			}
+			.fa-skype{
+				font-size: 20px;
+				margin:0 2px 0 0;
+			}
+			.fa-behance{margin:0 2px 0 0;}
+			.fa-facebook{
+				margin:3px 0 0;
+				font-size: 21px;
+			}
+		}
+		.footer-cent{
+			padding-top: 55px;
+			padding-bottom: 79px;
+		}
+		.footer-bottom{padding-top: 30px;}
+	}
+	&.style5 .footer-bottom{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	&.style6{
+		.footer-top{
+			padding-bottom: 40px;
+			.footer-social{
+				li{
+					padding:0 3px;
+					&.apple,
+					&.skype{@include vertical-align(inline-block, top);}
+				}
+				a{@include square(45px);}
+			}
+			.logo{margin:0 auto 32px;}
+		}
+		.footer-cent{padding-top: 55px;}
+		.footer-bottom{padding-top: 26px;}
+	}
+	&.style7{
+		.footer-top{
+			padding-bottom: 40px;
+			.footer-social{
+				li{
+					padding:0 3px;
+					&.apple,
+					&.skype{@include vertical-align(inline-block, top);}
+				}
+				a{@include square(45px);}
+			}
+			.logo{margin:0 auto 32px;}
+		}
+		.footer-bottom{
+			padding-top: 25px;
+			.bottom-box4{display: block;}
+		}
+	}
+	&.style8{
+		.footer-top{
+			padding-bottom: 60px;
+			.holder{padding:0 10%;}
+			p{margin: 0;}
+			.logo{margin:0 auto 26px;}
+		}
+		.footer-bottom{
+			padding-top: 0;
+			padding-bottom: 30px;
+		}
+	}
+	&.style9{
+		.footer-cent{padding-bottom: 57px;}
+		.footer-bottom{
+			padding-top: 19px;
+			padding-bottom: 9px;
+		}
+		.bottom-box5{
+			padding:0;
+			border:0;
+		}
+		.f-our-mission .btn-more:hover{background: none;}
+	}
+	&.style10{
+		.footer-top{padding-bottom: 63px;}
+		.footer-cent{padding-bottom: 55px;}
+		.footer-bottom{
+			padding-top: 23px;
+			.copyright{margin-top: 5px;}
+		}
+		.insta-box li{
+			padding:0 1.2px 0 0;
+			margin:0 0 -2px 0;
+		}
+	}
+	&.style11{
+		@include breakpoint($screen-xs-max){
+			.footer-aside{
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
+		}
+		.btn-more:hover{color: $white;}
+	}
+	&.style12{
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		position: absolute;
+		@include breakpoint($screen-sm-max){
+			display: none;
+		}
+		.footer-bottom{
+			padding-top: 0;
+			padding-bottom: 59px;
+			&:after{display: none;}
+		}
+		.f-social-networks{
+			margin:0 0 13px;
+			li{padding:0 8px;}
+		}
+		.copyrights{
+			display: block;
+			padding:0;
+		}
+	}
+	&.style13{
+		.footer-app{
+			padding: 27px 0 49px;
+			border-bottom: 1px solid #313131;
+		}
+		.bottom-box3{
+			color: $stack;
+			font-size: 15px;
+			line-height: 25px;
+			padding: 33px 0 0;
+			background: url(../images/icons/map.png) no-repeat 50% 0;
+			.logo{
+				width: 90px;
+				height: auto;
+				margin: 0 auto 24px;
+			}
+			p{margin: 0 0 27px;}
+			.footer-social{margin: 0 0 55px;}
+		}
+		.f-info-box{
+			color: $stack;
+			text-transform: uppercase;
+			font: 300 24px/28px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 20px;
+				line-height: 22px;
+			}
+			p{margin: 0 0 48px;}
+			.title{
+				color: $white;
+				display: block;
+				margin: 0 0 12px;
+				font-weight: 400;
+			}
+			.tel{
+				font-size: 70px;
+				margin: 0 0 14px;
+				font-weight: 900;
+				line-height: 80px;
+				@include vertical-align(inline-block, top);
+				@include breakpoint($screen-xs-max){font-size: 40px;}
+			}
+			.num{
+				color: $white;
+				display: block;
+				margin: 0 0 6px;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 40px;
+			}
+			.counter-box{
+				color: $stack;
+				text-transform: uppercase;
+				font: 14px/20px $font-family-sans-serif;
+				p{margin: 0;}
+			}
+		}
+	}
+	&.style14{
+		.footer-bottom .copyright{
+			@include breakpoint($screen-sm-max){
+				float: none;
+				display: block;
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	&.style15{
+        z-index: 5;
+        position: relative;
+        .parallax-holder{z-index: -1;}
+		.footer-cent{
+			padding-top: 97px;
+			background: rgba(0, 0, 0, 0.8);
+			.f-info-col{
+				color: $white;
+				p{margin: 0 0 26px;}
+			}
+			.logo{margin: 5px 0 8px;}
+			h5{
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+        .footer-news-box a{
+			color: $white;
+			a{color: $white;}
+        }
+		.f-contact-info2{
+			color: $white;
+			a{color: $white;}
+		}
+		.footer-bottom{
+			padding-top: 0;
+			font-size: 12px;
+			line-height: 13px;
+			text-transform: uppercase;
+			background: rgba(0, 0, 0, 0.8);
+			.footer-nav li{
+				padding: 0 11px 0 0;
+				a{color: $white;}
+			}
+			.copyright{
+				color: $white;
+				max-width: 570px;
+				@include breakpoint($screen-sm-max){
+					float: none;
+					display: block;
+					max-width: 100%;
+					text-align: center;
+				}
+				a{color: $white;}
+			}
+			.bottom-box1{
+				padding-top: 27px;
+				border-top: 1px solid #333;
+			}
+		}
+	}
+	&.style16{
+		.footer-top{
+			padding-bottom: 32px;
+			.holder{padding:0 13%;}
+			p{margin: 0 0 28px;}
+			.logo{margin:0 auto 26px;}
+		}
+		.footer-bottom{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			.footer-nav{text-transform: capitalize;}
+			.copyright{
+				@include breakpoint($screen-sm-max){
+					float: none;
+					display: block;
+					max-width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+	&.style17{
+        z-index: 5;
+        position: relative;
+        .parallax-holder{z-index: -1;}
+		.footer-cent{
+			padding-top: 97px;
+			background: rgba(0, 0, 0, 0.8);
+			.f-info-col{
+				color: $white;
+				p{margin: 0 0 26px;}
+			}
+			.logo{margin: 5px 0 8px;}
+			h5{
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+		.f-contact-info2{
+			color: $white;
+			a{color: $white;}
+		}
+        .footer-news-box a{
+			color: $white;
+			a{color: $white;}
+        }
+		.footer-bottom{
+			padding-top: 0;
+			font-size: 12px;
+			line-height: 13px;
+			text-transform: uppercase;
+			background: rgba(0, 0, 0, 0.8);
+			.footer-nav li{
+				padding: 0 11px 0 0;
+				a{color: $white;}
+			}
+			.copyright{
+				color: $white;
+				max-width: 570px;
+				@include breakpoint($screen-sm-max){
+					float: none;
+					display: block;
+					max-width: 100%;
+					text-align: center;
+				}
+				a{color: $white;}
+			}
+			.bottom-box1{
+				padding-top: 27px;
+				border-top: 1px solid #333;
+			}
+		}
+	}
+	&.style18{
+		.footer-cent{padding-bottom: 57px;}
+		.footer-bottom{
+			padding-top: 19px;
+			padding-bottom: 9px;
+		}
+		.bottom-box5{
+			padding:0;
+			border:0;
+		}
+		.btn-more:hover{background: transparent;}
+	}
+	&.style19{
+		background: url(../images/icons/map.png) no-repeat 50% 0 $shark;
+		.footer-app{
+			padding: 27px 0 49px;
+			@include breakpoint($screen-xs-max){
+				padding: 27px 0 15px;
+			}
+		}
+		.bottom-box3{
+			color: $stack;
+			font-size: 14px;
+			line-height: 25px;
+			padding: 66px 0 43px;
+			@include breakpoint($screen-xs-max){
+				padding: 20px 0 20px;
+			}
+		}
+		.footer-bottom{
+			&:after{background: transparent;}
+			border-top: 1px solid #313131;
+			.copyright{
+				float: none;
+				display: block;
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+		.f-info-box{
+			color: $stack;
+			text-transform: uppercase;
+			font: 300 24px/28px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 16px;
+				line-height: 24px;
+			}
+			p{margin: 0 0 48px;}
+			.title{
+				color: $white;
+				display: block;
+				margin: 0 0 12px;
+				font-weight: 400;
+			}
+			.tel{
+				font-size: 70px;
+				margin: 0 0 14px;
+				font-weight: 900;
+				line-height: 80px;
+				@include vertical-align(inline-block, top);
+				@include breakpoint($screen-xs-max){
+					font-size: 36px;
+					line-height: 50px;
+				}
+			}
+			.num{
+				color: $white;
+				display: block;
+				margin: 0 0 6px;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 40px;
+			}
+			.counter-box{
+				color: $stack;
+				text-transform: uppercase;
+				font: 14px/20px $font-family-sans-serif;
+				p{margin: 0;}
+			}
+		}
+	}
+	&.style20{
+		.footer-cent{padding-bottom: 55px;}
+		.footer-bottom{
+			padding-top: 23px;
+			.copyright{margin-top: 5px;}
+		}
+		.insta-box li{
+			padding:0 1.2px 0 0;
+			margin:0 0 -2px 0;
+		}
+	}
+	&.style21{
+		.copyright{
+			float: none;
+			display: block;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+	&.style22{
+		.footer-cent{padding-bottom: 55px;}
+		.footer-bottom{
+			padding-top: 23px;
+			.copyright{margin-top: 5px;}
+		}
+		.insta-box li{
+			padding:0 1.2px 0 0;
+			margin:0 0 -2px 0;
+		}
+	}
+	&.style23{
+		background: url(../images/icons/pattern01.jpg);
+		.footer-app{
+			padding: 27px 0 49px;
+			border-bottom: 1px solid #313131;
+		}
+		.bottom-box3{
+			color: $stack;
+			font-size: 14px;
+			line-height: 25px;
+			padding: 33px 0 0;
+			.logo{
+				width: 90px;
+				height: auto;
+				margin: 0 auto 54px;
+			}
+			p{margin: 0 0 27px;}
+			.footer-social{margin: 0 0 65px;}
+		}
+		.copyright{
+			float: none;
+			display: block;
+			max-width: 100%;
+			text-align: center;
+		}
+		.socialize-holder{
+			z-index: 99;
+			@include element(before, 0, -9999px, 0, -9999px, transparent);
+			&:before{
+				z-index: 2;
+				background: rgba(0, 0, 0, 0.4);
+			}
+			.container{
+				z-index: 99;
+				position: relative;
+			}
+		}
+		.f-info-box{
+			color: $stack;
+			text-transform: uppercase;
+			font: 700 18px/24px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 20px;
+				line-height: 22px;
+			}
+			p{margin: 0 0 48px;}
+			.title{
+				color: $white;
+				display: block;
+				margin: 0 0 12px;
+				font-weight: 400;
+			}
+			.tel{
+				font-size: 70px;
+				margin: 0 0 14px;
+				font-weight: 900;
+				line-height: 80px;
+				@include vertical-align(inline-block, top);
+				@include breakpoint($screen-xs-max){font-size: 40px;}
+			}
+			.num{
+				color: $white;
+				display: block;
+				margin: 0 0 6px;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 40px;
+			}
+			.counter-box{
+				color: $stack;
+				text-transform: uppercase;
+				font: 14px/20px $font-family-sans-serif;
+				p{
+                    margin: 0;
+                    letter-spacing: 2px;
+                }
+			}
+		}
+		.footer-bottom:after{background: transparent;}
+	}
+	&.style24{
+		.copyright{
+			float: none;
+			display: block;
+			max-width: 100%;
+			text-align: center;
+		}
+		.socialize-holder{
+			z-index: 99;
+			@include element(before, 0, -9999px, 0, -9999px, transparent);
+			&:before{
+				z-index: 2;
+				background: rgba(0, 0, 0, 0.4);
+			}
+			.container{
+				z-index: 99;
+				position: relative;
+			}
+		}
+	}
+	&.style25{
+		.footer-bottom .copyright{
+			@include breakpoint($screen-sm-max){
+				float: none;
+				display: block;
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	&.style26{
+		.footer-app{
+			padding: 27px 0 49px;
+			border-bottom: 1px solid #313131;
+		}
+		.bottom-box3{
+			color: $stack;
+			font-size: 15px;
+			line-height: 25px;
+			padding: 33px 0 0;
+			.logo{
+				width: 90px;
+				height: auto;
+				margin: 0 auto 24px;
+			}
+			p{margin: 0 0 27px;}
+			.footer-social{margin: 0 0 55px;}
+		}
+		.f-info-box{
+			color: $stack;
+			text-transform: uppercase;
+			font: 300 24px/28px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 20px;
+				line-height: 22px;
+			}
+			p{margin: 0 0 48px;}
+			.num{
+				display: block;
+				margin: 0 0 6px;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 40px;
+			}
+			.counter-box{
+				color: $stack;
+				text-transform: uppercase;
+				font: 14px/20px $font-family-sans-serif;
+				p{margin: 0;}
+			}
+		}
+	}
+	&.style27{
+		.footer-app{
+			background: $shark;
+			padding: 27px 0 49px;
+			border-bottom: 1px solid #313131;
+		}
+		.bottom-box3{
+			color: $stack;
+			font-size: 14px;
+			line-height: 25px;
+			padding: 33px 0 0;
+			background: url(../images/icons/map.png) no-repeat 50% 0;
+			.logo{
+				width: 90px;
+				height: auto;
+				margin: 0 auto 24px;
+			}
+			p{margin: 0 0 27px;}
+			.footer-social{margin: 0 0 55px;}
+		}
+		.f-info-box{
+			color: $stack;
+			text-transform: uppercase;
+			font: 300 24px/28px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 20px;
+				line-height: 22px;
+			}
+			p{margin: 0 0 48px;}
+			.title{
+				color: $white;
+				display: block;
+				margin: 0 0 12px;
+				font-weight: 400;
+			}
+			.tel{
+				font-size: 70px;
+				margin: 0 0 14px;
+				font-weight: 500;
+				line-height: 80px;
+				@include vertical-align(inline-block, top);
+				@include breakpoint($screen-xs-max){font-size: 40px;}
+			}
+			.num{
+				color: $white;
+				display: block;
+				margin: 0 0 6px;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 40px;
+			}
+			.counter-box{
+				color: $stack;
+				text-transform: uppercase;
+				font: 14px/20px $font-family-sans-serif;
+				p{margin: 0;}
+			}
+		}
+	}
+    &.style28 .footer-bottom:after{border-top: 1px solid #494949;}
+	&.style29{
+		.footer-cent{
+			padding-bottom: 55px;
+			h5{color: $lime;}
+		}
+		.footer-bottom{
+			font-size: 14px;
+			padding-top: 23px;
+			.copyright{margin-top: 5px; float: left;}
+		}
+		.mailing-form2 .email,
+		.footer-tags a{background: #efefef;}
+		.footer-tags a:hover{background: $lime;}
+		.payment-nav{float: right;}
+		.insta-box li{
+			padding:0 1.2px 0 0;
+			margin:0 0 -2px 0;
+		}
+	}
+	&.style30{
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: left;
+		padding: 25px 0 0;
+		position: absolute;
+		@include breakpoint($screen-sm-max){
+			display: none;
+		}
+		.footer-bottom{
+			padding-top: 0;
+			padding-bottom: 0;
+			position: relative;
+			&:after{
+				top: -20px;
+				left: 44px;
+				height: 2px;
+				width: 60px;
+				content: "";
+				position: absolute;
+				background: #e0e0e0;
+			}
+		}
+		.f-social-networks{
+			font-size: 16px;
+			margin: 0 0 30px 36px;
+			li{padding:0 8px;}
+			a{color: $stack;}
+		}
+	}
+	&.style31{
+		.footer-aside{
+			color: #fff;
+			font-weight: 300;
+			font-family: $font-family-sans-serif;
+			.time-nav dt{font-weight: 300;}
+			@include breakpoint($screen-xs-max){
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
+		}
+		.footer-bottom,
+		.footer-bottom a,
+		.btn-more:hover{color: $white;}
+		.footer-social a{background: transparent;}
+		.f-about-box{font: 300 12px/24px $font-family-sans-serif;}
+		.footer-cent h5{font-family: $font-playfair; font-size: 16px; text-transform: lowercase; text-transform: capitalize;}
+	}
+}
+/*------------------------------------------------------------------
+2-2. footer top Styles / .footer-top
+-------------------------------------------------------------------*/
+.footer-top{
+	color: $stack;
+	font-size: 15px;
+	line-height: 25px;
+	padding-top: 60px;
+	text-align: center;
+	padding-bottom: 30px;
+	.logo{
+		float: none;
+		width: 90px;
+		display: block;
+		margin: 0 auto 23px;
+	}
+	.holder{
+		max-width: 710px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.holder2{
+		max-width: 750px;
+		overflow: hidden;
+		margin: 0 auto;
+		.btn-more{padding:6px 15px 8px;}
+	}
+	p{margin: 0 0 29px;}
+}
+/*------------------------------------------------------------------
+2-3. footer social Styles / .footer-social
+-------------------------------------------------------------------*/
+.footer-social{
+	margin: 0 0 20px;
+	li{padding: 0 1px 10px;}
+	a{
+		color: $white;
+		display: block;
+		font-size: 18px;
+		line-height:40px;
+		text-align:center;
+		border-radius: 50%;
+		background: $cape-cod;
+		@include square(44px);
+		&:hover{text-decoration: none;}
+		.fa{@include vertical-align(inline-block, middle);}
+		.fa-facebook{margin:0 2px 0 0;}
+		.fa-google-plus{margin:-2px 0 0 2px;}
+		.fa-behance{margin:-2px 0 0 2px;}
+	}
+}
+/*------------------------------------------------------------------
+2-4. footer cent Styles / .footer-cent
+-------------------------------------------------------------------*/
+.footer-cent{
+	color: $stack;
+	font-size: 14px;
+	line-height: 25px;
+	padding-top: 57px;
+	padding-bottom: 39px;
+	h5{
+		color: $white;
+		margin: 0 0 27px;
+		letter-spacing: 2px;
+		text-transform:uppercase;
+		font: 600 14px/18px $font-family-sans-serif;
+	}
+}
+/*------------------------------------------------------------------
+2-5. f get touch Styles / .f-get-touch
+-------------------------------------------------------------------*/
+.f-get-touch{
+	p{margin: 0 0 20px;}
+	a{
+		color: $stack;
+		&:hover{color: $white;}
+	}
+	address{
+		margin: 0;
+		font-size: 14px;
+		line-height: 24px;
+		position: relative;
+		padding: 0 10px 0 19px;
+		.fa{
+			left: 0;
+			top: 7px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.email{
+		position: relative;
+		padding: 0 0 0 25px;
+		@include vertical-align(inline-block, top);
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.tel{
+		position: relative;
+		padding: 0 0 0 22px;
+		@include vertical-align(inline-block, top);
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-6. insta box Styles / .insta-box
+-------------------------------------------------------------------*/
+.insta-box{
+	margin: 0;
+	padding: 9px 0 0;
+	a{
+		max-width: 64px;
+		margin: 0 2px 2px 0;
+		@include vertical-align(inline-block, top);
+		&:hover{opacity: 0.8;}
+	}
+	img{@include img-responsive;}
+}
+/*------------------------------------------------------------------
+2-7. footer news box Styles / .footer-news-box
+-------------------------------------------------------------------*/
+.footer-news-box{
+	font-size: 14px;
+	overflow: hidden;
+	line-height: 25px;
+	padding: 2px 0 20px;
+	time{
+		color: $stack;
+		font-size: 11px;
+	}
+	a{
+		color: $stack;
+		&:hover{color: $white;}
+	}
+	.img-box{
+		float: left;
+		margin: 8px 9px 0 0;
+	}
+	p{margin: 0;}
+	.txt{overflow: hidden;}
+	img{display: block;}
+}
+/*------------------------------------------------------------------
+2-8. footer tags Styles / .footer-tags
+-------------------------------------------------------------------*/
+.footer-tags{
+	margin: 0;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 10px 0 0;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	li{
+		padding: 0 3px 4px 0;
+		vertical-align: top;
+	}
+	a{
+		color: $stack;
+		display: block;
+		background: $cape-cod;
+		padding: 5px 17px 5px 14px;
+		&:hover{
+			color: $white;
+			background: $stack;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-9. footer bottom Styles / .footer-bottom
+-------------------------------------------------------------------*/
+.footer-bottom{
+	color: $dove-gray;
+	font-size: 12px;
+	line-height: 20px;
+	padding-top: 27px;
+	padding-bottom: 26px;
+	a{
+		font-weight: 400;
+		color: $dove-gray;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		&:hover{color: $white;}
+	}
+	.footer-nav{
+		margin: 0;
+		float: left;
+		max-width: 690px;
+		@include breakpoint($screen-sm-max){
+			float: none;
+			max-width: 100%;
+			overflow: hidden;
+			margin: 0 0 20px;
+			text-align: center;
+		}
+		li{
+			padding: 0 24px 0 0;
+			&.active a{color: $white;}
+		}
+	}
+	.copyright{
+		float: right;
+		max-width: 500px;
+		text-transform: uppercase;
+		@include breakpoint($screen-sm-max){
+			float: none;
+			display: block;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-10. f info col Styles / .f-info-col
+-------------------------------------------------------------------*/
+.f-info-col{
+	color: $stack;
+	font-size: 14px;
+	line-height: 25px;
+	p{margin: 0 0 18px;}
+	a{
+		color: $stack;
+		&:hover{color: $white;}
+	}
+	.footer-social{
+		font-size: 16px;
+		margin: 0 0 20px;
+		li{
+			padding: 0;
+			margin:0 3px 5px 0;
+			@include square(34px);
+		}
+		a{
+			color: $white;
+			@include square(34px);
+			line-height:32px;
+			font-size: 15px;
+			.fa-facebook{margin: 0 0 0 1px;}
+			.fa-behance{margin:-3px 0 0;}
+			.fa-skype{margin:-3px 0 0;}
+			.fa-apple{
+				margin:-3px 0 0;
+				font-size: 15px;
+			}
+		}
+	}
+	.logo{margin:5px 0 14px;}
+}
+/*------------------------------------------------------------------
+2-11. footer form Styles / .footer-form
+-------------------------------------------------------------------*/
+.footer-form{
+	overflow: hidden;
+	padding: 9px 2px 0 0;
+	.text{
+		float: left;
+		width: 100%;
+		height: 30px;
+		outline: none;
+		color: $stack;
+		margin: 0 0 5px;
+		padding: 4px 12px;
+		background: $cape-cod;
+		border: 1px solid $cape-cod;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+		font: 12px/20px $font-family-base;
+		@include transition (all, 0.4s, ease);
+		&:focus{border-color: $desert-storm;}
+	}
+	textarea{
+		padding: 0;
+		float: left;
+		resize: none;
+		outline: none;
+		color: $stack;
+		overflow: auto;
+		margin: 0 0 4px;
+		padding: 4px 12px;
+		background: $cape-cod;
+		width: 100% !important;
+		height: 59px !important;
+		border: 1px solid $cape-cod;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+		font: 12px/20px $font-family-base;
+		@include transition (all, 0.4s, ease);
+		&:focus{border-color: $desert-storm;}
+	}
+	.text::-webkit-input-placeholder {color: $stack;}
+	.text::-moz-placeholder {
+		color: $stack;
+		opacity: 1;
+	}
+	.text:-ms-input-placeholder {color: $stack;}
+	textarea::-webkit-input-placeholder {color: $stack;}
+	textarea::-moz-placeholder {
+		color: $stack;
+		opacity: 1;
+	}
+	textarea:-ms-input-placeholder {color: $stack;}
+	.btn-submit{
+		border: 0;
+		color: $white;
+		font-size: 12px;
+		border-radius: 0;
+		padding:5px 12px;
+		line-height: 20px;
+		text-transform: uppercase;
+		@include transition (all, 0.6s, ease);
+		&:hover{
+			color: $cape-cod;
+			background: $desert-storm;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-12. mailing form Styles / .mailing-form
+-------------------------------------------------------------------*/
+.mailing-form{
+	overflow: hidden;
+	padding: 2px 2px 0 0;
+	label{
+		color:$stack;
+		font-size: 14px;
+		line-height:25px;
+		display: block;
+		margin:0 0 26px;
+	}
+	.email{
+		border: 0;
+		float: left;
+		width: 100%;
+		height: 30px;
+		color: $stack;
+		outline: none;
+		margin: 0 0 5px;
+		padding: 5px 12px;
+		background: $cape-cod;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+		font: 12px/20px $font-family-base;
+	}
+	.email::-webkit-input-placeholder {color: $stack;}
+	.email::-moz-placeholder {
+		color: $stack;
+		opacity: 1;
+	}
+	.email:-ms-input-placeholder {color: $stack;}
+	.btn-submit{
+		border: 0;
+		color: $white;
+		font-size: 12px;
+		border-radius: 0;
+		line-height: 20px;
+		text-transform: uppercase;
+		padding:5px 14px 4px 12px;
+		@include transition (all, 0.6s, ease);
+		.fa{
+			@include vertical-align(inline-block, middle);
+			margin:-4px 7px 0 0;
+		}
+		&:hover{
+			color: $cape-cod;
+			background: $desert-storm;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-13. mailing form2 Styles / .mailing-form2
+-------------------------------------------------------------------*/
+.mailing-form2{
+	overflow: hidden;
+	padding: 2px 2px 0 0;
+	label{
+		color:$stack;
+		font-size: 14px;
+		line-height:25px;
+		display: block;
+		margin:0 0 26px;
+		font-weight: 400;
+	}
+	.mc-field-group label{display: none;}
+	.email{
+		border: 0;
+		margin:0;
+		float: left;
+		width: 100%;
+		height: 30px;
+		outline: none;
+		color: $stack;
+		padding: 5px 12px;
+        background: #494949;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+		font: 12px/20px $font-family-base;
+		.dark &{background: #191919;}
+	}
+	.email::-webkit-input-placeholder {color: $stack;}
+	.email::-moz-placeholder {
+		color: $stack;
+		opacity: 1;
+	}
+	.email:-ms-input-placeholder {color: $stack;}
+	.mc-field-group{
+		float: left;
+		width: 87.3%;
+		@include breakpoint($screen-md-max){
+			width: 83.3%;
+		}
+		@include breakpoint($screen-sm-max){
+			width: 87.5%;
+		}
+	}
+	#mce-responses{display: none;}
+	.clear{float: left;}
+	.btn-submit{
+		border: 0;
+		padding:0;
+		float: right;
+		color: $white;
+		font-size: 12px;
+		border-radius: 0;
+		line-height: 30px;
+		transition:all 0.25s ease;
+		@include size(34px, 30px);
+		.fa{
+			@include vertical-align(inline-block, middle);
+			margin:-2px 0 0 -2px;
+		}
+		&:hover{background: $lime;}
+	}
+	.form-col{@extend %clearfix;}
+}
+/*------------------------------------------------------------------
+2-14. footer social2 Styles / .footer-social2
+-------------------------------------------------------------------*/
+.footer-social2{
+	float: right;
+	font-size: 18px;
+	line-height:12px;
+	margin:2px 3px 0 0;
+	@include breakpoint($screen-xs-max){
+		float: none;
+	}
+	li{padding:0 0 0 19px;}
+	a{
+		color: $stack;
+		&:hover{text-decoration: none;}
+	}
+}
+/*------------------------------------------------------------------
+2-15. f contact us Styles / .f-contact-us
+-------------------------------------------------------------------*/
+.f-contact-us{
+	overflow: hidden;
+	.contct{
+		float: left;
+		font-size: 18px;
+		line-height:22px;
+		font-style:italic;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			display: block;
+			margin: 0 0 10px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-15. f about us Styles / .f-about-us
+-------------------------------------------------------------------*/
+.f-about-us{
+	.f-about-box{
+		overflow: hidden;
+		padding-top: 4px;
+	}
+	p{margin: 0 0 24px;}
+	.logo{margin: 0 0 15px;}
+	.btn{
+		color: $stack;
+		border-color: $stack;
+		&:hover{
+			text-decoration: none;
+			color: rgba(143, 143, 143, 0.5);
+			border-color: rgba(143, 143, 143, 0.5);
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-16. f contact info Styles / .f-contact-info
+-------------------------------------------------------------------*/
+.f-contact-info{
+	p{margin: 0 0 20px;}
+	address{
+		margin: 0 0 16px;
+		font-size: 14px;
+		line-height: 24px;
+		position: relative;
+		padding: 2px 10px 0 19px;
+		.fa{
+			left: 0;
+			top: 7px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.mail-box2{
+		overflow: hidden;
+		margin:0 0 16px;
+	}
+	.mail-box{
+		display: block;
+		padding: 0 0 0 25px;
+		position:relative;
+		line-height:24px;
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.email{
+		position: relative;
+		@include vertical-align(inline-block, top);
+	}
+	.tel-holder{overflow: hidden;}
+	.tel-box{
+		display: block;
+		position: relative;
+		padding: 0 0 0 22px;
+		line-height:24px;
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.tel{
+		position: relative;
+		@include vertical-align(inline-block, top);
+	}
+	a{
+		color: $stack;
+		&:hover{color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+2-17. f contact info2 Styles / .f-contact-info2
+-------------------------------------------------------------------*/
+.f-contact-info2{
+	p{margin: 0 0 20px;}
+	a{
+		color: $stack;
+		&:hover{color: $white;}
+	}
+	address{
+		margin:0 0 2px;
+		font-size: 14px;
+		line-height: 25px;
+		position: relative;
+		padding: 3px 10px 0 19px;
+		.fa{
+			left: 0;
+			top: 9px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.mail-box2{
+		overflow: hidden;
+		margin:0 0 3px;
+	}
+	.mail-box{
+		display: block;
+		padding: 0 0 0 24px;
+		position:relative;
+		line-height:24px;
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.email{
+		position: relative;
+		@include vertical-align(inline-block, top);
+	}
+	.tel-holder{overflow: hidden;}
+	.tel-box{
+		display: block;
+		position: relative;
+		padding: 0 0 0 24px;
+		line-height:24px;
+		.fa{
+			left: 0;
+			top: 6px;
+			color: $stack;
+			font-size: 14px;
+			position: absolute;
+		}
+	}
+	.tel{
+		position: relative;
+		@include vertical-align(inline-block, top);
+	}
+}
+.f-insta-photo .insta-box li{padding:0 1.3px 0 0;}
+/*------------------------------------------------------------------
+2-18. bottom box1 Styles / .bottom-box1
+-------------------------------------------------------------------*/
+.bottom-box1{overflow: hidden;}
+/*------------------------------------------------------------------
+2-19. bottom box2 Styles / .bottom-box2
+-------------------------------------------------------------------*/
+.bottom-box2{
+	overflow: hidden;
+	text-align: center;
+	.logo{margin:0 auto 26px;}
+	.copyright{
+		float: none;
+		display: block;
+		max-width: 100%;
+	}
+}
+/*------------------------------------------------------------------
+2-20. bottom box3 Styles / .bottom-box3
+-------------------------------------------------------------------*/
+.bottom-box3{
+	overflow: hidden;
+	text-align: center;
+	.logo{
+		@include size(196px, 49px);
+		display: block;
+		margin:0 auto 30px;
+	}
+	.copyright{
+		float: none;
+		display: block;
+		max-width: 100%;
+		margin:0 0 24px;
+	}
+	.footer-social{
+		float: none;
+		overflow: hidden;
+		width: 100%;
+		margin:0;
+		li{padding: 0 1px;}
+		a{
+			color:$white;
+			background: $cape-cod;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-21. bottom box4 Styles / .bottom-box4
+-------------------------------------------------------------------*/
+.bottom-box4{
+	overflow: hidden;
+	.footer-nav{
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}
+/*------------------------------------------------------------------
+2-22. bottom box5 Styles / .bottom-box5
+-------------------------------------------------------------------*/
+.bottom-box5{
+	overflow: hidden;
+	border-top:1px solid #373737;
+	padding:30px 0 0;
+	.footer-social{
+		margin: 0;
+		float: left;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			margin: 0 0 20px;
+			text-align: center;
+		}
+		a{
+			font-size: 15px;
+			line-height:34px;
+			@include square(34px);
+		}
+	}
+	.copyright{margin:6px 0 0;}
+}
+/*------------------------------------------------------------------
+2-23. f our mission Styles / .f-our-mission
+-------------------------------------------------------------------*/
+.f-our-mission{
+	.f-mission-box{
+		overflow: hidden;
+		padding:3px 0 0 1px;
+	}
+	p{margin:0 0 14px;}
+	.btn-more{
+		border:0;
+		padding:0;
+		color: $stack;
+		.fa{
+			@include vertical-align(inline-block, middle);
+			margin:-3px 0 0 3px;
+		}
+		&:hover{
+			.fa{color:$stack;}
+			text-decoration: none;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-24. payment nav Styles / .payment-nav
+-------------------------------------------------------------------*/
+.payment-nav{
+	margin:0;
+	float: left;
+	@include breakpoint($screen-xs-max){
+		float: none;
+		text-align: center;
+	}
+	li{padding:0 7px 0 0;}
+}
+/*------------------------------------------------------------------
+2-25. f aside holder Styles / .f-aside-holder
+-------------------------------------------------------------------*/
+.f-aside-holder{
+    z-index: 2;
+	overflow: hidden;
+	position: relative;
+	.stretch{z-index: -1;}
+}
+/*------------------------------------------------------------------
+2-26. footer aside Styles / .footer-aside
+-------------------------------------------------------------------*/
+.footer-aside{
+	color:$stack;
+	font-size: 14px;
+	line-height:24px;
+	padding-top: 95px;
+	text-align: center;
+	padding-bottom: 120px;
+	p{margin: 0 0 27px;}
+	h5{
+		color:$white;
+		margin:0 0 53px;
+		text-transform: capitalize;
+		font:24px/28px $font-playfair;
+	}
+	.footer-social{
+		li{padding:0 2px 15px;}
+		a{
+			color:$white;
+			@include square(46px);
+			border:2px solid $white;
+			&:hover{
+				color:$black;
+				background: $white;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-27. newsletter form Styles / .newsletter-form
+-------------------------------------------------------------------*/
+.newsletter-form{
+	margin:0;
+	@extend %clearfix;
+	#mc-embedded-subscribe-form,
+	.form-group{
+		margin:0;
+		@extend %clearfix;
+		padding:0 19px 0 0;
+		border:1px solid $white;
+	}
+	.email,
+	.text{
+		border:0;
+		float: left;
+		color:$white;
+		box-shadow:none;
+		background: none;
+		@include size(94%, 38px);
+		padding:10px 10px 10px 17px;
+		font:12px/18px $font-family-base;
+	}
+	.email::-webkit-input-placeholder {color: $white;}
+	.email::-moz-placeholder {
+		color: $white;
+		opacity: 1;
+	}
+	.email:-ms-input-placeholder {color: $white;}
+	button{
+		border:0;
+		padding:0;
+		color:$white;
+		float: right;
+		background: none;
+		margin:5px 1px 0 0;
+		transition:all 0.25s ease;
+	}
+}
+/*------------------------------------------------------------------
+2-28. time nav Styles / .time-nav
+-------------------------------------------------------------------*/
+.time-nav{
+	@extend %clearfix;
+	margin:0;
+	dt{
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:0 13px 0 0;
+	}
+	dd{
+		text-align:left;
+		overflow: hidden;
+		margin:0 0 4px;
+		padding:0 0 0 15px;
+	}
+	.close-txt{
+		color:$white;
+		min-width:65px;
+		text-align: center;
+		padding:1px 2px 3px;
+		margin:3px 0 0;
+		font-size: 12px;
+		line-height:14px;
+		text-transform: uppercase;
+		@include vertical-align(inline-block, top);
+	}
+}
+/*------------------------------------------------------------------
+2-29. lancer footer Styles / #lancer-footer
+-------------------------------------------------------------------*/
+#lancer-footer{
+	@extend %boxreset;
+	.parallax-holder{z-index: -1;}
+	.f-social{
+		margin: 0 -15px;
+		text-align: center;
+		padding: 94px 0 97px;
+		@include element(after, 0, -9999px, 0, -9999px, rgba(0, 0, 0, 0.5));
+		li{
+			padding: 0;
+			width: 16.1667%;
+			@include breakpoint($screen-xs-max){
+				width: 49%;
+				margin: 0 0 20px
+			}
+		}
+		a{
+			color: $white;
+			margin: 0 auto;
+			display: block;
+			font-size: 48px;
+			padding: 30px 0 0;
+			line-height: 60px;
+			text-align: center;
+			border-radius: 50%;
+			@include square(120px);
+			background: rgba(255, 255, 255, 0.2);
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.img-box{
+		border-radius: 50%;
+		@include square(151px);
+		margin: -103px auto 27px;
+		border: 10px solid $shark;
+		img{
+			display: block;
+			border-radius: 50%;
+		}
+	}
+	.footer-bottom{
+		@include element(after, 0, -9999px, 0, -9999px, $lime);
+		&:after{display: block;}
+		ul{
+			font-size: 12px;
+			margin: 0 0 11px;
+			overflow: hidden;
+			text-align: center;
+			text-transform: uppercase;
+			li{
+				padding: 0 10px;
+				@include vertical-align(inline-block, top);
+			}
+			a{
+				color: $stack;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+		}
+		.copyright{
+			float: none;
+			display: block;
+			font-size: 12px;
+			max-width: 100%;
+			margin: 0 0 30px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	&.comming{
+		.f-social{
+			text-align: center;
+			margin: 0;
+			padding: 149px 0 148px;
+			li{
+				margin: 0 26px;
+				width: auto;
+			}
+			a{
+				@include square(84px);
+				font-size: 34px;
+				line-height: 84px;
+				padding: 0;
+            	&:hover{background:#2b97f0;}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-30. wed logo Styles / .wed-logo
+-------------------------------------------------------------------*/
+.wed-logo{
+	padding: 27px 0;
+	@extend %boxreset;
+	background: $shark;
+	text-align: center;
+	.logo{
+		width: 261px;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+/*------------------------------------------------------------------
+2-31. wed social Styles / .wed-social
+-------------------------------------------------------------------*/
+.wed-social{
+	padding: 62px 0;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{background: rgba(0, 0, 0, 0.4);}
+	.parallax-holder{z-index: -1;}
+	.social{
+		margin: 0;
+		z-index: 55;
+		position: relative;
+		li{padding: 0 2.3px;}
+		a{
+			color: $white;
+			display: block;
+			font-size: 20px;
+			padding: 9px 0 0;
+			border-radius: 50%;
+			@include square(47px);
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-32. socialize holder Styles / .socialize-holder
+-------------------------------------------------------------------*/
+.socialize-holder{
+	z-index: 5;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 120px 0 91px;
+	.parallax-holder{z-index: -1;}
+	.title{
+		color: $white;
+		max-width: 390px;
+		position: relative;
+		padding: 0 96px 28px 0;
+		font: italic 24px/30px $font-family-sans-serif;
+		@include vertical-align(inline-block, middle);
+		&:after{
+			top: 36px;
+			right: 7px;
+			@extend %after;
+			@include size(93px, 36px);
+			background: url(../images/icons/icon2.png);
+			@include breakpoint($screen-xs-max){display: none;}
+		}
+	}
+	.footer-social{
+		@include vertical-align(inline-block, middle);
+		li{padding: 0 4px 10px;}
+		a{
+			font-size: 27px;
+			padding: 6px 0 0;
+			@include square(58px);
+			background: rgba(255, 255, 255, 0.4);
+			&:hover{color: $white;}
+		}
+	}
+}
+@include breakpoint($screen-xs-max){
+	.newsletter,
+	.opening-hours{margin-bottom: 30px;}
+}
+/*------------------------------------------------------------------
+2-33. f blog social Styles / .f-blog-social
+-------------------------------------------------------------------*/
+.f-blog-social{
+	width: 100%;
+	color: $white;
+	display: table;
+	font-size: 60px;
+	@extend %listreset;
+	text-align: center;
+	table-layout: fixed;
+	li{
+		display: table-cell;
+		vertical-align: top;
+		&.facebook a{background: #3b5998;}
+		&.google a{background: #dd4b39;}
+		&.twitter a{background: #00aced;}
+		&.pinterest a{background: #ea4c89;}
+	}
+	a{
+		color: $white;
+		padding: 19px;
+		display: block;
+		&:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+}
+/*------------------------------------------------------------------
+2-34. social block Styles / .social-block
+-------------------------------------------------------------------*/
+.social-block{
+	position:relative;
+	overflow: hidden;
+	&.style2{
+		@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.5));
+		&:after{z-index: 2;}
+		.container{
+			z-index: 5;
+			position: relative;
+		}
+	}
+	&.style3{
+		text-align: center;
+		@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.5));
+		&:after{z-index: 2;}
+		.container{
+			z-index: 5;
+			position: relative;
+		}
+	}
+	&.style4{
+		text-align: center;
+		@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.5));
+		&:after{z-index: 2;}
+		.container{
+			z-index: 5;
+			position: relative;
+		}
+        .social-container .footer-social a{background: rgba(255, 255, 255, 0.2);}
+	}
+}
+/*------------------------------------------------------------------
+2-35. social container Styles / .social-container
+-------------------------------------------------------------------*/
+.social-container{
+	min-height: 400px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@include v-align2(footer-social, $valign: middle);
+	.footer-social{
+		margin:0 0 0 5px;
+		li{padding: 0 8px 0 0;}
+		a{
+			font-size: 25px;
+			line-height:56px;
+			@include square(58px);
+			@include transition (all, 0.4s, ease);
+			.fa-twitter{margin: -7px 0 0;}
+			.fa-google-plus{margin: -3px 0 0 0px;}
+			.fa-behance{margin: -6px 0 0 -2px;}
+			.fa-skype{margin: -5px 0 0 -2px;}
+		}
+	}
+}

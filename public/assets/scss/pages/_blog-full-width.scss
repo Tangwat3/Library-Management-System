@@ -1,0 +1,1374 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+21-2. blog mainbanner Styles / .blog-mainbanner
+21-3. blog post v1 Styles / .blog-post-v1
+21-4. blog footer Styles / .blog-footer
+21-5. blog masonry holder Styles / .blog-masonry-holder
+21-6. post footer Styles / .post-footer
+21-7. post author box Styles / .post-author-box
+21-8. blog post v2 Styles / .blog-post-v2
+21-9. widget Styles / .widget
+21-10. comment box Styles / .comment-box
+21-11. related post widget Styles / .related-post-widget
+21-12. blog container Styles / .blog-container
+21-13. blog4 home Styles / .blog4-home
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+21-2. blog mainbanner Styles / .blog-mainbanner
+-------------------------------------------------------------------*/
+.blog-mainbanner{
+	color: $white;
+	margin: 0 0 98px;
+	@extend %boxreset;
+	text-align: center;
+	padding: 174px 0 131px;
+	font: 700 42px/60px $font-playfair;
+	.container{
+		z-index: 5;
+		position: relative;
+	}
+	p{margin: 0 0 30px;}
+	.title{
+		display: block;
+		margin: 0 0 38px;
+		font: italic 18px/20px $font-family-sans-serif;
+	}
+	.beans-slider .slick-dots{
+		position: static;
+		li{
+			margin: 0 6px 0 5px;
+			@include vertical-align(inline-block, top);
+	        &.slick-active button{background: $white;}
+	        button{
+	        	margin: 0;
+	        	border: 0;
+	        	padding: 0;
+	            display: block;
+	            background: none;
+	            border-radius:50%;
+	            text-indent: -9999px;
+	            @include square(10px);
+	            border:2px solid $white;
+	            &:hover{
+	                background: $white;
+	                text-decoration: none;
+	            }
+	        }
+		}
+	}
+}
+/*------------------------------------------------------------------
+21-3. blog post v1 Styles / .blog-post-v1
+-------------------------------------------------------------------*/
+.blog-post-v1{
+	color: $stack;
+	font-size: 14px;
+	margin: 0 0 61px;
+	line-height: 28px;
+	padding: 0 0 34px;
+	border-bottom: 1px solid $munsell;
+	.dark &{border-color: #494949;}
+	.more{
+		color: $shark;
+		font-size: 12px;
+		line-height: 20px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $stack;}
+		&:hover{text-decoration: none;}
+	}
+	.beans-slider .slick-dots{
+		bottom: 5px;
+		li{
+			margin: 0 6px 0 5px;
+			@include vertical-align(inline-block, top);
+	        &.slick-active button{background: $white;}
+	        button{
+	        	margin: 0;
+	        	border: 0;
+	        	padding: 0;
+	            display: block;
+	            background: none;
+	            border-radius:50%;
+	            text-indent: -9999px;
+	            @include square(10px);
+	            border:2px solid $white;
+	            &:hover{
+	                background: $white;
+	                text-decoration: none;
+	            }
+	        }
+		}
+	}
+	.blog-txt{
+		position: relative;
+		padding: 0 0 20px 89px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){padding: 0 0 0 58px;}
+	}
+	img{width: 100%;}
+	.img-box{
+		margin: 0 0 24px;
+		overflow: hidden;
+		.box{
+			width: 31.5%;
+			float: left;
+			margin: 0 0 5px 2.7%;
+			&:first-child{margin: 0 0 5px;}
+			&.add{
+				width: 30.9%;
+				margin: 0 0 2px 3.6%;
+				&:first-child{margin: 0 0 2px;}
+			}
+		}
+	}
+	h2{
+		color: $shark;
+		margin: 0 0 8px;
+		text-transform: uppercase;
+		font: 600 24px/30px $font-family-sans-serif;
+		.dark &{color: $white}
+        @include breakpoint($screen-xs-max){
+            font-size: 18px;
+            line-height: 25px;
+        }
+		a{
+			color: $shark;
+			.dark &{color: $white}
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	h3{
+		margin: 0 0 5px;
+		text-transform: uppercase;
+		font: 700 18px/20px $font-family-sans-serif;
+		a{
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				color: $shark;
+				text-decoration: none;
+				.dark &{color: $white;}
+			}
+		}
+	}
+	.meta{
+		color: $stack;
+		margin: 0 0 8px;
+		font-size: 12px;
+		line-height: 21px;
+		a{
+			color: $stack;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+		li{padding: 0 12px 0 0;}
+	}
+	.box-holder{
+		top: -4px;
+		left: -5px;
+		position: absolute;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){
+			left: 3px;
+		}
+	}
+	time{
+		color: $white;
+		display: block;
+		font-size: 14px;
+		line-height: 21px;
+		padding: 19px 0 0;
+		text-align: center;
+		background: $shark;
+		margin: -5px auto 0;
+		@include square(74px);
+		text-transform: uppercase;
+		@include breakpoint($screen-sm-max){
+			font-size: 10px;
+			padding: 4px 0 0;
+			line-height: 18px;
+			@include square(40px);
+		}
+		.add{
+			display: block;
+			font-size: 22px;
+			font-weight: 700;
+			@include breakpoint($screen-sm-max){
+				font-size: 16px;
+			}
+		}
+	}
+	.fa{margin: 0 3px 0 0;}
+	.icon{
+		color: $white;
+		display: block;
+		font-size: 32px;
+		text-align: center;
+		padding: 22px 0 0 2px;
+		@include square(84px);
+		border: 5px solid $white;
+		.dark &{border-color: $lime}
+		@include breakpoint($screen-sm-max){
+			font-size: 22px;
+			padding: 4px 0 0 2px;
+			@include square(50px);
+		}
+	}
+	blockquote{
+		margin: 0;
+		border: 0;
+		color: $shark;
+		background: $munsell;
+		padding: 34px 30px 24px 28px;
+        @include breakpoint($screen-xs-max){
+            padding: 20px;
+        }
+		.dark &{
+			color: $stack;
+			background: #191919;
+		}
+		q{
+			quotes: none;
+			display: block;
+			text-indent: 20px;
+			position: relative;
+			font: 300 italic 24px/31px $font-family-sans-serif;
+            @include breakpoint($screen-xs-max){
+                font-size: 18px;
+                line-height: 25px;
+            }
+			&:after{
+				top: -10px;
+				left: -16px;
+				content: '"';
+				color: $shark;
+				font-size: 46px;
+				font-weight: 900;
+				position: absolute;
+			}
+		}
+	}
+	.txt{
+		overflow: hidden;
+		p{margin: 0 0 47px;}
+	}
+	.post-blockquote{
+		margin: 0 0 49px;
+		letter-spacing: -0.3px;
+		padding: 22px 20px 20px 36px;
+		border-left: 4px solid transparent;
+        @include breakpoint($screen-xs-max){
+            padding: 22px;
+        }
+		q{
+			text-indent: 0;
+			font-size: 18px;
+			line-height: 30px;
+			&:after{display: none;}
+		}
+	}
+	&.style2{
+		border: 0;
+		padding: 0;
+		margin: 0 0 60px;
+		overflow: hidden;
+		background: $white;
+		.dark &{background: #191919;}
+		.img-box{
+			margin: 0;
+			float: left;
+			width: 48.7%;
+            @include breakpoint($screen-xs-max){
+                float: none;
+                width: 100%;
+            }
+		}
+		h2{
+            line-height: 37px;
+            @include breakpoint($screen-xs-max){
+                line-height: 27px;
+            }
+        }
+		.blog-txt{
+			float: left;
+			width: 51.3%;
+			position: relative;
+			padding: 21px 32px 20px 119px;
+            @include breakpoint($screen-sm-max){
+                padding: 21px 20px 20px 60px;
+            }
+            @include breakpoint($screen-xs-max){
+                width: 100%;
+                padding: 20px 20px 20px 60px;
+            }
+		}
+		.box-holder{
+			top: 21px;
+			left: 24px;
+            @include breakpoint($screen-sm-max){
+                left: 04px;
+            }
+		}
+		.audio-area{position: relative;}
+		.mejs-audio{
+			left: 0;
+			right: 0;
+			top: 50%;
+			margin: -35px 0 0;
+			position: absolute;
+		}
+		.audio-area .mejs-controls .mejs-time, .audio-area .mejs-controls .mejs-button{width: 5% !important;}
+		.audio-area .mejs-controls div.mejs-time-rail{width: 67% !important;}
+		.mejs-container .mejs-controls,
+		.mejs-container{background: $lime;}
+	}
+	&.style3{
+		width: 30%;
+		padding: 0;
+		float: left;
+		background: $white;
+		margin: 0 2.6% 30px 0;
+		.dark &{background: $lime;}
+        @include breakpoint($screen-md-max){
+            width: 31%;
+            margin: 0 1.2% 30px 0;
+        }
+        @include breakpoint($screen-sm-max){
+            width: 48%;
+            margin: 0 1.2% 30px 0;
+        }
+        @include breakpoint($screen-xs-max){
+            width: 100%;
+            margin: 0 0 20px;
+        }
+		h2{
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 26px;
+			text-transform: inherit;
+		}
+		.img-box{margin: 0;}
+		.blog-txt{
+			padding: 12px 30px 20px 118px;
+			border: 1px solid $munsell;
+			.dark &{border-color: #494949;}
+            @include breakpoint($screen-sm-max){
+                padding: 12px 20px 20px 60px;
+            }
+		}
+		p{margin: 0 0 3px;}
+		.box-holder{
+			top: 11px;
+			left: 12px;
+		}
+		&.nospace{
+			margin: 0;
+			width: 33.3%;
+			@include breakpoint($screen-sm-max){
+				width: 49.9%;
+			}
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+	&.style-full{
+		padding: 0 0 10px;
+		margin: 0 0 17px;
+		.blog-txt{
+            padding: 0 0 6px 89px;
+            @include breakpoint($screen-sm-max){
+                padding: 0 0 6px 60px;
+            }
+        }
+		.main-blockquote{
+			margin: 0 0 30px;
+			padding: 74px 50px 54px 33px;
+            @include breakpoint($screen-xs-max){
+                padding: 20px;
+            }
+		}
+	}
+	&.style4 h2{
+		text-transform: inherit;
+		font-family: $font-playfair;
+	}
+	&.style5{
+		width: 47%;
+		padding: 0;
+		float: left;
+		background: $white;
+		margin: 0 1.5% 30px;
+		.dark &{background: $lime;}
+        @include breakpoint($screen-sm-max){
+        	margin: 0 1.2% 30px;
+        }
+        @include breakpoint($screen-xs-max){
+            width: 100%;
+            margin: 0 0 20px;
+        }
+		h2{
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 26px;
+			text-transform: inherit;
+		}
+		.img-box{margin: 0;}
+		.blog-txt{
+			border: 1px solid $munsell;
+			padding: 12px 30px 20px 118px;
+			.dark &{border-color: #494949;}
+            @include breakpoint($screen-sm-max){
+                padding: 12px 20px 20px 60px;
+            }
+		}
+		p{margin: 0 0 3px;}
+		.box-holder{
+			top: 11px;
+			left: 12px;
+		}
+		&.nospace{
+			width: 49.9%;
+			margin: 0;
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+	&.style6{
+		width: 24%;
+		padding: 0;
+		float: left;
+		background: $white;
+		margin: 0 0.3% 20px;
+		.dark &{background: $lime;}
+        @include breakpoint($screen-md-max){
+            width: 32%;
+        }
+        @include breakpoint($screen-sm-max){
+            width: 49%;
+			margin: 0 0.3% 10px;
+        }
+        @include breakpoint($screen-xs-max){
+            width: 100%;
+            margin: 0 0 20px;
+        }
+		h2{
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 26px;
+			text-transform: inherit;
+		}
+		.img-box{margin: 0;}
+		.blog-txt{
+			padding: 12px 10px 20px 95px;
+			border: 1px solid $munsell;
+			.dark &{border-color: #494949;}
+            @include breakpoint($screen-sm-max){
+                padding: 12px 20px 20px 60px;
+            }
+		}
+		p{margin: 0 0 3px;}
+		.box-holder{
+			top: 11px;
+			left: 6px;
+		}
+		&.nospace{
+			margin: 0;
+			width: 24.9%;
+			@include breakpoint($screen-md-max){
+				width: 33.3%;
+			}
+			@include breakpoint($screen-sm-max){
+				width: 50%;
+			}
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+21-4. blog footer Styles / .blog-footer
+-------------------------------------------------------------------*/
+.blog-footer{
+	overflow: hidden;
+	margin: 0 0 100px;
+	.btn-box{
+		float: left;
+        @include breakpoint($screen-xs-max){
+            float: none;
+			overflow: hidden;
+            margin: 0 0 10px;
+			text-align: center;
+        }
+		.btn{
+			color: $stack;
+			margin: 0 7px 0 0;
+			text-transform: uppercase;
+			padding: 8px 30px 8px 29px;
+			border: 1px solid $gainsboro;
+			@include transition (all, 0.4s, ease);
+			.dark &{
+				color: rgba(143, 143, 143, 0.6);
+				border-color: rgba(143, 143, 143, 0.6);
+			}
+			&:hover{
+				color: $white;
+				text-decoration: none;
+				.dark &{
+					color: #8f8f8f;
+					background: transparent;
+					color: rgba(143, 143, 143, 1);
+					border-color: rgba(143, 143, 143, 1);
+				}
+			}
+		}
+	}
+	.btn-load{
+		color: $shark;
+		margin: 27px 0 0;
+		border: 1px solid $shark;
+		text-transform: uppercase;
+		padding: 8px 30px 8px 29px;
+		@include transition (all, 0.4s, ease);
+		.dark &{
+			color: rgba(143, 143, 143, 0.6);
+			border-color: rgba(143, 143, 143, 0.6);
+		}
+		&:hover{
+			color: $white;
+			text-decoration: none;
+			.dark &{
+				color: #8f8f8f;
+				background: transparent;
+				color: rgba(143, 143, 143, 1);
+				border-color: rgba(143, 143, 143, 1);
+			}
+		}
+	}
+	.b-pagination{
+		margin: 0;
+		float: right;
+        @include breakpoint($screen-xs-max){
+            float: none;
+			overflow: hidden;
+            margin: 0 0 10px;
+			text-align: center;
+        }
+		li{
+			float: left;
+			margin: 0 0 0 9px;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				vertical-align: top;
+				display: inline-block;
+			}
+			&.active a{
+				color: $white;
+				pointer-events: none;
+				text-decoration: none;
+			}
+		}
+		a{
+			color: $stack;
+			display: block;
+			font-size: 13px;
+			line-height: 20px;
+			padding: 8px 20px;
+			border: 1px solid $gainsboro;
+			@include transition (all, 0.4s, ease);
+			.dark &{
+				color: rgba(143, 143, 143, 0.6);
+				border-color: rgba(143, 143, 143, 0.6);
+			}
+			&:hover{
+				color: $white;
+				text-decoration: none;
+				.dark &{
+					color: #8f8f8f;
+					background: transparent;
+					color: rgba(143, 143, 143, 1);
+					border-color: rgba(143, 143, 143, 1);
+				}
+			}
+		}
+	}
+	&.style3{margin: 0 0 59px;}
+}
+/*------------------------------------------------------------------
+21-5. blog masonry holder Styles / .blog-masonry-holder
+-------------------------------------------------------------------*/
+.blog-masonry-holder{
+	width: 105%;
+    @include breakpoint($screen-sm-max){
+        width: 100%;
+    }
+	&.full-width{
+		.blog-post-v1.style3{
+			width: 17.8%;
+			margin: 0 1.57% 30px 0;
+			@include breakpoint(1500px){
+				width: 31%;
+				margin: 0 1.2% 30px 0;
+			}
+			@include breakpoint($screen-sm-max){
+				width: 48%;
+				margin: 0 2% 30px 0;
+			}
+			@include breakpoint($screen-xs-max){
+				width: 100%;
+				margin: 0 0 20px;
+			}
+			.blog-txt{
+				padding: 14px 10px 20px 122px;
+				@include breakpoint(1500px){
+					padding: 14px 10px 20px 100px;
+				}
+				@include breakpoint($screen-sm-max){
+					padding: 14px 10px 20px 70px;
+				}
+			}
+		}
+		&.add-style{
+			width: auto;
+			margin: 0 -30px 0 -15px;
+			@include breakpoint($screen-xs-max){
+				margin: 0;
+			}
+			.blog-post-v1.style3{
+				margin: 0;
+				width: 19.9%;
+				@include breakpoint(1500px){
+					width: 24.9%;
+					margin: 0;
+				}
+				@include breakpoint($screen-sm-max){
+					width: 49.9%;
+					margin: 0;
+				}
+				@include breakpoint($screen-xs-max){
+					width: 100%;
+					margin: 0;
+				}
+				.blog-txt{
+					padding: 14px 10px 20px 122px;
+					@include breakpoint(1500px){
+						padding: 14px 10px 20px 100px;
+					}
+					@include breakpoint($screen-sm-max){
+						padding: 14px 10px 20px 70px;
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+21-6. post footer Styles / .post-footer
+-------------------------------------------------------------------*/
+.post-footer{
+	margin: 0 0 60px;
+	overflow: hidden;
+	padding: 0 0 17px;
+	border-bottom: 1px solid $munsell;
+	.dark &{border-color: #494949;}
+	.post-social{
+		float: right;
+		font-size: 13px;
+		margin: 9px 0 0;
+		line-height: 18px;
+		text-transform: uppercase;
+		li{
+			float: left;
+			margin: 0 0 0 25px;
+		}
+		a{
+			color: $shark;
+			&:hover{text-decoration: none;}
+			.fa{padding: 0 4px 0 0;}
+			.dark &{color: $white;}
+		}
+		.fa-pinterest{color: #cc2127;}
+		.fa-twitter{color: #55acee;}
+		.fa-facebook{color: #3b5998;}
+	}
+	.post-tags{
+		float: left;
+		.title{
+			color: $shark2;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 24px;
+			margin: 0 23px 0 0;
+			@include vertical-align(inline-block, middle);
+			.dark &{ color: $white;}
+		}
+		ul{
+			margin: 0;
+			overflow: hidden;
+			@include vertical-align(inline-block, middle);
+			li{
+				float: left;
+				margin: 0 6px 3px 0;
+			}
+			a{
+				color: $stack;
+				display: block;
+				font-size: 13px;
+				line-height: 20px;
+				background: $munsell;
+				padding: 6px 16px 6px 13px;
+				@include transition (all, 0.4s, ease);
+				.dark &{
+					color: $white;
+					background: #191919;
+				}
+				&:hover{
+					color: $munsell;
+					background: $stack;
+					text-decoration: none;
+					.dark &{ 
+						color: $white;
+						background: #191919;
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+21-7. post author box Styles / .post-author-box
+-------------------------------------------------------------------*/
+.post-author-box{
+	color: $stack;
+	font-size: 14px;
+	overflow: hidden;
+	margin: 0 0 96px;
+	line-height: 24px;
+	background: $desert-storm;
+	border: 1px solid $munsell;
+	padding: 26px 40px 20px 30px;
+	.dark &{
+		background: #191919;
+		border-color: #494949;
+	}
+	.img-box{
+		float: left;
+		margin: 5px 29px 0 0;
+		img{display: block;}
+        @include breakpoint($screen-xs-max){
+            float: none;
+            margin: 5px 0 10px;
+        }
+	}
+	.holder{
+		overflow: hidden;
+		padding: 0 0 0 9px;
+	}
+	.title{
+		color: $shark;
+		display: block;
+		margin: 0 0 0 -8px;
+		font: 600 16px/20px $font-family-sans-serif;
+		.dark &{color: $stack;}
+		a{
+			color: $shark;
+			.dark &{color: $stack;}
+		}
+	}
+	.aut-text{
+		display: block;
+		margin: 0 0 9px;
+		font-size: 12px;
+		line-height: 20px;
+		padding: 0 0 0 8px;
+		a{color: $stack;}
+	}
+}
+/*------------------------------------------------------------------
+21-8. blog post v2 Styles / .blog-post-v2
+-------------------------------------------------------------------*/
+.blog-post-v2{
+	float: left;
+	color: $stack;
+	width: 33.33%;
+	font-size: 14px;
+	margin: 0 0 36px;
+	line-height: 24px;
+    @include breakpoint($screen-xs-max){
+        float: none;
+        width: 100%;
+    }
+	.more{
+		color: $shark;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.beans-slider .slick-dots{
+		bottom: 5px;
+		li{
+			margin: 0 6px 0 5px;
+			@include vertical-align(inline-block, top);
+	        &.slick-active button{background: $white;}
+	        button{
+	        	margin: 0;
+	        	border: 0;
+	        	padding: 0;
+	            display: block;
+	            background: none;
+	            border-radius:50%;
+	            text-indent: -9999px;
+	            @include square(10px);
+	            border:2px solid $white;
+	            &:hover{
+	                background: $white;
+	                text-decoration: none;
+	            }
+	        }
+		}
+	}
+	.blog-txt{
+		position: relative;
+		padding: 0 0 20px 103px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){padding: 0 0 0 58px;}
+	}
+	img{width: 100%;}
+	.img-box{
+		margin: 0 0 15px;
+		overflow: hidden;
+		position: relative;
+		border-left: 1px solid $white;
+		.dark &{border-color: $lime;}
+	}
+	h2{
+		color: $shark;
+		margin: 0 0 8px;
+		font: 18px/26px $font-family-sans-serif;
+		.dark &{color: $white;}
+		a{
+			color: $shark;
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $white;}
+			&:hover{text-decoration: none;}
+		}
+	}
+	.meta{
+		color: $stack;
+		font-size: 12px;
+		margin: 0 0 17px;
+		line-height: 21px;
+		a{
+			color: $stack;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+		li{padding: 0 12px 0 0;		}
+	}
+	.box{
+		top: -4px;
+		left: 9px;
+		position: absolute;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){left: 3px;}
+	}
+	.fluid-width-video-wrapper{padding: 18.85% !important;}
+	time{
+		color: $white;
+		display: block;
+		font-size: 14px;
+		line-height: 21px;
+		padding: 19px 0 0;
+		background: $shark;
+		text-align: center;
+		margin: -5px auto 0;
+		@include square(74px);
+		text-transform: uppercase;
+		@include breakpoint($screen-sm-max){
+			font-size: 10px;
+			padding: 4px 0 0;
+			line-height: 18px;
+			@include square(40px);
+		}
+		.add{
+			display: block;
+			font-size: 22px;
+			font-weight: 700;
+			@include breakpoint($screen-sm-max){
+				font-size: 16px;
+			}
+		}
+	}
+	.fa{margin: 0 3px 0 0;}
+	.icon{
+		color: $white;
+		display: block;
+		font-size: 32px;
+		text-align: center;
+		padding: 22px 0 0 2px;
+		@include square(84px);
+		border: 5px solid $white;
+		.dark &{border-color: $lime;}
+		@include breakpoint($screen-sm-max){
+			font-size: 22px;
+			padding: 4px 0 0 2px;
+			@include square(50px);
+		}
+	}
+	blockquote{
+		margin: 0;
+		border: 0;
+		color: $shark;
+		min-height: 257px;
+		background: $munsell;
+		padding: 81px 30px 24px 23px;
+		.dark &{
+			color: $white;
+			background: #191919;
+		}
+		@include breakpoint($screen-md-max){
+			padding: 25px 20px 24px;
+		}
+		q{
+			quotes: none;
+			display: block;
+			text-indent: 20px;
+			position: relative;
+			font: 300 italic 24px/31px $font-family-sans-serif;
+			@include breakpoint($screen-md-max){
+				font-size: 18px;
+				line-height: 20px;
+			}
+			&:after{
+				top: -10px;
+				left: -16px;
+				content: '"';
+				color: $shark;
+				font-size: 46px;
+				font-weight: 900;
+				position: absolute;
+				.dark &{color: $white;}
+			}
+		}
+	}
+	.audio-area{position: relative;}
+	.mejs-audio{
+		left: 0;
+		right: 0;
+		top: 50%;
+		margin: -19px 0 0;
+		position: absolute;
+	}
+	.audio-area .mejs-controls .mejs-time, .audio-area .mejs-controls .mejs-button{width: 5% !important;}
+	.audio-area .mejs-controls div.mejs-time-rail{
+		width: 67% !important;
+		@include breakpoint($screen-xs-max){
+			width: 65% !important;
+		}
+	}
+	.mejs-container .mejs-controls,
+	.mejs-container{background: $lime;}
+}
+/*------------------------------------------------------------------
+21-9. widget Styles / .widget
+-------------------------------------------------------------------*/
+.widget{
+	margin: 0 0 58px;
+	padding: 0 0 62px;
+	position: relative;
+	border-bottom: 2px solid $munsell;
+	.dark &{border-color: #494949;}
+	&:before{
+		left: 0;
+		bottom: -2px;
+		@extend %after;
+		background: $shark;
+		@include size(50px, 2px);
+		.dark &{background: #191919;}
+	}
+	h2{
+		color: $shark;
+		margin: 0 0 26px;
+        letter-spacing: 2px;
+		font: 600 16px/25px $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+	.searchform{
+		overflow: hidden;
+		position: relative;
+		border: 1px solid $munsell;
+		.dark &{border-color: #494949;}
+		.input{
+			border: 0;
+			margin: 0;
+			width: 100%;
+			float: left;
+			height: 36px;
+			color: $stack;
+			outline: none;
+			font-size: 14px;
+			background: none;
+			line-height: 20px;
+			padding: 8px 60px 8px 21px;
+			&::-webkit-input-placeholder{color: $stack;}
+			&:-moz-placeholder{color: $stack;}
+			&::-moz-placeholder{
+				color: $stack;
+				opacity: 1;
+			}
+			&:-ms-input-placeholder { color: $stack;}
+		}
+		button{
+			top: 0;
+			right: 0;
+			margin: 0;
+			border: 0;
+			bottom: 0;
+			color: $white;
+			padding: 0 11px;
+			font-size: 16px;
+			position: absolute;
+			@include transition (all, 0.4s, ease);
+			&:hover{background: $stack;}
+		}
+	}
+	.tabset{
+		margin: 0;
+		font-size: 0;
+		letter-spacing: 0;
+		li{
+			padding: 0;
+			&.active a{color: $white;}
+		}
+		a{
+			color: $shark2;
+			display: block;
+			font-size: 13px;
+			line-height: 20px;
+			background: $black-haze;
+			text-transform: uppercase;
+			padding: 11px 18px 9px 20px;
+			@include transition (all, 0.4s, ease);
+			.dark &{
+				color: $white;
+				background: #191919;
+			}
+			&:hover{
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	.tab-content{
+		padding-top: 20px;
+		padding-bottom: 32px;
+		background: $black-haze;
+		.dark &{background: #191919;}
+		.box{
+			overflow: hidden;
+			text-transform: uppercase;
+			padding: 20px 10px 15px 19px;
+			.img-box{
+				float: left;
+				margin: 0 13px 0 0;
+				@include breakpoint($screen-sm-max){
+					float: none;
+					margin: 0 0 10px;
+					img{width: 100%;}
+				}
+				@include breakpoint($screen-xs-max){
+					float: left;
+					margin: 0 13px 0 0;
+					img{width: auto;}
+				}
+				img{display: block;}
+			}
+			.holder{overflow: hidden;}
+			time{
+				color: $stack;
+				display: block;
+				margin: 0 0 2px;
+				font-size: 12px;
+			}
+			h3{
+				margin: 0;
+				color: $shark;
+				font: 13px/19px $font-family-base;
+				.dark &{color: $white;}
+			}
+		}
+	}
+	&.search-widget{margin-top: -7px;}
+	&.s-social-widget{
+		font-size: 13px;
+		margin: 0 0 52px;
+		ul{
+			margin: 0;
+			li{margin: 0 0 2px;}
+			a{
+				color: $white;
+				display: block;
+				background: #262626;
+				padding: 13px 19px 10px;
+				@include transition (all, 0.4s, ease);
+				&:hover{
+					background: #55acee;
+					text-decoration: none;
+				}
+			}
+		}
+		.fa{
+			padding: 0 9px 0 0;
+			@include vertical-align(inline-block, top);
+		}
+	}
+	&.cate-widget{
+		margin: 0 0 52px;
+		padding: 0 0 46px;
+		font: 14px/20px $font-family-sans-serif;
+		h2{margin: 0 0 20px;}
+		a{
+			color: $stack;
+			position: relative;
+			padding: 0 0 0 11px;
+            letter-spacing: 1px;
+			@include transition (all, 0.4s, ease);
+			@include vertical-align(inline-block, top);
+			&:hover{
+				text-decoration: none;
+				.fa{color: $stack;}
+			}
+			.fa{
+				left: 0;
+				top: 2px;
+				position: absolute;
+			}
+		}
+		ul{
+			margin: 0;
+			overflow: hidden;
+			li{
+				margin: 0 0 10px;
+				&.active a .fa{color: $stack;}
+			}
+		}
+		&.big-icon a{padding: 0 0 0 20px;}
+	}
+	&.toppost-widget{margin: 0 0 51px;}
+	&.video-widget{margin: 0 0 51px;}
+	&.tag-widget{
+		ul{
+			margin: 0;
+			overflow: hidden;
+			li{
+				float: left;
+				margin: 0 6px 3px 0;
+			}
+			a{
+				color: $stack;
+				display: block;
+				font-size: 13px;
+				line-height: 20px;
+				background: $munsell;
+				padding: 6px 16px 6px 13px;
+				@include transition (all, 0.4s, ease);
+				.dark &{background: #191919;}
+				&:hover{
+					color: $munsell;
+					background: $stack;
+					text-decoration: none;
+					.dark &{background: #494949;}
+				}
+			}
+		}
+	}
+	&.test-widget{
+		.beans-slider{
+			padding: 0;
+			.slick-dots{
+				position: static;
+				li{
+					margin: 0 3px 0 2px;
+					@include vertical-align(inline-block, top);
+			        &.slick-active button{background: $shark;}
+			        button{
+			        	margin: 0;
+			        	border: 0;
+			        	padding: 0;
+			            display: block;
+			            background: none;
+			            border-radius:50%;
+			            text-indent: -9999px;
+						@include square(15px);
+						background: #ddd;
+			            &:hover{
+							background: $shark;
+							text-decoration: none;
+			            }
+			        }
+				}
+			}
+		}
+	}
+	&:last-child{
+		border: 0;
+		&:before{display: none;}
+	}
+}
+/*------------------------------------------------------------------
+21-10. comment box Styles / .comment-box
+-------------------------------------------------------------------*/
+.comment-box{
+	overflow: hidden;
+	h4{
+		color: $lime;
+		margin: 0 0 29px;
+		font: 600 21px/24px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+	.list{
+		overflow: hidden;
+		margin: 0 0 29px;
+		ul{
+			margin: 0 0 0 9.3%;
+			ul{margin: 0 0 0 11.3%;}
+		}
+	}
+	.box{
+		color: $stack;
+		font-weight: 500;
+		margin: 0 0 29px;
+		@extend %clearfix;
+		font-style: italic;
+		background: $desert-storm;
+		padding: 30px 22px 23px 29px;
+		.dark &{
+			background: #191919;
+			border: 1px solid #494949;
+		}
+		.img-box{
+			float: left;
+			font-style: normal;
+			margin: 0 20px 0 0;
+			text-align: center;
+            @include breakpoint($screen-xs-max){
+                float: none;
+                margin: 0 0 10px;
+            }
+			img{
+				display: block;
+				margin: 0 0 6px;
+			}
+			.reply{
+				font-size: 20px;
+				color: $gainsboro;
+				position: relative;
+				@include vertical-align(inline-block, top);
+				&:hover{
+					text-decoration: none;
+					.txt-over{display: block;}
+				}
+				.txt-over{
+					left: 50%;
+					width: 56px;
+					display: none;
+					bottom: -26px;
+					color: $white;
+					font-size: 10px;
+					font-weight: 600;
+					padding: 4px 3px;
+					text-align: center;
+					background: $black;
+					border-radius: 11px;
+					position: absolute;
+					margin: 0 0 0 -28px;
+					&:after{
+						left: 50%;
+						bottom: 100%;
+						@extend %after;
+						margin: 0 0 0 -2px;
+						@include arrow(0, 3.5px, 5px, 3.5px, transparent, transparent, $black, transparent);
+					}
+				}
+			}
+		}
+		.holder{overflow: hidden;}
+		.title{
+			color: $shark;
+			display: block;
+			margin: 0 0 1px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font: 600 12px/18px $font-family-sans-serif;
+			.dark &{color: $white;}
+		}
+		time{
+			display: block;
+			font-size: 12px;
+            margin: 0 0 9px;
+			line-height: 20px;
+			font-style: normal;
+		}
+	}
+}
+/*------------------------------------------------------------------
+21-11. related post widget Styles / .related-post-widget
+-------------------------------------------------------------------*/
+.related-post-widget{
+	padding-top: 88px;
+	padding-bottom: 42px;
+	h5{
+		color: $lime;
+		margin: 0 0 49px;
+		font: 600 36px/42px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+21-12. blog container Styles / .blog-container
+-------------------------------------------------------------------*/
+.blog-container{
+	@extend %boxreset;
+	padding: 75px 0 0;
+	h2{
+		font-weight: 400;
+		text-transform: inherit;
+		font-family: $font-playfair;
+	}
+}
+/*------------------------------------------------------------------
+21-13. blog4 home Styles / .blog4-home
+-------------------------------------------------------------------*/
+.blog4-home{
+	.blog-footer{
+		margin: -48px 0 0;
+		text-align: center;
+		padding: 28px 81px 59px 0;
+		@include breakpoint($screen-sm-max){
+			padding: 28px 0 59px;
+		}
+	}
+	.blog-post-v2{
+		margin: 0 0 49px;
+		blockquote{
+			min-height: 248px;
+			@include breakpoint($screen-md-max){
+				min-height: 0;
+			}
+		}
+		.blog-txt{
+			padding-bottom: 0;
+			overflow: hidden;
+			p{margin: 0 0 6px;}
+		}
+		@include breakpoint($screen-sm-max){
+			width: 100%;
+		}
+	}
+}

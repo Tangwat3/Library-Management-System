@@ -1,0 +1,851 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+20-2. shop header Styles / .shop-header
+20-3. shop footer Styles / .shop-footer
+20-4. products holder Styles / .products-holder
+20-5. shop widget Styles / .shop-widget
+20-6. top seller Styles / .top-seller
+20-7. shop product info Styles / .shop-product-info
+20-8. beans stepslider2 Styles / .beans-stepslider2
+20-9. description block Styles / .description-block
+20-10. description header Styles / .description-header
+20-11. descriptio tabs Styles / .descriptio-tabs
+20-12. related shop Styles / .related-shop
+20-13. reply box Styles / .reply-box
+20-14. table container Styles / .table-container
+20-15. shop table Styles / .shop-table
+20-16. shop apply Styles / .shop-apply
+20-17. shop calculation Styles / .shop-calculation
+20-18. cart table Styles / .cart-table
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+20-2. shop header Styles / .shop-header
+-------------------------------------------------------------------*/
+.shop-header{
+	overflow: hidden;
+	margin-bottom: 60px;
+	font-weight: 300;
+	.holder{
+		float: left;
+		max-width: 850px;
+	}
+	h2{
+        color: $shark;
+		margin: 0 0 2px;
+		text-transform: uppercase;
+		font: 700 21px/25px $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+	p{
+		margin: 0;
+		a{font-weight: 700;}
+	}
+}
+.contact-block.shop{
+    padding-top: 95px;
+    @include breakpoint($screen-xs-max){
+        padding-top: 45px;
+    }
+}
+.products-shop{overflow: hidden;}
+/*------------------------------------------------------------------
+20-3. shop footer Styles / .shop-footer
+-------------------------------------------------------------------*/
+.shop-footer{
+	overflow: hidden;
+	text-align: center;
+	font-weight: 300;
+	.buttons-box{
+		float: left;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			margin: 0 0 10px;
+		}
+	}
+	.txt-box{
+		overflow: hidden;
+		padding: 9px 0 0;
+	}
+	p{margin: 0;}
+	&.side .txt-box{
+        float: left;
+		@include breakpoint($screen-xs-max){
+			float: none;
+            text-align: center;
+        }
+    }
+}
+.shop-next,
+.shop-prev{
+    color: $stack;
+    border-color: $gainsboro;
+	text-transform: uppercase;
+	min-width: inherit;
+	border-radius: 0;
+	transition:all 0.3s ease;
+	padding: 9px 10px;
+	min-width: 123px;
+	margin: 0 10px 0 0;
+	font-size: 13px;
+	font-weight: 400;
+    &:hover{color: $white;}
+    .dark &{border-color: #494949;}
+}
+.shop-next{min-width: 95px;}
+.shop-pagination{
+	float: right;
+	margin: 0;
+	font-weight: 400;
+	@include breakpoint($screen-xs-max){
+		float: none;
+		margin: 0 0 10px;
+	}
+	li{
+		@include vertical-align(inline-block, top);
+		margin: 0 0 0 7px;
+		padding: 0;
+        &.active a{color: $white;}
+		a{
+            color: $stack;
+			display: block;
+			@include size(48px, 40px);
+			border:1px solid $gainsboro;
+			text-align: center;
+			font-size: 14px;
+			line-height: 38px;
+			transition:all 0.3s ease;
+            .dark &{border-color: #494949;}
+			&:hover{
+                color: $white;
+                text-decoration: none;
+            }
+		}
+	}
+}
+/*------------------------------------------------------------------
+20-4. products holder Styles / .products-holder
+-------------------------------------------------------------------*/
+.products-holder{
+	&.side{
+		.new-product{
+			width: 29.6%;
+			margin: 0 3.2% 57px 0;
+			@include breakpoint($screen-xs-max){
+				width: 48%;
+				margin: 0 2% 20px 0;
+			}
+			@include breakpoint(479px){
+				width: 100%;
+				margin: 0 0 20px;
+			}
+		}
+	}
+	&.sidebar{
+		.new-product{
+			@include breakpoint($screen-sm-max){
+				width: 29.6%;
+				margin: 0 3.2% 57px 0;
+			}
+			@include breakpoint($screen-xs-max){
+				width: 48%;
+				margin: 0 2% 20px 0;
+			}
+			@include breakpoint(479px){
+				width: 100%;
+				margin: 0 0 20px;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+20-5. shop widget Styles / .shop-widget
+-------------------------------------------------------------------*/
+.shop-widget{
+	@extend %clearfix;
+	border-top: 2px solid $munsell;
+	padding: 55px 0 0;
+	margin: 0 0 46px;
+	@include element(before, -2px, auto, auto, 0, $shark);
+	&:before{@include size(50px, 2px);}
+    .dark &{border-color: #494949;}
+	h3{
+        color: $shark;
+		margin: 0 0 22px;
+        letter-spacing: 1px;
+		font: 600 14px/20px $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+	ul{
+		margin: 0;
+		@extend %clearfix;
+		li{
+			padding: 0 0 10px 12px;
+			a{
+                color: $stack;
+				transition:all 0.3s ease;
+				@include element2(before, 5px, auto, auto, -14px);
+				&:before{
+					@include arrow(4px, 0, 4px, 5px, transparent, transparent, transparent, transparent);
+				}
+				&:hover{text-decoration: none;}
+			}
+		}
+	}
+	&.sellers-widget h3{margin: 0 0 27px;}
+	.rattings-nav{
+		margin: 0 0 8px;
+		li{padding: 0;}
+	}
+    &:first-child{
+        border: 0;
+        padding: 0;
+        &:before{display: none;}
+    }
+}
+/*------------------------------------------------------------------
+20-6. top seller Styles / .top-seller
+-------------------------------------------------------------------*/
+.top-seller{
+    color: $shark;
+	overflow: hidden;
+	margin: 0 0 26px;
+    .dark &{color: $white;}
+	.alignleft{
+		float: left;
+		margin: 4px 18px 0 0;
+		width: 70px;
+	}
+	.txt-box{overflow: hidden;}
+	.title{
+		display: block;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
+		margin: 0 0 8px;
+	}
+	.amount{
+		display: block;
+		font-size: 21px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+}
+/*------------------------------------------------------------------
+20-7. shop product info Styles / .shop-product-info
+-------------------------------------------------------------------*/
+.shop-product-info{
+    color: $storm-dust;
+	overflow: hidden;
+	margin: 0 0 57px;
+	font-size: 14px;
+	line-height: 24px;
+    .dark &{color: $stack;}
+	.title{
+		display: block;
+        color:$stack;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height:16px;
+		margin:0 0 2px;
+	}
+	h2{
+        color: $shark;
+		margin:0 0 6px;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 600 18px/21px $font-family-sans-serif;
+        .dark &{color: $white;}
+		a{
+            color: $shark;
+			@include transition (all, 0.4s, ease);
+            .dark &{color: $stack;}
+			&:hover{text-decoration: none;}
+		}
+	}
+	.rattings-nav{margin: 0 0 23px;}
+	p{margin: 0 0 15px;}
+	.amount{
+        color:$shark;
+		display: block;
+		margin:0 0 22px;
+        font: 700 21px/24px $font-family-sans-serif;
+        .dark &{color: $white;}
+		sub{
+			font-size: 16px;
+			font-weight: 700;
+			@include vertical-align(inline-block, middle);
+			margin:-9px 0 0;
+		}
+	}
+	.buttons-box{overflow: hidden;}
+	.btn-cart{
+        color:$shark;
+		@include vertical-align(inline-block, middle);
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height:16px;
+		margin:0 5px 0 0;
+		@include transition (all, 0.4s, ease);
+        .dark &{color: $white;}
+		&:hover{text-decoration: none;}
+	}
+	.produt-txt{
+		overflow: hidden;
+		padding: 7px 0 27px;
+		@include breakpoint($screen-xs-max){
+			overflow: visible;
+		}
+	}
+	.product-img{
+		float: left;
+		width: 29.5%;
+		max-width: 270px;
+		margin: 0 3.2% 0 0;
+		position: relative;
+		text-align: center;
+		@include breakpoint(599px){
+            float: none;
+            width: 100%;
+            margin: 0 0 20px;
+            overflow: hidden;
+            img{width: 100%;}
+        }
+	}
+	&:hover{ .product-img .product-over{top: 0;}}
+}
+/*------------------------------------------------------------------
+20-8. beans stepslider2 Styles / .beans-stepslider2
+-------------------------------------------------------------------*/
+.beans-stepslider2.description{
+		overflow: hidden;
+		padding: 5px 0 0;
+		.beans-pagination{
+			padding: 10px 0 0;
+			position: static;
+			top:auto;
+			bottom: auto;
+			right: auto;
+			left: auto;
+			margin: 0 -2% 20px 0;
+			@include breakpoint($screen-xs-max){
+				margin: 0 -2% 20px 0;
+			}
+			ul{
+				margin: 0;
+				li{
+					padding: 0;
+					&:first-child{margin-left: 0;}
+				}
+			}
+			
+		}
+	}
+/*------------------------------------------------------------------
+20-9. description block Styles / .description-block
+-------------------------------------------------------------------*/
+.description-block{
+    color: $stack;
+	font-size: 14px;
+	line-height: 28px;
+	p{margin: 0 0 28px;}
+	.footer-social{
+		margin: 0;
+		a{
+            color: $shark;
+            background:$seashell;
+			transition:all 0.3s ease;
+			@include square(35px);
+			font-size: 15px;
+			line-height: 35px;
+            .dark &{
+                color: $white;
+                background: #191919;
+            }
+            &:hover{
+                background:$shark;
+                color: $seashell;
+                .dark &{background: #191919;}
+            }
+		}
+	}
+	.buttons-block{
+		@extend %clearfix;
+		padding: 0 0 16px 2px;
+	}
+}
+.shop-description{margin-bottom: 56px;}
+/*------------------------------------------------------------------
+20-10. description header Styles / .description-header
+-------------------------------------------------------------------*/
+.description-header{
+	overflow: hidden;
+	margin: 0 0 51px;
+    color: $shark;
+    .dark &{color: $white;}
+	.holder{
+		float: left;
+		width: 60%;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			width: 100%;
+		}
+	}
+	h2{
+		margin: 0 0 15px;
+		text-transform: capitalize;
+		font: 500 32px/34px $font-family-sans-serif;
+	}
+	.amount{
+		float: right;
+        color: $shark;
+		font-size: 32px;
+		line-height: 34px;
+		font-weight: 900;
+        .dark &{color: $white;}
+		sup{
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 34px;
+			margin: 15px 0 0;
+			@include vertical-align(inline-block, top);
+		}
+	}
+	.rattings-nav{
+		margin: 0 6px 0 0;
+		font-size: 15px;
+		line-height: 18px;
+		@include vertical-align(inline-block, middle);
+	}
+	.review{
+        color: $stack;
+		@include vertical-align(inline-block, middle);
+		font-size: 12px;
+		line-height: 14px;
+		&:hover{text-decoration: none;}
+	}
+	.block{
+		overflow: hidden;
+		margin: 0 0 10px;
+	}
+	.in-stock{
+        color: $white;
+        font-size: 12px;
+        line-height: 20px;
+        vertical-align: top;
+        letter-spacing: 2px;
+        display: inline-block;
+		padding: 6px 20px 8px;
+        background: $chateau-green;
+	}
+}
+/*------------------------------------------------------------------
+20-11. descriptio tabs Styles / .descriptio-tabs
+-------------------------------------------------------------------*/
+.descriptio-tabs{
+	margin-bottom: 92px;
+	.nav-tabs{
+		font-size: 13px;
+		line-height: 15px;
+	}
+	.nav-tabs > li{
+		float: left;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+	.nav-tabs > li > a{
+		margin: 0;
+        color:$shark2;
+		cursor: pointer;
+        background:$desert-storm;
+		padding: 10px 19px 10px;
+		border: 0;
+        .dark &{
+            color: $white;
+            background: #191919;
+        }
+        &:hover{color: $white;}
+	}
+	.nav-tabs > li.active > a{cursor: pointer;}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus{
+		padding: 10px 19px 10px;;
+		border: 0;
+        color: $white;
+		&:after,
+		&:before{display: none;}
+	}
+	.nav-tabs > li a:hover:after{display: none;}
+	.nav-tabs > li a:hover:before{display: none;}
+	.tab-pane{
+		border: 0;
+        color: $stack;
+		font-size: 13px;
+		line-height: 20px;
+        background:$desert-storm;
+		padding: 39px 2.4% 20px 2.6%;
+        .dark &{background: #191919;}
+		p{margin: 0 0 20px;}
+		.column{
+			width: 46%;
+			float: left;
+			margin: 0 0 0 8%;
+			@include breakpoint($screen-xs-max){
+				width: 100%;
+				float: left;
+				margin: 0 0 15px;
+			}
+			&:first-child{margin-left: 0;}
+		}
+		h2{
+            color: $shark;
+			margin: 0 0 62px;
+			font: 24px/28px $font-family-sans-serif;
+            .dark &{color: $white;}
+		}
+	}
+	.comment-form{
+		margin: 0 0 40px;
+		h4{
+            color: $shark;
+            font-size: 25px;
+            .dark &{color: $white;}
+        }
+	}
+	&.review .tab-pane{padding-top: 26px;}
+}
+/*------------------------------------------------------------------
+20-12. related shop Styles / .related-shop
+-------------------------------------------------------------------*/
+.related-shop{
+	h2{
+        color: $lime;
+		margin: 0 0 53px;
+		text-transform: capitalize;
+		font: 300 40px/42px $font-family-sans-serif;
+        .dark &{color: $white;}
+		@include breakpoint($screen-xs-max){
+			font-size: 20px;
+		}
+	}
+	.new-product{
+		width: 23.1%;
+		margin: 0 0 0 2.5%;
+		@include breakpoint($screen-xs-max){
+			width: 48%;
+			margin: 0 0 20px 2%;
+		}
+		@include breakpoint(400px){
+			width: 100%;
+			margin: 0 0 20px;
+		}
+		h2{
+			margin: 0 0 6px;
+			font: 16px/20px $font-family-base;
+		}
+		&:first-child{margin-left: 0;}
+	}
+	.beans-stepslider{overflow: visible;}
+	.slick-arrow{
+		top: -85px;
+		right: 0;
+		font-size: 20px;
+		overflow: hidden;
+		line-height: 23px;
+        color: $gainsboro;
+		margin: 0 0 0 4px;
+		border-radius: 50%;
+		position: absolute;
+		text-indent: -9999px;
+		@include square(28px);
+		border:1px solid $gainsboro;
+		@include vertical-align(inline-block, top);
+		&:after{
+			top: 3px;
+			left: 8px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+        .dark &{
+            color: rgba(143, 143, 143, 0.6);
+            border-color: rgba(143, 143, 143, 0.6);
+        }
+        &:hover .dark &{
+            color: #8f8f8f;
+            background: transparent;
+            color: rgba(143, 143, 143, 1);
+            border-color: rgba(143, 143, 143, 1);
+        }
+	}
+	.slick-next{
+		right: 37px;
+		&:after{content:"\f104";}
+	}
+}
+/*------------------------------------------------------------------
+20-13. reply box Styles / .reply-box
+-------------------------------------------------------------------*/
+.reply-box{
+    color: $white;
+	min-width: 56px;
+	padding: 6px 2px;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 600;
+    background:$black;
+	text-align: center;
+	border-radius: 20px;
+	@include element2(before, -4px, auto, auto, 50%);
+	position: absolute;
+	bottom: 3px;
+	left: 50%;
+	margin: 0 0 0 -28px;
+	@include vertical-align(inline-block, top);
+	&:before{
+		margin: 0 0 0 -3px;
+		@include arrow(0, 3px, 6px, 3px, transparent, transparent, #000, transparent);
+	}
+	&:hover{text-decoration: none;}
+}
+.shop-table-block{margin-bottom: 60px;}
+/*------------------------------------------------------------------
+20-14. table container Styles / .table-container
+-------------------------------------------------------------------*/
+.table-container{
+	@include breakpoint($screen-sm-max){
+		overflow-x: auto;
+		.table-block{width: 700px;}
+	}
+}
+/*------------------------------------------------------------------
+20-15. shop table Styles / .shop-table
+-------------------------------------------------------------------*/
+.shop-table{
+    color: $lime;
+	display: block;
+	width: 100%;
+	margin: 0 0 30px;
+    background:$white; 
+    border:1px solid $gainsboro;
+	font:14px/18px $font-family-base;
+    .dark &{
+        color: $white;
+        background: #191919;
+        border-color: #494949;
+    }
+    .gray{
+        background:$seashell;
+        .dark &{background: $lime;}
+    }
+	thead{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		text-transform: uppercase;
+		border-bottom:1px solid $gainsboro;
+        .dark &{border-color: #494949;}
+	}
+	tbody{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		tr{
+			border-top:1px solid $gainsboro;
+            .dark &{border-color: #494949;}
+			&:first-child{border-top:0;}
+		}
+		.ico-1{padding:9px 1.6%;}
+		.ico-5{padding:24px 1.6%;}
+	}
+	th{font-weight: 400;}
+	tr{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	th,
+	td{
+		width: 31.2%;
+		float: left;
+		padding: 32px 1.5% 28px;
+	}
+	td{padding: 28px 1.5% 28px;}
+
+	.ico-2{
+		width: 7.9%;
+		text-transform: none;
+	}
+	.ico-3{
+		width: 9.7%;
+		text-align: center;
+	}
+	.ico-4{
+		width:12.5%;
+		text-align: center;
+	}
+	.ico-5{
+		width: 20.6%;
+		text-align: center;
+	}
+	.ico-6{
+		width: 12.9%;
+		text-align: center;
+	}
+	.ico-7{
+		width: 5.1%;
+		padding: 28px 1% 28px;
+		text-align: center;
+	}
+	.btn-close{
+        color: $gainsboro;
+		@include vertical-align(inline-block, middle);
+		font-size: 20px;
+		&:hover{text-decoration: none;}
+	}
+	.alignleft{
+		margin: 0 18px 0 0;
+		width: 60px;
+		@include vertical-align(inline-block, middle);
+	}
+	.product-name{
+		margin: -3px 0 0;
+		@include vertical-align(inline-block, middle);
+	}
+}
+/*------------------------------------------------------------------
+20-16. shop apply Styles / .shop-apply
+-------------------------------------------------------------------*/
+.shop-apply{
+	overflow: hidden;
+	.shop-buttons{
+		width: 50%;
+		float: right;
+		text-align: right;
+		@include breakpoint($screen-sm-max){
+			width: 47%;
+		}
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+			float: none;
+			text-align: left;
+		}
+	}
+	.btn{
+		border: 0;
+        color: $white;
+        background:$shark;
+		margin: 0 0 0 6px;
+	}
+}
+/*------------------------------------------------------------------
+20-17. shop calculation Styles / .shop-calculation
+-------------------------------------------------------------------*/
+.shop-calculation{
+	padding-top: 56px;
+	margin-bottom: 94px;
+	padding-bottom: 54px;
+	@include breakpoint($screen-xs-max){
+		margin-bottom: 40px;
+		padding-bottom: 30px;
+	}
+	h2{
+        color: $shark;
+		margin: 0 0 17px;
+		text-transform: capitalize;
+		font:18px/22px $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+	.block{
+		overflow: hidden;
+		margin: 0 0 57px;
+	}
+	&.checkout{
+		padding-top: 0;
+		padding-bottom: 0;
+		&:before{display: none;}
+		h2{margin: 0 0 32px;}
+		.cart-table{
+            background:#fafafa;
+            .dark &{background: #191919;}
+			td{
+				width: 81%;
+				padding: 17px 2% 18px 5%;
+				@include breakpoint($screen-sm-max){
+					width: 70%;
+				}
+			}
+			.col-2{
+				width: 19%;
+				padding-left: 3.9%;
+				@include breakpoint($screen-sm-max){
+					width: 30%;
+				}
+			}
+		}
+		.update-form{
+			.jcf-select{margin: 0 0 9px;}
+			.form-control{margin: 0 0 9px;}
+			@include placeholder{color: $shark;}
+            .dark &{
+                @include placeholder{color: $white;}
+            }
+			.jcf-select-text{
+                color: $shark;
+                .dark &{color: $white;}
+            }
+			.form-control{
+                color: $shark;
+                .dark &{color: $white;}
+            }
+		}
+	}
+}
+/*------------------------------------------------------------------
+20-18. cart table Styles / .cart-table
+-------------------------------------------------------------------*/
+.cart-table{
+    color: $shark;
+	display: block;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 15px;
+	line-height: 18px;
+	border:1px solid $gainsboro;
+    .dark &{
+        color: $white;
+        background: none;
+        border-color: #494949;
+    }
+	tbody{
+		display: block;
+		width: 100%;
+	}
+	tr{
+		overflow: hidden;
+		display: block;
+		border-top:1px solid $gainsboro;
+        .dark &{border-color: #494949;}
+		&:first-child{border-top: 0;}
+	}
+	td{
+		float: left;
+		padding: 17px 3.9% 18px;
+		width: 68%;
+		border-left:1px solid $gainsboro;
+        .dark &{border-color: #494949;}
+		&:first-child{border-left: 0;}
+	}
+	.col-2{
+		width: 32%;
+		float: left;
+        background:$white;
+        .dark &{background: none;}
+	}
+}

@@ -1,0 +1,315 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+18-2. app banner Styles / .app-banner
+18-3. app mainbanner Styles / .app-mainbanner
+18-4. about app Styles / .about-app
+18-5. get app Styles / .get-app
+18-6. appsub section Styles / .appsub-section
+18-7. appshowcase banner Styles / .appshowcase-banner
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+18-2. app banner Styles / .app-banner
+-------------------------------------------------------------------*/
+.app-banner{
+	@extend %boxreset;
+	.container{
+		z-index: 99;
+		position: relative;
+		text-align: center;
+	}
+	.title{
+		color: $white;
+		display: block;
+		max-width: 570px;
+		margin: 0 auto 44px;
+		font: 300 60px/80px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 35px;
+			line-height: 40px;
+		}
+	}
+	.btn-holder{
+		overflow: hidden;
+		margin: 0 0 158px;
+		padding: 0 16px 0 0;
+		@include breakpoint($screen-xs-max){
+			padding: 0;
+			margin: 0 0 58px;
+		}
+	}
+	.holder{padding-top: 226px;}
+	.btn{
+		margin: 0 4px 10px;
+		@include breakpoint($screen-xs-max){margin: 0 0 10px;}
+	}
+	img{margin: 0 auto;}
+}
+/*------------------------------------------------------------------
+18-3. app mainbanner Styles / .app-mainbanner
+-------------------------------------------------------------------*/
+.app-mainbanner{
+	color: $white;
+	@extend %boxreset;
+	text-align: center;
+	font: 300 24px/30px $font-family-sans-serif;
+	.holder{padding-top: 230px;}
+	.stretch{
+		text-align: center;
+		@include element(before, 0, -9999px, 0, -9999px, rgba(0, 0, 0, 0.8));
+		position: absolute;
+		&:before{
+			z-index: 9;
+			display: block;
+		}
+	}
+	.container{
+		z-index: 9;
+		position: relative;
+	}
+	h1{
+		margin: 0 0 18px;
+		font: 300 50px/60px $font-family-sans-serif;
+		.add{font-weight: 500;}
+	}
+	p{margin: 0 0 18px;}
+	.signup-form{
+		overflow: hidden;
+		margin: 0 0 136px;
+	}
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		border: 0;
+		float: left;
+		width: 23.2%;
+		height: 42px;
+		outline: none;
+		color: #848484;
+		background: $white;
+		margin: 0 0 31px 2.4%;
+		padding: 10px 20px 10px 20px;
+		font: 16px/20px $font-family-base;
+		@include breakpoint($screen-sm-max){
+			font-size: 14px;
+		}
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+			margin: 0 0 20px;
+		}
+		&:first-child{margin: 0 0 31px;}
+	}
+	.frame{overflow: hidden;}
+	p{margin: 0 0 55px;}
+	.btn{
+		color: $white;
+		&:hover{background: $lime;}
+	}
+}
+/*------------------------------------------------------------------
+18-4. about app Styles / .about-app
+-------------------------------------------------------------------*/
+.about-app{
+	font-size: 18px;
+	line-height: 30px;
+	font-style: italic;
+	@include breakpoint($screen-xs-max){padding: 50px 0 0;}
+	.ico{padding: 21px 0 0;}
+	.box{
+		max-width: 770px;
+		overflow: hidden;
+		text-align: center;
+		margin: 0 auto 81px;
+	}
+	img{margin: 0 auto -60px;}
+}
+/*------------------------------------------------------------------
+18-5. get app Styles / .get-app
+-------------------------------------------------------------------*/
+.get-app{
+	z-index: 5;
+	color: $white;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	padding: 126px 0 143px;
+	font: 18px/20px $font-family-sans-serif;
+	@include element2(before, 0, 0, 0, 0);
+	&:before{background: rgba(0, 0, 0, 0.5);}
+	.parallax-holder{z-index: -1;}
+	.heading{
+		display: block;
+		font-size: 48px;
+		margin: 0 0 10px;
+		line-height: 80px;
+		text-transform: uppercase;
+		@include breakpoint($screen-xs-max){
+			font-size: 28px;
+			line-height: 50px;
+		}
+	}
+	p{margin: 0 0 61px;}
+	.platform{
+		font-size: 34px;
+		li{padding: 0 15px;}
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.num{
+		display: block;
+		font-size: 68px;
+		font-weight: 600;
+		line-height: 75px;
+	}
+}
+/*------------------------------------------------------------------
+18-6. appsub section Styles / .appsub-section
+-------------------------------------------------------------------*/
+.appsub-section{
+	padding: 100px 0 100px;
+	@extend %boxreset;
+	.app-subform{
+		margin: 0 auto;
+		font-size: 18px;
+		max-width: 810px;
+		line-height: 30px;
+		text-align: center;
+		font-style: italic;
+	}
+	p{margin: 0 0 57px;}
+	#mc_embed_signup {
+		overflow: hidden;
+		background: transparent;
+	}
+	#mc_embed_signup form {
+		padding: 0;
+		overflow: hidden;
+	}
+	#mc_embed_signup_scroll{
+		float: left;
+		width: 100%;
+		border: 1px solid $gainsboro;
+		.dark &{border-color: #494949;}
+	}
+	.input-box{
+		margin: 0 auto;
+		max-width: 570px;
+		overflow: hidden;
+		position: relative;
+		.clear{
+			float: right;
+			@include breakpoint($screen-xs-max){
+				float: none;
+			}
+		}
+		#mc_embed_signup input.button{
+			border: 0;
+			height: 48px;
+			float: right;
+			width: 152px;
+			float: right;
+			min-width: 0;
+			color: $white;
+            border-radius: 0 !important;
+			font-size: 14px;
+			font-weight: 400;
+			font-style: normal;
+			padding: 1px 5px 0;
+			text-align: center;
+			margin: -1px -1px -1px 0;
+			text-transform: uppercase;
+			@include transition (all, 0.4s, ease);
+			@include breakpoint($screen-xs-max){
+				width: 100%;
+				margin: 0;
+			}
+			&:hover{background: $masala;}
+		}
+		#mc_embed_signup input.email{
+			margin: 0;
+			border: 0 !important;
+			width: 73%;
+			float: left;
+			height: 46px;
+			outline: none;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 20px;
+			padding: 6px 20px;
+			font-style: normal;
+			background: transparent;
+			@include breakpoint($screen-xs-max){width: 100%;}
+		}
+	}
+	&.style2{
+		padding: 95px 0;
+		p{margin: 0 0 37px;}
+		.app-subform{font: 300 16px/26px $font-family-base;}
+		.input-box #mc_embed_signup input.button{
+			background: #e84c3d;
+			&:hover{background: $masala;}
+		}
+	}
+	&.style3{
+		padding: 95px 0;
+		p{margin: 0 0 37px;}
+		.app-subform{font: 300 16px/26px $font-family-base;}
+	}
+}
+/*------------------------------------------------------------------
+18-7. appshowcase banner Styles / .appshowcase-banner
+-------------------------------------------------------------------*/
+.appshowcase-banner{
+	@extend %boxreset;
+	.container{
+		z-index: 99;
+		position: relative;
+		@include element(before, 0, -9999px, 0, -9999px, rgba(0, 0, 0, 0.8));
+		&:before{display: block;}
+	}
+	.title{
+		color: $white;
+		display: block;
+		margin: 0 0 27px;
+		font: 300 60px/80px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 35px;
+			line-height: 40px;
+		}
+	}
+	.btn-holder{
+		overflow: hidden;
+		margin: 0 0 35px;
+	}
+	.frame{
+		padding: 249px 70px 146px 497px;
+		@include breakpoint($screen-sm-max){
+			padding: 249px 10px 146px 377px;
+		}
+		@include breakpoint($screen-xs-max){
+			padding: 200px 10px 400px;
+		}
+	}
+	.btn{margin: 0 4px 5px;}
+	.img{
+		bottom: 0;
+		left: 18px;
+		position: absolute;
+		@include breakpoint($screen-sm-max){
+			left: -80px;
+		}
+	}
+	.platform{
+		font-size: 24px;
+		li{padding: 0 26px 0 15px;}
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+}

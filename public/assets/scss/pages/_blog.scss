@@ -1,0 +1,298 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+16-2. blogs block Styles / .blogs-block
+16-3. blog alignleft Styles / .blog-alignleft
+16-4. blog content Styles / .blog-content
+16-5. blog over Styles / .blog-over
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+16-2. blogs block Styles / .blogs-block
+-------------------------------------------------------------------*/
+.blogs-block{
+	overflow: hidden;
+	position:relative;
+	.blogs-frame{padding-top: 100%;}
+}
+/*------------------------------------------------------------------
+16-3. blog alignleft Styles / .blog-alignleft
+-------------------------------------------------------------------*/
+.blog-alignleft{
+	float: left;
+	width: 40.4%;
+	@include breakpoint(1905px){
+		width: 100%;
+	}
+	.img-box{
+		position:relative;
+		overflow: hidden;
+		.blogs-frame{
+			padding-top: 39.8%;
+			@include breakpoint(1905px){
+				padding-top: 25%;
+			}
+			@include breakpoint($screen-xs-max){
+				padding-top: 100%;
+			}
+		}
+	}
+	.beans-slider{
+		.beans-slide{
+			.blogs-frame{
+				padding-top: 79.7%;
+				@include breakpoint(1905px){
+					padding-top: 40%;
+				}
+				@include breakpoint($screen-xs-max){
+					padding-top: 100%;
+				}
+			}
+		}
+		.slick-dots{
+			margin:0;
+			top: 45px;
+			left: auto;
+			right: 34px;
+		    li{
+		        padding:0 0 8px;
+		        &.slick-active button{background: $white;}
+		        button{
+		        	margin: 0;
+		        	border: 0;
+		        	padding: 0;
+		            display: block;
+		            background: none;
+		            border-radius:50%;
+		            text-indent: -9999px;
+		            @include square(10px);
+		            border:2px solid $white;
+		            &:hover{
+		                background: $white;
+		                text-decoration: none;
+		            }
+		        }
+		    }
+		}
+	}
+}
+/*------------------------------------------------------------------
+16-4. blog content Styles / .blog-content
+-------------------------------------------------------------------*/
+.blog-content{
+	float: left;
+	width: 59.6%;
+	@include breakpoint(1905px){
+		width: 100%;
+	}
+	.towcolumns{
+		overflow: hidden;
+		.img-box{
+			float: left;
+			width: 33.9%;
+			@include breakpoint(1905px){
+				width: 100%;
+			}
+			.blogs-frame{
+				padding-top: 79.4%;
+				@include breakpoint(1905px){
+					padding-top: 30%;
+				}
+				@include breakpoint($screen-xs-max){
+					padding-top: 100%;
+				}
+			}
+			&.road{
+				width: 66.1%;
+				@include breakpoint(1905px){
+					width: 100%;
+				}
+				.blogs-frame{
+					padding-top: 40.7%;
+					@include breakpoint($screen-xs-max){
+						padding-top: 100%;
+					}
+				}
+			}
+		}
+	}
+	.img-box{
+		position:relative;
+		overflow: hidden;
+	}
+	.other-blogs{overflow: hidden;}
+	.alignleft{
+		position: relative;
+		float: left;
+		width: 33.9%;
+		@include breakpoint(1140px){
+			width: 100%;
+		}
+		.blogs-frame{
+			padding-top: 159.6%;
+			@include breakpoint(1140px){
+				padding-top: 30%;
+			}
+			@include breakpoint($screen-xs-max){
+				padding-top: 100%;
+			}
+		}
+	}
+	.blogs-box2{
+		float: left;
+		width: 66.1%;
+		@include breakpoint(1140px){
+			width: 100%;
+		}
+		.img-box{
+			float: left;
+			width: 50%;
+			@include breakpoint($screen-xs-max){
+				width: 100%;
+			}
+		}
+		.blogs-frame{
+			padding-top: 81.9%;
+			@include breakpoint($screen-xs-max){
+				padding-top: 100%;
+			}
+		}
+		.blog-nav{
+			li{padding:0 32px 0 0;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+16-5. blog over Styles / .blog-over
+-------------------------------------------------------------------*/
+.blog-over{
+	@extend %postionreset;
+	top:auto;
+	padding:10px 5px 16px 18px;
+	@include breakpoint($screen-xs-max){
+		padding:10px 5px 16px 10px;
+	}
+	.blog-date{
+		float: left;
+		color:$white;
+		border:3px solid $white;
+		@include square(74px);
+		text-align: center;
+		font-size: 14px;
+		line-height:18px;
+		margin:0 14px 5px 0;
+		padding:11px 5px 3px;
+		text-transform: uppercase;
+		@include breakpoint($screen-xs-max){
+			margin:0 8px 5px 0;
+		}
+		.number{
+			margin:0 0 2px;
+			display: block;
+			font-size: 21px;
+			line-height:24px;
+			font-weight: 700;
+		}
+	}
+	.blog-txt{overflow: hidden;}
+	h2{
+		color:$white;
+		margin:-4px 0 14px 2px;
+		font:24px/28px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 20px;
+			line-height: 28px;
+		}
+		a{
+			color:$white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.box{
+		overflow: hidden;
+		@include breakpoint($screen-xs-max){
+			margin: 0 -10px 0 0;
+		}
+	}
+	.author-info{
+		float: left;
+		color:$white;
+		max-width:170px;
+		font-size: 14px;
+		line-height:17px;
+		margin:0 40px 0 0;
+		@include breakpoint($screen-xs-max){
+			margin:0 10px 0 0;
+		}
+		.author-img{
+			@include vertical-align(inline-block, middle);
+			border-radius:50%;
+			overflow: hidden;
+			margin:0 16px 0 0;
+			@include square(32px);
+			img{@extend %img-responsive2;}
+			@include breakpoint($screen-xs-max){
+				margin:0 10px 0 0;
+			}
+		}
+		.txt{
+			@include vertical-align(inline-block, middle);
+			a{
+				color:$white;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+		}
+	}
+	.blog-nav{
+		margin:8px 0 0;
+		float: left;
+		font-size: 14px;
+		line-height:17px;
+		@include breakpoint($screen-xs-max){
+			display: none;
+		}
+		li{
+			padding:0 36px 0 0;
+			a{
+				color:$white;
+				position: relative;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+				.fa{
+					position:absolute;
+					top: 4px;
+					left: -20px;
+					font-size: 14px;
+					line-height:10px;
+				}
+			}
+		}
+	}
+	&.add{
+		padding:10px 10px 16px 18px;
+		@include breakpoint($screen-xs-max){
+			padding:10px 5px 16px 10px;
+		}
+		h2{
+			margin:-4px 0 19px 2px;
+			font-size: 18px;
+			line-height:22px;
+		}
+		.blog-date{
+			margin:0 14px 3px 0;
+			@include breakpoint($screen-xs-max){
+				margin:0 8px 3px 0;
+			}
+		}
+		.blog-nav{
+			li{padding:0 33px 0 0;}
+		}
+	}
+}
+.blog-button{
+	text-align: center;
+	padding-top: 58px;
+	padding-bottom: 60px;
+}

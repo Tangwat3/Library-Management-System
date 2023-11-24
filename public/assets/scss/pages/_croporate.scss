@@ -1,0 +1,746 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+3-2. croporate slider Styles / .croporate-slider
+3-3. wedo section Styles / .wedo-section
+3-4. joinus section Styles / .joinus-section
+3-5. counter container Styles / .counter3
+3-6. services section Styles / .services-section
+3-7. clients section3 Styles / .clients-section3
+3-8. video section Styles / .video-section
+3-9. whatwedo section Styles / .whatwedo-section
+3-10. process section Styles / .process-section
+3-11. progress holder Styles / .progress-holder
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+3-2. croporate slider Styles / .croporate-slider
+-------------------------------------------------------------------*/
+.croporate-slider{
+	.caption{
+		z-index: 5;
+		width: 100%;
+		color: $white;
+		padding: 90px 0 0;
+		text-align: center;
+		position: relative;
+		background: rgba(0, 0, 0, 0.3);
+		@include v-align(holder, middle);
+		font: 18px/20px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 14px;
+			line-height: 16px;
+		}
+		.holder{
+			padding: 0 0 9px;
+			@include breakpoint($screen-xs-max){padding: 60px 0 0;}
+		}
+	}
+	p{
+		margin:0 0 40px;
+		@include breakpoint($screen-xs-max){margin: 0 0 20px;}
+	}
+	.heading{
+		margin: 0 0 27px;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		font: 700 60px/65px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	.heading-slim{
+		margin: 0 0 27px;
+		letter-spacing: 0.4px;
+		font: 300 60px/80px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	.btn-box{
+		overflow: hidden;
+		.btn{margin: 0 2px 0 3px;}
+	}
+	.caption > .holder {
+		transition: all 2.5s ease;
+		position: relative;
+		bottom: -50px;
+		opacity: 0;
+	}
+	.slick-active .caption > .holder {
+		transition: all 1s ease 1s;
+		opacity: 1;
+		bottom: 0;
+	}
+	.slick-dots{
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        @include transition (all, 0.4s, ease);
+		li{
+			margin: 0 6px 0 5px;
+			@include vertical-align(inline-block, top);
+			&.slick-active button{background: $white;}
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			display: block;
+			overflow: hidden;
+			background: none;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(10px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				background: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	.slick-arrow{
+		right: 0;
+		top: 50%;
+		border: 0;
+        opacity: 0;
+		z-index: 99;
+		padding: 0;
+		width: 20px;
+		height: 50px;
+		font-size: 0;
+		color: $white;
+		background: none;
+		text-align: left;
+		margin: -46px 0 0;
+        visibility: hidden;
+		position: absolute;
+		text-indent: 9999px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){
+			margin: -20px 0 0;
+			right: 15px;
+		}
+		&:hover{
+			text-decoration: none;
+			&:after{opacity: 0.8;}
+		}
+		&:after{
+			top: 0;
+			left: 3px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 60px;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-prev{
+		left: 0;
+		right: auto;
+		&:after{content:"\f104";}
+	}
+    &:hover{
+        .slick-next{
+            opacity: 1;
+            right: 29px;
+            visibility: visible;
+		    @include breakpoint($screen-xs-max){right: 15px;}
+        }
+        .slick-prev{
+            opacity: 1;
+            left: 29px;
+            right: auto;
+            visibility: visible;
+            @include breakpoint($screen-xs-max){
+                right: auto;
+                left: 15px;
+            }
+        }
+        .slick-dots{
+            opacity: 1;
+            bottom: 33px;
+            visibility: visible;
+        }
+    }
+}
+/*------------------------------------------------------------------
+3-3. wedo section Styles / .wedo-section
+-------------------------------------------------------------------*/
+.wedo-section{
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 100px;
+	@include breakpoint($screen-xs-max){
+		padding-top: 60px;
+	}
+	h3{
+		color: $shark;
+		margin: 0 0 9px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 12px/16px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+	.coll{
+		margin-bottom: 60px;
+		&:hover{
+			.icon{color: $white;}
+			.btn{
+				color: $white;
+				&:hover{
+					background: transparent;
+					color: rgba(143, 143, 143, 0.6);
+					border-color: rgba(143, 143, 143, 0.6);
+				}
+			}
+		}
+		&.large{
+			h3{
+				font-size: 16px;
+				line-height: 25px;
+			}
+			.icon{font-size: 50px;}
+		}
+	}
+	.icon{
+		display: block;
+		font-size: 30px;
+		line-height: 110px;
+		text-align: center;
+		border-radius: 50%;
+		margin: 0 auto 28px;
+		@include square(110px);
+		border: 1px solid $stack;
+		@include v-align(fa, middle);
+		@include transition (all, 0.4s, ease);
+		&:hover{color: $white;}
+	}
+	p{margin: 0 0 24px;}
+	.img{margin: 0 auto;}
+}
+/*------------------------------------------------------------------
+3-4. joinus section Styles / .joinus-section
+-------------------------------------------------------------------*/
+.joinus-section{
+	z-index: 2;
+	color: $white;
+	font-size: 16px;
+	line-height: 26px;
+	@extend %boxreset;
+	text-align: center;
+	padding: 87px 0 0;
+	@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.5));
+	@include breakpoint($screen-xs-max){
+		font-size: 14px;
+		line-height: 20px;
+	}
+	h3{
+		margin: 0 0 22px;
+		font: 600 36px/50px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+	.box{
+		max-width: 660px;
+		margin: 0 auto;
+	}
+	p{margin: 0 0 53px;}
+	.img{margin: 0 auto;}
+	.parallax-holder{
+		z-index: -1;
+		@extend %postionreset;
+	}
+}
+/*------------------------------------------------------------------
+3-5. counter container Styles / .counter-container
+-------------------------------------------------------------------*/
+.counter-container{
+	font-size: 16px;
+	padding-top: 98px;
+	line-height: 20px;
+	text-align: center;
+	position: relative;
+	@include breakpoint($screen-xs-max){
+		margin: 0 auto 40px;
+	}
+	.txt{
+		display: block;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font: 600 12px/16px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			margin: 0 0 30px;
+		}
+	}
+	.fa{
+		display: block;
+		font-size: 30px;
+		margin: 0 0 11px;
+	}
+	.num{
+		color: $shark;
+		display: block;
+		margin: 0 0 18px;
+		padding: 0 0 12px;
+		position: relative;
+		font: 700 70px/90px $font-family-sans-serif;
+		.dark &{color: $white;}
+		&:after{
+			bottom: 0;
+			left: 50%;
+			@extend %after;
+			margin: 0 0 0 -20px;
+			@include size(40px, 3px);
+		}
+	}
+}
+/*------------------------------------------------------------------
+3-6. services section Styles / .services-section
+-------------------------------------------------------------------*/
+.services-section{
+	.box{
+		z-index: 88;
+		margin: 0 0 49px;
+		overflow: hidden;
+		line-height: 24px;
+		position: relative;
+		@include breakpoint($screen-xs-max){
+			margin: 0 0 20px;
+		}
+	}
+	h3{
+		color: $shark;
+		margin: 0 0 27px;
+		position: relative;
+		padding: 0 0 0 40px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 700 14px/20px $font-family-base;
+		.dark &{color: $white;}
+		.icon,
+		.fa{
+			left: 0;
+			top: 1px;
+			font-size: 20px;
+			position: absolute;
+		}
+	}
+	.img{
+		display: block;
+		margin: -18px 0 0 -342px;
+		@include breakpoint($screen-sm-max){
+			margin: -18px 0 0 -42px;
+		}
+		@include breakpoint($screen-xs-max){
+			@include img-responsive;
+		}
+	}
+	&.style3{
+		padding: 99px 0 0;
+		.img{
+			margin: 5px 0 0 26px;
+			@include breakpoint($screen-md-max){
+				margin: 5px 0 0 -50px;
+			}
+		}
+	}
+	&.style4{
+		padding-top: 92px;
+		padding-bottom: 34px;
+		h2{
+			font-weight: 700;
+			font-size: 32px;
+			line-height:38px;
+			margin: 0 0 23px;
+		}
+		.holder{
+			@include element2(before, 0, auto, auto, 50%);
+			z-index:1;
+			&:before{
+				z-index:-1;
+				margin:-36px 0 0 -470px;
+				@include size(940px, 527px);
+				background: url(images/one-page/img37.png) no-repeat;
+			}
+		}
+		.img{
+			margin: 34px auto 0;
+			@include breakpoint($screen-sm-max){
+				margin:0;
+			}
+		}
+	}
+	&.style5{
+		padding-top: 90px;
+		.img{
+			margin: -41px 0 0 -201px;
+			@include breakpoint($screen-md-max){margin: 0 0 0 -201px;}
+		}
+	}
+	&.style6{
+		padding-top: 100px;
+		padding-bottom: 60px;
+		.text-box{
+			text-align: left;
+			margin: 0 auto 43px;
+			font: 14px/24px $font-family-sans-serif;
+		}
+		h2{
+			color: $lime;
+			margin: 0 0 25px;
+			text-align: left;
+			font: 700 32px/40px $font-family-sans-serif;
+			.dark &{color: $white;}
+		}
+		h3{margin: 0 0 20px;}
+		.box{margin: 0 0 23px;}
+		.img{margin: -154px 0 -147px -20px;}
+	}
+	&.style7{
+		padding-top: 88px;
+		padding-bottom: 8px;
+		h2{margin: 0 0 13px;}
+		.text-box{margin: 0 auto 65px;}
+		.holder{
+			@include element2(before, 0, auto, auto, 50%);
+			z-index:1;
+			&:before{
+				z-index:-1;
+				margin:-36px 0 0 -470px;
+				@include size(940px, 527px);
+				background: url(images/one-page/img37.png) no-repeat;
+			}
+		}
+		.img{
+			margin: 34px auto 0;
+			@include breakpoint($screen-sm-max){
+				margin:0;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+3-7. clients section3 Styles / .clients-section3
+-------------------------------------------------------------------*/
+.clients-section3 .list{
+	margin: 0;
+	font-size: 0;
+	overflow: hidden;
+	letter-spacing: -4px;
+	border: solid $gainsboro;
+	border-width: 1px 1px 1px 0;
+	.dark &{border-color: #494949;}
+	@include breakpoint($screen-xs-max){
+		margin: 0 -10px;
+	}
+	li{
+		float: left;
+		height: 131px;
+		width: 16.666%;
+		letter-spacing: 0;
+		text-align: center;
+		position: relative;
+		@include v-align(box, middle);
+		border-bottom: 1px solid $gainsboro;
+		.dark &{border-color: #494949;}
+		@include breakpoint($screen-md-max){
+			width: 25%;
+		}
+		@include breakpoint($screen-xs-max){
+			width: 50%;
+		}
+		&:after{
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 1px;
+			@extend %after;
+			background: $gainsboro;
+			.dark &{background: #494949;}
+		}
+	}
+	img{display: block;}
+	a{
+		opacity: 0.5;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			opacity: 1;
+			text-decoration: none;
+		}
+	}
+}
+/*------------------------------------------------------------------
+3-8. video section Styles / .video-section
+-------------------------------------------------------------------*/
+.video-section{
+	color: $white;
+	font-size: 16px;
+	line-height: 26px;
+	@extend %boxreset;
+	text-align: center;
+	@include element(after, 0, 0, 0, 0, transparent);
+	&:after{
+		z-index:1;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.container {
+		position: relative;
+		z-index: 100;
+	}
+	h2{
+		color: $white;
+		margin: 0 0 23px;
+		text-align: center;
+		font: 600 36px/50px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+	.play-icon{
+		display: block;
+		font-size: 50px;
+		overflow: hidden;
+		text-align: center;
+		margin: 0 auto 47px;
+		padding: 25px 0 0 10px;
+		@include square(100px);
+		@include transition (all, 0.4s, ease);
+		background: url(images/icons/icon1.png) no-repeat;
+		.fa-pause{display: none;}
+		&.video-playing{
+			font-size: 40px;
+			padding: 30px 0 0;
+			.fa-play{display: none;}
+			.fa-pause{display: block;}
+		}
+		&:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+	.video-area{
+		@extend %postionreset;
+		z-index: -1;
+	}
+	.buttonBar{display: none;}
+}
+/*------------------------------------------------------------------
+3-9. whatwedo section Styles / .whatwedo-section
+-------------------------------------------------------------------*/
+.whatwedo-section{
+	font-size: 16px;
+	line-height: 26px;
+	p{margin: 0 0 25px;}
+	&.style2{
+		color:$storm-dust;
+		line-height:24px;
+		h2{
+			margin:0 0 24px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height:28px;
+			text-transform: uppercase;
+		}
+		p{margin: 0 0 46px;}
+		.img-holder{
+			position: relative;
+			.img{
+				display: block;
+				margin:0 0 0 -54px;
+			}
+		}
+		&.add-style{
+			padding-bottom: 71px;
+			p{margin: 0 0 23px;}
+		}
+	}
+	&.style3{
+		color:$storm-dust;
+		line-height:24px;
+		font-weight: 300;
+		h2{
+			margin:0;
+			font-weight: 700;
+			font-size: 24px;
+			line-height:28px;
+			text-transform: uppercase;
+		}
+		p{margin: 0 0 20px;}
+		.title{
+			display: block;
+			margin: 0 0 10px;
+			font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+		}
+		.progress-holder.style2 .title{margin: 0 0 7px;}
+	}
+}
+/*------------------------------------------------------------------
+3-10. process section Styles / .process-section
+-------------------------------------------------------------------*/
+.process-section{
+	font-size: 16px;
+	line-height: 26px;
+	.icon-block{
+		margin: 0 0 100px;
+		@include breakpoint($screen-md-max){
+			margin: 0 0 60px;
+		}
+	}
+	.icon{
+		z-index: 5;
+		position: relative;
+		margin: 0 0 16px 19px;
+		@include square(100px);
+		@include breakpoint($screen-md-max){
+			margin: 0 auto 10px;
+		}
+		.fa{
+			color: $shark;
+			font-size: 30px;
+			.dark &{color: $stack;}
+		}
+		.num{
+			color: $white;
+			z-index: -1;
+			top: 30px;
+			right: -34px;
+			padding: 6px 0 0;
+			border-radius: 50%;
+			position: absolute;
+			@include square( 40px);
+		}
+	}
+	.icon-holder{
+		background: $white;
+		border-radius: 50%;
+		text-align: center;
+		@include square(100px);
+		border: 1px solid $gainsboro;
+		@include v-align(fa, middle);
+		.dark &{
+			background: #191919;
+			border-color: #494949;
+		}
+	}
+	.txt{
+		color: $shark;
+		display: block;
+		text-align: center;
+		padding: 0 37px 0 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font: 600 12px/20px $font-family-sans-serif;
+		.dark &{color: $stack;}
+		@include breakpoint($screen-md-max){
+			padding: 0 0 25px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+3-11. progress holder Styles / .progress-holder
+-------------------------------------------------------------------*/
+.progress-holder{
+	margin: 14px 0 0 -2px;
+	li{
+		height: 30px;
+		margin: 0 0 20px;
+		position: relative;
+		background: $desert-storm;
+		.dark &{background: #191919;}
+	}
+	.progress-bar-outer{
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 30px;
+		display: block;
+		position: absolute;
+	}
+	.text{
+		top: 6px;
+		left: 12px;
+		color: $white;
+		position: absolute;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font: 600 12px/18px $font-family-sans-serif;
+	}
+	.progress-bar{
+		height: 30px;
+		width: 100%;
+		margin-bottom: 0;
+		box-shadow: none;
+		border-radius: 0;
+		overflow: visible;
+		position: relative;
+		background-color: transparent;
+	}
+	.counter{
+		top: 5px;
+		right: 16px;
+		color: $shark;
+		font-size: 13px;
+		line-height: 18px;
+		position: absolute;
+		.dark &{color: $white;}
+	}
+	&.style2{
+		margin: 0;
+		padding:0 17.4% 0 0;
+		li{
+			height: auto;
+			margin: 0 0 12px;
+			overflow: hidden;
+            .dark &{
+                background: none;
+            }
+		}
+		.progress-bar{
+			height: 12px;
+			background: $cararra;
+			.dark &{background: #191919;}
+		}
+		.progress-bar-outer{
+			height: 12px;
+			overflow: visible !important;
+		}
+		.title{
+			display: block;
+            font-size: 12px;
+            font-weight: 600;
+			margin: 0 0 15px;
+			color: $storm-dust;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: $font-family-sans-serif;
+		}
+		.counter{
+			padding:0;
+			left: 100%;
+            top: -26px;
+			width: 31px;
+			right: auto;
+			color:$white;
+			font-size: 11px;
+			background: $lime;
+			margin: 0 0 0 1px;
+			text-align: center;
+			@include element2(before, 100%, auto, auto, 0);
+			position: absolute;
+			&:before{
+				@include arrow(6px, 6px, 0, 0, $lime, transparent, transparent, transparent);
+			}
+		}
+	}
+}

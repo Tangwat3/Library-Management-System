@@ -1,0 +1,321 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+17-2. port slider Styles / .port-slider
+17-3. portfolio footer Styles / .portfolio-footer
+17-4. port single Styles / .port-single
+17-5. port aside Styles / .port-aside
+17-6. w9 Styles / .w9
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+17-2. port slider Styles / .port-slider
+-------------------------------------------------------------------*/
+.port-slider .slick-dots li{
+    padding:0 4px;
+    @include vertical-align(inline-block, top);
+    &.slick-active button{background: $black;}
+    button{
+    	margin: 0;
+    	border: 0;
+    	padding: 0;
+        display: block;
+    	background: none;
+        border-radius:50%;
+        text-indent: -9999px;
+        @include square(15px);
+        border:2px solid $black;
+        &:hover{
+            background: $black;
+            text-decoration: none;
+        }
+    }
+}
+/*------------------------------------------------------------------
+17-3. portfolio footer Styles / .portfolio-footer
+-------------------------------------------------------------------*/
+.portfolio-footer{
+    color:$shark;
+	font-size: 21px;
+	line-height:25px;
+	font-weight: 300;
+	font-style:italic;
+    .dark &{color: $white;}
+    a{
+        color:$shark;
+        .dark &{color: $white;}
+    }
+	.new-txt{
+		float: left;
+		margin:3px 0 0;
+		max-width:800px;
+	}
+	&.style2{
+		color: $white;
+		.btn{
+			color: $white;
+			&:hover{
+				border-color: $white;
+				background: transparent;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+17-4. port single Styles / .port-single
+-------------------------------------------------------------------*/
+.port-single{
+    color: $stack;
+	font-size: 14px;
+	margin: 0 0 25px;
+	line-height: 28px;
+	.next,
+	.prev,
+	.dashboard{
+		font-size: 20px;
+		line-height: 50px;
+        color: $gainsboro;
+		margin: 0 2px 51px;
+		vertical-align: top;
+		@include square(50px);
+		display: inline-block;
+		border: 1px solid $gainsboro;
+		@include transition (all, 0.4s, ease);
+		.dark &{
+			color: #494949;
+			border-color: #494949;
+		}
+		&:hover{
+			color: $shark;
+			border-color: $shark;
+            text-decoration: none;
+			.dark &{
+				color: $white;
+				border-color: $white;
+			}
+		}
+	}
+	.dashboard{font-size: 21px;}
+	h2{
+        color: $shark;
+		margin: 0 0 17px;
+		text-transform: uppercase;
+		font: 700 32px/35px $font-family-base;
+		.dark &{color: $white;}
+	}
+	h3{
+        color: $black2;
+		margin: 0 0 17px;
+		text-transform: uppercase;
+		font: 18px/20px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+	.beans-slide{
+		height: 440px;
+		position: relative;
+	}
+	p{margin: 0 0 50px;}
+	.video-area,
+	.beans-slider{margin: 0 0 57px;}
+	.slick-arrow{
+		top: 50%;
+		left: 15px;
+		z-index: 5;
+		color: #919191;
+		font-size: 20px;
+		overflow: hidden;
+		margin: -20px 0 0;
+		line-height: 40px;
+		position: absolute;
+		border-radius: 50%;
+		text-indent: -9999px;
+		@include square(40px);
+		border: 1px solid #919191;
+		&:after{
+			top: 7px;
+			left: 13px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+		&:hover{
+			color: $shark;
+			text-decoration: none;
+			border-color: $shark;
+			.dark &{color: $white;}
+		}
+	}
+	.slick-next{
+		left: auto;
+		right: 15px;
+		&:after{content:"\f105";}
+	}
+	ul{
+		padding: 0;
+		margin: 0 0 29px;
+		list-style: none;
+		li{margin: 0 0 2px;}
+		.fa{
+            color: $shark;
+            margin: 0 5px 0 0;
+			.dark &{color: $white;}
+        }
+        strong{
+			color: $shark;
+			.dark &{color: $white;}
+		}
+		a{
+			@include transition (all, 0.4s, ease);
+            &:hover{
+                color: $shark;
+                text-decoration: none;
+				.dark &{color: $white;}
+            }
+		}
+	}
+	footer{overflow: hidden;}
+	.social-network{
+		margin: 0;
+		float: right;
+		font-size: 18px;
+		line-height: 38px;
+		text-align: center;
+		li{
+			margin: 0;
+			vertical-align: top;
+			display: inline-block;
+		}
+		a{
+            color: $shark;
+			display: block;
+			border-radius: 50%;
+			@include square(38px);
+            background: $desert-storm;
+			.dark &{
+				color: $white;
+				background: #191919;
+			}
+            &:hover .fa{color: $white;}
+		}
+		.fa{margin: 0;}
+	}
+	blockquote{
+		margin: 0;
+		border: 0;
+        color: $shark;
+        background: $munsell;
+		padding: 34px 30px 24px 28px;
+		.dark &{
+			color: $white;
+			background: #191919;
+		}
+        @include breakpoint($screen-xs-max){
+            padding: 20px;
+        }
+		q{
+			quotes: none;
+			display: block;
+			text-indent: 20px;
+			position: relative;
+			font: 300 italic 24px/31px $font-family-sans-serif;
+            @include breakpoint($screen-xs-max){
+                font-size: 18px;
+                line-height: 25px;
+            }
+			&:after{
+				top: -10px;
+				left: -16px;
+				content: '"';
+                color: $shark;
+				font-size: 46px;
+				font-weight: 900;
+				position: absolute;
+				.dark &{color: $white;}
+			}
+		}
+	}
+	.btn-f-info:hover{
+		color: $black;
+		border-color: $black;
+	}
+}
+/*------------------------------------------------------------------
+17-5. port aside Styles / .port-aside
+-------------------------------------------------------------------*/
+.port-aside{
+	.btn:hover{
+		color: $shark;
+		border-color: $shark;
+		background: transparent;
+		.dark &{
+			color: $white;
+			border-color: $white;
+		}
+	}
+	.work-slider .slick-dots{
+		bottom: -60px;
+		li{
+			margin: 0 3px 0 2px;
+			@include vertical-align(inline-block, top);
+            &.slick-active button{
+                background: $shark;
+                border-color: $shark;
+            }
+		}
+		button{
+			margin: 0;
+			border: 0;
+			padding: 0;
+			display: block;
+			background: none;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(14px);
+			border:2px solid #dedede;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				background: $shark;
+				border-color: $shark;
+                text-decoration: none;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+17-6. w9 Styles / .w9
+-------------------------------------------------------------------*/
+.w9{
+	overflow: hidden;
+	position:relative;
+	padding:0 0 0 60px;
+	@include transition (margin, 0.4s, ease);
+	@include breakpoint($screen-xs-max){padding: 0;}
+}
+.work-section .beans-slider.coll-2.pull-left .slick-dots{
+    bottom:24px;
+    li{
+        padding:0 4px;
+        float: none;
+        @include vertical-align(inline-block, top);
+        &.slick-active button{background: $white;}
+        button{
+        	margin: 0;
+        	border: 0;
+        	padding: 0;
+            display: block;
+            background: none;
+            border-radius:50%;
+            text-indent: -9999px;
+            @include square(10px);
+            border:2px solid $white;
+            &:hover{
+                background: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}

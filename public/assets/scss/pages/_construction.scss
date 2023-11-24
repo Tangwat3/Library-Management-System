@@ -1,0 +1,297 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+12-2. construct gallery Styles / .construct-gallery
+12-3. safety section Styles / .safety-section
+12-4. const services Styles / .const-services
+12-5. const partners Styles / .const-partners
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+12-2. construct gallery Styles / .construct-gallery
+-------------------------------------------------------------------*/
+.construct-gallery{
+    color: $white;
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase;
+	.holder{
+		padding: 180px 0 40px;
+		@include v-align(frame, middle);
+		.frame{
+			@include breakpoint($screen-xs-max){
+				max-width: 280px;
+			}
+		}
+	}
+	.txt{
+		display: block;
+		margin: 0 0 14px;
+		font: 32px/56px $font-family-sans-serif;
+	}
+	.title{
+		display: block;
+		margin: 0 0 7px;
+		padding: 0 0 0 9px;
+		font: 48px/40px $font-family-sans-serif;
+		border-left: 10px solid $ucla-gold;
+		@include breakpoint($screen-xs-max){
+			font-size: 30px;
+		}
+		.add{
+			display: block;
+			font-size: 60px;
+			margin: 0 0 5px;
+			font-weight: 900;
+		}
+	}
+	p{margin: 0 0 23px;}
+	.btn{
+        color: $white;
+		font-size: 14px;
+        background: $lime;
+		font-style: normal;
+		padding: 10px 61px 11px 24px;
+        &:before{background: $lime;}
+		&:hover:before{background: $lime;}
+	}
+	.slick-dots{
+		li{
+			padding:0 5px;
+			float: none;
+			@include vertical-align(inline-block, top);
+			button{
+				margin: 0;
+				border: 0;
+				padding: 0;
+				display: block;
+				overflow: hidden;
+				border-radius:50%;
+				text-indent: 9999px;
+				@include square(10px);
+				border:2px solid #c4c4c4;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+12-3. safety section Styles / .safety-section
+-------------------------------------------------------------------*/
+.safety-section{
+	@extend %boxreset;
+	padding: 87px 0 100px;
+    background: $white url(images/icons/map2.png) 50% 0 no-repeat;
+    .dark &{background-color: #2a2a2a;}
+	.about-box{
+        color: $stack;
+		margin: 0 auto 100px;
+		overflow: hidden;
+		max-width: 707px;
+		text-align: center;
+		font: 300 italic 16px/24px $font-family-sans-serif;
+	}
+	h2{
+        color: $lime;
+		margin: 0 0 29px;
+		font: 38px/40px $font-family-sans-serif;
+		.add{font-weight: 700;}
+        .dark &{color: $white;}
+	}
+	h3{
+        color: $white;
+		max-width: 257px;
+        background: $lime;
+		position: relative;
+		margin: -34px 0 0 10px;
+		text-transform: uppercase;
+		padding: 12px 80px 12px 19px;
+		font: 15px/16px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){width: 90%;}
+		.add{
+			display: block;
+			font-size: 21px;
+			font-weight: 700;
+		}
+	}
+	.btn{
+        color: $white;
+		font-size: 14px;
+        background: $lime;
+		font-style: normal;
+		padding: 10px 61px 11px 24px;
+        &:before{background: $lime;}
+		&:hover:before{background: $lime;}
+	}
+	img{width: 100%;}
+	p{margin: 0 0 26px;}
+	.more{
+		top: -11px;
+		right: -10px;
+        color: $white;
+		font-size: 25px;
+		overflow: hidden;
+		position: absolute;
+		padding: 15px 0 0 42px;
+		@include size(84px , 57px);
+		&:before{
+			top: 0;
+			bottom: 0;
+			left: 12px;
+			right: -11px;
+			@extend %after;
+			transform: skewX(-20deg);
+			-ms-transform: skewX(-20deg);
+			-webkit-transform: skewX(-20deg);
+			@include transition (all, 0.4s, ease);
+		}
+		.fa{position: relative;}
+        &:hover:before{background: $lime;}
+	}
+}
+/*------------------------------------------------------------------
+12-4. const services Styles / .const-services
+-------------------------------------------------------------------*/
+.const-services{
+    color: $white;
+	font-size: 14px;
+	@extend %boxreset;
+	line-height: 24px;
+	text-align: center;
+	padding: 87px 0 100px;
+	.container{
+		z-index: 2;
+		position: relative;
+	}
+	.slick-list{border: 1px solid #424242;}
+	.box{
+		width: 25%;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		border-left: 1px solid #424242;
+		@include breakpoint($screen-xs-max){
+			border: 0;
+			width: 100%;
+		}
+		&:first-child{border: 0;}
+		.over{
+			z-index: 5;
+            background: #2c2c2c;
+			@extend %postionreset;
+			@include transition (all, 0.4s, ease);
+		}
+		.frame{
+			@include square(100%);
+			@include transition (all, 0.4s, ease);
+			@include vertical-align(table, middle);
+		}
+		.block{
+			@include square(100%);
+			@include transition (all, 0.4s, ease);
+			@include vertical-align(table-cell, middle);
+		}
+		.text-box{
+			max-height: 0;
+			overflow: hidden;
+			@include transition (all, 0.4s, ease);
+		}
+		.icon{
+			display: block;
+			font-size: 40px;
+			margin: 0 0 23px;
+			@include transition (all, 0.4s, ease);
+		}
+		.title{
+			display: block;
+			margin: 0 0 10px;
+            letter-spacing: 2px;
+			text-transform: uppercase;
+			@include transition (all, 0.4s, ease);
+            font: 600 12px/24px $font-family-sans-serif;
+		}
+		&:hover{
+			.over{background: rgba(0, 0, 0, 0.6);}
+			.text-box{
+				max-height: 100px;
+				padding: 10px 0 0;
+			}
+		}
+	}
+	.slick-arrow{
+		border: 0;
+        color: $white;
+		font-size: 25px;
+		padding: 7px 0 0;
+		position: relative;
+		border-radius: 50%;
+        background: #2c2c2c;
+		text-indent: -9999px;
+		margin: 0 50px 32px 0;
+		@include square(40px);
+		@include transition (all, 0.4s, ease);
+		@include vertical-align(inline-block, top);
+		&:after{
+			top: 7px;
+			left: 15px;
+			line-height: 1;
+			text-indent: 0;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-prev:after{content:"\f104";}
+	.slick-next{
+		top: 0;
+		left: 50%;
+		margin: 0 0 0 4px;
+		position: absolute;
+	}
+	.box-block{
+		padding: 16px 23px 20px 18px;
+		border: 1px solid #ededed;
+		border-top: 0;
+		.dark &{border-color: #494949;}
+		h3{
+			color: $lime;
+			margin: 0 0 17px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font: 700 21px/30px $font-family-sans-serif;
+			.dark &{color: $white;}
+		}
+	}
+	&.style2{
+		padding: 93px 0 100px;
+		.box{
+			.fa{
+				font-size: 34px;
+				margin: 0 0 23px;
+			}
+			&:hover .over .fa{
+                color: $white;
+                margin: 0 0 8px;
+            }
+		}
+	}
+	&.style3 .slick-list{border: 0; color: $stack; text-align: left;}
+}
+/*------------------------------------------------------------------
+12-5. const partners Styles / .const-partners
+-------------------------------------------------------------------*/
+.const-partners{
+	text-align: center;
+	padding: 95px 0 95px;
+	a{
+		@include vertical-align(inline-block, top);
+		&:hover{opacity: 0.8;}
+	}
+	&.style3 a{
+        opacity: 0.4;
+        @include transition (all, 0.4s, ease);
+        &:hover{opacity: 1;}
+	}
+}

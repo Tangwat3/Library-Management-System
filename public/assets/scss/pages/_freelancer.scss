@@ -1,0 +1,208 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+7-2. lancer banner Styles / .lancer-banner
+7-3. lancer about Styles / .lancer-about
+7-4. lancer do Styles / .lancer-do
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+7-2. lancer banner Styles / .lancer-banner
+-------------------------------------------------------------------*/
+.lancer-banner{
+	color: $white;
+	@extend %boxreset;
+	.container{
+		z-index: 99;
+		position: relative;
+	}
+	.text-box{
+		float: right;
+		width: 571px;
+		letter-spacing: 1.8px;
+		@include v-align(frame, middle);
+		font: 16px/20px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+		}
+	}
+	h1{
+		margin: 0 0 17px;
+		letter-spacing: 0;
+		font: 700 68px/70px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 40px;
+			line-height: 50px;
+		}
+	}
+	.btn{
+		border-width: 2px;
+		margin: 0 0 30px 2px;
+	}
+	p{margin: 0 0 28px;}
+}
+/*------------------------------------------------------------------
+7-3. lancer about Styles / .lancer-about
+-------------------------------------------------------------------*/
+.lancer-about{
+	color: $stack;
+	font-size: 15px;
+	line-height: 32px;
+	padding-top: 89px;
+	font-style: italic;
+	padding-bottom: 84px;
+	.txt{
+		width: 48%;
+		float: left;
+		margin: 0 2.5% 0 0;
+		@include breakpoint($screen-xs-max){
+			width: 100%;
+			float: none;
+			margin: 0 0 20px;
+		}
+		p{margin: 0;}
+	}
+	.chart-block{
+		width: 53%;
+		float: left;
+		margin: 0 -12% 0 0;
+		@include breakpoint($screen-xs-max){
+			margin: 0;
+			width: 100%;
+			float: none;
+		}
+	}
+	.box{
+		width: 31.53%;
+		margin: 0 0 13px;
+		font-weight: 400;
+		font-style: normal;
+		@include vertical-align(inline-block, top);
+		@include breakpoint($screen-xs-max){
+			width: 49%;
+		}
+	}
+	.pie-chart {
+		line-height: 20px;
+		position: relative;
+		margin: 0 auto 6px;
+		text-align: center;
+		canvas {
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			display: block;
+			position: absolute;
+		}
+		.pie-chart-percent{
+			left: 0;
+			top: 50px;
+			width: 100%;
+			z-index: 10;
+			color: $shark;
+			display: block;
+			text-align: center;
+			position: absolute;
+			font: 700 15px/20px $font-family-sans-serif;
+			.dark &{color: $white;}
+		}
+		img {
+			max-width:100%;
+			vertical-align: middle;
+		}
+	}
+	.pie-description {
+		color: $shark;
+		display: block;
+		font-size: 11px;
+        font-weight: 600;
+		text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+    strong.title {
+        font-style: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+/*------------------------------------------------------------------
+7-4. lancer do Styles / .lancer-do
+-------------------------------------------------------------------*/
+.lancer-do{
+	text-align: center;
+	.list-do{
+		font-size: 14px;
+		overflow: hidden;
+		line-height: 22px;
+		@extend %listreset;
+		border: solid $gainsboro;
+		border-width: 1px 1px 0 0;
+		.dark &{border-color: #494949;}
+		li{
+			width: 25%;
+			float: left;
+			border: solid $gainsboro;
+			border-width: 0 0 1px 1px;
+			.dark &{border-color: #494949;}
+			@include breakpoint($screen-xs-max){
+				width: 50%;
+			}
+			@include breakpoint(479px){
+				width: 100%;
+			}
+		}
+		p{
+			max-height: 0;
+			overflow: hidden;
+			margin: 0 25px 0 29px;
+			@include transition (all, 0.4s, ease);
+		}
+		a{
+			color: $stack;
+			height: 270px;
+			display: block;
+			@include v-align(frame, middle);
+			@include transition (all, 0.4s, ease);
+			.dark &{color: $white;}
+			&:hover{
+				background: $shark;
+				text-decoration: none;
+				.text{color: $white;}
+				p{
+					max-height: 99px;
+					margin: 22px 25px 6px 29px;
+				}
+			}
+		}
+	}
+	.fa{
+		display: block;
+		font-size: 23px;
+		margin: 5px 0 26px;
+		text-shadow: 0 0 5px rgba(0,0,0,0.1);
+		@include transition (all, 0.4s, ease);
+	}
+	.text{
+		color: $shark;
+		display: block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $white;}
+	}
+	&.style2{
+		.fa{text-shadow: none;}
+		.list-do a:hover{
+			color: $white;
+			.fa,
+			.text{color: $white;}
+		}
+	}
+}

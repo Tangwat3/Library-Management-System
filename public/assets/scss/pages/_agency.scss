@@ -1,0 +1,2585 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1-2. page wrapper Styles / #wrapper
+1-3. page w1 Styles / .w1
+1-4. mainslider Styles / .mainslider
+1-5. main slider Styles / .main-slider
+1-6. main Styles / #main
+1-7. history section Styles / .history-section
+1-8. f iconbox Styles / .f-iconbox
+1-9. banner Styles / .banner
+1-10. team block Styles / .team-block
+1-11. team box Styles / .team-box
+1-12. testimon section Styles / .testimon-section
+1-13. work section Styles / .work-section
+1-14. portfolio block Styles / .portfolio-block
+1-15. porto nav Styles / .porto-nav
+1-16. portfolio text Styles / .portfolio-text
+1-17. work slider Styles / .work-slider
+1-18. isotop controls Styles / .isotop-controls
+1-19. isotop controls2 Styles / .isotop-controls2
+1-20. isotop controls3 Styles / .isotop-controls3
+1-21. isotop controls4 Styles / .isotop-controls4
+1-22. more feature Styles / .more-feature
+1-23. price section Styles / .price-section
+1-24. blog section Styles / .blog-section
+1-25. blog m post Styles / .blog-m-post
+1-26. facts section Styles / .facts-section
+1-27. client box Styles / .client-box
+1-28. team lightbox Styles / .team-lightbox
+1-29. about section Styles / .about-section
+1-30. counter section Styles / .counter-section
+1-31. banner img Styles / .banner-img
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1-2. page wrapper Styles / #wrapper
+-------------------------------------------------------------------*/
+#wrapper{@extend %boxreset;}
+/*------------------------------------------------------------------
+1-3. page w1 Styles / .w1
+-------------------------------------------------------------------*/
+.w1{
+	position: relative;
+	@include transition (margin, 0.4s, ease);
+}
+.tp-loader.spinner4{display: none !important;}
+/*------------------------------------------------------------------
+1-4. mainslider Styles / .mainslider
+-------------------------------------------------------------------*/
+.mainslider{
+	color: $white;
+	overflow: hidden;
+	position: relative;
+	.title{
+		display: block;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: 21px !important;
+		font-weight: 300 !important;
+		line-height: 25px !important;
+		@include breakpoint($screen-sm-max){
+			font-size: 18px !important;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 16px !important;
+			line-height: 20px !important;
+			margin: -30px 0 0 -10px !important;
+		}
+	}
+	.title2{
+		font: 24px/25px $font-family-sans-serif !important;
+		@include breakpoint($screen-sm-max){
+			font-size: 18px !important;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 16px !important;
+			line-height: 20px !important;
+		}
+	}
+	.heading{
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.4px !important;
+		font: 500 54px/56px $font-family-sans-serif !important;
+		@include breakpoint($screen-md-max){
+			font-size: 40px !important;
+			line-height: 50px !important;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 25px !important;
+			line-height: 30px !important;
+		}
+		.add{font-weight: 300;}
+	}
+	.heading2{
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.6px !important;
+		font:700 60px/65px $font-family-sans-serif !important;
+		@include breakpoint($screen-md-max){
+			font-size: 40px !important;
+			line-height: 50px !important;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 25px !important;
+			line-height: 30px !important;
+		}
+	}
+	.btn-box{
+		overflow: hidden;
+		text-align: center;
+		cursor: default !important;
+		@include breakpoint($screen-xs-max){
+			margin: 80px 0 0 !important;
+		}
+		.btn{
+			margin: 0 3px 0 5px;
+			font-size: 12px !important;
+			@include breakpoint($screen-xs-max){
+				margin: 0 3px;
+				padding: 10px !important;
+				border-width: 1px !important;
+			}
+		}
+	}
+	.tp-bullets {display: none !important;}
+	.slideset{position: relative;}
+}
+/*------------------------------------------------------------------
+1-5. main slider Styles / .main-slider
+-------------------------------------------------------------------*/
+.main-slider{
+	overflow: hidden;
+	position: relative;
+	text-transform: uppercase;
+	.beans-fadeslider{
+		height: 80px;
+		overflow: visible;
+		@include breakpoint($screen-xs-max){
+			&.text-rotator h1{
+				font-size: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+	.caption{
+		z-index: 99;
+		width: 100%;
+		color: $white;
+		min-height: 600px;
+		text-align: center;
+		position: relative;
+		padding: 130px 0 0;
+		@include v-align(holder, middle);
+		@include breakpoint($screen-xs-max){
+			min-height: 400px;
+			padding: 110px 0 0;
+		}
+		.holder{
+			width: 99%;
+			padding: 0 0 11px;
+			@include breakpoint($screen-xs-max){padding: 90px 0 0;}
+		}
+	}
+	.title{
+		display: block;
+		font-size: 21px;
+		font-weight: 300;
+		margin: 0 0 41px;
+		line-height: 25px;
+		text-transform: uppercase;
+		@include breakpoint($screen-sm-max){
+			font-size: 18px;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	.title2{
+		display: block;
+		margin: 0 0 41px;
+		text-transform: capitalize;
+		font: 24px/25px $font-family-sans-serif;
+		@include breakpoint($screen-sm-max){
+			font-size: 18px;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	.heading,
+	.heading2{
+		margin: 0 0 29px;
+		text-align: center;
+		text-transform: uppercase;
+		font:700 60px/65px $font-family-sans-serif;
+		@include breakpoint($screen-md-max){
+			font-size: 40px;
+			line-height: 50px;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 25px;
+			margin: 0 0 15px;
+			line-height: 30px;
+		}
+	}
+	.btn-box{
+		overflow: hidden;
+		text-align: center;
+		@include breakpoint($screen-xs-max){
+			margin: 40px 0 0;
+		}
+		.btn{
+			margin: 0 3px 0 5px;
+			@include breakpoint($screen-xs-max){
+				margin: 0 0 15px;
+			}
+		}
+	}
+	.slick-arrow{
+		right: 0;
+		top: 50%;
+		border: 0;
+        opacity: 0;
+		z-index: 99;
+		padding: 0;
+		width: 20px;
+		height: 50px;
+		font-size: 0;
+		color: $white;
+		background: none;
+		text-align: left;
+		margin: -46px 0 0;
+        visibility: hidden;
+		position: absolute;
+		text-indent: 9999px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-xs-max){
+			margin: -20px 0 0;
+			right: 15px;
+		}
+		&:hover:after{opacity: 0.8;}
+		&:after{
+			top: 0;
+			left: 3px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 60px;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-prev{
+		left: 0;
+		right: auto;
+		&:after{content:"\f104";}
+	}
+	.slick-dots{
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        @include transition (all, 0.4s, ease);
+		li{
+			margin: 0 3px 0 2px;
+			@include vertical-align(inline-block, top);
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			display: block;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(12px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.slick-track .caption > .holder {
+		transition: all 2.5s ease;
+		position: relative;
+		bottom: -50px;
+		opacity: 0;
+	}
+	.slick-track .slick-active .caption > .holder {
+		transition: all 1s ease 1s;
+		opacity: 1;
+		bottom: 0;
+	}
+	.stretch{z-index: auto !important;}
+	&.style3{
+		.caption{
+			@include breakpoint($screen-xs-max){min-height: 600px;}
+			.holder{padding: 140px 0 11px;}
+		}
+		.title{
+			color: $white;
+			margin: 0 0 3px;
+			font: 32px/40px $font-family-sans-serif;
+		}
+		h1{
+			color: $white;
+			margin: 0 0 11px;
+			font: 700 60px/80px $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 30px;
+				line-height: 45px;
+			}
+		}
+	}
+    &:hover{
+        .slick-next{
+            opacity: 1;
+            right: 29px;
+            visibility: visible;
+		    @include breakpoint($screen-xs-max){right: 15px;}
+        }
+        .slick-prev{
+            opacity: 1;
+            left: 29px;
+            right: auto;
+            visibility: visible;
+            @include breakpoint($screen-xs-max){
+                right: auto;
+                left: 15px;
+            }
+        }
+        .slick-dots{
+            opacity: 1;
+            bottom:20px;
+            visibility: visible;
+        }
+    }
+}
+/*------------------------------------------------------------------
+1-6. main Styles / #main
+-------------------------------------------------------------------*/
+#main{@extend %boxreset;}
+/*------------------------------------------------------------------
+1-7. history section Styles / .history-section
+-------------------------------------------------------------------*/
+.history-section{
+	font-size: 16px;
+	line-height: 26px;
+	padding: 88px 0 0;
+	@include breakpoint($screen-xs-max){
+		line-height: 20px;
+		padding: 30px 0 0;
+	}
+	.text-box{
+		max-width: 840px;
+		color: $storm-dust;
+		font-style: italic;
+		text-align: center;
+		margin: 0 auto 53px;
+		@include breakpoint($screen-xs-max){
+			margin: 0 auto 30px;
+		}
+	}
+	.img-box{
+		font-size: 0;
+		overflow: hidden;
+		letter-spacing: -4px;
+		@include breakpoint($screen-xs-max){
+			text-align: center;
+		}
+		img{width: 100%;}
+		.img1{
+			margin: 5px 10px 0 0;
+			@include img-responsive;
+			max-width: 287px;
+			@include vertical-align(inline-block, bottom);
+			@include breakpoint($screen-md-max){max-width: 225px;}
+			@include breakpoint($screen-sm-max){max-width: 185px;}
+			@include breakpoint($screen-xs-max){max-width: 100%;}
+		}
+		.img2{
+			margin: 5px 10px 0 0;
+			@include img-responsive;
+			max-width: 569px;
+			@include vertical-align(inline-block, bottom);
+			@include breakpoint($screen-md-max){max-width: 470px;}
+			@include breakpoint($screen-sm-max){max-width: 330px;}
+			@include breakpoint($screen-xs-max){max-width: 100%;}
+		}
+		.img3{
+			@include img-responsive;
+			max-width: 287px;
+			@include vertical-align(inline-block, bottom);
+			@include breakpoint($screen-md-max){max-width: 225px;}
+			@include breakpoint($screen-sm-max){max-width: 185px;}
+			@include breakpoint($screen-xs-max){max-width: 100%;}
+		}
+	}
+	.img-center{
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.title{
+		display: block;
+		margin: 0 0 20px;
+		font-weight: 700;
+	}
+	&.style2{
+		font-size: 18px;
+		font-weight: 300;
+		@include breakpoint($screen-xs-max){font-size: 16px;}
+		p{margin: 0 0 57px;}
+	}
+}
+/*------------------------------------------------------------------
+1-8. f iconbox Styles / .f-iconbox
+-------------------------------------------------------------------*/
+.f-iconbox{
+	z-index: 5;
+	font-size: 14px;
+	line-height: 24px;
+	position: relative;
+	padding-left: 96px;
+	.icon{
+		left: 0;
+		top: 7px;
+		font-size: 25px;
+		padding: 20px 0 0;
+		text-align: center;
+		border-radius: 50%;
+		position: absolute;
+		@include square(68px);
+		border: 2px solid transparent;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-md-max){margin: 0 8px 0 0;}
+	}
+	.title{
+		color: $shark;
+		display: block;
+		margin: 0 0 9px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		.dark &{color: $white;}
+	}
+	p{margin: 0;}
+	&.large{
+		font-size: 15px;
+		.title{font-size: 16px;}
+	}
+	&.right{
+		padding-left: 0;
+		text-align: right;
+		padding-right: 96px;
+		.icon{
+			right: 0;
+			left: auto;
+		}
+	}
+	&.light{
+		.icon{
+			color: $gainsboro;
+			border-color: $gainsboro;
+			.dark &{
+				color: $stack;
+				border-color: #494949;
+			}
+		}
+		&:hover .icon{color: $white;}
+	}
+	&.radius-zero .icon{border-radius: 0;}
+	&.noicon{
+		padding-right: 0;
+		.icon{display: none;}
+	}
+	&:hover .icon{color: $white;}
+	&:hover .icon.border-zero{color: inherit;}
+}
+/*------------------------------------------------------------------
+1-9. banner Styles / .banner
+-------------------------------------------------------------------*/
+.banner{
+	color: $white;
+	@extend %boxreset;
+	text-align: center;
+	position: relative;
+	padding: 89px 0 95px;
+	font: 300 italic 32px/54px $font-family-sans-serif;
+	@include element(after, 0, 0, 0, 0, transparent);
+	&:after{background: rgba(55, 63, 69, 0.7);}
+	p{margin: 0 0 34px;}
+	@include breakpoint($screen-md-max){
+		font-size: 30px;
+		line-height: 50px;
+	}
+	@include breakpoint($screen-xs-max){
+		font-size: 20px;
+		line-height: 25px;
+	}
+	&.style2:after{background: rgba(0, 0, 0, 0.1);}
+	&.style3:after{background: rgba(0, 0, 0, 0.5);}
+	.parallax-holder{z-index: -1;}
+}
+/*------------------------------------------------------------------
+1-10. team block Styles / .team-block
+-------------------------------------------------------------------*/
+.team-block{
+	font-size: 11px;
+	font-weight: 700;
+	overflow: hidden;
+	line-height: 20px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 10px;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	.img-box{
+		position: relative;
+		margin: 0 0 25px;
+		img{width: 100%;}
+	}
+	.over{
+		opacity: 0;
+		@extend %after;
+		visibility: hidden;
+		@extend %postionreset;
+		@include transition (all, 0.4s, ease);
+	}
+	.social-network{
+		top: 50%;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		color: $white;
+		font-size: 21px;
+		margin: -11px 0 0;
+		position: absolute;
+		visibility: hidden;
+		li{
+			opacity: 0;
+			position: relative;
+			visibility: hidden;
+			padding: 0 7px 0 14px;
+			@include transition (all, 0.4s, ease);
+		}
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				opacity: 0.85;
+				text-decoration: none;
+			}
+		}
+		.add{
+			-webkit-transform: translateY(-80px);
+			-ms-transform: translateY(-80px);
+			transform: translateY(-80px);
+		}
+		.add2{
+			-webkit-transform: translateY(80px);
+			-ms-transform: translateY(80px);
+			transform: translateY(80px);
+		}
+	}
+	.heading{
+		margin: 0;
+		color: $shark;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 700 14px/ 20px $font-family-base;
+		a{
+			color: $shark;
+			.dark &{color: $white;}
+			&:hover{
+				opacity: 0.85;
+				text-decoration: none;
+			}
+		}
+		.dark &{color: $white;}
+	}
+	&:hover{
+		.social-network,
+		.over{
+			opacity: 0.85;
+			visibility: visible;
+		}
+		.add,.add2{
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+	&.style2{
+		text-transform: lowercase;
+		background: $desert-storm;
+		.dark &{background: #191919;}
+		.heading{
+			text-transform: lowercase;
+			text-transform: capitalize;
+		}
+		.title{
+			display: block;
+			padding: 5px 0 20px;
+			text-transform: uppercase;
+		}
+		.block{
+			overflow: hidden;
+			padding: 0 8% 24px;
+		}
+		&:hover{
+			background: $shark;
+			.heading{color: $white;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-11. team box Styles / .team-box
+-------------------------------------------------------------------*/
+.team-box{
+	color: $stack;
+	font-size: 11px;
+	font-weight: 700;
+	overflow: hidden;
+	line-height: 20px;
+	text-align: center;
+	position: relative;
+	background: $desert-storm;
+	text-transform: uppercase;
+	.dark &{background: #191919;}
+	@include breakpoint($screen-sm-max){
+		margin-bottom: 20px;
+	}
+	.plus{
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		color: $white;
+		font-size: 150px;
+		font-weight: 100;
+		visibility: hidden;
+		position: absolute;
+		margin: -10px 0 0 -32px;
+		font-family: $font-family-serif;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+	.img-box{
+		position: relative;
+		margin: 0 0 25px;
+		img{width: 100%;}
+	}
+	.over{
+		opacity: 0;
+		@extend %after;
+		visibility: hidden;
+		@extend %postionreset;
+		@include transition (all, 0.4s, ease);
+	}
+	p{
+        margin: 0 0 26px;
+        letter-spacing: 1px;
+    }
+	.social-network{
+		margin: 0;
+		color: $stack;
+		font-size: 17px;
+		padding: 15px 0 14px;
+		border-top: 1px solid $white;
+		.dark &{border-color: #494949;}
+		li{
+			position: relative;
+			padding: 0 12px 0 10px;
+		}
+		a{
+			color: $stack;
+			@include transition (all, 0.4s, ease);
+			&:hover{
+				opacity: 0.85;
+				text-decoration: none;
+			}
+		}
+	}
+	.heading{
+		color: $shark;
+		margin: 0 0 9px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 700 14px/20px $font-family-base;
+		@include breakpoint($screen-md-max){font-size: 12px;}
+		.dark &{color: $white;}
+		a{
+			color: $shark;
+			.dark &{color: $white;}
+		}
+		a:hover{
+			opacity: 0.85;
+			text-decoration: none;
+		}
+	}
+	.info-box{
+		font-size: 11px;
+		font-weight: 700;
+		overflow: hidden;
+		padding: 5px 0 0;
+		.add-text{
+			float: left;
+			margin: 0 30px 0 0;
+			@include breakpoint($screen-md-max){
+				margin: 0 10px 0 0;
+			}
+			&:first-child{
+				margin: 0;
+				float: right;
+			}
+		}
+	}
+	&:hover{
+		background: $shark;
+		.heading{color: $white;}
+		.social-network a{color: $white;}
+		.over{
+			opacity: 0.9;
+			visibility: visible;
+		}
+		.plus{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&.style2{
+		font-size: 13px;
+		margin: 0 0 27px;
+		overflow: hidden;
+		text-align: left;
+		line-height: 24px;
+        font-weight: normal;
+		text-transform: inherit;
+		background: $desert-storm;
+		border: 1px solid #f2f2f2;
+		.dark &{
+			background: #191919;
+			border-color: #494949;
+		}
+		@include breakpoint($screen-md-max){
+			font-size: 11px;
+			line-height: 20px;
+		}
+		&.right{
+			text-align: right;
+			@include breakpoint($screen-sm-max){
+				text-align: left;
+			}
+			.img-box{
+				float: right;
+				@include breakpoint($screen-sm-max){
+					float: none;
+				}
+			}
+			.block{
+				padding: 30px 28px 0 30px;
+				@include breakpoint($screen-md-max){
+					padding: 15px 10px 0;
+				}
+				@include breakpoint($screen-sm-max){
+					padding: 25px 15px;
+				}
+			}
+			.social-network li{
+				padding: 0 1px 0 21px;
+				@include breakpoint($screen-sm-max){
+					padding: 0 21px 0 1px;
+				}
+			}
+			.info-box .add-text:first-child{
+				margin: 0;
+				float: right;
+			}
+		}
+		p{
+			margin: 0 0 20px;
+			@include breakpoint($screen-md-max){
+				margin: 0 0 10px;
+			}
+		}
+		.block{
+			overflow: hidden;
+			padding: 30px 28px 0 28px;
+			@include breakpoint($screen-md-max){
+				padding: 15px 10px 0;
+			}
+			@include breakpoint($screen-sm-max){
+				padding: 25px 15px;
+			}
+		}
+		.img-box{
+			margin: 0;
+			float: left;
+            max-width: 270px;
+			@include breakpoint($screen-md-max){
+				max-width: 200px;
+			}
+			@include breakpoint($screen-sm-max){
+				float: none;
+				max-width: 100%;
+			}
+		}
+		.heading{margin: 0 0 3px;}
+		.subtitle{
+			display: block;
+			font-size: 11px;
+			margin: 0 0 18px;
+			text-transform: uppercase;
+			@include breakpoint($screen-md-max){
+				margin: 0 0 9px;
+			}
+		}
+		.social-network{
+			padding: 0;
+			border-top: 0;
+			font-size: 16px;
+			li{padding: 0 22px 0 0;}
+		}
+		&:hover{
+			h3{
+				color: $shark;
+				.dark &{color: $white;}
+			}
+			.social-network{
+				background: transparent;
+				a{color: $stack;}
+			}
+		}
+	}
+	&.style3{
+		.img-box{margin: 0;}
+		.over{background: rgba(0, 0, 0, 0.95) !important;}
+		.social-network{
+			margin: 0 0 25px;
+			border-bottom: 1px solid $white;
+			.dark &{border-color: #494949;}
+			a{color: $white;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-12. testimon section Styles / .testimon-section
+-------------------------------------------------------------------*/
+.testimon-section{
+	overflow: hidden;
+	position: relative;
+	padding: 90px 0 80px;
+	@extend %backgroundreset;
+	@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.4));
+	.icon{
+		color: $white;
+		display: block;
+		font-size: 21px;
+		padding: 17px 0 0;
+		text-align: center;
+		border-radius: 50%;
+		margin: 0 auto 24px;
+		@include square(63px);
+	}
+	.img{
+		display: block;
+		border-radius: 50%;
+		margin: 0 auto 29px;
+	}
+	blockquote {
+		padding: 0;
+		color: $white;
+		border-left: 0;
+		max-width: 885px;
+		text-align: center;
+		margin: 0 auto 60px;
+		font: 300 italic 21px/30px $font-family-sans-serif;
+		a{
+			color: $white;
+			&:hover{
+				opacity: 0.8;
+				text-decoration: none;
+			}
+		}
+	}
+	q{
+		display: block;
+		margin: 0 0 23px;
+		&:after,
+		&:before{font-size: 30px;}
+	}
+	cite{
+		display: block;
+		font: 16px/20px $font-family-base;
+	}
+	.name{
+        display: block;
+        font-weight: 400;
+        font-weight: 600;
+        margin-bottom: 6px;
+	    letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+	.comp-name{
+		display: block;
+		font-size: 11px;
+		font-weight: 700;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	.slick-dots{
+		li{
+			margin: 0 3px;
+			@include vertical-align(inline-block, top);
+		}
+		button{
+			margin: 0;
+			border: 0;
+			padding: 0;
+			display: block;
+			background: none;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(10px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.stretch,
+	.parallax-holder{z-index: -1;}
+	&.alt-version{
+		blockquote{
+			color: $stack;
+			a{color: $stack;}
+			q{
+				margin: 0 0 49px;
+				&:before,
+				&:after{display: none;}
+			}
+			.fa{
+				display: block;
+				margin: 0 0 27px;
+			}
+			.name{
+				color: $shark;
+				.dark &{color: $white;}
+			}
+		}
+		.slick-dots button{
+			border-color:  $gainsboro;
+			@include square(12px);
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-13. work section Styles / .work-section
+-------------------------------------------------------------------*/
+.work-section{
+	overflow: hidden;
+	.icotop-holder{
+		overflow: hidden;
+		position: relative;
+	}
+	.slick-dots{
+	    bottom:24px;
+	    li{
+	        float: none;
+	        padding:0 4px;
+	        @include vertical-align(inline-block, top);
+	        &.slick-active button{background: $white;}
+	        button{
+	        	margin: 0;
+	        	border: 0;
+	        	padding: 0;
+	            display: block;
+	        	background: none;
+	            border-radius:50%;
+	            text-indent: -9999px;
+	            @include square(10px);
+	            border:2px solid $white;
+	            &:hover{
+	                background: $white;
+	                text-decoration: none;
+	            }
+	        }
+	    }
+	}
+    &.space{
+        padding-left: 30px;
+        @include breakpoint($screen-xs-max){padding-left: 0;}
+        #work-filter{
+            padding-right: 30px;
+            @include breakpoint($screen-xs-max){padding-right: 0;}
+        }
+    }
+}
+/*------------------------------------------------------------------
+1-14. portfolio block Styles / .portfolio-block
+-------------------------------------------------------------------*/
+.portfolio-block{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+    letter-spacing: 2px;
+	a{
+		color: $stack;
+		&:hover{text-decoration: none;}
+	}
+	.box{
+		position: relative;
+		margin: 0 30px 30px 0;
+        @include breakpoint($screen-xs-max){margin: 0 0 30px;}
+		&:hover{
+			.over{
+				opacity: 1;
+				visibility: visible;
+			}
+			.over-frame{
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+	}
+	.box-holder{
+        padding-top: 100%;
+        &.half{
+            padding-top: 50%;
+            @include breakpoint($screen-xs-max){padding-top: 100%;}
+        }
+    }
+	.holder{
+		@include square(100%);
+		@include vertical-align(table, middle)
+	}
+	.frame{
+		padding: 19px 0 0;
+		@include square(100%);
+		@include vertical-align(table-cell, middle)
+	}
+	.over{
+		opacity: 0;
+		z-index: 99;
+		text-align: center;
+		visibility: hidden;
+		@extend %postionreset;
+		text-transform: uppercase;
+		background: rgba(0, 0, 0, 0.9);
+		@include transition (all, 0.5s, ease);
+        font: 600 12px/20px $font-family-sans-serif;
+		.plus{
+			height: 40px;
+			display: block;
+			font-size: 120px;
+			font-weight: 100;
+			margin: 0 0 16px;
+			font-family: $font-family-serif;
+            &.small{
+                font-size: 80px;
+                height: 36px;
+                margin: -17px 0 12px;
+            }
+		}
+		&:hover{text-decoration: none;}
+        &.capitalize{
+            text-transform: lowercase;
+            text-transform: capitalize;
+        }
+	}
+	.over-frame{
+		@include transition (all, 0.4s, ease);
+		-webkit-transform: translateY(80px);
+		-ms-transform: translateY(80px);
+		transform: translateY(80px);
+		display: block;
+        &.no-animate{
+		    @include transition (all, 0s, ease);
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+	}
+	.title{
+		color: $white;
+		display: block;
+		margin: 0 0 10px;
+		padding: 0 0 14px;
+		position: relative;
+		text-transform: capitalize;
+		font: 600 18px/30px $font-family-sans-serif;
+		&:after{
+			bottom: 0;
+			left: 50%;
+			@extend %after;
+			margin: 0 0 0 -14px;
+			@include size(28px, 4px);
+		}
+		&.upper{text-transform: uppercase;}
+	}
+	.heading{
+        color:$white;
+        display: block;
+		margin: 0 0 15px;
+		text-transform: capitalize;
+		font:italic 300 48px/50px $font-family-base;
+		@include breakpoint($screen-md-max){
+			font-size: 30px;
+			line-height: 40px;
+		}
+		&.upper{text-transform: uppercase;}
+	}
+	img{width: 100%;}
+	.search{
+		bottom: 0;
+		right: 57px;
+		color: $white;
+		font-size: 26px;
+		padding: 13px 0 0;
+		text-align: center;
+		position: absolute;
+		@include square(57px);
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			color: $shark;
+			background: $desert-storm;
+		}
+	}
+	.link{
+		right: 0;
+		bottom: 0;
+		color: $shark;
+		font-size: 25px;
+		padding: 16px 0 0;
+		text-align: center;
+		position: absolute;
+		@include square(57px);
+		background: $desert-storm;
+		@include transition (all, 0.4s, ease);
+		&:hover{
+			color: $white;
+			text-decoration: none;
+			background: $carmine-pink;
+		}
+	}
+	.btn{
+		border-width:2px;
+		font-weight: 700;
+		&:hover{
+			color:$black;
+			background: $white;
+			border-color:$white;
+		}
+	}
+    .text-box{
+        z-index: 100;
+        position: relative;
+        padding: 11px 18px 6px;
+        background: $desert-storm;
+        .dark &{background: #191919;}
+        &:after{
+            left: 21px;
+            top: -14px;
+            @extend %after;
+            @include arrow(0, 7px, 16px, 7px, transparent, transparent, $desert-storm, transparent);
+            .dark &{border-color: transparent transparent #191919 transparent;}
+        }
+    }
+    .img-box{
+        overflow: hidden;
+        position: relative;
+    }
+    &.style2{
+        .over{
+            top: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+        .box:hover .over{top: 0;}
+    }
+    &.style3 .box:hover .over{
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    &.style4{
+        .link,
+        .search{
+            right: 50%;
+            bottom: 50%;
+        }
+        .link{margin: 0 -37px -30px 0;}
+        .search{margin: 0 20px -30px 0;}
+        .search.center{margin: 0 -28px -30px 0;}
+    }
+    &.style5{
+        .title{color:$shark;}
+        .over{
+            opacity: 1;
+            background: none;
+            visibility: visible;
+        }
+        .holder{
+            top:auto;
+            height: auto;
+            display: block;
+            @extend %postionreset;
+        }
+        .frame{
+            padding: 0;
+            display: block;
+        }
+        .over-frame{
+            background: $white;
+            transition:all 0.25s linear;
+            padding:28px 20px 29px 28px;
+            transform: translateY(160px);
+            -ms-transform: translateY(160px);
+            -webkit-transform: translateY(160px);
+            @include element2(before, -14px, auto, auto, 28px);
+            &:before{@include arrow(0, 14px, 14px, 14px, transparent, transparent, $white, transparent);}
+            @include breakpoint($screen-md-max){
+                transform: translateY(190px);
+                -ms-transform: translateY(190px);
+                -webkit-transform: translateY(190px);
+            }
+        }
+        img{
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            @include transition (all, 0.4s, ease);
+        }
+        .box:hover{
+            .studio-over{
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+            img{
+                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+            }
+        }
+    }
+    &.style6{
+        .title{
+            color: $black2;
+            .dark &{color: $stack;}
+            a{
+                color: $black2;
+                @include transition (all, 0.4s, ease);
+                .dark &{color: $stack;}
+                &:hover{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .box:hover{
+            .text-box{
+                background: $shark;
+                &:after{border-color: transparent transparent $shark transparent;}
+            }
+            .title{
+                color: $white;
+                a{
+                    color: $white;
+                    &:hover{color: $black2;}
+                }
+            }
+        }
+    }
+}
+/*------------------------------------------------------------------
+1-15. porto nav Styles / .porto-nav
+-------------------------------------------------------------------*/
+.porto-nav{
+	margin:0;
+    color: $stack;
+	font-size: 11px;
+	line-height:14px;
+	overflow: hidden;
+	text-transform: uppercase;
+	li{
+		padding: 0;
+		@include element2(after, 0, auto, auto, 0);
+		&:before{content:"/";}
+		&:first-child:before{display: none;}
+	}
+    a{color: $stack;}
+}
+/*------------------------------------------------------------------
+1-16. portfolio text Styles / .portfolio-text
+-------------------------------------------------------------------*/
+.portfolio-text{
+    float: left;
+    width: 100%;
+	color: $white;
+	background: $shark;
+    position: relative;
+	.dark &{background: #191919;}
+	font: 300 24px/44px $font-family-serif;
+	@include breakpoint($screen-md-max){
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.box-holder{
+		padding-top: 50%;
+        position: relative;
+		@include breakpoint($screen-sm-max){padding-top: 35%;}
+		@include breakpoint($screen-xs-max){padding-top: 100%;}
+		@include breakpoint(479px){padding-top: 80%;}
+	}
+	.holder{
+		display: block;
+		text-align: center;
+		@extend %postionreset;
+	}
+	.frame{
+		margin : 0 auto;
+		max-width: 290px;
+		@include vertical-align(table, top);
+	}
+	.block{
+		max-width: 500px;
+		overflow: hidden;
+		padding: 80px 0 0;
+		@include square(100%);
+		@include breakpoint(1480px){
+			padding: 40px 0 0;
+		}
+		@include breakpoint($screen-sm-max){
+			padding: 80px 0 0;
+		}
+	}
+	p{margin: 0 0 16px;}
+	.btn{
+		color: $stack;
+		border-color: $stack;
+		&:hover{color: $white;}
+	}
+}
+.coll-2{
+	width: 50%;
+	@include breakpoint(500px){
+		width: 100%;
+	}
+}
+.coll-3{
+	width: 33.333%;
+	@include breakpoint($screen-sm-max){
+		width: 50%;
+	}
+	@include breakpoint(500px){
+		width: 100%;
+	}
+}
+.coll-4{
+	width: 25%;
+	@include breakpoint($screen-sm-max){
+		width: 50%;
+	}
+	@include breakpoint(500px){
+		width: 100%;
+	}
+}
+.coll-5{
+	width: 20%;
+	@include breakpoint(1400px){
+        width: 25%;
+    }
+	@include breakpoint($screen-md-max){
+        width: 33.333%;
+    }
+	@include breakpoint($screen-sm-max){
+		width: 50%;
+	}
+	@include breakpoint(500px){
+		width: 100%;
+	}
+}
+.coll-6{
+	width: 16.6666%;
+	@include breakpoint($screen-md-max){
+		width: 25%;
+	}
+	@include breakpoint($screen-sm-max){
+		width: 33.33%;
+	}
+	@include breakpoint(767px){
+		width: 50%;
+	}
+	@include breakpoint(500px){
+		width: 100%;
+	}
+}
+.coll3-holder{margin: 0 -1px 0 0;}
+.nospace .box{margin: 0;}
+/*------------------------------------------------------------------
+1-17. work slider Styles / .work-slider
+-------------------------------------------------------------------*/
+.work-slider{
+	.slick-arrow{
+		left: 79%;
+		border: 0;
+		z-index: 6;
+		font-size: 0;
+		color: $shark;
+		bottom: -68px;
+		background: #ddd;
+		position: absolute;
+		border-radius: 50%;
+		text-indent: 9999px;
+		@include square(40px);
+		@include transition (all, 0.4s, ease);
+		@include vertical-align(inline-block, top);
+		@include breakpoint(1605px){left: 80%;}
+		@include breakpoint(1120px){
+			left: auto;
+			right: 100px;
+		}
+		@include breakpoint(479px){right: 5px;}
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
+		.dark &{
+			color: $white;
+			background: #191919;
+		}
+		&:after{
+			top: 6px;
+			left: 14px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 25px;
+			content:"\f105";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+	.slick-prev{
+		left: 76.5%;
+		@include breakpoint(1120px){
+			left: auto;
+			right: 150px;
+		}
+		@include breakpoint(479px){right: 50px;}
+		&:after{content:"\f104";}
+	}
+	.slick-dots{
+	    bottom:24px;
+	    li{
+	        float: none;
+	        padding:0 4px;
+	        @include vertical-align(inline-block, top);
+	        &.slick-active button{background: $white;}
+	        button{
+	        	margin: 0;
+	        	border: 0;
+	        	padding: 0;
+	            display: block;
+	        	background: none;
+	            border-radius:50%;
+	            text-indent: -9999px;
+	            @include square(10px);
+	            border:2px solid $white;
+	            &:hover{
+	                background: $white;
+	                text-decoration: none;
+	            }
+	        }
+	    }
+	}
+}
+/*------------------------------------------------------------------
+1-18. isotop controls Styles / .isotop-controls
+-------------------------------------------------------------------*/
+.isotop-controls{
+	margin: 0 0 62px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font: 600 12px/20px $font-family-sans-serif;
+	@include breakpoint($screen-xs-max){
+		margin: 0 0 20px;
+	}
+	li{
+		margin: 0 -8px;
+		vertical-align: top;
+		@include breakpoint($screen-xs-max){
+			margin: 0 0 5px;
+		}
+		&.active a{color: $white;}
+	}
+	a{
+		color: $lime;
+		display: block;
+		padding: 7px 20px;
+		@include transition (all, 0.4s, ease);
+		.dark &{color: $white;}
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	&.leftalign{text-align: left;}
+	&.rightalign{text-align: right;}
+}
+/*------------------------------------------------------------------
+1-19. isotop controls2 Styles / .isotop-controls2
+-------------------------------------------------------------------*/
+.isotop-controls2{
+	margin: 0 0 62px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font: 600 12px/20px $font-family-sans-serif;
+	@include breakpoint($screen-xs-max){
+		margin: 0 0 20px;
+	}
+	a{
+		color: $shark;
+		display: block;
+		padding: 0 0 14px;
+		position: relative;
+		.dark &{color: $white;}
+		&:after{
+			left: 50%;
+			opacity: 0;
+			bottom: 1px;
+			@extend %after;
+			overflow: hidden;
+			visibility: hidden;
+			margin: 0 0 0 -18px;
+			@include size(0, 4px);
+			@include transition (all, 0.4s, ease);
+		}
+		&:hover{
+			text-decoration: none;
+			&:after{
+				opacity: 1;
+				width: 35px;
+				visibility: visible;
+			}
+		}
+	}
+	li{
+		position: relative;
+		vertical-align: top;
+		padding: 0 35px 0 13px;
+		&.active a:after{
+			opacity: 1;
+			width: 35px;
+			visibility: visible;
+		}
+		&:after{
+			top: 11px;
+			left: -10px;
+			@extend %after;
+			@include square(4px);
+		}
+		&:first-child:after{display: none;}
+	}
+	&.leftalign{text-align: left;}
+	&.rightalign{text-align: right;}
+}
+/*------------------------------------------------------------------
+1-20. isotop controls3 Styles / .isotop-controls3
+-------------------------------------------------------------------*/
+.isotop-controls3{
+	margin: 0 0 62px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font: 600 12px/20px $font-family-sans-serif;
+	@include breakpoint($screen-xs-max){
+		margin: 0 0 20px;
+	}
+	a{
+		color: $shark;
+		display: block;
+		padding: 0 0 14px;
+		position: relative;
+		.dark &{color: $white;}
+		&:after{
+			left: 50%;
+			bottom: 1px;
+			@extend %after;
+			overflow: hidden;
+			margin: 0 0 0 -18px;
+			@include size(0, 4px);
+			@include transition (all, 0.8s, ease);
+		}
+		&:hover{
+			text-decoration: none;
+			&:after{
+				opacity: 1;
+				width: 35px;
+				visibility: visible;
+			}
+		}
+	}
+	li{
+		position: relative;
+		vertical-align: top;
+		padding: 0 35px 0 13px;
+		&.active a:after{width: 35px;}
+		&:after{
+			top: 11px;
+			left: -10px;
+			@extend %after;
+			background: $stack;
+			@include square(4px);
+		}
+		&:first-child:after{display: none;}
+	}
+	&.leftalign{text-align: left;}
+	&.rightalign{text-align: right;}
+}
+/*------------------------------------------------------------------
+1-21. isotop controls4 Styles / .isotop-controls4
+-------------------------------------------------------------------*/
+.isotop-controls4{
+	overflow: hidden;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: $desert-storm;
+	font: 600 12px/20px $font-family-sans-serif;
+    .dark &{background: #191919;}
+    ul{
+        float: left;
+        margin: 0 0 0 -2px;
+    }
+    li.active a{color: $white;}
+    a{
+        z-index: 5;
+		color: $stack;
+        display: block;
+        position: relative;
+        padding: 14px 11px 15px 27px;
+		@include breakpoint($screen-sm-max){
+			padding: 14px 7px 15px 16px;
+		}
+        &:before{
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            left: -12px;
+            right: -12px;
+            @extend %after;
+            transform: skewX(-20deg);
+            -ms-transform: skewX(-20deg);
+            -webkit-transform: skewX(-20deg);
+            @include transition (all, 0.4s, ease);
+            .dark &{background: #191919;}
+        }
+        &:hover{
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    .view-all{
+        z-index: 5;
+        float: right;
+		color: $white;
+        font-size: 12px;
+        position: relative;
+        padding: 16px 27px 16px 14px;
+        &:before{
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            left: -12px;
+            right: -12px;
+            color: $white;
+            @extend %after;
+            background: $lime;
+            transform: skewX(-20deg);
+            -ms-transform: skewX(-20deg);
+            -webkit-transform: skewX(-20deg);
+            @include transition (all, 0.4s, ease);
+            .dark &{background: #191919;}
+        }
+        &:hover{text-decoration: none;}
+    }
+}
+/*------------------------------------------------------------------
+1-22. more feature Styles / .more-feature
+-------------------------------------------------------------------*/
+.more-feature{
+	.img{
+		display: block;
+		margin: -120px 0 0 -46px;
+		@include breakpoint($screen-md-max){
+			margin: -120px 0 0 -15px;
+		}
+		@include breakpoint($screen-sm-max){
+			margin: 88px 0 0 -36px;
+		}
+		@include breakpoint($screen-xs-max){
+			margin: 0;
+			@include img-responsive;
+		}
+	}
+	&.style2 img{
+		margin: -8px 0 0 -103px;
+		@include breakpoint($screen-md-max){
+			margin: 102px 0 0 -40px;
+		}
+	}
+	&.style3 img{
+		margin: -144px 0 0 0;
+		@include breakpoint($screen-md-max){
+			margin: -84px 0 0 -70px;
+		}
+	}
+	&.style4{
+		padding-top: 88px;
+		padding-bottom: 60px;
+		img{margin: 0;}
+	}
+}
+/*------------------------------------------------------------------
+1-23. price section Styles / .price-section
+-------------------------------------------------------------------*/
+.price-section{
+	@extend %boxreset;
+	padding: 87px 0 100px;
+	@extend %backgroundreset;
+	@include element(after, 0, 0, 0, 0, rgba(0, 0, 0, 0.7));
+	.box{
+		color: $stack;
+		font-size: 13px;
+		overflow: hidden;
+		text-align: center;
+		background: $white;
+		@include transition (all, 0.4s, ease);
+		.dark &{background: #191919;}
+		@include breakpoint($screen-sm-max){
+			margin: 0 0 20px;
+		}
+		.heading{
+			font: 600 18px/24px $font-family-sans-serif;
+			@include transition (all, 0.4s, ease);
+			text-transform: uppercase;
+            letter-spacing: 2px;
+			background: $shark;
+			padding: 26px 5px;
+			margin: 0 0 20px;
+			display: block;
+			color: $white;
+		}
+		&:hover,
+		&.active{
+			.btn:hover{
+				background: $shark;
+				border-color: $shark;
+			}
+		}
+	}
+	.price{
+		color: $shark;
+		display: block;
+		margin: 0 0 -10px;
+		font: 700 60px/65px $font-family-sans-serif;
+		.dark &{color: $white;}
+		sup{
+			top: -19px;
+			font-size: 34px;
+			font-weight: 300;
+			margin: 0 -7px 0 -3px;
+		}
+	}
+	.month{
+		display: block;
+		font-size: 12px;
+		margin: 0 0 20px;
+		font-weight: 700;
+		line-height: 24px;
+		text-transform: uppercase;
+	}
+	.price-list{
+		margin: 0 0 7px;
+		overflow: hidden;
+		li{
+			padding: 0 5px;
+			margin: 0 0 17px;
+		}
+	}
+	.btn{
+		color: $white;
+		margin: 0 0 33px;
+		background: $shark;
+		border-color: $shark;
+	}
+	.parallax-holder{z-index: -1;}
+	&.style2{
+		padding: 101px 0 100px;
+		&:after{display: none;}
+		.box{
+			background: $desert-storm;
+            .dark &{background: #191919;}
+			.heading{
+				color: $shark;
+				margin: 0 0 12px;
+				padding: 33px 5px;
+				background: transparent;
+                .dark &{color: $white;}
+			}
+            .price{ .dark &{color: $white;}}
+			&.active,
+			&:hover{
+				background: $shark;
+				.price,
+				.heading{color: $white;}
+				.btn:hover{opacity:0.7;}
+				.heading{background: none;}
+			}
+		}
+	}
+	&.style3{
+		padding: 93px 0 100px;
+		.box{
+			background: $white;
+			padding: 23px 0 15px;
+			border:1px solid $gainsboro;
+            .dark &{
+                border-color: #494949;
+                background: #191919;
+            }
+            .price{
+                .dark &{color:$white;}
+            }
+			.heading{
+				color:$white;
+				font-size: 18px;
+				margin:0 0 19px;
+				line-height:22px;
+				padding:20px 10px;
+				background: $shark;
+			}
+			.month{margin:0 0 16px;}
+			&.active,
+			&:hover{
+				background: none;
+				.price{
+                    color:$shark;
+                    .dark &{color:$white;}
+                }
+			}
+		}
+		.price-list{
+			margin: 0 0 12px;
+			li{margin: 0 0 16px;}
+		}
+		.btn-purchase{margin: 0 0 15px;}
+	}
+	&.style4 .box{
+		.heading{margin: 0;}
+		img{
+			width: 100%;
+			margin: 0 0 16px;
+		}
+		.btn{margin: 0 0 22px;}
+	}
+}
+/*------------------------------------------------------------------
+1-24. blog section Styles / .blog-section
+-------------------------------------------------------------------*/
+.blog-section{
+	.beans-slider{
+		padding: 0 0 80px;
+		@include breakpoint($screen-sm-max){padding: 0 0 50px;}
+		.slick-dots{
+			bottom: -38px;
+			li{
+				margin: 0 3px 0 2px;
+				@include vertical-align(inline-block, top);
+				&.slick-active button{background: #191919;}
+			}
+			button{
+				border: 0;
+				margin: 0;
+				padding: 0;
+				display: block;
+				overflow: hidden;
+				background: #ddd;
+				border-radius: 50%;
+				text-indent: -9999px;
+				@include square(12px);
+				.dark &{background: #8f8f8f;}
+				&:hover{background: #191919;}
+			}
+		}
+	}
+	.beans-stepslider{
+		padding: 0 0 50px;
+		img{
+			width: 100%;
+			margin: 0 0 18px;
+		}
+		.slick-dots{
+			bottom: -50px;
+			li{
+				margin: 0 3px 0 2px;
+				@include vertical-align(inline-block, top);
+				&.slick-active button:after{display: block;}
+			}
+			button{
+				border: 0;
+				margin: 0;
+				padding: 0;
+				display: block;
+				background: #ddd;
+				overflow: hidden;
+				position: relative;
+				border-radius: 50%;
+				text-indent: -9999px;
+				@include square(14px);
+				border: 2px solid #ddd;
+				@include transition (all, 0.4s, ease);
+				.dark &{
+					border-color: #494949;
+					background: #494949;
+				}
+				&:hover{
+					text-decoration: none;
+					&:after{display: block;}
+				}
+				&:after{
+					top: 50%;
+					left: 50%;
+					display: none;
+					@extend %after;
+					border-radius: 50%;
+					@include square(4px);
+					margin: -2px 0 0 -2px;
+				}
+			}
+		}
+	}
+	.btn{margin: 0 4px;}
+}
+/*------------------------------------------------------------------
+1-25. blog m post Styles / .blog-m-post
+-------------------------------------------------------------------*/
+.blog-m-post{
+	overflow: hidden;
+	@include breakpoint($screen-xs-max){
+		margin-bottom: 20px;
+	}
+	.blog-txt{
+		position: relative;
+		padding: 0 0 20px 123px;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){padding: 0 0 0 58px;}
+	}
+	img{
+		width: 100%;
+		margin: 0 0 18px;
+		@include breakpoint($screen-sm-max){margin: 0 0 8px;}
+	}
+	h3{
+		color: $shark;
+		margin: 0 0 10px;
+		font: 500 18px/20px $font-family-sans-serif;
+		@include breakpoint($screen-sm-max){
+			margin: 0;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		.dark &{color: $white;}
+		a{
+			color: $shark;
+			.dark &{color: $white;}
+		}
+	}
+	a{
+		@include transition (all, 0.4s, ease);
+		&:hover{text-decoration: none;}
+	}
+	.meta{
+		margin: 0;
+		color: $stack;
+		font-size: 12px;
+		line-height: 21px;
+		@include breakpoint($screen-sm-max){
+			font-size: 10px;
+			line-height: 18px;
+		}
+		li{
+			padding: 0 12px 0 0;
+			@include breakpoint($screen-sm-max){padding: 0 6px 0 0;}
+		}
+		a{color: $stack;}
+	}
+	.box-holder{
+		left: 13px;
+		bottom: 16px;
+		position: absolute;
+		@include transition (all, 0.4s, ease);
+		@include breakpoint($screen-sm-max){
+			left: 3px;
+		}
+	}
+	time{
+		color: $white;
+		display: block;
+		font-size: 12px;
+        font-weight: 700;
+		line-height: 21px;
+		padding: 19px 0 0;
+		text-align: center;
+		background: $shark;
+        letter-spacing: 2px;
+		margin: -5px auto 0;
+		@include square(74px);
+		text-transform: uppercase;
+		.dark &{background: #191919;}
+		@include breakpoint($screen-sm-max){
+			font-size: 10px;
+			padding: 4px 0 0;
+			line-height: 18px;
+			@include square(40px);
+		}
+		.add{
+			display: block;
+			font-size: 22px;
+			font-weight: 700;
+			@include breakpoint($screen-sm-max){
+				font-size: 16px;
+			}
+		}
+	}
+	.fa{
+		margin: 0 3px 0 0;
+		position: relative;
+	}
+	.icon{
+		color: $white;
+		display: block;
+		font-size: 32px;
+		text-align: center;
+		padding: 12px 0 0 2px;
+		@include square(84px);
+		border: 5px solid $white;
+		.dark &{border-color: #191919;}
+		@include breakpoint($screen-sm-max){
+			font-size: 22px;
+			padding: 4px 0 0 2px;
+			@include square(50px);
+		}
+	}
+	.blog-text{
+		font-size: 14px;
+		overflow: hidden;
+		padding: 2px 0 0;
+		line-height: 24px;
+		position: relative;
+		@include breakpoint($screen-sm-max){
+			width: 100%;
+			display: block;
+		}
+		@include breakpoint($screen-xs-max){
+			padding: 0 0 0 10px;
+		}
+	}
+	.blog-box{
+		float: left;
+		width: 74px;
+		margin: 0 14px;
+		@include breakpoint($screen-md-max){
+			width: 100%;
+			float: none;
+			margin: 0 0 10px;
+			overflow: hidden;
+		}
+		.icon{
+			border: 0;
+			@include square(74px);
+			@include breakpoint($screen-md-max){float: left;}
+			@include breakpoint($screen-sm-max){
+				@include square(40px);
+			}
+		}
+		time{
+			margin: 0;
+			height: 74px;
+			@include breakpoint($screen-md-max){float: left;}
+			@include breakpoint($screen-sm-max){height: 40px;}
+		}
+	}
+	&.accordion{
+		margin: 0 0 15px;
+		@include transition (all, 0.4s, ease);
+		.box-holder{
+			left: 19px;
+			top: -85px;
+			bottom: auto;
+			@include breakpoint($screen-sm-max){top: -50px;}
+			@include breakpoint($screen-xs-max){display: none;}
+		}
+		.icon{border-bottom: 0;}
+		time{margin: 0 auto;}
+		.blog-txt{
+			border: 1px solid transparent;
+			padding: 16px 20px 20px 113px;
+			@include breakpoint($screen-sm-max){
+				padding: 10px 20px 20px 80px;
+			}
+			@include breakpoint($screen-xs-max){
+				padding: 10px 10px 20px;
+			}
+		}
+		img{margin: 0;}
+		p{margin: 0 0 23px;}
+		.blog-slide{padding-top: 30px;}
+		.btn{
+			border-width: 2px;
+			.dark &{
+				color: rgba(143, 143, 143, 0.6);
+				border-color: rgba(143, 143, 143, 0.6);
+			}
+			&:hover{
+				.dark &{
+					color: #8f8f8f;
+					background: transparent;
+					color: rgba(143, 143, 143, 1);
+					border-color: rgba(143, 143, 143, 1);
+				}
+			}
+		}
+		&.active{
+			margin: 0 0 30px;
+			background: $white;
+			.dark &{background: #191919;}
+			.blog-txt{
+				border-color: $gainsboro;
+				padding: 26px 20px 34px 113px;
+				@include breakpoint($screen-sm-max){
+					padding: 10px 10px 20px 80px;
+				}
+				@include breakpoint($screen-xs-max){
+					padding: 10px 10px 20px;
+				}
+				.dark &{border-color: #494949;}
+			}
+			.blog-slide{position: static !important;}
+			time{ .dark &{background: #2a2a2a;}}
+		}
+	}
+	&.style2{
+		img{margin: 0;}
+		.blog-txt{
+			color: $stack;
+			font-size: 12px;
+			position: relative;
+			padding: 7px 0 20px 95px;
+			border-top: 5px solid transparent;
+			h3{margin: 0 0 2px;}
+			p{text-transform: uppercase;}
+		}
+		.icon{
+			border: 0;
+			top: -14px;
+			left: 11px;
+			font-size: 24px;
+			overflow: hidden;
+			position: absolute;
+			padding: 12px 10px 0 0;
+			background: transparent;
+			@include size(80px, 60px);
+			&:before{
+				top: 0;
+				bottom: 0;
+				left: -12px;
+				right: 12px;
+				@extend %after;
+				background: $lime;
+				transform: skewX(-20deg);
+				-ms-transform: skewX(-20deg);
+				-webkit-transform: skewX(-20deg);
+				@include transition (all, 0.4s, ease);
+                .dark &{background: #191919;}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-26. facts section Styles / .facts-section
+-------------------------------------------------------------------*/
+.facts-section{
+	.fa{
+		left: 0;
+		top: 10px;
+		font-size: 60px;
+		position: absolute;
+		@include breakpoint($screen-md-max){
+			font-size: 40px;
+		}
+	}
+	p{margin: 0 0 39px;}
+	.box{
+		color: $shark;
+		font-size: 14px;
+		font-weight:700;
+		letter-spacing:2px;
+		position: relative;
+		padding: 0 0 0 99px;
+		text-transform: uppercase;
+		.dark &{color: $white;}
+		@include breakpoint($screen-md-max){
+			padding: 0 0 0 70px;
+		}
+	}
+	.num{
+		display: block;
+		position: relative;
+		margin: 0 0 23px -7px;
+		font: 700 70px/90px $font-family-sans-serif;
+		@include breakpoint($screen-md-max){
+			font-size: 50px;
+			line-height: 60px;
+			margin: 0 0 8px -7px;
+		}
+		&:after{
+			left: 5px;
+			bottom: -7px;
+			@extend %after;
+			@include size(52px, 4px);
+			@include breakpoint($screen-md-max){
+				bottom: -1px;
+			}
+			@include breakpoint($screen-xs-max){
+				bottom: 0;
+			}
+		}
+	}
+	.img{
+		margin: 8px 0 0 0;
+		@include breakpoint($screen-xs-max){
+			margin: 0 auto;
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-27. client box Styles / .client-box
+-------------------------------------------------------------------*/
+.client-box{
+    width: 100%;
+    height: 115px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #ddd;
+    @include v-align(img, middle);
+    @include transition (all, 0.4s, ease);
+    .dark &{border-color: #494949;}
+    @include breakpoint($screen-xs-max){
+        margin: 0 0 10px;
+    }
+    img{@extend %img-responsive;}
+    .img{
+        opacity:0.5;
+		max-width: 99.99%;
+        @include transition (all, 0.4s, ease);
+    }
+    &:hover{
+        border-color: $stack;
+        text-decoration: none;
+        .img{opacity: 1;}
+    }
+    &.large{height: 160px;}
+    &.dark{border-color: #535353;}
+}
+.clients-section .beans-stepslider{
+    overflow: visible;
+    .beans-slide{padding: 0 15px;}
+    .slick-arrow{
+        top: 63px;
+    	border: 0;
+    	margin: 0;
+		padding: 0;
+        left: -56px;
+        color: #535353;
+        font-size: 20px;
+        padding: 2px 0 0;
+		background: none;
+        border-radius: 50%;
+        position: absolute;
+        text-indent: 9999px;
+        @include square(40px);
+        border: 2px solid #535353;
+        @include transition (all, 0.4s, ease);
+        @include breakpoint($screen-md-max){left: -35px;}
+        @include breakpoint($screen-sm-max){left: -25px;}
+        @include breakpoint($screen-xs-max){display: none;}
+        &:hover{
+            color: $white;
+            text-decoration: none;
+        }
+		&:after{
+			top: 3px;
+			left: 11px;
+			line-height: 1;
+			text-indent: 0;
+			font-size: 30px;
+			content:"\f104";
+			overflow: hidden;
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+    }
+    .slick-next{
+    	left: auto;
+		right: -56px;
+		@include breakpoint($screen-md-max){right: -35px; left: auto;}
+		@include breakpoint($screen-sm-max){right: -25px; left: auto;}
+		&:after{content:"\f105";}
+	}
+}
+/*------------------------------------------------------------------
+1-28. team lightbox Styles / .team-lightbox
+-------------------------------------------------------------------*/
+.team-lightbox{
+	width: 817px;
+	color: $stack;
+	font-size: 14px;
+	overflow: hidden;
+	line-height: 26px;
+	background: $white;
+	padding: 36px 40px 30px;
+	border: 1px solid $gainsboro;
+	@include breakpoint($screen-sm-max){width: 700px;}
+	@include breakpoint($screen-xs-max){width: 280px; padding: 15px;}
+	.img-box{
+		float: left;
+		max-width: 248px;
+		margin: 3px 39px 0 0;
+		@include breakpoint($screen-xs-max){float: none; margin: 0 0 20px;}
+	}
+	img{width: 100%;}
+	.holder{overflow: hidden;}
+	.title{
+		color: $lime;
+		display: block;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+		text-transform: uppercase;
+		font: 700 16px/20px $font-family-sans-serif;
+	}
+	.subtitle{
+		color: $stack;
+		display: block;
+		margin: 0 0 19px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 600 12px/16px $font-family-sans-serif;
+	}
+	p{margin: 0 0 8px;}
+	.socialnetworks{
+		padding: 6px 0 0;
+		li{
+			margin: 0 2px 0 0;
+			@include vertical-align(inline-block, top);
+		}
+		a{
+			color: $white;
+			display: block;
+			font-size: 18px;
+			padding: 5px 0 0;
+			text-align: center;
+			border-radius: 50%;
+			background: $cape-cod;
+			@include square(40px);
+			&:hover{text-decoration: none;}
+		}
+	}
+	.close{
+		top: 15px;
+		opacity: 1;
+		float: none;
+		right: 21px;
+		color: $lime;
+		font-size: 35px;
+		text-shadow: none;
+		line-height: 35px;
+		position: absolute;
+		font-weight: normal;
+	}
+}
+/*------------------------------------------------------------------
+1-29. about section Styles / .about-section
+-------------------------------------------------------------------*/
+.about-section{
+	font-size: 14px;
+	line-height: 26px;
+	color: $storm-dust;
+	h3{
+		color: $shark;
+		margin: 0 0 3px;
+		position: relative;
+		padding: 0 0 0 15px;
+		text-transform: uppercase;
+		font: 16px/20px $font-family-base;
+		.dark &{color: $white;}
+	}
+	.box{
+		margin: 0 0 28px;
+		overflow: hidden;
+	}
+	p{margin: 0;}
+	.fa{
+		left: 0;
+		top: 3px;
+		position: absolute;
+		&.small{
+			top: 8px;
+			font-size: 6px;
+			font-weight: 400;
+		}
+	}
+	.know-more{
+		margin: 10px 0 0;
+		@include breakpoint($screen-sm-max){margin: 0 0 20px;}
+		.dark &{
+			color: rgba(143, 143, 143, 0.6) !important;
+			border-color: rgba(143, 143, 143, 0.6);
+			background: transparent !important;
+		}
+		&:hover{
+			background: transparent;
+			border-color: $lime;
+			color: $lime;
+			.dark &{
+				border-color: rgba(143, 143, 143, 1);
+				color: rgba(143, 143, 143, 1);
+				color: #8f8f8f !important;
+			}
+		}
+	}
+	.img-box{
+		overflow: hidden;
+		margin: 5px 2px 28px -1px;
+		img{width: 100%;}
+	}
+	.beans-slider .slick-dots{
+		li{
+			margin: 0 3px 0 2px;
+			@include vertical-align(inline-block, top);
+			&.slick-active button{background: $white;}
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			padding: 0;
+			display: block;
+			background: none;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			@include square(14px);
+			border:2px solid $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{background: $white;}
+		}
+	}
+	&.halfbg{
+		position: relative;
+		overflow: hidden;
+		.stretch{
+			left: auto;
+			width: 50%;
+			@include breakpoint($screen-sm-max){width: 35.7%;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-30. counter section Styles / .counter-section
+-------------------------------------------------------------------*/
+.counter-section{
+	color: $white;
+	font-size: 14px;
+    font-weight: 700;
+	line-height: 20px;
+	@extend %boxreset;
+	text-align: center;
+	position: relative;
+    letter-spacing: 2px;
+	padding: 84px 0 99px;
+	@extend %backgroundreset;
+	text-transform: uppercase;
+	@include element(after, 0, 0, 0, 0, rgba(55, 63, 69, 0.6));
+	.txt{display: block;}
+	.num{
+		display: block;
+		padding: 0 0 7px;
+		margin: 0 0 18px;
+		position: relative;
+		font: 700 80px/90px $font-family-sans-serif;
+		&:after{
+			bottom: 0;
+			left: 50%;
+			@extend %after;
+			margin: 0 0 0 -20px;
+			@include size(40px, 3px);
+		}
+	}
+	.parallax-holder,
+	.stretch{z-index: -1;}
+	&.small{
+		padding: 100px 0;
+		.counter{
+			font-size: 33px;
+			line-height: 60px;
+		}
+		.txt{@include breakpoint($screen-md-max){margin: 0 0 20px;}}
+		.num{
+			font-size: 70px;
+			margin: 0 0 25px;
+			line-height: 90px;
+			padding: 0 0 25px;
+			display: inline-block;
+			&:after{
+				margin: 0 0 0 -10px;
+				@include size(20px , 3px);
+			}
+		}
+	}
+	&.large{
+		color: $lime;
+		font-weight: 900;
+		background: url(images/icons/map4.png) no-repeat 50% 50% $lime ;
+		&:after{display: none;}
+		.num{
+			padding: 0;
+			font-size: 70px;
+			font-weight: 700;
+			margin: 0 0 10px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+1-31. banner img Styles / .banner-img
+-------------------------------------------------------------------*/
+.banner-img{
+	color: $white;
+	margin: 0 0 119px;
+	text-align: center;
+	position: relative;
+	padding: 89px 0 0;
+	@extend %backgroundreset;
+	font: 300 21px/40px $font-family-sans-serif;
+	@include element(after, 0, 0, 0, 0, rgba(55, 63, 69, 0.4));
+	.img{margin: 0 auto -56px;}
+	.title{
+		display: block;
+		font-weight: 300;
+		margin: 0 0 -6px;
+	}
+	h3{
+		margin: 0 0 36px;
+		font: 600 36px/40px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+	.parallax-holder{z-index: -1;}
+	//&.style2{margin: 0 0 62px;}
+	&.style3{
+		margin: 0 0 32px;
+		.img{margin: 0 auto -116px;}
+		&:after{background: rgba(0, 0, 0, 0.4);}
+	}
+}
