@@ -1,2 +1,2 @@
-# Digital-library-system
-School Digital Library System using Laravel
+# Library Management System
+School Library Management System using Laravel
