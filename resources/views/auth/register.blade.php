@@ -20,9 +20,9 @@
             </div>
 
             <div>
-                <x-label for="name" :value="__('Matric no')" />
+                <x-label for="matric" :value="__('Matric')" />
 
-                <x-input id="matric no" class="block mt-1 w-full" type="text" name="matric no" :value="old('matric no')" required autofocus />
+                <x-input id="matric" class="block mt-1 w-full" type="text" name="matric" :value="old('matric')" required autofocus />
             </div>
 
             <!-- Email Address -->
@@ -32,23 +32,22 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
             <div>
-                <x-label for="name" :value="__('Phone')" />
+                <x-label for="phone" :value="__('Phone')" />
 
                 <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus />
             </div>
-
+            
             <div>
-                <x-label for="name" :value="__('Department')" />
+                <x-label for="department" :value="__('department')" />
 
                 <x-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" required autofocus />
             </div>
 
             <div>
-                <x-label for="name" :value="__('Level')" />
+                <x-label for="level" :value="__('Level')" />
 
                 <x-input id="level" class="block mt-1 w-full" type="text" name="level" :value="old('level')" required autofocus />
             </div>
-
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />

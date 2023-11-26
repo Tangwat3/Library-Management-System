@@ -30,15 +30,6 @@ Route::get('/admin', function () {
 
    
 
-Route::prefix('admin')->group(function () {
-    // Existing routes...
-
-    Route::get('/pages/create', [PageController::class, 'create'])->name('admin.pages.create');
-    Route::post('/pages/store', [PageController::class, 'store'])->name('admin.pages.store');
-});
-
-  
-
 
 require __DIR__.'/auth.php';
 
