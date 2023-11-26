@@ -4,11 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 
-use App\Http\Controllers\AdminController;
-
-use App\Http\Controllers\Admin\BookController;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,20 +23,12 @@ Route::get("/home",[Homecontroller::class,"index"])->name('home');
 Route::get("/about",[HomeController::class,"about"])->name('about');
 Route::get("/categories",[HomeController::class,"categories"])->name('categories');
 Route::get("/books",[HomeController::class,"books"])->name('books');
-Route::get("/admin", [AdminController::class,"index"]);
-Route::get("/dashboard",[AdminController::class,"index"]);
 
-
-
-    Route::prefix('admin')->group(function () {
-    Route::get('/books', [BookController::class, 'index'])->name('admin.books.index');
-    Route::get('/books/create', [BookController::class, 'create'])->name('admin.books.create');
-    Route::post('/books/store', [BookController::class, 'store'])->name('admin.books.store');
-    Route::get('/books/{id}', [BookController::class, 'show'])->name('admin.books.show');
-    Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('admin.books.edit');
-    Route::put('/books/{id}/update', [BookController::class, 'update'])->name('admin.books.update');
-    Route::delete('/books/{id}/delete', [BookController::class, 'destroy'])->name('admin.books.destroy');
+Route::get('/admin', function () {
+    return view('admin.dashboard');
 });
+
+   
 
 Route::prefix('admin')->group(function () {
     // Existing routes...
