@@ -25,6 +25,8 @@
             <!-- ============================================================== -->
             <!-- end pageheader  -->
             <!-- ============================================================== -->
+            <a href="{{ route('admin.books.index') }}">Manage Books</a>
+
             <div class="ecommerce-widget">
 
                 <div class="row">
@@ -141,7 +143,7 @@
                                             <tr>
                                                 <td>3</td>
                                                 <td>
-                                                    <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
+                                                    <div class="m-r-10"><img src="{{asset('assets/images/product-pic-3.jpg')}}" alt="user" class="rounded" width="45"></div>
                                                 </td>
                                                 <td>Product #3 </td>
                                                 <td>id000003 </td>
@@ -154,7 +156,7 @@
                                             <tr>
                                                 <td>4</td>
                                                 <td>
-                                                    <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
+                                                <div class="m-r-10"><img src="{{asset('assets/images/product-pic-4.jpg')}}" alt="user" class="rounded" width="45"></div>
                                                 </td>
                                                 <td>Product #4 </td>
                                                 <td>id000004 </td>

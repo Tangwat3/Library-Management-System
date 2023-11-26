@@ -1,18 +1,17 @@
 			@include('layouts.partials.header')
 									<section class="welcom-banner">
 				<div class="stretch">
-					<img src="http://placehold.it/1920x1000" alt="image description">
+					<img src="{{asset('assets/images/fcep.jpg')}}" alt="image description">
 				</div>
 				<div class="container">
 					<div class="row">
 						<section class="col-xs-12">
 							<div class="banner-section win-height">
 								<div class="welcome-heading">
-									<h1>WELCOME TO FCEP E-LIBRARY</h1>
-									<p>GET ENROLL AND READ BOOKS.</p>
+									<p>The destination of choice for students that desire affordable, good and quality education..</p>
 									<div class="buttons-box">
-										<a href="features.html" class="btn btn-f-default">FEATURES</a>
-										<a href="index.html" class="btn btn-f-info">GET STRATED</a>
+										<a href="{{asset('assets/features.html')}}" class="btn btn-f-default">CATEGORIES</a>
+										<a href="{{asset('assets/index.html')}}" class="btn btn-f-info">BOOKS</a>
 									</div>
 								</div>
 							</div>
@@ -29,7 +28,7 @@
                         <header class="page-heading style2">
                             <div class="heading">
                                 <h2 class="lime text-uppercase font-medium">ABOUT<span class="dot">.</span></h2>
-                                <p>We create your business to success</p>
+                                <p>We provide you with a platform to access books.</p>
                             </div>
                         </header>
 						<div class="row">
@@ -42,24 +41,7 @@
 	                            <p>Suspendisse et metus eu massa lobortis condimentum sed ut orci. Nullam viverra dapibus risus, eu tristique nisl sollicitudin at. Etiam iaculis blandit libero.</p>
 	                            <a href="about-us.html" class="btn btn-slider">READ MORE</a>
 	                        </article>
-	                        <article class="about-post col-sm-4 col-xs-12" data-animate="fadeInUp" data-delay="300">
-	                            <!-- img-box -->
-	                            <div class="img-box">
-	                                <img class="img-responsive" src="{{asset('assets/http://placehold.it/370x270')}}" alt="image description">
-	                            </div>
-	                            <h3>Our Mission</h3>
-	                            <p>Suspendisse et metus eu massa lobortis condimentum sed ut orci. Nullam viverra dapibus risus, eu tristique nisl sollicitudin at. Etiam iaculis blandit libero.</p>
-	                            <a href="about-us.html" class="btn btn-slider">READ MORE</a>
-	                        </article>
-	                        <article class="about-post col-sm-4 col-xs-12" data-animate="fadeInUp" data-delay="400">
-	                            <!-- img-box -->
-	                            <div class="img-box">
-	                                <img class="img-responsive" src="{{asset('assets/http://placehold.it/370x270')}}" alt="image description">
-	                            </div>
-	                            <h3>Our Strategy</h3>
-	                            <p>Suspendisse et metus eu massa lobortis condimentum sed ut orci. Nullam viverra dapibus risus, eu tristique nisl sollicitudin at. Etiam iaculis blandit libero.</p>
-	                            <a href="about-us.html" class="btn btn-slider">READ MORE</a>
-	                        </article>
+	                        
 						</div>
 					</section>
 				</div>
@@ -441,7 +423,7 @@
                         <header class="page-heading style2">
                             <div class="heading">
                                 <h2 class="white text-uppercase font-medium">GET IN TOUCH<span class="dot">.</span></h2>
-								<p>Will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it<br> has a more-or-less normal distribution of letters</p>
+								<p>Connect with us any time, anywhere and any moment<br>See you in the other side were readers belong </p>
                             </div>
                         </header>
 						<!-- email form -->
@@ -474,14 +456,7 @@
 					<div class="stretch">
 						<img src="http://placehold.it/1920x1000" alt="image description">
 					</div>
-				</section>
-				<!-- map -->
-				<div class="map" data-lat="52.392363" data-lng="1.480408" data-zoom="8">
-					<div class="map-info">
-						<h2>Fekra</h2>
-						<p>Lorem ipsum dolor sit amet...</p>
-					</div>
-				</div>
+				
 			</main>
 			<!-- footer of the page -->
 			@include('layouts.partials.footer')
