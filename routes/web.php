@@ -7,7 +7,6 @@ use App\Http\Controllers\BookCategoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,15 +41,7 @@ Route::controller(BookCategoryController::class)->group(function (){
     });
         Route::get('/role-register', 
         [App\Http\Controllers\Admin\DashboardController::class, 'registered']);
-       
+       });
 });
-
-
-});
-
 
 require __DIR__.'/auth.php';
-
-
-
-

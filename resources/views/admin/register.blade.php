@@ -39,9 +39,8 @@
                     <td>400</td>  
                     <td>
                         <a href="#" class="btn btn-success">EDIT</a>
-                   </td>  
+                    </td>  
                     <td>
-                      
                         <a href="#" class="btn btn-danger">DELETE</a>
                     </td>  
                 </tr>
