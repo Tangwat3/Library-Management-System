@@ -38,7 +38,7 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="{{asset('admin.dashboard.html')}}">
+            <a href="./admin">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>

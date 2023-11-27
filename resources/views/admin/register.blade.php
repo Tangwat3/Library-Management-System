@@ -41,6 +41,7 @@
                         <a href="#" class="btn btn-success">EDIT</a>
                    </td>  
                     <td>
+                      
                         <a href="#" class="btn btn-danger">DELETE</a>
                     </td>  
                 </tr>

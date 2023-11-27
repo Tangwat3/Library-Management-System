@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookCategoryController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 
 
 /*
@@ -39,8 +40,9 @@ Route::controller(BookCategoryController::class)->group(function (){
         Route::get('/admin', function () {
             return view('admin.dashboard');
     });
-    
-        Route::get('/role-register','Admin\DashboardController@registered');
+        Route::get('/role-register', 
+        [App\Http\Controllers\Admin\DashboardController::class, 'registered']);
+       
 });
 
 
