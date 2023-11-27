@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('matric');
             $table->string('email')->unique();
             $table->string('phone');
+            $table->string('usertype')->nullable();
             $table->string('department');
             $table->string('level');
             $table->timestamp('email_verified_at')->nullable();

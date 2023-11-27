@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Dashboard I FCEP E-LIBRARY
+    Book Category
     
 @endsection
 
@@ -14,18 +14,26 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Book Category</h4>
+          <h4 class="card-title"> Book Categories</h4>
+         <button> <a href="{{route('book.categories.create')}}">Add New</a></button>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
                 <th>Name</th>
-                <th>Slug</th>
+                <th>Action</th>
+               
               </thead>
               <tbody>
-                <tr>              
-                </tr>
+                @foreach ($categories as $category)
+                <tr>
+                    <td>{{ $category->name }}</td>
+                    <td><a>View</a><button>Delete</button></td>
+                    
+                  </tr>
+                @endforeach
+               
               </tbody>
             </table>
           </div>

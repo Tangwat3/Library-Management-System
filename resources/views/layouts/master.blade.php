@@ -24,29 +24,29 @@
 <body class="">
   <div class="wrapper ">
     
-    <div class="sidebar" data-color="orange"> 
-        <!--Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
+
+       <div class="sidebar" data-color="orange"> 
+   
       <div class="logo">
         <a href="{{asset('admin_assets/http://www.creative-tim.com')}}" class="simple-text logo-mini">
-          CT
+        
         </a>
         <a href="{{asset('admin_assets/http://www.creative-tim.com')}}" class="simple-text logo-normal">
-          Creative Tim
+         TTECH IT SOLUTIONS
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="./dashboard.html">
+            <a href="{{asset('admin.dashboard.html')}}">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="{{route('book.categories.index')}}">
               <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+              <p>Book Categories</p>
             </a>
           </li>
           <li>
@@ -62,7 +62,7 @@
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="./role-register">
               <i class="now-ui-icons users_single-02"></i>
               <p>User Profile</p>
             </a>
@@ -87,8 +87,7 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="main-panel" id="main-panel">
+    </div> <div class="main-panel" id="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
         <div class="container-fluid">
@@ -128,17 +127,22 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="now-ui-icons location_world"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+            
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
+            </li>
+            
+              
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">

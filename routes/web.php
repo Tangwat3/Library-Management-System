@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BookCategoryController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +27,24 @@ Route::get("/about",[HomeController::class,"about"])->name('about');
 Route::get("/categories",[HomeController::class,"categories"])->name('categories');
 Route::get("/books",[HomeController::class,"books"])->name('books');
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
+Route::controller(BookCategoryController::class)->group(function (){
+    Route::prefix('admin')->group(function(){
+        Route::get("/book-categories","index")->name('book.categories.index');
+        Route::get("/book-categories-create","create")->name('book.categories.create');
+        Route::get("/book/{bookcategories}", [\App\Http\Controllers\BookCategoryController::class, 'show']);
+    });
+
+    Route::group(['middleware' => ['auth', 'admin']], function() {
+        
+        Route::get('/admin', function () {
+            return view('admin.dashboard');
+    });
+    
+        Route::get('/role-register','Admin\DashboardController@registered');
 });
 
-   
+
+});
 
 
 require __DIR__.'/auth.php';
