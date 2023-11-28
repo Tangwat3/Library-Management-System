@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BookCategory extends Model
 {
+    protected $table ="Book category";
     use HasFactory;
     use HasSlug;
 

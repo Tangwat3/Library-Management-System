@@ -39,8 +39,11 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {
-        
-        Route::get('/book-categories','Admin\BookController@index');
+        Route::get("/book-categories", [BookCategoryController::class, 'index'])->name('book.categories.index');
+        Route::get("/book-categories-create", [BookCategoryController::class, 'create'])->name('book.categories.create');
+        Route::get("/book/{bookcategories}", [BookCategoryController::class, 'show']);
+
+        Route::get('/abouts','Admin\AboutusController@index');
     });
 });
 

@@ -10,18 +10,17 @@ class BookCategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     *  \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
-        $categories =BookCategory::all();
-        return view ('admin.categories', compact('categories'));
+              return view('book-categories',);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * \Illuminate\Http\Response
      */
     public function create()
     {
