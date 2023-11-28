@@ -44,7 +44,8 @@
             </a>
           </li>
           <li>
-            <a href="{{route('book.categories.index')}}">
+            <li class="{{'book-categories'==request()->path()?'active':''}}">
+            <a href="{{url('book-categories')}}">
               <i class="now-ui-icons education_atom"></i>
               <p>Book Categories</p>
             </a>

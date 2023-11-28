@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\controller;
 
 class BookController extends Controller
 {
-    public function index ()
+    public function index()
     {
-        return view("admin.services.index"); 
-
+        return view('admin.books.index');
     }
 }
